@@ -1370,6 +1370,7 @@
 		}
 		@media (min-width: $md3) {
 			gap: 2.19rem;
+
 			grid-template-columns: repeat(3, 1fr);
 			&:not(:first-child) {
 				margin-top: 3rem;

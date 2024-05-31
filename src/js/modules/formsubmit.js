@@ -71,7 +71,7 @@ export const formSubmit = () => {
 			try {
 				await Promise.all(fileUploadPromises);
 				hubspotData.fields.push(...fileFields);
-				console.log(hubspotData);
+
 
 				let response = await fetch(hubspotUrl, {
 					method: "POST",
