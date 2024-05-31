@@ -1,0 +1,86 @@
+<header class="header@@if(fixed===true){ header-fixed}">
+    <div class="header__wrapper">
+        <div class="header__container">
+            <a href="/" class="header__logo"><img src="@img/logo.svg" alt="logo"></a>
+            <div class="header__menu menu">
+                <nav class="menu__body">
+                    <ul class="menu__list">
+                        <li class="menu__item menu-parent">
+                            <a href="/solutions.html" class="menu__link@@if(active===1){ active}">Solutions</a>
+                            <button aria-label="get submenu" class="menu__arrow icon-chevron"></button>
+                            <div class="submenu">
+                                <ul class="submenu__list">
+                                    <li class="submenu__item"><a href="/healthcare-customer-relationship-management.html" class="submenu__link">Healthcare Customer Relationship Management</a></li>
+                                    <li class="submenu__item"><a href="/healthcare-ecommerce.html" class="submenu__link">Healthcare E-commerce</a></li>
+                                    <li class="submenu__item"><a href="/patient-portals.html" class="submenu__link">Patient Portals</a></li>
+                                    <li class="submenu__item"><a href="/healthcare-data-analytics.html" class="submenu__link">Healthcare Data Analytics</a></li>
+                                    <li class="submenu__item"><a href="/healthcare-bi.html" class="submenu__link">Healthcare BI</a></li>
+                                    <li class="submenu__item"><a href="/healthcare-mobile-apps.html" class="submenu__link">Healthcare Mobile Apps</a></li>
+                                    <li class="submenu__item"><a href="/pharmacy-management-solutions.html" class="submenu__link">Pharmacy Management Solutions (PMS)</a></li>
+                                    <li class="submenu__item"><a href="/hospital-management-software.html" class="submenu__link">Hospital Management Software (HMS)</a></li>
+                                    <li class="submenu__item"><a href="/remote-patient-monitoring.html" class="submenu__link">Remote Patient Monitoring (RPM)</a></li>
+                                    <li class="submenu__item"><a href="/patient-engagement-tools.html" class="submenu__link">Patient Engagement Tools</a></li>
+                                    <li class="submenu__item"><a href="/telehealth-solutions.html" class="submenu__link">Telehealth Solutions</a></li>
+                                    <li class="submenu__item"><a href="/emr-development.html" class="submenu__link">EMR/EHR Development</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu__item menu-parent">
+                            <a href="/services.html" class="menu__link@@if(active===2){ active}">Services</a>
+                            <button aria-label="get submenu" class="menu__arrow icon-chevron"></button>
+                            <div class="submenu">
+                                <ul class="submenu__list">
+                                    <li class="submenu__item"><a href="/healthcare-it-consulting.html" class="submenu__link">IT consulting</a></li>
+                                    <li class="submenu__item"><a href="/medical-software-development.html" class="submenu__link"> Software engineering</a></li>
+                                    <li class="submenu__item"><a href="/medical-application-development-services.html" class="submenu__link">Application services</a></li>
+                                    <li class="submenu__item"><a href="/managed-it-services-in-healthcare.html" class="submenu__link">Managed IT services</a></li>
+                                    <li class="submenu__item"><a href="/medical-devops-consulting.html" class="submenu__link">DevOps</a></li>
+                                    <li class="submenu__item"><a href="/engineering-and-quality-testing-in-medicine.html" class="submenu__link">QA & testing</a></li>
+                                    <li class="submenu__item"><a href="/medical-software-maintenance-and-support-services.html" class="submenu__link">Software Support</a></li>
+                                    <li class="submenu__item"><a href="/dedicated-smart-teams.html" class="submenu__link">Dedicated teams</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">Case studies</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/blog.html" class="menu__link@@if(active===4){ active}">Blog</a>
+                        </li>
+                        <li class="menu__item menu-parent">
+                            <a href="/about.html" class="menu__link@@if(active===5){ active}">About Us</a>
+                            <button aria-label="get submenu" class="menu__arrow icon-chevron"></button>
+                            <div class="submenu">
+                                <ul class="submenu__list">
+                                    <li class="submenu__item"><a href="" class="submenu__link">About 1</a></li>
+                                    <li class="submenu__item"><a href="" class="submenu__link">About 2</a></li>
+                                    <li class="submenu__item"><a href="" class="submenu__link">About 3</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </nav>
+                <div class="header__search search">
+                    <button type="button" aria-label="get search form" class="search__btn icon-search"></button>
+                    <form action="#" class="search__form">
+                        <div class="search__body">
+                            <div class="search__container">
+                                <a href="/" class="search__logo"><img src="@img/logo.svg" alt="logo"></a>
+                                <input type="text" autocomplete="off" name="search" class="search__form-input form__input" placeholder="Search by keyword or phrase">
+                                <button type="submit" class="search__form-btn btn btn-primary btn-sm icon-search"><span>Search</span></button>
+                                <button type="button" aria-label="hide search form" class="search__close icon-close"></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <a href="/contacts.html" class="header__btn btn btn-primary btn-sm">Contact us</a>
+            </div>
+            <button type="button" aria-label="open mobile menu" class="header__menu-btn icon-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,40 @@
+<div id="modal" class="popup">
+    <div class="popup__body" data-form-body>
+        <div class="popup__title">Get a quote</div>
+        <p class="popup__subtitle">Our consultant will contact you
+            and answer all your questions</p>
+        <form action="#" class="popup__form form">
+            <div class="form__row">
+                <label class="form__field">
+                    <input type="text" name="name" data-required class="form__input" placeholder="">
+                    <span class="form__field-placeholder">Your name</span>
+                </label>
+                <span class="form__error">Enter correct name</span>
+            </div>
+            <div class="form__row">
+                <label class="form__field">
+                    <input type="tel" name="phone" data-required class="form__input" placeholder="">
+                    <span class="form__field-placeholder">Phone</span>
+                </label>
+                <span class="form__error">Enter correct phone number</span>
+            </div>
+            <div class="form__row">
+                <label class="form__field">
+                    <input type="email" name="email" data-required class="form__input" placeholder="">
+                    <span class="form__field-placeholder">Email</span>
+                </label>
+                <span class="form__error">Enter correct email address</span>
+            </div>
+            <label class="form__checkbox">
+                <input type="checkbox" checked data-required name="privacy" class="form__checkbox-input hidden" hidden>
+                <span class="form__checkbox-content">I have read and agree to the Privacy Policy</span>
+            </label>
+            <button type="submit" class="form__footer-btn btn btn-secondary">Send</button>
+        </form>
+    </div>
+    <div class="popup__body" data-form-succes>
+        <div class="popup__title">Thank you!</div>
+        <p class="popup__subtitle">We’re already recived your request and comming to you as soon as possible </p>
+        <button type="button" data-fancybox-close class="popup__btn btn btn-secondary">Okay</button>
+    </div>
+</div>

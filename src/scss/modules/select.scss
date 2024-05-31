@@ -1,0 +1,78 @@
+// <SELECT>=================================
+.select-hidden {
+	display: none;
+	visibility: hidden;
+}
+.select {
+	cursor: pointer;
+	position: relative;
+}
+.select-styled {
+	background: transparent;
+	padding: 0.62rem 1rem;
+	border-radius: 6.25rem;
+	border: rem(1) solid #eceae0;
+	color: #543d2f;
+	font-size: 0.875rem;
+	line-height: 145%;
+	color: $red;
+	white-space: nowrap;
+	user-select: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: 0.63rem;
+	&::before {
+		@extend %ic, .icon-chevron-down;
+		order: 1;
+		font-size: 1rem;
+		transition: transform 0.3s ease 0s;
+	}
+
+	&:active,
+	&.active {
+		&::before {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.select-options {
+	display: none;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	width: 100%;
+	min-width: rem(190);
+	top: calc(100% + 0.63rem);
+	z-index: 999;
+	margin: 0;
+	padding: 1rem;
+	list-style: none;
+	border-radius: 1.25rem;
+	border: 1px solid rgba(84, 61, 47, 0.1);
+	background: #f7f6f2;
+	color: #543d2f;
+	li {
+		font-size: 0.875rem;
+		line-height: 120%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		&:not(:last-child) {
+			margin-bottom: 0.62rem;
+		}
+		&:hover {
+			color: $red;
+		}
+		&.active {
+			&::before {
+				order: 1;
+				@extend %ic, .icon-check;
+			}
+		}
+	}
+}
+
+// </SELECT>=================================

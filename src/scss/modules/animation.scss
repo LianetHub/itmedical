@@ -1,0 +1,31 @@
+[data-animate="bottom"] {
+	transform: translateY(40px);
+	transition-timing-function: ease;
+	transition-duration: 0.6s;
+	transition-property: transform, opacity;
+	opacity: 0;
+	&.animated {
+		transform: none;
+		opacity: 1;
+		transition-delay: 0s;
+		& > * {
+			transition-delay: 0s !important;
+		}
+	}
+}
+
+[data-animate="fade"] {
+	transition-timing-function: ease;
+	transition-duration: 0.6s;
+	transition-property: opacity, visibility;
+	opacity: 0;
+	visibility: hidden;
+	&.animated {
+		opacity: 1;
+		visibility: visible;
+		transition-delay: 0s;
+		& > * {
+			transition-delay: 0s !important;
+		}
+	}
+}

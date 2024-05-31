@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': 'IT Medical | Services',
+    'keywords': 'IT medical',
+    'url': 'https://itmedical.com/',
+    'desc': ''
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "fixed": true,
+            "active": 1
+            })
+            <main class="page">
+                <section class="promo promo-solutions">
+                    <div class="promo__container">
+                        <h1 class="promo__title title-md fw-normal">
+                            Solutions
+                        </h1>
+                    </div>
+                    <div class="promo__background">
+                        <img src="@img/promo-solutions.jpg" class="cover-image" alt="promo">
+                    </div>
+                </section>
+                <nav class="breadcrumbs" aria-label="breadcrumbs menu">
+                    <div class="breadcrumbs__container">
+                        <ul class="breadcrumbs__items">
+                            <li class="breadcrumbs__item">
+                                <a href="/" class="breadcrumbs__link">Home</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <span class="breadcrumbs__link active">Solutions</span>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                @@include('./html/_solutions.html', {})
+                @@include('./html/_results.html')
+                @@include('./html/_development.html')
+                @@include('./html/_engagement.html')
+                @@include('./html/_compliance.html')
+                @@include('html/_contacts-2.html', {})
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+
+        @@include('html/_js.html', {})
+    </body>
+</html>

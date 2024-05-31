@@ -1,0 +1,45 @@
+.breadcrumbs {
+	display: none;
+	@media (min-width: $md3) {
+		display: block;
+		padding: 2.5rem 0;
+	}
+
+	&__items {
+		display: flex;
+		gap: rem(8);
+	}
+	// .breadcrumbs__item
+	&__item {
+		display: flex;
+		align-items: center;
+		font-size: 1rem;
+		gap: rem(8);
+		color: $accent;
+		&:not(:first-child) {
+			&::before {
+				color: #625f5f;
+				content: "/";
+				flex-shrink: 0;
+			}
+		}
+	}
+	// .breadcrumbs__link
+	&__link {
+		transition: color 0.3s ease 0s;
+		white-space: nowrap;
+
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #625f5f;
+			}
+		}
+		&.active {
+			pointer-events: none;
+			color: #625f5f;
+		}
+	}
+}
