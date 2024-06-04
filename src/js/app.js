@@ -15,9 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (document.querySelector('.main__video')) {
         if (window.innerWidth >= 1200) {
-            document.querySelector('.main__video')?.setAttribute('autoplay', true);
-            document.querySelector('.main__video')?.play();
-            document.querySelector('.main__play')?.classList.add('active')
+            document.querySelector('.main__video').setAttribute('autoplay', true);
+            document.querySelector('.main__video').play();
+            // if (document.querySelector('.main__play')) {
+            //     document.querySelector('.main__play').classList.add('active')
+            // }
         }
     }
 
@@ -109,9 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
 
-        if (target.classList.contains('main__play')) {
-            togglePlayVideo()
-        }
+        // if (target.classList.contains('main__play')) {
+        //     togglePlayVideo()
+        // }
 
         if (target.tagName === 'A' && target.getAttribute('href') === '#contacts') {
 
@@ -144,20 +146,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    function togglePlayVideo() {
-        const video = document.querySelector('.main__video');
-        const playButton = document.querySelector('.main__play');
+    // function togglePlayVideo() {
+    //     const video = document.querySelector('.main__video');
+    //     const playButton = document.querySelector('.main__play');
 
-        if (video.paused == true) {
-            video.play();
-            // video.classList.add('play');
-            playButton.classList.add('active');
-        } else {
-            video.pause();
-            // video.classList.remove('play');
-            playButton.classList.remove('active');
-        }
-    }
+    //     if (video.paused == true) {
+    //         video.play();
+    //         // video.classList.add('play');
+    //         playButton.classList.add('active');
+    //     } else {
+    //         video.pause();
+    //         // video.classList.remove('play');
+    //         playButton.classList.remove('active');
+    //     }
+    // }
 
     function getSearch() {
         document.querySelector('.search').classList.add('active');
