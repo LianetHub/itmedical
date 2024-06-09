@@ -1,5 +1,6 @@
 .policy {
 	padding: 0 0 6.5rem 0;
+	scroll-margin-top: 6.875rem;
 	// .policy__container
 	&__container {
 	}
@@ -10,14 +11,23 @@
 
 	&__content {
 		margin-top: rem(70);
-		display: flex;
-		align-items: flex-start;
+		@media (min-width: $md4) {
+			display: flex;
+			align-items: flex-start;
+		}
 	}
 	// .policy__sidebar
 	&__sidebar {
-		position: sticky;
-		top: 8rem;
-		flex: 0 0 25.5rem;
+		display: none;
+		@media (min-width: $md4) {
+			display: block;
+			position: sticky;
+			top: 8rem;
+			flex: 0 0 15rem;
+		}
+		@media (min-width: $md2) {
+			flex: 0 0 25.5rem;
+		}
 	}
 	// .policy__sidebar-list
 	&__sidebar-list {
@@ -36,8 +46,10 @@
 	}
 	// .policy__body
 	&__body {
-		border-left: rem(1) solid #dadada;
-		padding-left: 2.31rem;
+		@media (min-width: $md4) {
+			border-left: rem(1) solid #dadada;
+			padding-left: 2.31rem;
+		}
 		& h2 {
 			margin-top: 1.87rem;
 			font-size: 1.5625rem;
@@ -66,20 +78,29 @@
 		& table {
 			margin-top: 1.25rem;
 			border-collapse: separate;
-			border-spacing: 0.62rem;
+			@media (min-width: $md5) {
+				border-spacing: 0.62rem;
+			}
+
 			th {
 				background: #fff;
 
 				border-bottom: rem(1) solid rgba(0, 0, 0, 0.25);
-				padding: 0.75rem 2.06rem;
+				padding: 0.75em 2.06em;
 				text-align: center;
-				font-size: 1rem;
 				font-weight: 600;
 				line-height: 200%;
+				font-size: 0.6rem;
+				@media (min-width: $md5) {
+					font-size: 1rem;
+				}
 			}
 			& td {
-				padding: 0.65rem 0;
-				font-size: 1rem;
+				padding: 0.65em 0;
+				font-size: 0.6rem;
+				@media (min-width: $md5) {
+					font-size: 1rem;
+				}
 				line-height: 140%;
 				border-bottom: rem(1) solid rgba(0, 0, 0, 0.25);
 			}

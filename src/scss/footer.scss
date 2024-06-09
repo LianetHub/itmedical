@@ -10,8 +10,8 @@
 	}
 	// .footer__header
 	&__header {
-		display: flex;
-		align-items: center;
+		display: grid;
+		grid-template-columns: 1fr 3fr;
 		border-bottom: 1px solid #2d6ab2;
 		padding-bottom: 1.88rem;
 		@media (min-width: $md3) {
@@ -20,12 +20,9 @@
 	}
 	// .footer__logo
 	&__logo {
-		margin-right: auto;
-		@media (min-width: $md4) {
-			margin-right: 7.25rem;
-		}
-		@media (min-width: $md3) {
-			margin-right: 5.69rem;
+		max-width: rem(157);
+		& img {
+			width: 100%;
 		}
 	}
 	// .footer__socials
@@ -127,6 +124,9 @@
 	}
 	// .footer__contacts
 	&__contacts {
+		flex: 1 1 auto;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 	}
 	// .footer__contact
 	&__contact {
@@ -148,7 +148,7 @@
 	// .footer__caption
 	&__caption {
 		font-family: $font-noto;
-		font-size: 1.375rem;
+		font-size: 1.125rem;
 		&[href] {
 			transition: color 0.3s ease 0s;
 			@media (any-hover: hover) {

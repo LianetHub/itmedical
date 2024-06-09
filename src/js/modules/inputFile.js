@@ -1,6 +1,7 @@
 export const inputFile = () => {
 
     const inputElement = document.querySelector('.form__file-input');
+    if (!inputElement) return;
     const fileListContainer = document.querySelector('.form__file-list');
     let errorContainer = null;
     let dataTransfer = new DataTransfer();
@@ -10,10 +11,10 @@ export const inputFile = () => {
         const isAnyFileUploading = Array.from(fileListContainer.children).some(fileItem => !fileItem.classList.contains('complete'));
 
         if (isAnyFileUploading) {
-            event.preventDefault(); 
-            showError('Wait for the files to load before submitting the form.'); 
+            event.preventDefault();
+            showError('Wait for the files to load before submitting the form.');
         } else {
-            clearErrors(); 
+            clearErrors();
         }
     });
 
