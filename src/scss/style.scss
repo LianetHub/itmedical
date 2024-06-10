@@ -53,6 +53,10 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 	--lock-padding: 0px;
 }
 
+html {
+	scroll-padding-top: 7rem;
+}
+
 //ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ
 body {
 	font-family: $fontfamily, sans-serif;

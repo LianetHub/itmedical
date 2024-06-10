@@ -217,16 +217,16 @@
 	}
 	// .form__privacy
 	&__privacy {
-		margin-top: 1.88rem;
-		color: #606060;
-		text-align: center;
-		line-height: 180%;
+		color: #656565;
+		line-height: 140%;
+
+		max-width: 39.5rem;
+
 		font-size: 0.8125rem;
-		max-width: rem(700);
-		margin-left: auto;
-		margin-right: auto;
+		margin-top: 1.25rem;
 		@media (min-width: $md3) {
-			font-size: 0.9375rem;
+			margin-top: 1.88rem;
+			font-size: 1rem;
 		}
 	}
 	// .form__privacy-link

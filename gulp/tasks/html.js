@@ -16,7 +16,7 @@ function updatePaths() {
         if (file.isBuffer()) {
             const fileContents = file.contents.toString();
             const newContents = fileContents.replace(/(href|src|srcset)="([^"]+)"/g, (match, p1, p2) => {
-                if (!p2.startsWith('/') && !p2.startsWith('http')) {
+                if (!p2.startsWith('/') && !p2.startsWith('http') && !p2.startsWith('#')) {
                     const newPath = path.join('../', p2).replace(/\\/g, '/');
                     return `${p1}="${newPath}"`;
                 }
