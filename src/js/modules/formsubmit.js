@@ -85,6 +85,10 @@ export const formSubmit = () => {
 					form.reset();
 					form.classList.remove("_sending");
 					form.classList.add('_success');
+					setTimeout(() => {
+						form.classList.remove('_success');
+						form.reset()
+					}, 10000)
 					console.log("Success sending");
 				} else {
 					form.classList.remove("_sending");
