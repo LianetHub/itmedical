@@ -168,6 +168,7 @@
 html {
   scroll-margin-top: 6.875rem;
   scroll-padding-top: 6.875rem;
+  overflow: auto;
 }
 
 body {
