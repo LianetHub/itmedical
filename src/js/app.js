@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.inputFile();
 
     var scroll = new SmoothScroll('a[href*="#"], a[href*="/about#"]', {
-        header: '.header__wrapper'
+        offset: document.querySelector('.header__wrapper').offsetHeight
     });
 
     if (document.querySelector('.main__video')) {
