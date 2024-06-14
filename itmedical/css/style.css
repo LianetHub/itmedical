@@ -165,12 +165,6 @@
   --lock-padding: 0px;
 }
 
-html {
-  scroll-margin-top: 6.875rem;
-  scroll-padding-top: 6.875rem;
-  overflow: auto;
-}
-
 body {
   font-family: "MuseoSansCyrl", sans-serif;
   color: #080808;

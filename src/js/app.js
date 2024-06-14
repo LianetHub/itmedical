@@ -1,7 +1,7 @@
 "use strict";
 
 import * as devFunctions from './modules/functions.js';
-
+import SmoothScroll from 'smooth-scroll';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.formSubmit();
     devFunctions.spollers();
     devFunctions.inputFile();
+
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        header: '.header__wrapper'
+    });
 
     if (document.querySelector('.main__video')) {
         if (window.innerWidth >= 1200) {
