@@ -54,7 +54,7 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 }
 
 html {
-	scroll-padding-top: 7rem;
+	scroll-padding-top: 6.875rem;
 }
 
 //ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ
@@ -64,7 +64,7 @@ body {
 	min-width: 320px;
 	min-height: 100%;
 	line-height: normal;
-
+	scroll-padding-top: 6.875rem;
 	&.lock {
 		overflow: hidden;
 		@media (min-width: $md3) {

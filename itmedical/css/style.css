@@ -166,7 +166,7 @@
 }
 
 html {
-  scroll-padding-top: 7rem;
+  scroll-padding-top: 6.875rem;
 }
 
 body {
@@ -175,6 +175,7 @@ body {
   min-width: 320px;
   min-height: 100%;
   line-height: normal;
+  scroll-padding-top: 6.875rem;
 }
 
 body.lock {
@@ -5236,7 +5237,6 @@ source[data-srcset] {
 
 .policy {
   padding: 0 0 6.5rem 0;
-  scroll-padding-top: 6.875rem;
 }
 
 .policy__title {
