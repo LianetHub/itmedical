@@ -233,22 +233,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    // if (document.querySelector('.contacts__slider')) {
-    //     getConditionSlider('.contacts__slider', {
-    //         slidesPerView: "auto",
-    //         spaceBetween: 60,
-    //         slideToClickedSlide: true,
-    //         pagination: {
-    //             el: '.contacts__pagination',
-    //             clickable: true
-    //         },
-    //     }, function () {
-    //         return (window.innerWidth <= 1200 && window.innerWidth >= 767)
-    //     })
-    // }
-
-
-
     function getConditionSlider(sliderName, options, condition = () => window.innerWidth <= 1200) {
 
 

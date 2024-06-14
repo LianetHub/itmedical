@@ -166,6 +166,7 @@
 }
 
 html {
+  scroll-margin-top: 6.875rem;
   scroll-padding-top: 6.875rem;
 }
 
@@ -175,7 +176,6 @@ body {
   min-width: 320px;
   min-height: 100%;
   line-height: normal;
-  scroll-padding-top: 6.875rem;
 }
 
 body.lock {
