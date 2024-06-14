@@ -1,7 +1,7 @@
 "use strict";
 
 import * as devFunctions from './modules/functions.js';
-import SmoothScroll from 'smooth-scroll';
+// import SmoothScroll from 'smooth-scroll';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.spollers();
     devFunctions.inputFile();
 
-    var scroll = new SmoothScroll('a[href*="#"], a[href*="/about#"]', {
-        offset: document.querySelector('.header__wrapper').offsetHeight
-    });
+    // var scroll = new SmoothScroll('a[href*="#"], a[href*="/about#"]', {
+    //     offset: document.querySelector('.header__wrapper').offsetHeight
+    // });
 
     if (document.querySelector('.main__video')) {
         if (window.innerWidth >= 1200) {

@@ -53,11 +53,11 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 	--lock-padding: 0px;
 	// scroll-margin-top: 6.875rem;
 }
-// html {
-// 	scroll-margin-top: 6.875rem;
-// 	scroll-padding-top: 6.875rem;
-// 	overflow: auto;
-// }
+html {
+	scroll-margin-top: 6.875rem;
+	scroll-padding-top: 6.875rem;
+	// overflow: auto;
+}
 
 //ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ
 body {
