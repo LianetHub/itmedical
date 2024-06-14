@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.spollers();
     devFunctions.inputFile();
 
-    var scroll = new SmoothScroll('a[href*="#"]', {
+    var scroll = new SmoothScroll('a[href*="#"], a[href*="/about#"]', {
         header: '.header__wrapper'
     });
 
