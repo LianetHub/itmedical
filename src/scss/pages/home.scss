@@ -452,6 +452,9 @@
 	& + .compliance {
 		margin-top: rem(25);
 	}
+	& + .development {
+		margin-top: rem(25);
+	}
 	@media (min-width: $md3) {
 		padding: 6.25rem 0 3.125rem;
 		& + .approach {
@@ -473,6 +476,9 @@
 			padding-top: rem(50);
 		}
 		& + .compliance {
+			margin-top: rem(50);
+		}
+		& + .development {
 			margin-top: rem(50);
 		}
 	}

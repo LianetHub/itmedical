@@ -2070,6 +2070,10 @@ source[data-srcset] {
   margin-top: 1.5625rem;
 }
 
+.banner + .development {
+  margin-top: 1.5625rem;
+}
+
 .banner__body {
   background: -o-linear-gradient(179deg, #023384 4.14%, #0057b8 71.64%);
   background: linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
@@ -3988,7 +3992,7 @@ source[data-srcset] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 3.75rem;
+  gap: 1.8125rem;
   row-gap: 1rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -6209,11 +6213,6 @@ source[data-srcset] {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .cloud__item:last-child {
-    -ms-grid-column-span: 2;
-    grid-column: span 2;
-  }
-
   .automation__list {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
@@ -6850,6 +6849,10 @@ source[data-srcset] {
     margin-top: 3.125rem;
   }
 
+  .banner + .development {
+    margin-top: 3.125rem;
+  }
+
   .banner__body {
     padding: 3.12rem 3.09rem 3.09rem;
   }
@@ -7273,10 +7276,6 @@ source[data-srcset] {
 
   .approach__list.approach__list-lg:not(:first-child) {
     margin-top: 3.25rem;
-  }
-
-  .approach__list.approach__list-lg .approach__item-title {
-    font-size: 1.5625rem;
   }
 
   .approach__list.approach__list-lg .approach__item-desc {
@@ -8158,8 +8157,8 @@ source[data-srcset] {
   }
 
   .cloud__body {
-    -ms-grid-columns: (1fr)[4];
-    grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .action__item {

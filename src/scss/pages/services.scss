@@ -1387,9 +1387,9 @@
 					margin-top: 3.25rem;
 				}
 				grid-template-columns: repeat(4, 1fr);
-				.approach__item-title {
-					font-size: 1.5625rem;
-				}
+				// .approach__item-title {
+				// 	font-size: 1.5625rem;
+				// }
 				.approach__item-desc {
 					font-size: 1rem;
 				}
@@ -1746,16 +1746,11 @@
 			margin-top: 3.12rem;
 		}
 		@media (min-width: $md2) {
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 	// .cloud__item
 	&__item {
-		@media (min-width: $md4) {
-			&:last-child {
-				grid-column: span 2;
-			}
-		}
 	}
 	// .cloud__item-header
 	&__item-header {
@@ -1784,7 +1779,7 @@
 	&__item-logos {
 		display: flex;
 		align-items: center;
-		gap: 3.75rem;
+		gap: rem(29);
 		row-gap: 1rem;
 		flex-wrap: wrap;
 		margin-top: 1.25rem;
