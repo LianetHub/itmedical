@@ -1,0 +1,63 @@
+.case {
+	// .case__banner
+	&__banner {
+		position: relative;
+		min-height: rem(395);
+
+		width: 100%;
+		@media (min-width: 2600px) {
+			min-height: rem(600);
+		}
+		padding: rem(100) 0 rem(90);
+		background-color: #f2f8ff;
+		z-index: 1;
+		display: flex;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 67.4%;
+			@media (min-width: 2600px) {
+				width: 50%;
+			}
+			height: 100%;
+			background: linear-gradient(90deg, #f2f8ff 0%, rgba(242, 248, 255, 0) 100%) 0 0 / 25.5rem 100% no-repeat, url("@img/case-banner.jpg") 1px center / cover no-repeat;
+			z-index: -1;
+		}
+		.case__container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 100%;
+		}
+	}
+	// .case__container
+	&__container {
+	}
+	// .case__offer
+	&__offer {
+	}
+	// .case__title
+	&__title {
+		color: #0057b8;
+		font-weight: 400;
+	}
+	// .case__list
+	&__offer-list {
+		margin-top: 2.15rem;
+		display: flex;
+		gap: 1.44rem;
+		font-weight: 500;
+	}
+	// .case__logotypes
+	&__logotypes {
+		margin-top: 2rem;
+		display: flex;
+		align-items: center;
+		gap: 3.12rem;
+	}
+	// .case__logotype
+	&__logotype {
+	}
+}

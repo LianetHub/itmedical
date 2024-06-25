@@ -1859,6 +1859,7 @@
 		border-bottom: rem(1) solid #cbc5c5;
 		@media (min-width: $md3) {
 			display: flex;
+			align-items: center;
 			margin-bottom: 1.94rem;
 		}
 		@media (min-width: $md2) {

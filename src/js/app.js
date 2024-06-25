@@ -9,11 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof Fancybox !== "undefined" && Fancybox !== null) {
 
         Fancybox.bind("[data-fancybox]", {
-            // dragToClose: false,
-            // closeButton: false
+            Toolbar: {
+                display: {
+                    right: ["fullscreen", "thumbs", "close"]
+                }
+            }
         });
 
     }
+
+
     devFunctions.isWebp();
     devFunctions.OS();
     devFunctions.lazy();

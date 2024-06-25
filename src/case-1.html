@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': 'IT Medical',
+    'keywords': 'IT medical',
+    'url': 'https://itmedical.com/',
+    'desc': ''
+    })
+
+    <div class="wrapper">
+        @@include('html/_header.html', {
+        "fixed": false,
+        "active": 0
+        })
+        <main class="page">
+            <section class="case">
+                <div class="case__banner">
+                    <div class="case__container">
+                        <div class="case__offer">
+                            <h1 class="case__title title-md">
+                                Case Study #1
+                            </h1>
+                            <ul class="case__offer-list">
+                                <li>Duration: 35+ months</li>
+                                <li>Team size: 15</li>
+                                <li>Location: United Kingdom</li>
+                            </ul>
+                            <div class="case__logotypes">
+                                <div class="case__logotype">
+                                    <img src="@img/cases/logotypes/functional-gut-clinic.svg" alt="functional gut clinic logo">
+                                </div>
+                                <div class="case__logotype">
+                                    <img src="@img/cases/logotypes/owlstone-logo.svg" alt="owlstone logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case__body">
+                    <div class="case__container">
+                        <nav class="breadcrumbs" aria-label="breadcrumbs menu">
+                            <ul class="breadcrumbs__items">
+                                <li class="breadcrumbs__item">
+                                    <a href="/" class="breadcrumbs__link">Home</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <a href="/" class="breadcrumbs__link">Case studies</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link active">Case 1</span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="case__content">
+                            <aside class="case__sidebar">
+                                <ul class="case__sidebar-list">
+                                    <li class="case__sidebar-item"><a href="#overview" class="case__sidebar-link">Project overview</a></li>
+                                    <li class="case__sidebar-item"><a href="#challenge" class="case__sidebar-link">Challenge</a></li>
+                                    <li class="case__sidebar-item"><a href="#solution" class="case__sidebar-link">Solution</a></li>
+                                    <li class="case__sidebar-item"><a href="#outcome" class="case__sidebar-link">Outcome</a></li>
+                                    <li class="case__sidebar-item"><a href="#technologies-and-tools" class="case__sidebar-link">Technologies and Tools</a></li>
+                                    <li class="case__sidebar-item"><a href="#keywords" class="case__sidebar-link">Keywords</a></li>
+                                    <li class="case__sidebar-item"><a href="#faq" class="case__sidebar-link">FAQ</a></li>
+                                    <li class="case__sidebar-item"><a href="#social-media" class="case__sidebar-link">Social Media</a></li>
+                                </ul>
+                                <div class="case__share">
+                                    <div class="case__share-text">
+                                        Share
+                                    </div>
+                                    <div class="case__share-btns">
+                                        <a href="" class="case__share-btn icon-facebook"></a>
+                                        <a href="" class="case__share-btn icon-linkedin"></a>
+                                        <a href="" class="case__share-btn icon-share"></a>
+                                    </div>
+                                </div>
+                            </aside>
+                            <article class="case__article">
+                                <div id="overview" class="case__block">
+                                    <h2 class="case__caption">
+                                        About the Client
+                                    </h2>
+                                    <p class="case__desc">
+                                        Primary Care Medical Centers is a private US-based company seeking a custom Electronic Health Record (EHR) system that allows for easy input, storage, and display of patient data to facilitate patient data maintenance and streamline care.
+                                    </p>
+                                    <div class="case__promo">
+                                        <img src="@img/cases/case-1.png" alt="case">
+                                    </div>
+                                </div>
+                                <div id="challenge" class="case__block">
+                                    <h2 class="case__caption">
+                                        Challenge
+                                    </h2>
+                                    <p class="case__tagline">
+                                        Addressing the Limitations of Generic Electronic Health Record Systems in&nbsp;Primary Care: A Custom Solution for Unique Workflow Needs
+                                    </p>
+                                    <p class="case__desc">
+                                        Existing electronic health records (EHRs) have been based on a one-size-fits-all approach created for generalized clinics and insurance companies. These systems fail to consider the unique needs of different healthcare providers and organizations, specifically clinicians' needs and their workflows. This generic approach often results in several inefficiencies:
+                                    </p>
+                                    <ul class="case__list">
+                                        <li>Workflow Mismatch: Generalized EHR systems are not designed to accommodate the specific workflows of various specialties. For example, a primary care provider's needs vastly differ from those of a cardiologist or a pediatrician. A generic system often disrupts the natural workflow, leading to frustration and increased administrative burden.</li>
+                                        <li>Data Entry and Retrieval Issues: Clinicians often face difficulties in quickly inputting and retrieving patient information. The complex and unique nature of each clinician's practice requires a system that can adapt to their specific ways of documenting patient interactions and accessing historical data.</li>
+                                        <li>Integration Challenges: Many existing EHR systems struggle with integrating seamlessly with other healthcare technologies and services, such as laboratory systems, imaging systems, and telehealth platforms. This lack of integration can lead to data silos, making it hard for healthcare providers to get a comprehensive view of a patient's health record.</li>
+                                        <li>Compliance and Security: Healthcare regulations, such as HIPAA, ONC, and CEHRT, impose strict requirements on how patient data should be managed and protected. Generic EHR systems often fail to meet these compliance standards effectively, posing risks of data breaches and legal repercussions.</li>
+                                        <li>User Experience: A one-size-fits-all EHR often offers a poor user experience, characterized by complex interfaces and non-intuitive navigation. This can lead to longer training times, reduced productivity, and ultimately, burnout among healthcare providers.</li>
+                                    </ul>
+                                    <p class="case__desc">
+                                        Given these challenges, our task was to develop a custom EHR platform solution that would optimize the complex and unique workflow for the client, enhance user experience, and have built-in telehealth features to enable further growth. The goal was to create a system that could be tailored to the specific needs of different healthcare providers within the organization, ensuring efficient and effective patient care.
+                                    </p>
+                                </div>
+                                <div id="solution" class="case__block">
+                                    <h2 class="case__caption">
+                                        Solution
+                                    </h2>
+                                    <div class="case__image">
+                                        <img src="@img/cases/01.jpg" alt="case">
+                                    </div>
+                                    <p class="case__tagline">
+                                        Custom Cloud-Based EHR Solution with Integrated Telehealth Services for Enhanced Patient Care
+                                    </p>
+                                    <p class="case__desc">
+                                        To address these challenges, we developed a custom cloud-based EHR solution that automates a wide array of business processes. Our solution includes:
+                                    </p>
+                                    <ul class="case__list">
+                                        <li>Automated Scheduling and Reminders: The system streamlines the process of scheduling patient appointments, sending reminders, and handling cancellations. This automation reduces administrative workload, enhances patient engagement, and reduces no-show rates which can cost healthcare systems millions yearly.</li>
+                                        <li>Comprehensive Medical Records Management: The EHR allows for the efficient input, storage, and retrieval of patient medical records and notes. The system supports various data types, including text, images, and structured data, ensuring that all relevant patient information is easily accessible.</li>
+                                        <li>Invoicing and Billing: Integrated invoicing and billing features automate the financial aspects of patient care. This includes generating invoices, processing payments, and managing insurance claims, which helps reduce errors and speed up the revenue cycle.</li>
+                                        <li>Telehealth Integration: To minimize readmission rates and enhance patient care, we introduced telehealth features that allow for remote consultations. Patients can have secure, HIPAA-compliant virtual visits through a dedicated patient portal. This feature is especially beneficial for patients with chronic conditions who require regular monitoring but may find frequent in-person visits challenging.</li>
+                                        <li>Long-Term Data Retention: The system supports long-term retention of medical records, ranging from 5 to 28 years, to comply with legal and medical requirements. This ensures that historical patient data is preserved and can be accessed whenever needed streamlining patient monitoring.</li>
+                                        <li>Scalability and Flexibility: Our cloud-based solution is designed to scale with the growing needs of the healthcare provider. It supports the addition of new features and integrations with laboratories, insurance companies, and other healthcare services, ensuring that the system evolves with the organization.</li>
+                                        <li>Compliance and Security: The EHR is built to comply with strict healthcare regulations, including HIPAA, ONC, and CEHRT. We implemented robust security measures to protect patient data and meet all regulatory standards.</li>
+                                    </ul>
+                                </div>
+                                <div id="outcome" class="case__block">
+                                    <h2 class="case__caption">
+                                        Outcome
+                                    </h2>
+                                    <div class="case__image">
+                                        <img src="@img/cases/02.jpg" alt="case">
+                                    </div>
+                                    <p class="case__tagline">
+                                        Transforming Primary Care with a Tailored EHR System: Enhanced Efficiency and Patient Outcomes
+                                    </p>
+                                    <p class="case__desc">
+                                        The EHR solution has been successfully implemented and is currently utilized by over 700 healthcare employees across more than 30 medical institutions in the US. This widespread adoption underscores the system's effectiveness in addressing the specific needs of healthcare providers.
+                                    </p>
+                                    <p class="case__desc">
+                                        Implementing our EHR system has streamlined operations, allowing healthcare professionals to focus more on patient care rather than administrative tasks. The integration of telehealth features has expanded the reach of healthcare services, providing patients with more accessible and flexible care options.
+                                    </p>
+                                    <p class="case__desc">
+                                        Additionally, the compliance and security measures ensure that patient data is protected and managed according to the highest standards. Our ongoing commitment to enhancing the platform means that new features and integrations are regularly added, continuously improving the system's functionality and user experience.
+                                    </p>
+                                    <p class="case__desc">
+                                        Our tailored approach has set a new standard for efficiency and patient care in the primary care sector, demonstrating the value of customized solutions in healthcare technology.
+                                    </p>
+                                </div>
+                                <div id="technologies-and-tools" class="case__block">
+                                    <h2 class="case__caption">
+                                        Technologies and Tools
+                                    </h2>
+                                    <ul class="case__labels">
+                                        <li class="case__label">JavaScript</li>
+                                        <li class="case__label">MySQL</li>
+                                        <li class="case__label">Angular framework</li>
+                                        <li class="case__label">Angular Material UI</li>
+                                        <li class="case__label">Kotlin</li>
+                                        <li class="case__label">PostgreSQL</li>
+                                        <li class="case__label">Redis</li>
+                                    </ul>
+                                    <p class="case__desc">
+                                        The success of this project underscores the importance of a tailored approach in healthcare technology. Our custom EHR with integrated telehealth capabilities has addressed the client's unique needs and set a new standard for efficiency and patient care in the primary care sector. We look forward to continuing our partnership and supporting healthcare providers' evolving needs.
+                                    </p>
+                                </div>
+                                <div id="keywords" class="case__block">
+                                    <h2 class="case__caption">
+                                        Technologies and Tools
+                                    </h2>
+                                    <ul class="case__labels">
+                                        <li class="case__label">JavaScript</li>
+                                        <li class="case__label">MySQL</li>
+                                        <li class="case__label">Angular framework</li>
+                                        <li class="case__label">Angular Material UI</li>
+                                        <li class="case__label">Kotlin</li>
+                                        <li class="case__label">PostgreSQL</li>
+                                        <li class="case__label">Redis</li>
+                                    </ul>
+                                    <p class="case__desc">
+                                        The success of this project underscores the importance of a tailored approach in healthcare technology. Our custom EHR with integrated telehealth capabilities has addressed the client's unique needs and set a new standard for efficiency and patient care in the primary care sector. We look forward to continuing our partnership and supporting healthcare providers' evolving needs.
+                                    </p>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @@include('html/_contacts-2.html', {})
+        </main>
+        @@include('html/_footer.html', {})
+    </div>
+    @@include('html/_js.html', {})
+
+</html>
