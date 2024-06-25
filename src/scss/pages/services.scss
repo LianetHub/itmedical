@@ -371,6 +371,7 @@
 		font-size: 1rem;
 		@media (min-width: $md5) {
 			margin-top: 2rem;
+			font-size: rem(20);
 		}
 	}
 }
@@ -1383,9 +1384,6 @@
 				margin-top: 2.5rem;
 			}
 			@media (min-width: $md3) {
-				&:not(:first-child) {
-					margin-top: 3.25rem;
-				}
 				grid-template-columns: repeat(4, 1fr);
 				// .approach__item-title {
 				// 	font-size: 1.5625rem;
@@ -1842,7 +1840,7 @@
 			position: relative;
 			gap: rem(21);
 			display: block;
-			padding-top: 2.5rem;
+			padding-top: rem(33);
 			&::before {
 				content: "";
 				position: absolute;
@@ -1864,7 +1862,8 @@
 			margin-bottom: 1.94rem;
 		}
 		@media (min-width: $md2) {
-			margin-bottom: 2.5rem;
+			margin-bottom: rem(30);
+			padding-bottom: rem(30);
 		}
 		&:last-child {
 			@media (min-width: $md3) {

@@ -5701,6 +5701,7 @@ source[data-srcset] {
 
   .benefits__item-text {
     margin-top: 2rem;
+    font-size: 1.25rem;
   }
 
   .management__item-list {
@@ -7274,10 +7275,6 @@ source[data-srcset] {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .approach__list.approach__list-lg:not(:first-child) {
-    margin-top: 3.25rem;
-  }
-
   .approach__list.approach__list-lg .approach__item-desc {
     font-size: 1rem;
   }
@@ -7413,7 +7410,7 @@ source[data-srcset] {
     position: relative;
     gap: 1.3125rem;
     display: block;
-    padding-top: 2.5rem;
+    padding-top: 2.0625rem;
   }
 
   .action__list::before {
@@ -8162,7 +8159,8 @@ source[data-srcset] {
   }
 
   .action__item {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.875rem;
+    padding-bottom: 1.875rem;
   }
 
   .action__item-caption {

@@ -89,6 +89,9 @@ export const formSubmit = () => {
 						form.classList.remove('_success');
 						form.reset()
 					}, 10000)
+
+					sendGtmEvent();
+
 					console.log("Success sending");
 				} else {
 					form.classList.remove("_sending");
@@ -195,6 +198,19 @@ export const formSubmit = () => {
 		let value = input.value.length > 0 ? input.value.match(/\d/g).join('') : input.value;
 
 		return /^\d[\d\(\)\-]{4,14}\d$/g.test(value);
+	}
+
+	function sendGtmEvent() {
+		window.dataLayer = window.dataLayer || [];
+		window.dataLayer.push({
+			'event': 'contact_form_submit',
+			'v_category': 'Contact Form',
+			'v_action': 'Submit',
+			'v_label': 'Contact Form Submission',
+			'v_value': 1
+		});
+
+
 	}
 
 
