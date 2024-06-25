@@ -6,96 +6,96 @@
     'url': 'https://itmedical.com/contacts',
     'desc': ''
     })
-    <body>
-        <div class="wrapper">
-            @@include('html/_header.html', {
-            "fixed": false,
-            "active": 0
-            })
-            <main class="page">
-                <section class="contacts contacts-sm">
-                    <div class="contacts__container">
-                        <nav class="breadcrumbs" aria-label="breadcrumbs menu">
-                            <div class="breadcrumbs__container">
-                                <ul class="breadcrumbs__items">
-                                    <li class="breadcrumbs__item">
-                                        <a href="/" class="breadcrumbs__link">Home</a>
-                                    </li>
-                                    <li class="breadcrumbs__item">
-                                        <span class="breadcrumbs__link active">Contact Us</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                        <div class="contacts__content">
-                            <div class="contacts__side">
-                                <h2 class="contacts__title title">
-                                    Contact Us
-                                </h2>
-                                <p class="contacts__subtitle">
-                                    Here's what you can expect to happen next:
-                                </p>
-                                <ol class="contacts__list">
-                                    <li class="contacts__item">After reviewing your project’s requirements, one of our experts will get in&nbsp;touch to schedule a call.</li>
-                                    <li class="contacts__item">Upon request, we can promptly arrange an&nbsp;NDA to ensure the highest level of privacy.</li>
-                                    <li class="contacts__item">You will receive a detailed project proposal with estimates, timelines, and our expert opinion.</li>
-                                </ol>
-                            </div>
-                            <form action="#" class="contacts__request form">
-                                <div class="contacts__request-grid">
-                                    <input type="text" name="firstname" data-required class="form__input form__input-underline" placeholder="Full name">
-                                    <input type="text" name="company" data-required class="form__input form__input-underline" placeholder="Company">
-                                    <input type="tel" name="phone" data-required class="form__input form__input-underline" placeholder="Phone number">
-                                    <input type="text" name="email" data-required class="form__input form__input-underline" placeholder="E-mail">
-                                    <textarea type="text" name="message" class="form__textarea form__textarea-underline form__input-lg" placeholder="Please tell us about your project"></textarea>
-                                    <div class="form__req-tooltip">
-                                        * This is a required fields.
-                                    </div>
-                                </div>
-                                <div class="form__file">
-                                    <div class="form__file-body">
-                                        <label class="form__file-content">
-                                            <input type="file" name="documents" accept=".doc,.docx,.pdf,.ppt,.pptx" multiple class="form__file-input hidden" hidden>
-                                            <span class="form__file-btn icon-attach">Attach file</span>
-                                        </label>
-                                        <div class="form__file-description">
-                                            No more than 3 files may be attached up to 15MB <br> each. Formats: doc, docx, pdf, ppt, pptx.
-                                        </div>
-                                    </div>
-                                    <div class="form__file-list empty"></div>
 
-                                </div>
-                                <label class="form__checkbox">
-                                    <input type="checkbox" name="nda" class="form__checkbox-input hidden" hidden>
-                                    <span class="form__checkbox-content">
-                                        Request an NDA
-                                    </span>
-                                </label>
-                                <button type="submit" class="form__btn btn btn-primary">Submit</button>
-                                <div class="form__privacy">The information you submit to us by filling out this contact form will be processed in&nbsp;accordance with the <a href="/privacy" class="form__privacy-link">Privacy Policy.</a></div>
-                                <div class="form__error-message">
-                                    Please correct errors before submitting this form.
-                                </div>
-                                <div class="form__succes">
-                                    <div class="form__succes-banner">
-                                        <h2 class="form__succes-title title">
-                                            Thank you <br> for your message
-                                        </h2>
-                                        <p class="form__succes-subtitle">
-                                            Your details have been submitted and we will get in touch with you shortly
-                                        </p>
-                                    </div>
-                                    <div class="form__succes-notify">
-                                        Please be informed that once you click the Send button we will process your data in accordance with our <a href="https://rbbrduck.co.uk/privacy-policy-popup/" target="_blank">Privacy notice</a> for the purpose of providing you with the appropriate information.
-                                    </div>
-                                </div>
-                            </form>
+    <div class="wrapper">
+        @@include('html/_header.html', {
+        "fixed": false,
+        "active": 0
+        })
+        <main class="page">
+            <section class="contacts contacts-sm">
+                <div class="contacts__container">
+                    <nav class="breadcrumbs" aria-label="breadcrumbs menu">
+                        <div class="breadcrumbs__container">
+                            <ul class="breadcrumbs__items">
+                                <li class="breadcrumbs__item">
+                                    <a href="/" class="breadcrumbs__link">Home</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link active">Contact Us</span>
+                                </li>
+                            </ul>
                         </div>
+                    </nav>
+                    <div class="contacts__content">
+                        <div class="contacts__side">
+                            <h2 class="contacts__title title">
+                                Contact Us
+                            </h2>
+                            <p class="contacts__subtitle">
+                                Here's what you can expect to happen next:
+                            </p>
+                            <ol class="contacts__list">
+                                <li class="contacts__item">After reviewing your project’s requirements, one of our experts will get in&nbsp;touch to schedule a call.</li>
+                                <li class="contacts__item">Upon request, we can promptly arrange an&nbsp;NDA to ensure the highest level of privacy.</li>
+                                <li class="contacts__item">You will receive a detailed project proposal with estimates, timelines, and our expert opinion.</li>
+                            </ol>
+                        </div>
+                        <form action="#" class="contacts__request form">
+                            <div class="contacts__request-grid">
+                                <input type="text" name="firstname" data-required class="form__input form__input-underline" placeholder="Full name">
+                                <input type="text" name="company" data-required class="form__input form__input-underline" placeholder="Company">
+                                <input type="tel" name="phone" data-required class="form__input form__input-underline" placeholder="Phone number">
+                                <input type="text" name="email" data-required class="form__input form__input-underline" placeholder="E-mail">
+                                <textarea type="text" name="message" class="form__textarea form__textarea-underline form__input-lg" placeholder="Please tell us about your project"></textarea>
+                                <div class="form__req-tooltip">
+                                    * This is a required fields.
+                                </div>
+                            </div>
+                            <div class="form__file">
+                                <div class="form__file-body">
+                                    <label class="form__file-content">
+                                        <input type="file" name="documents" accept=".doc,.docx,.pdf,.ppt,.pptx" multiple class="form__file-input hidden" hidden>
+                                        <span class="form__file-btn icon-attach">Attach file</span>
+                                    </label>
+                                    <div class="form__file-description">
+                                        No more than 3 files may be attached up to 15MB <br> each. Formats: doc, docx, pdf, ppt, pptx.
+                                    </div>
+                                </div>
+                                <div class="form__file-list empty"></div>
+
+                            </div>
+                            <label class="form__checkbox">
+                                <input type="checkbox" name="nda" class="form__checkbox-input hidden" hidden>
+                                <span class="form__checkbox-content">
+                                    Request an NDA
+                                </span>
+                            </label>
+                            <button type="submit" class="form__btn btn btn-primary">Submit</button>
+                            <div class="form__privacy">The information you submit to us by filling out this contact form will be processed in&nbsp;accordance with the <a href="/privacy" class="form__privacy-link">Privacy Policy.</a></div>
+                            <div class="form__error-message">
+                                Please correct errors before submitting this form.
+                            </div>
+                            <div class="form__succes">
+                                <div class="form__succes-banner">
+                                    <h2 class="form__succes-title title">
+                                        Thank you <br> for your message
+                                    </h2>
+                                    <p class="form__succes-subtitle">
+                                        Your details have been submitted and we will get in touch with you shortly
+                                    </p>
+                                </div>
+                                <div class="form__succes-notify">
+                                    Please be informed that once you click the Send button we will process your data in accordance with our <a href="https://rbbrduck.co.uk/privacy-policy-popup/" target="_blank">Privacy notice</a> for the purpose of providing you with the appropriate information.
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </section>
-            </main>
-            @@include('html/_footer.html', {})
-        </div>
-        @@include('html/_js.html', {})
-    </body>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.html', {})
+    </div>
+    @@include('html/_js.html', {})
+
 </html>

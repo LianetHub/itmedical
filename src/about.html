@@ -6,352 +6,352 @@
     'url': 'https://itmedical.com/about',
     'desc': ''
     })
-    <body>
-        <div class="wrapper">
-            @@include('html/_header.html', {
-            "fixed": true,
-            "active": 5
-            })
-            <main class="page">
-                <section class="promo promo-about">
-                    <div class="promo__container">
-                        <h1 class="promo__title title-md fw-normal">
-                            About us
-                        </h1>
+
+    <div class="wrapper">
+        @@include('html/_header.html', {
+        "fixed": true,
+        "active": 5
+        })
+        <main class="page">
+            <section class="promo promo-about">
+                <div class="promo__container">
+                    <h1 class="promo__title title-md fw-normal">
+                        About us
+                    </h1>
+                </div>
+                <div class="promo__background">
+                    <img src="@img/promo-about.jpg" class="cover-image" alt="promo">
+                </div>
+            </section>
+            <nav class="breadcrumbs" aria-label="breadcrumbs menu">
+                <div class="breadcrumbs__container">
+                    <ul class="breadcrumbs__items">
+                        <li class="breadcrumbs__item">
+                            <a href="/" class="breadcrumbs__link">Home</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <span class="breadcrumbs__link active">About</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section id="overview" class="service">
+                <div class="service__container">
+                    <h2 class="service__title title">
+                        Who We Are
+                    </h2>
+                    <div class="service__info">
+                        <p class="service__subtitle">
+                            IT Medical is a global provider of software engineering and consulting services specializing in healthcare software development. Our products and solutions enable our customers to operate profitably, adapt continuously, and make a meaningful difference worldwide.
+                        </p>
+                        <a href="#contacts" class="service__btn btn btn-primary btn-sm">Contact us</a>
                     </div>
-                    <div class="promo__background">
-                        <img src="@img/promo-about.jpg" class="cover-image" alt="promo">
-                    </div>
-                </section>
-                <nav class="breadcrumbs" aria-label="breadcrumbs menu">
-                    <div class="breadcrumbs__container">
-                        <ul class="breadcrumbs__items">
-                            <li class="breadcrumbs__item">
-                                <a href="/" class="breadcrumbs__link">Home</a>
-                            </li>
-                            <li class="breadcrumbs__item">
-                                <span class="breadcrumbs__link active">About</span>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                <section id="overview" class="service">
-                    <div class="service__container">
-                        <h2 class="service__title title">
-                            Who We Are
-                        </h2>
-                        <div class="service__info">
-                            <p class="service__subtitle">
-                                IT Medical is a global provider of software engineering and consulting services specializing in healthcare software development. Our products and solutions enable our customers to operate profitably, adapt continuously, and make a meaningful difference worldwide.
+                    <ul class="service__cards service__cards-lg">
+                        <li class="service__card">
+                            <h3 class="service__card-caption">
+                                Build your perfect development team
+                            </h3>
+                            <p class="service__card-desc">
+                                Our team of over 65 software experts is adept at tailoring our core services to meet your unique healthcare business requirements. We bring in experts with a strong foundation in natural sciences, engineering and medicine to tackle the most intricate challenges.
                             </p>
-                            <a href="#contacts" class="service__btn btn btn-primary btn-sm">Contact us</a>
+                        </li>
+                        <li class="service__card">
+                            <h3 class="service__card-caption">
+                                Adopt digital <br> transformations
+                            </h3>
+                            <p class="service__card-desc">
+                                Stay ahead of changing demands with our agile and innovative technologies, including blockchain, Data Science, and Cloud. We translate your needs into transparent and scalable custom software solutions designed to adapt and grow your business.
+                            </p>
+                        </li>
+                        <li class="service__card">
+                            <h3 class="service__card-caption">
+                                Unify healthcare digital&nbsp;ecosystem
+                            </h3>
+                            <p class="service__card-desc">
+                                We build secure and scalable software solutions that provide an integrated digital environment for healthcare organisations and care providers, allowing for smooth, stable and efficient user experience for patients and staff members alike.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <div class="nums nums-lg">
+                <div class="nums__container">
+                    <ul class="nums__list ">
+                        <li class="nums__item">
+                            <div class="nums__item-value">
+                                98<small>%</small>
+                            </div>
+                            <div class="nums__item-text">
+                                hold BS, MSc, or PhD degrees
+                            </div>
+                        </li>
+                        <li class="nums__item">
+                            <div class="nums__item-value">
+                                87<small>%</small>
+                            </div>
+                            <div class="nums__item-text">
+                                senior & middle level engineers
+                            </div>
+                        </li>
+                        <li class="nums__item">
+                            <div class="nums__item-value">
+                                77<small>%</small>
+                            </div>
+                            <div class="nums__item-text">
+                                work with us for 3+ years
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <section id="team" class="geography">
+                <div class="geography__container container-sm">
+                    <div class="geography__body geography__body-sm">
+                        <div class="geography__main">
+                            <h2 class="geography__title title">
+                                We Are Global
+                            </h2>
+                            <p class="geography__text">
+                                At IT Medical, we transcend geographical limits — our exceptional team can choose to work wherever they have an internet access. This means we get to harness global talent and work with not just the best people in one location, but the entire world.
+                            </p>
                         </div>
-                        <ul class="service__cards service__cards-lg">
-                            <li class="service__card">
-                                <h3 class="service__card-caption">
-                                    Build your perfect development team
-                                </h3>
-                                <p class="service__card-desc">
-                                    Our team of over 65 software experts is adept at tailoring our core services to meet your unique healthcare business requirements. We bring in experts with a strong foundation in natural sciences, engineering and medicine to tackle the most intricate challenges.
-                                </p>
+                        <a href="#contacts" class="geography__more btn btn-primary btn-sm">Contact Us</a>
+                    </div>
+                    <div class="geography__image geography__image-center">
+                        <img src="@img/map.svg" alt="map">
+                    </div>
+                </div>
+            </section>
+            @@include('./html/_solutions.html', {})
+            <section class="values">
+                <div class="values__container">
+                    <h2 class="values__title title">
+                        Our Values
+                    </h2>
+                    <div class="values__body">
+                        <div class="values__image">
+                            <img src="@img/values.jpg" class="cover-image" alt="flowers">
+                        </div>
+                        <ul class="values__list">
+                            <li class="values__list-item">
+                                <div class="values__list-caption">Commitment</div>
+                                <div class="values__list-desc">At IT Medical, we believe in empowering and motivating our people. We are firmly committed to creating an environment where every individual is valued and connected.</div>
                             </li>
-                            <li class="service__card">
-                                <h3 class="service__card-caption">
-                                    Adopt digital <br> transformations
-                                </h3>
-                                <p class="service__card-desc">
-                                    Stay ahead of changing demands with our agile and innovative technologies, including blockchain, Data Science, and Cloud. We translate your needs into transparent and scalable custom software solutions designed to adapt and grow your business.
-                                </p>
+                            <li class="values__list-item">
+                                <div class="values__list-caption">Excellence</div>
+                                <div class="values__list-desc">We strive for the highest quality in everything we do, including the quality of our communication, decisions, and service overall, while promoting product and engineering excellence.</div>
                             </li>
-                            <li class="service__card">
-                                <h3 class="service__card-caption">
-                                    Unify healthcare digital&nbsp;ecosystem
-                                </h3>
-                                <p class="service__card-desc">
-                                    We build secure and scalable software solutions that provide an integrated digital environment for healthcare organisations and care providers, allowing for smooth, stable and efficient user experience for patients and staff members alike.
-                                </p>
+                            <li class="values__list-item">
+                                <div class="values__list-caption">Passion</div>
+                                <div class="values__list-desc">With passion comes commitment. With commitment comes accountability. Passionate people drove everything that helped us succeed. Without them, we wouldn’t be the company we are today.</div>
+                            </li>
+                            <li class="values__list-item">
+                                <div class="values__list-caption">Clarity</div>
+                                <div class="values__list-desc">Everything we promise and deliver is precise and direct. We ensure transparency for our customers at all times. We are straightforward and honest with our people, focusing on what’s most important.</div>
                             </li>
                         </ul>
                     </div>
-                </section>
-                <div class="nums nums-lg">
-                    <div class="nums__container">
-                        <ul class="nums__list ">
-                            <li class="nums__item">
-                                <div class="nums__item-value">
-                                    98<small>%</small>
+                </div>
+            </section>
+            <section class="management">
+                <div class="management__container">
+                    <div class="management__body">
+                        <div class="management__main">
+                            <h2 class="management__title title">
+                                Your Trusted Partner
+                            </h2>
+                            <div class="management__info">
+                                <p class="management__desc">
+                                    Our ultimate goal is to bring value to your business by delivering quality services with lower investments. We match our processes with your preferences so that you feel confident and secure outsourcing work to us.
+                                </p>
+                                <div class="management__image">
+                                    <img src="@img/transformation.jpg" class="cover-image" alt="team">
                                 </div>
-                                <div class="nums__item-text">
-                                    hold BS, MSc, or PhD degrees
+                            </div>
+                        </div>
+                        <ul class="management__list" data-spollers data-one-spoller>
+                            <li class="management__item">
+                                <button type="button" class="management__item-caption _active" data-spoller>High Transparency</button>
+                                <div class="management__item-body">
+                                    <div class="management__item-text">
+                                        To make outsourcing engagements transparent for clients and developers, we leverage planning, reporting, and change management tools. This approach allows you to control the project timeline and budget.
+                                    </div>
                                 </div>
                             </li>
-                            <li class="nums__item">
-                                <div class="nums__item-value">
-                                    87<small>%</small>
-                                </div>
-                                <div class="nums__item-text">
-                                    senior & middle level engineers
+                            <li class="management__item">
+                                <button type="button" data-spoller class="management__item-caption">Tailored Approach</button>
+                                <div class="management__item-body">
+                                    <div class="management__item-text">
+                                        Based on your unique project objectives, we propose the most efficient cooperation model and development methodology. We assemble a team of experts with relevant experience, ensuring a tailored approach that meets your specific needs.
+                                    </div>
                                 </div>
                             </li>
-                            <li class="nums__item">
-                                <div class="nums__item-value">
-                                    77<small>%</small>
+                            <li class="management__item">
+                                <button type="button" data-spoller class="management__item-caption">Global Availability</button>
+                                <div class="management__item-body">
+                                    <div class="management__item-text">
+                                        With headquarters in the USA and representative offices in Europe and Asia, we can easily adapt to your timetable. Regardless of location, we guarantee brisk responsiveness through multiple communication channels.
+                                    </div>
                                 </div>
-                                <div class="nums__item-text">
-                                    work with us for 3+ years
+                            </li>
+                            <li class="management__item">
+                                <button type="button" data-spoller class="management__item-caption">Maximum Adaptability</button>
+                                <div class="management__item-body">
+                                    <div class="management__item-text">
+                                        Our approach combines the best aspects of Lean and Scrum to foster on‑demand scalability and agility in our healthcare software development. We are ready to adapt development processes to your schedule and requirement shifts at any project stage while reducing the cost of change.
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="management__item">
+                                <button type="button" data-spoller class="management__item-caption">Risk Mitigation</button>
+                                <div class="management__item-body">
+                                    <div class="management__item-text">
+                                        Our comprehensive risk management policy ensures safe and predictable relationships by providing a set of practices for identifying and eliminating software risks before they threaten successful software operations or become a significant source of expensive rework.
+                                    </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <section id="team" class="geography">
-                    <div class="geography__container container-sm">
-                        <div class="geography__body geography__body-sm">
-                            <div class="geography__main">
-                                <h2 class="geography__title title">
-                                    We Are Global
-                                </h2>
-                                <p class="geography__text">
-                                    At IT Medical, we transcend geographical limits — our exceptional team can choose to work wherever they have an internet access. This means we get to harness global talent and work with not just the best people in one location, but the entire world.
-                                </p>
+            </section>
+            <section id="approach" class="teams teams-lg">
+                <div class="teams__container">
+                    <h2 class="teams__title title">
+                        Our Key Differentiators
+                    </h2>
+                    <ul class="teams__list teams__list-sm">
+                        <li class="teams__item">
+                            <div class="teams__item-header">
+                                <div class="teams__item-icon">
+                                    <img src="@img/teams/06.svg" alt="icon">
+                                </div>
+                                <div class="teams__item-caption">
+                                    Expanded area of&nbsp;business
+                                </div>
                             </div>
-                            <a href="#contacts" class="geography__more btn btn-primary btn-sm">Contact Us</a>
-                        </div>
-                        <div class="geography__image geography__image-center">
-                            <img src="@img/map.svg" alt="map">
-                        </div>
-                    </div>
-                </section>
-                @@include('./html/_solutions.html', {})
-                <section class="values">
-                    <div class="values__container">
-                        <h2 class="values__title title">
-                            Our Values
+                            <p class="teams__item-text text-sm">
+                                Attract new customers through online touchpoints without setting up additional offline medical stores or points of service. Our solutions enable you to reach a wider audience and expand your business beyond geographical limits.
+                            </p>
+                        </li>
+                        <li class="teams__item">
+                            <div class="teams__item-header">
+                                <div class="teams__item-icon">
+                                    <img src="@img/teams/07.svg" alt="icon">
+                                </div>
+                                <div class="teams__item-caption">
+                                    Improved customer convenience
+                                </div>
+                            </div>
+                            <p class="teams__item-text text-sm">
+                                Thanks to our user-friendly digital platforms and solutions, patients can purchase medication, equipment, or doctor consultations online without leaving their homes. We put patient engagement and convenience first.
+                            </p>
+                        </li>
+                        <li class="teams__item">
+                            <div class="teams__item-header">
+                                <div class="teams__item-icon">
+                                    <img src="@img/teams/08.svg" alt="icon">
+                                </div>
+                                <div class="teams__item-caption">
+                                    Direct-to-consumer sales&nbsp;channel
+                                </div>
+                            </div>
+                            <p class="teams__item-text text-sm">
+                                Contact patients directly and take full control over your medical business to cut the costs of third-party marketing or sales platforms. Our tools empower you to connect with patients with great convenience and efficiency.
+                            </p>
+                        </li>
+                        <li class="teams__item">
+                            <div class="teams__item-header">
+                                <div class="teams__item-icon">
+                                    <img src="@img/teams/09.svg" alt="icon">
+                                </div>
+                                <div class="teams__item-caption">
+                                    Increase efficiency & optimize costs
+                                </div>
+                            </div>
+                            <p class="teams__item-text text-sm">
+                                Improve health outcomes, eliminate wait times and speed up patient discharge by creating custom automated workflows. We help medical organisations and care providers to optimize costs while improving operational efficiency
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            @@include('./html/_compliance.html')
+            <section class="related-services">
+                <div class="related-services__container">
+                    <div class="related-services__header">
+                        <h2 class="related-services__title title">
+                            Solutions We Offer
                         </h2>
-                        <div class="values__body">
-                            <div class="values__image">
-                                <img src="@img/values.jpg" class="cover-image" alt="flowers">
-                            </div>
-                            <ul class="values__list">
-                                <li class="values__list-item">
-                                    <div class="values__list-caption">Commitment</div>
-                                    <div class="values__list-desc">At IT Medical, we believe in empowering and motivating our people. We are firmly committed to creating an environment where every individual is valued and connected.</div>
-                                </li>
-                                <li class="values__list-item">
-                                    <div class="values__list-caption">Excellence</div>
-                                    <div class="values__list-desc">We strive for the highest quality in everything we do, including the quality of our communication, decisions, and service overall, while promoting product and engineering excellence.</div>
-                                </li>
-                                <li class="values__list-item">
-                                    <div class="values__list-caption">Passion</div>
-                                    <div class="values__list-desc">With passion comes commitment. With commitment comes accountability. Passionate people drove everything that helped us succeed. Without them, we wouldn’t be the company we are today.</div>
-                                </li>
-                                <li class="values__list-item">
-                                    <div class="values__list-caption">Clarity</div>
-                                    <div class="values__list-desc">Everything we promise and deliver is precise and direct. We ensure transparency for our customers at all times. We are straightforward and honest with our people, focusing on what’s most important.</div>
-                                </li>
-                            </ul>
-                        </div>
+                        <a href="/solutions" class="related-services__btn btn btn-secondary">
+                            All solutions
+                        </a>
                     </div>
-                </section>
-                <section class="management">
-                    <div class="management__container">
-                        <div class="management__body">
-                            <div class="management__main">
-                                <h2 class="management__title title">
-                                    Your Trusted Partner
-                                </h2>
-                                <div class="management__info">
-                                    <p class="management__desc">
-                                        Our ultimate goal is to bring value to your business by delivering quality services with lower investments. We match our processes with your preferences so that you feel confident and secure outsourcing work to us.
-                                    </p>
-                                    <div class="management__image">
-                                        <img src="@img/transformation.jpg" class="cover-image" alt="team">
-                                    </div>
-                                </div>
-                            </div>
-                            <ul class="management__list" data-spollers data-one-spoller>
-                                <li class="management__item">
-                                    <button type="button" class="management__item-caption _active" data-spoller>High Transparency</button>
-                                    <div class="management__item-body">
-                                        <div class="management__item-text">
-                                            To make outsourcing engagements transparent for clients and developers, we leverage planning, reporting, and change management tools. This approach allows you to control the project timeline and budget.
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="management__item">
-                                    <button type="button" data-spoller class="management__item-caption">Tailored Approach</button>
-                                    <div class="management__item-body">
-                                        <div class="management__item-text">
-                                            Based on your unique project objectives, we propose the most efficient cooperation model and development methodology. We assemble a team of experts with relevant experience, ensuring a tailored approach that meets your specific needs.
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="management__item">
-                                    <button type="button" data-spoller class="management__item-caption">Global Availability</button>
-                                    <div class="management__item-body">
-                                        <div class="management__item-text">
-                                            With headquarters in the USA and representative offices in Europe and Asia, we can easily adapt to your timetable. Regardless of location, we guarantee brisk responsiveness through multiple communication channels.
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="management__item">
-                                    <button type="button" data-spoller class="management__item-caption">Maximum Adaptability</button>
-                                    <div class="management__item-body">
-                                        <div class="management__item-text">
-                                            Our approach combines the best aspects of Lean and Scrum to foster on‑demand scalability and agility in our healthcare software development. We are ready to adapt development processes to your schedule and requirement shifts at any project stage while reducing the cost of change.
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="management__item">
-                                    <button type="button" data-spoller class="management__item-caption">Risk Mitigation</button>
-                                    <div class="management__item-body">
-                                        <div class="management__item-text">
-                                            Our comprehensive risk management policy ensures safe and predictable relationships by providing a set of practices for identifying and eliminating software risks before they threaten successful software operations or become a significant source of expensive rework.
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                    <div class="related-services__body">
+                        <div class="related-services__image">
+                            <img src="@img/services-6.jpg" class="cover-image" alt="service">
                         </div>
-                    </div>
-                </section>
-                <section id="approach" class="teams teams-lg">
-                    <div class="teams__container">
-                        <h2 class="teams__title title">
-                            Our Key Differentiators
-                        </h2>
-                        <ul class="teams__list teams__list-sm">
-                            <li class="teams__item">
-                                <div class="teams__item-header">
-                                    <div class="teams__item-icon">
-                                        <img src="@img/teams/06.svg" alt="icon">
-                                    </div>
-                                    <div class="teams__item-caption">
-                                        Expanded area of&nbsp;business
-                                    </div>
-                                </div>
-                                <p class="teams__item-text text-sm">
-                                    Attract new customers through online touchpoints without setting up additional offline medical stores or points of service. Our solutions enable you to reach a wider audience and expand your business beyond geographical limits.
-                                </p>
+                        <ul class="related-services__list">
+                            <li class="services__item">
+                                <a href="/healthcare-data-analytics" class="services__item-link">
+                                    <span class="services__item-header icon-arrow">
+                                        Healthcare Data Analytics
+                                    </span>
+                                    <span class="services__item-body">
+                                        Our specialised healthcare customer relationship management solutions encompass software systems designed to manage and improve the interactions between a business and its customers.
+                                    </span>
+                                    <span class="services__item-image">
+                                        <img src="@img/services/01.jpg" class="cover-image" alt="service">
+                                    </span>
+                                </a>
                             </li>
-                            <li class="teams__item">
-                                <div class="teams__item-header">
-                                    <div class="teams__item-icon">
-                                        <img src="@img/teams/07.svg" alt="icon">
-                                    </div>
-                                    <div class="teams__item-caption">
-                                        Improved customer convenience
-                                    </div>
-                                </div>
-                                <p class="teams__item-text text-sm">
-                                    Thanks to our user-friendly digital platforms and solutions, patients can purchase medication, equipment, or doctor consultations online without leaving their homes. We put patient engagement and convenience first.
-                                </p>
+                            <li class="services__item">
+                                <a href="/emr-development/" class="services__item-link">
+                                    <span class="services__item-header icon-arrow">
+                                        EHR Integration
+                                    </span>
+                                    <span class="services__item-body">
+                                        Through our electronic health record integration service, organizations can streamline data flow between EHR systems and other infrastructures while maintaining regulatory compliance. We ensure seamless integration of your healthcare IT ecosystem.
+                                    </span>
+                                    <span class="services__item-image">
+                                        <img src="@img/services/02.jpg" class="cover-image" alt="service">
+                                    </span>
+                                </a>
                             </li>
-                            <li class="teams__item">
-                                <div class="teams__item-header">
-                                    <div class="teams__item-icon">
-                                        <img src="@img/teams/08.svg" alt="icon">
-                                    </div>
-                                    <div class="teams__item-caption">
-                                        Direct-to-consumer sales&nbsp;channel
-                                    </div>
-                                </div>
-                                <p class="teams__item-text text-sm">
-                                    Contact patients directly and take full control over your medical business to cut the costs of third-party marketing or sales platforms. Our tools empower you to connect with patients with great convenience and efficiency.
-                                </p>
+                            <li class="services__item">
+                                <a href="/healthcare-mobile-apps/" class="services__item-link">
+                                    <span class="services__item-header icon-arrow">
+                                        Healthcare Mobile Apps
+                                    </span>
+                                    <span class="services__item-body">
+                                        We can develop our healthcare applications from scratch or customize them to meet the various goals and requirements of healthcare organizations, patients, and medical professionals.
+                                    </span>
+                                    <span class="services__item-image">
+                                        <img src="@img/services/03.jpg" class="cover-image" alt="service">
+                                    </span>
+                                </a>
                             </li>
-                            <li class="teams__item">
-                                <div class="teams__item-header">
-                                    <div class="teams__item-icon">
-                                        <img src="@img/teams/09.svg" alt="icon">
-                                    </div>
-                                    <div class="teams__item-caption">
-                                        Increase efficiency & optimize costs
-                                    </div>
-                                </div>
-                                <p class="teams__item-text text-sm">
-                                    Improve health outcomes, eliminate wait times and speed up patient discharge by creating custom automated workflows. We help medical organisations and care providers to optimize costs while improving operational efficiency
-                                </p>
+                            <li class="services__item">
+                                <a href="/healthcare-customer-relationship-management" class="services__item-link">
+                                    <span class="services__item-header icon-arrow">
+                                        Healthcare CRM
+                                    </span>
+                                    <span class="services__item-body">
+                                        Our specialized healthcare customer relationship management solutions encompass software systems designed to manage and improve the interactions between a business and its customers.
+                                    </span>
+                                    <span class="services__item-image">
+                                        <img src="@img/services/04.jpg" class="cover-image" alt="service">
+                                    </span>
+                                </a>
                             </li>
                         </ul>
                     </div>
-                </section>
-                @@include('./html/_compliance.html')
-                <section class="related-services">
-                    <div class="related-services__container">
-                        <div class="related-services__header">
-                            <h2 class="related-services__title title">
-                                Solutions We Offer
-                            </h2>
-                            <a href="/solutions" class="related-services__btn btn btn-secondary">
-                                All solutions
-                            </a>
-                        </div>
-                        <div class="related-services__body">
-                            <div class="related-services__image">
-                                <img src="@img/services-6.jpg" class="cover-image" alt="service">
-                            </div>
-                            <ul class="related-services__list">
-                                <li class="services__item">
-                                    <a href="/healthcare-data-analytics" class="services__item-link">
-                                        <span class="services__item-header icon-arrow">
-                                            Healthcare Data Analytics
-                                        </span>
-                                        <span class="services__item-body">
-                                            Our specialised healthcare customer relationship management solutions encompass software systems designed to manage and improve the interactions between a business and its customers.
-                                        </span>
-                                        <span class="services__item-image">
-                                            <img src="@img/services/01.jpg" class="cover-image" alt="service">
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="services__item">
-                                    <a href="/emr-development/" class="services__item-link">
-                                        <span class="services__item-header icon-arrow">
-                                            EHR Integration
-                                        </span>
-                                        <span class="services__item-body">
-                                            Through our electronic health record integration service, organizations can streamline data flow between EHR systems and other infrastructures while maintaining regulatory compliance. We ensure seamless integration of your healthcare IT ecosystem.
-                                        </span>
-                                        <span class="services__item-image">
-                                            <img src="@img/services/02.jpg" class="cover-image" alt="service">
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="services__item">
-                                    <a href="/healthcare-mobile-apps/" class="services__item-link">
-                                        <span class="services__item-header icon-arrow">
-                                            Healthcare Mobile Apps
-                                        </span>
-                                        <span class="services__item-body">
-                                            We can develop our healthcare applications from scratch or customize them to meet the various goals and requirements of healthcare organizations, patients, and medical professionals.
-                                        </span>
-                                        <span class="services__item-image">
-                                            <img src="@img/services/03.jpg" class="cover-image" alt="service">
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="services__item">
-                                    <a href="/healthcare-customer-relationship-management" class="services__item-link">
-                                        <span class="services__item-header icon-arrow">
-                                            Healthcare CRM
-                                        </span>
-                                        <span class="services__item-body">
-                                            Our specialized healthcare customer relationship management solutions encompass software systems designed to manage and improve the interactions between a business and its customers.
-                                        </span>
-                                        <span class="services__item-image">
-                                            <img src="@img/services/04.jpg" class="cover-image" alt="service">
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                @@include('html/_contacts-2.html', {})
-            </main>
-            @@include('html/_footer.html', {})
-        </div>
+                </div>
+            </section>
+            @@include('html/_contacts-2.html', {})
+        </main>
+        @@include('html/_footer.html', {})
+    </div>
 
-        @@include('html/_js.html', {})
-    </body>
+    @@include('html/_js.html', {})
+
 </html>

@@ -6,44 +6,43 @@
     'url': 'https://itmedical.com/',
     'desc': ''
     })
-    <body>
-        <div class="wrapper">
-            @@include('html/_header.html', {
-            "fixed": false,
-            "active": 0
-            })
-            <main class="page">
-                <section class="error">
-                    <div class="error__container">
-                        <nav class="breadcrumbs" aria-label="breadcrumbs menu">
-                            <div class="breadcrumbs__container">
-                                <ul class="breadcrumbs__items">
-                                    <li class="breadcrumbs__item">
-                                        <a href="/" class="breadcrumbs__link">Home</a>
-                                    </li>
-                                    <li class="breadcrumbs__item">
-                                        <span class="breadcrumbs__link active">404</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                        <div class="error__body">
-                            <div class="error__status">
-                                404
-                            </div>
-                            <h1 class="error__title title-md">
-                                <span>Error:</span> page not found
-                            </h1>
-                            <p class="error__subtitle">
-                                The address is typed incorrectly, or such page does not exist on the site at present
-                            </p>
-                            <a href="" class="error__btn btn btn-primary btn-md">Go back to home page</a>
+
+    <div class="wrapper">
+        @@include('html/_header.html', {
+        "fixed": false,
+        "active": 0
+        })
+        <main class="page">
+            <section class="error">
+                <div class="error__container">
+                    <nav class="breadcrumbs" aria-label="breadcrumbs menu">
+                        <div class="breadcrumbs__container">
+                            <ul class="breadcrumbs__items">
+                                <li class="breadcrumbs__item">
+                                    <a href="/" class="breadcrumbs__link">Home</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link active">404</span>
+                                </li>
+                            </ul>
                         </div>
+                    </nav>
+                    <div class="error__body">
+                        <div class="error__status">
+                            404
+                        </div>
+                        <h1 class="error__title title-md">
+                            <span>Error:</span> page not found
+                        </h1>
+                        <p class="error__subtitle">
+                            The address is typed incorrectly, or such page does not exist on the site at present
+                        </p>
+                        <a href="" class="error__btn btn btn-primary btn-md">Go back to home page</a>
                     </div>
-                </section>
-            </main>
-            @@include('html/_footer.html', {})
-        </div>
-        @@include('html/_js.html', {})
-    </body>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.html', {})
+    </div>
+    @@include('html/_js.html', {})
 </html>
