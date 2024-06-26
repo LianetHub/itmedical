@@ -52,28 +52,7 @@
                             </ul>
                         </nav>
                         <div class="case__content">
-                            <aside class="case__sidebar">
-                                <ul class="case__sidebar-list">
-                                    <li class="case__sidebar-item"><a href="#overview" class="case__sidebar-link">Project overview</a></li>
-                                    <li class="case__sidebar-item"><a href="#challenge" class="case__sidebar-link">Challenge</a></li>
-                                    <li class="case__sidebar-item"><a href="#solution" class="case__sidebar-link">Solution</a></li>
-                                    <li class="case__sidebar-item"><a href="#outcome" class="case__sidebar-link">Outcome</a></li>
-                                    <li class="case__sidebar-item"><a href="#technologies-and-tools" class="case__sidebar-link">Technologies and Tools</a></li>
-                                    <li class="case__sidebar-item"><a href="#keywords" class="case__sidebar-link">Keywords</a></li>
-                                    <li class="case__sidebar-item"><a href="#faq" class="case__sidebar-link">FAQ</a></li>
-                                    <li class="case__sidebar-item"><a href="#social-media" class="case__sidebar-link">Social Media</a></li>
-                                </ul>
-                                <div class="case__share">
-                                    <div class="case__share-text">
-                                        Share
-                                    </div>
-                                    <div class="case__share-btns">
-                                        <a href="" class="case__share-btn icon-facebook"></a>
-                                        <a href="" class="case__share-btn icon-linkedin"></a>
-                                        <a href="" class="case__share-btn icon-share"></a>
-                                    </div>
-                                </div>
-                            </aside>
+                            @@include('./html/_case-sidebar.html',{})
                             <article class="case__article">
                                 <div id="overview" class="case__block">
                                     <h2 class="case__caption">
@@ -172,20 +151,81 @@
                                 </div>
                                 <div id="keywords" class="case__block">
                                     <h2 class="case__caption">
-                                        Technologies and Tools
+                                        Keywords
                                     </h2>
-                                    <ul class="case__labels">
-                                        <li class="case__label">JavaScript</li>
-                                        <li class="case__label">MySQL</li>
-                                        <li class="case__label">Angular framework</li>
-                                        <li class="case__label">Angular Material UI</li>
-                                        <li class="case__label">Kotlin</li>
-                                        <li class="case__label">PostgreSQL</li>
-                                        <li class="case__label">Redis</li>
+                                    <ul class="case__keywords">
+                                        <li class="case__keyword">EHR system</li>
+                                        <li class="case__keyword">Electronic Health Record Systems</li>
+                                        <li class="case__keyword">Primary Care</li>
+                                        <li class="case__keyword">Telehealth Services</li>
+                                        <li class="case__keyword">Patient monitoring</li>
                                     </ul>
-                                    <p class="case__desc">
-                                        The success of this project underscores the importance of a tailored approach in healthcare technology. Our custom EHR with integrated telehealth capabilities has addressed the client's unique needs and set a new standard for efficiency and patient care in the primary care sector. We look forward to continuing our partnership and supporting healthcare providers' evolving needs.
-                                    </p>
+                                </div>
+                                <div id="faq" class="case__block">
+                                    <h2 class="case__caption">
+                                        FAQ
+                                    </h2>
+                                    <ol class="case__faq">
+                                        <li class="case__faq-item">
+                                            <div class="case__faq-question">
+                                                What are the key benefits of a custom EHR solution compared to a&nbsp;generic system?
+                                            </div>
+                                            <p class="case__faq-answer">A custom EHR solution is tailored to meet the specific needs of healthcare providers, ensuring a better alignment with unique workflows. It enhances user experience, integrates seamlessly with other healthcare technologies, and complies with strict regulatory standards, ultimately improving efficiency and patient care.</p>
+                                        </li>
+                                        <li class="case__faq-item">
+                                            <div class="case__faq-question">
+                                                How does integrating telehealth features into an EHR system benefit healthcare providers and patients?
+                                            </div>
+                                            <p class="case__faq-answer">
+                                                Integrating telehealth features allows healthcare providers to offer remote consultations, reducing the need for frequent in-person visits. This improves patient access to care, especially for those with chronic conditions, and helps minimize readmission rates by enabling continuous monitoring and timely interventions.
+                                            </p>
+                                        </li>
+                                        <li class="case__faq-item">
+                                            <div class="case__faq-question">
+                                                What challenges do generic EHR systems pose for primary care providers? </div>
+                                            <p class="case__faq-answer">
+                                                Generic EHR systems often fail to accommodate the specific workflows of various specialties, leading to inefficiencies. They can cause data entry and retrieval issues, integration challenges with other healthcare systems, poor user experience, and difficulties in meeting compliance and security standards.
+                                            </p>
+                                        </li>
+                                        <li class="case__faq-item">
+                                            <div class="case__faq-question">
+                                                How does a custom EHR solution ensure compliance with healthcare regulations?
+                                            </div>
+                                            <p class="case__faq-answer">
+                                                A custom EHR solution is designed with built-in compliance features that adhere to healthcare regulations such as HIPAA, ONC, and CEHRT. It includes robust security measures to protect patient data and ensures all regulatory standards are consistently met, reducing the risk of data breaches and legal issues.
+                                            </p>
+                                        </li>
+                                        <li class="case__faq-item">
+                                            <div class="case__faq-question">
+                                                Can a custom EHR solution scale with the growth of a healthcare provider?
+                                            </div>
+                                            <p class="case__faq-answer">
+                                                Yes, a custom EHR solution is designed to be scalable and flexible. It can evolve with the growing needs of the healthcare provider, supporting the addition of new features and integrations with laboratories, insurance companies, and other healthcare services, ensuring continuous improvement and adaptability.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div id="social-media" class="case__block">
+                                    <h2 class="case__caption">
+                                        Social Media
+                                    </h2>
+                                    <p class="case__desc">Transforming Primary Care with Custom EHR Solutions and Telehealth Integration.</p>
+                                    <p class="case__desc">We’re excited to share our latest success story in developing a tailored Electronic Health Record (EHR) system for a US-based primary care provider! </p>
+                                    <p class="case__desc">Generic EHR systems often fall short in meeting the unique needs of various healthcare providers, leading to inefficiencies and frustration. Our task was to design a solution that optimizes workflows, enhances user experience, and integrates telehealth features for improved patient care.</p>
+                                    <p class="case__desc">We developed a custom cloud-based EHR that automates scheduling, medical records management, invoicing, and more. The integration of telehealth allows for secure, remote consultations, making healthcare more accessible and flexible.</p>
+                                    <p class="case__desc">Our solution is now in use by over 700 healthcare employees across 30+ institutions, streamlining operations and improving patient outcomes. This project highlights the power of customized technology in transforming primary care.</p>
+                                    <p class="case__desc">Read the full article to learn more about how we addressed these challenges and delivered a cutting-edge solution!</p>
+                                    <div class="case__tags">
+                                        <a href="" class="case__tag">#HealthcareInnovation</a>
+                                        <a href="" class="case__tag">#EHR</a>
+                                        <a href="" class="case__tag">#Telehealth</a>
+                                        <a href="" class="case__tag">#PrimaryCare</a>
+                                        <a href="" class="case__tag">#HealthTech</a>
+                                        <a href="" class="case__tag">#MedicalSoftware</a>
+                                        <a href="" class="case__tag">#PatientCare</a>
+                                        <a href="" class="case__tag">#CloudSolutions</a>
+                                        <a href="" class="case__tag">#HIPAAComplianc</a>
+                                    </div>
                                 </div>
                             </article>
 
@@ -193,6 +233,7 @@
                     </div>
                 </div>
             </section>
+            @@include('html/_related-cases.html', {})
             @@include('html/_contacts-2.html', {})
         </main>
         @@include('html/_footer.html', {})

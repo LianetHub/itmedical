@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': 'IT Medical',
+    'keywords': 'IT medical',
+    'url': 'https://itmedical.com/',
+    'desc': ''
+    })
+
+    <div class="wrapper">
+        @@include('html/_header.html', {
+        "fixed": false,
+        "active": 0
+        })
+        <main class="page">
+            <section class="case">
+                <div class="case__banner">
+                    <div class="case__container">
+                        <div class="case__offer">
+                            <h1 class="case__title title-md">
+                                Case Study #4
+                            </h1>
+                            <ul class="case__offer-list">
+                                <li>Duration: 35+ months</li>
+                                <li>Team size: 15</li>
+                                <li>Location: United Kingdom</li>
+                            </ul>
+                            <div class="case__logotypes">
+                                <div class="case__logotype">
+                                    <img src="@img/cases/logotypes/functional-gut-clinic.svg" alt="functional gut clinic logo">
+                                </div>
+                                <div class="case__logotype">
+                                    <img src="@img/cases/logotypes/owlstone-logo.svg" alt="owlstone logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case__body">
+                    <div class="case__container">
+                        <nav class="breadcrumbs" aria-label="breadcrumbs menu">
+                            <ul class="breadcrumbs__items">
+                                <li class="breadcrumbs__item">
+                                    <a href="/" class="breadcrumbs__link">Home</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <a href="/" class="breadcrumbs__link">Case studies</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link active">Case 4</span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="case__content">
+                            @@include('./html/_case-sidebar.html',{})
+                            <article class="case__article">
+                                <div id="overview" class="case__block">
+                                    <h2 class="case__caption">
+                                        About the Client
+                                    </h2>
+                                    <p class="case__desc">
+                                        Our customer was a U.S. research center developing socially beneficial solutions. One of their projects was to create a platform to improve access to healthcare in remote areas.
+                                    </p>
+                                    <div class="case__promo">
+                                        <img src="@img/cases/case-4.png" alt="case">
+                                    </div>
+                                </div>
+                                <div id="challenge" class="case__block">
+                                    <h2 class="case__caption">
+                                        Challenge
+                                    </h2>
+                                    <p class="case__tagline">
+                                        Improving Healthcare Access in Remote Areas: A Comprehensive Remote Patient Monitoring Solution
+                                    </p>
+                                    <p class="case__desc">
+                                        The idea behind the platform was to connect patients in remote locations with the research center’s doctors and medical professionals through a mobile application. This app aimed to improve access to high-quality healthcare in remote areas by including video, audio, and text chat communication methods, as well as video and photo exchange between doctors and patients. The solutions necessitated compliance with HIPAA regulations due to the sensitivity of medical data. A solution that has been expatiated upon would contain all of the following:
+                                    </p>
+                                    <ol class="case__list _ordered">
+                                        <li>
+                                            <span>Reliable Communication Methods:</span>
+                                            Ensure the patients and doctors can communicate effectively through various methods (video, audio, text) for comprehensive remote care. Generic telehealth solutions often lack the robustness needed for high-quality, real-time interactions.
+                                        </li>
+                                        <li>
+                                            <span>High-Resolution Media Exchange:</span>
+                                            Provide the ability to upload and exchange high-resolution videos and photos for remote examinations. This functionality guarantees doctors can make diagnoses and treatment recommendations based on clear visual evidence.
+                                        </li>
+                                        <li>
+                                            <span>HIPAA Compliance:</span>
+                                            Handling sensitive medical data requires strict adherence to HIPAA regulations. Assuring that all communication and data storage methods are secure and compliant is a significant challenge that cannot be overlooked.
+                                        </li>
+                                        <li>
+                                            <span>Integration with Electronic Health Record Systems:</span>
+                                            The platform must integrate seamlessly with existing Electronic Health Records (EHR) systems to provide comprehensive care. This allows for the direct attachment of high-resolution media to patient records, ensuring continuity and accuracy in patient care.
+                                        </li>
+                                        <li>
+                                            <span>User-Friendly Interface for Remote Patients:</span>
+                                            The application must be intuitive and easy to use, especially for patients who may not be tech-savvy. A complex interface could deter usage and undermine the platform’s effectiveness in improving healthcare access.
+                                        </li>
+                                    </ol>
+                                    <p class="case__desc">
+                                        Given these challenges, the task was to develop a robust remote patient monitoring solution that combined all the above-mentioned aspects.
+                                    </p>
+                                </div>
+                                <div id="solution" class="case__block">
+                                    <h2 class="case__caption">
+                                        Solution
+                                    </h2>
+                                    <div class="case__image">
+                                        <img src="@img/cases/07.jpg" alt="case">
+                                    </div>
+                                    <p class="case__tagline">
+                                        Custom Mobile and Web Applications for Remote Patient Monitoring: Enhancing Remote Healthcare Delivery
+                                    </p>
+                                    <p class="case__desc">
+                                        The IT Medical team developed iOS and Android mobile applications that securely connect nurses from remote areas with the research center’s doctors via video, audio, or text chat. In addition to the mobile apps, our team developed a web portal for managing video conferences, users, and patient cases.
+                                    </p>
+                                    <ol class="case__list _ordered">
+                                        <li>
+                                            <span>
+                                                High-Resolution Media Exchange:
+                                            </span>
+                                            We enabled the upload and storage of high-resolution videos and photos taken by patients. These can be attached directly to the EHR within the mobile application or patient portal. Patients can also upload external examinations and lab results, providing doctors with comprehensive information for accurate diagnosis and treatment.
+                                        </li>
+                                        <li>
+                                            <span>
+                                                HIPAA-Compliant Data Management:
+                                            </span>
+                                            Our solution assures all communication and data storage methods are fully HIPAA-compliant. This protects sensitive medical data and maintains patient confidentiality.
+                                        </li>
+                                        <li>
+                                            <span>
+                                                Integration with EHR Systems:
+                                            </span>
+                                            The platform seamlessly integrates with existing EHR systems, allowing high-resolution media and other patient data to be directly attached to their records. This integration provides continuity and accuracy in patient care.
+                                        </li>
+                                        <li>
+                                            <span>
+                                                Web-Based Admin Portal:
+                                            </span>
+                                            The web portal helps manage video conferences, users, and patient cases created during examinations. This centralized management system allows healthcare providers to track and manage patient interactions efficiently.
+                                        </li>
+                                        <li>
+                                            <span>
+                                                User-Friendly Interface:
+                                            </span>
+                                            The application is designed to be intuitive and easy to use so that patients can navigate the platform effortlessly, regardless of their tech proficiency.
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div id="outcome" class="case__block">
+                                    <h2 class="case__caption">
+                                        Outcome
+                                    </h2>
+                                    <div class="case__image">
+                                        <img src="@img/cases/08.jpg" alt="case">
+                                    </div>
+                                    <p class="case__tagline">
+                                        Transforming Remote Healthcare with a Comprehensive Remote Patient Monitoring Solution
+                                    </p>
+                                    <p class="case__desc">
+                                        In under six months, the IT Medical team released a suite of two mobile applications and a web-based admin portal to enable remote patient monitoring and telehealth for patients in remote areas in the US. The web patient portal helps manage users and patient cases created during the examination.
+                                    </p>
+                                    <p class="case__desc">
+                                        The implementation of our remote patient monitoring solution has resulted in:
+                                    </p>
+                                    <ul class="case__list">
+                                        <li>
+                                            <span>Enhanced Communication:</span>
+                                            Reliable video, audio, and text chat features facilitate effective communication between patients and healthcare providers.
+                                        </li>
+                                        <li>
+                                            <span>
+                                                Improved Diagnostic Accuracy:
+                                            </span>
+                                            High-resolution image and video quality support detailed remote examinations, leading to more accurate diagnoses and treatment plans.
+                                        </li>
+                                        <li>
+                                            <span>
+                                                Efficiency in Case Management:
+                                            </span>
+                                            The solution allows for 3x faster case creation compared to legacy processes, streamlining patient management and reducing administrative burden.
+                                        </li>
+                                        <li>
+                                            <span>
+                                                HIPAA-Compliant Data Security:
+                                            </span>
+                                            Fully HIPAA-compliant data management guarantees the protection of sensitive patient information.
+                                        </li>
+                                        <li>
+                                            <span>
+                                                Scalable Distribution:
+                                            </span>
+                                            Our customer, the research center, is now distributing the solution to its partner hospitals, along with iOS and Android devices that run the application.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="technologies-and-tools" class="case__block">
+                                    <h2 class="case__caption">
+                                        Technologies and Tools
+                                    </h2>
+                                    <ul class="case__labels">
+                                        <li class="case__label">JavaScript</li>
+                                        <li class="case__label">MySQL</li>
+                                        <li class="case__label">Angular framework</li>
+                                        <li class="case__label">Angular Material UI</li>
+                                        <li class="case__label">Kotlin</li>
+                                        <li class="case__label">PostgreSQL</li>
+                                        <li class="case__label">Redis</li>
+                                    </ul>
+                                </div>
+                                <div id="keywords" class="case__block">
+                                    <h2 class="case__caption">
+                                        Keywords
+                                    </h2>
+                                    <ul class="case__keywords">
+                                        <li class="case__keyword">Healthcare Access</li>
+                                        <li class="case__keyword">EHR Systems</li>
+                                        <li class="case__keyword">Remote Patient Monitoring Solution</li>
+                                        <li class="case__keyword">HIPAA Compliance</li>
+                                        <li class="case__keyword">Electronic Health Record Systems</li>
+                                    </ul>
+                                </div>
+                                <div id="faq" class="case__block">
+                                    <h2 class="case__caption">
+                                        FAQ
+                                    </h2>
+                                    <ol class="case__faq">
+                                        <li class="case__faq-item">
+                                            <div class="case__faq-question">
+                                                What are the key benefits of a custom remote patient monitoring solution compared to a generic system?
+                                            </div>
+                                            <p class="case__faq-answer">
+                                                A custom remote patient monitoring solution is tailored to meet the specific needs of remote healthcare delivery, ensuring better alignment with unique workflows. It enhances user experience, integrates seamlessly with other healthcare technologies, and provides robust data security, ultimately improving efficiency and patient care.
+                                            </p>
+                                        </li>
+                                        <li class="case__faq-item">
+                                            <div class="case__faq-question">
+                                                How does integrating high-resolution media exchange into a remote monitoring solution benefit healthcare providers and patients?
+                                            </div>
+                                            <p class="case__faq-answer">
+                                                Integrating high-resolution media exchange allows healthcare providers to make accurate diagnoses and treatment recommendations based on clear visual evidence. This improves patient care by allowing doctors access to comprehensive information, even when working remotely.
+                                            </p>
+                                        </li>
+                                        <li class="case__faq-item">
+                                            <div class="case__faq-question">
+                                                What challenges do generic remote monitoring systems pose for healthcare in remote areas?
+                                            </div>
+                                            <p class="case__faq-answer">
+                                                Generic remote monitoring systems often fail to provide reliable communication methods, lack high-resolution media exchange capabilities, and struggle with HIPAA compliance and EHR integration. These shortcomings can lead to ineffective remote care and compromised patient data security.
+                                            </p>
+                                        </li>
+                                        <li class="case__faq-item">
+                                            <div class="case__faq-question">
+                                                How does a custom remote monitoring solution ensure compliance with healthcare regulations?
+                                            </div>
+                                            <p class="case__faq-answer">
+                                                A custom remote monitoring solution is designed with built-in compliance features that adhere to healthcare regulations such as HIPAA. It includes comprehensive security measures to protect patient data and ensures all regulatory standards are consistently met, reducing the risk of data breaches and legal issues.
+                                            </p>
+                                        </li>
+                                        <li class="case__faq-item">
+                                            <div class="case__faq-question">
+                                                Can a custom remote monitoring solution scale with the growth of a healthcare provider?
+                                            </div>
+                                            <p class="case__faq-answer">
+                                                Yes, a custom remote monitoring solution is designed to be scalable and flexible. It can evolve with the healthcare provider's growing needs, supporting the addition of new features and integrations with other healthcare services, which provides continuous improvement and adaptability.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div id="social-media" class="case__block">
+                                    <h2 class="case__caption">
+                                        Social Media
+                                    </h2>
+                                    <p class="case__desc">LinkedIn Post</p>
+                                    <p class="case__desc">Transforming Remote Healthcare with Custom Remote Patient Monitoring Solutions</p>
+                                    <p class="case__desc">We’re excited to share our latest success story in developing a tailored Remote Patient Monitoring (RPM) solution for a US-based research center!</p>
+                                    <p class="case__desc">Generic remote monitoring systems often fall short of meeting the unique needs of remote healthcare, leading to inefficiencies and compromised patient care. Our task was to design a solution that enhances communication, ensures data security, and integrates with EHR systems for improved remote healthcare delivery.</p>
+                                    <p class="case__desc">We developed custom iOS and Android mobile applications, along with a web-based admin portal, to facilitate secure video, audio, and text communication between patients and healthcare providers. Our solution also supports high-resolution media exchange and integrates seamlessly with EHR systems.</p>
+                                    <p class="case__desc">Our solution is now in use across remote areas in the US, enhancing patient care and streamlining operations. This project highlights the power of customized technology in transforming remote healthcare delivery.</p>
+                                    <div class="case__tags">
+                                        <a href="" class="case__tag">#HealthcareInnovation</a>
+                                        <a href="" class="case__tag">#OncologyTreatment </a>
+                                        <a href="" class="case__tag">#HealthTech </a>
+                                        <a href="" class="case__tag">#MedicalSoftware </a>
+                                        <a href="" class="case__tag">#PatientCare </a>
+                                        <a href="" class="case__tag">#CloudSolutions </a>
+                                        <a href="" class="case__tag">#EHRIntegration </a>
+                                        <a href="" class="case__tag">#EvidenceBasedMedicine</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @@include('html/_related-cases.html', {})
+            @@include('html/_contacts-2.html', {})
+        </main>
+        @@include('html/_footer.html', {})
+    </div>
+    @@include('html/_js.html', {})
+
+</html>
