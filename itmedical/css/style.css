@@ -2315,6 +2315,7 @@ source[data-srcset] {
   padding: 0 0.75rem;
   overflow-x: auto;
   scrollbar-width: 0;
+  margin-inline: -0.75rem;
 }
 
 .cases__btns::-webkit-scrollbar {
@@ -3996,7 +3997,7 @@ source[data-srcset] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.8125rem;
+  gap: 3.25rem;
   row-gap: 1rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -6189,6 +6190,7 @@ source[data-srcset] {
   }
 
   .cloud__item-logos {
+    gap: 1.8125rem;
     margin-top: 2.5rem;
   }
 
@@ -6515,6 +6517,7 @@ source[data-srcset] {
   }
 
   .cases__btns {
+    margin-inline: 0;
     overflow-x: visible;
     padding: 0;
     -webkit-box-pack: center;
@@ -8953,6 +8956,24 @@ source[data-srcset] {
     height: 0.125rem;
     display: block;
     background: #d9d9d9;
+  }
+
+  .cloud__item-logo:nth-child(1) {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    max-width: 9.375rem;
+  }
+
+  .cloud__item-logo:nth-child(2) {
+    max-width: 15.1875rem;
+  }
+
+  .cloud__item-logo:nth-child(3) {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    max-width: 2.625rem;
   }
 
   .action__list {

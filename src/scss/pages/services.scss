@@ -1777,11 +1777,12 @@
 	&__item-logos {
 		display: flex;
 		align-items: center;
-		gap: rem(29);
+		gap: rem(52);
 		row-gap: 1rem;
 		flex-wrap: wrap;
 		margin-top: 1.25rem;
 		@media (min-width: $md5) {
+			gap: rem(29);
 			margin-top: 2.5rem;
 		}
 		@media (min-width: $md3) {
@@ -1791,6 +1792,23 @@
 	}
 	// .cloud__item-logo
 	&__item-logo {
+		&:nth-child(1) {
+			@media (max-width: $md5) {
+				order: -1;
+				max-width: rem(150);
+			}
+		}
+		&:nth-child(2) {
+			@media (max-width: $md5) {
+				max-width: rem(243);
+			}
+		}
+		&:nth-child(3) {
+			@media (max-width: $md5) {
+				order: -1;
+				max-width: rem(42);
+			}
+		}
 	}
 }
 
