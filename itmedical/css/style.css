@@ -5516,8 +5516,7 @@ source[data-srcset] {
 }
 
 .case__block:not(:first-child) {
-  margin-top: 1.3rem;
-  padding-top: 2rem;
+  margin-top: 3.3rem;
 }
 
 .case__caption {
