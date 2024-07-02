@@ -316,6 +316,83 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+    // case sidebar animation
+
+    const caseSections = document.querySelectorAll('.case__block');
+
+    if (caseSections.length > 0) {
+
+        const navLinks = document.querySelectorAll('.case__sidebar-link');
+        const header = document.querySelector('.header');
+        let isScrolling = false;
+
+        function getHeaderHeight() {
+            return header ? header.offsetHeight : 0;
+        }
+
+        function animOnScroll() {
+
+            if (isScrolling) return;
+
+            let currentSection = null;
+            const headerHeight = getHeaderHeight();
+
+            for (let i = 0; i < caseSections.length; i++) {
+                const section = caseSections[i];
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.getBoundingClientRect().top + window.scrollY - headerHeight;
+                const sectionBottom = sectionTop + sectionHeight;
+
+                if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                    currentSection = section;
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            }
+
+            if (currentSection) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === currentSection.id) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        }
+
+        function onNavLinkClick(event) {
+            event.preventDefault();
+            isScrolling = true;
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            const headerHeight = getHeaderHeight();
+            const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+
+            navLinks.forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
+
+            window.setTimeout(() => {
+                isScrolling = false;
+            }, 1000);
+        }
+
+        window.addEventListener('scroll', animOnScroll);
+        window.addEventListener('resize', animOnScroll);
+        animOnScroll();
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', onNavLinkClick);
+        });
+    }
+
+
 
 
 

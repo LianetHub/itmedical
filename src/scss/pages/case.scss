@@ -126,24 +126,9 @@
 	// .case__sidebar-item
 	&__sidebar-item {
 		&:not(:last-child) {
-			margin-bottom: 1rem;
+			margin-bottom: 0.5rem;
 			@media (min-width: $md3) {
-				margin-bottom: 1.85rem;
-			}
-		}
-		&:first-child {
-			.case__sidebar-link {
-				position: relative;
-				padding-bottom: 1rem;
-				&::before {
-					content: "";
-					position: absolute;
-					bottom: 0;
-					left: 0;
-					width: 100%;
-					height: 0.1875rem;
-					background: linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
-				}
+				margin-bottom: 0.85rem;
 			}
 		}
 	}
@@ -155,6 +140,27 @@
 			&:hover {
 				color: #0057b8;
 			}
+		}
+		&.active {
+			color: $accent;
+			&::before {
+				width: 100%;
+			}
+		}
+		position: relative;
+		padding-bottom: 0.5rem;
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			transition: width 0.3s ease 0s;
+			height: 0.1875rem;
+			background: linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
+		}
+		@media (min-width: $md3) {
+			padding-bottom: 1rem;
 		}
 	}
 	// .case__share
@@ -199,8 +205,9 @@
 	}
 	// .case__block
 	&__block {
-		&:not(:last-child) {
-			margin-bottom: 3.3rem;
+		&:not(:first-child) {
+			margin-top: 1.3rem;
+			padding-top: 2rem;
 		}
 	}
 	// .case__caption
