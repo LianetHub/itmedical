@@ -62,6 +62,7 @@ export const html = () => {
             return 'src="img/1x1.png"' + ' ' + 'data-' + match;
         })))
 
+
         .pipe(
             app.plugins.if(
                 app.isBuild,

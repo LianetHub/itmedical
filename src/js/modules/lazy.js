@@ -12,6 +12,7 @@ export const lazy = () => {
                 if (lazyImage.hasAttribute("src")) {
                     lazyImage.src = lazyImage.dataset.src
                     lazyImage.removeAttribute('data-src');
+                    lazyImage.removeAttribute('height');
                 }
                 if (lazyImage.hasAttribute("srcset")) {
                     lazyImage.srcset = lazyImage.dataset.srcset;
@@ -25,7 +26,7 @@ export const lazy = () => {
     lazyImages.forEach((lazyImage) => {
         imageObserver.observe(lazyImage);
     });
-
+    п
     const loadVideoIfIntersecting = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
