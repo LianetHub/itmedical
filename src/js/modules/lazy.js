@@ -26,7 +26,7 @@ export const lazy = () => {
     lazyImages.forEach((lazyImage) => {
         imageObserver.observe(lazyImage);
     });
-    п
+
     const loadVideoIfIntersecting = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
