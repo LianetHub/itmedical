@@ -161,6 +161,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+    // Функция для выполнения скроллинга к якорю
+    function scrollToAnchor(anchor) {
+        const targetElement = document.querySelector(anchor);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    // Обработчик кликов по якорям
+    function handleAnchorClick(event) {
+        // Предотвращаем стандартное поведение браузера
+        event.preventDefault();
+
+        // Получаем якорь из href ссылки
+        const anchor = event.currentTarget.getAttribute('href');
+
+        // Выполняем скроллинг к якорю
+        scrollToAnchor(anchor);
+
+        // Обновляем URL без перезагрузки страницы
+        history.pushState(null, '', anchor);
+    }
+
+    // Навешиваем обработчики на все ссылки с якорями
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    anchorLinks.forEach(function (link) {
+        link.addEventListener('click', handleAnchorClick);
+    });
+
+    // Скроллинг к якорю при загрузке страницы
+    const initialAnchor = window.location.hash;
+    if (initialAnchor) {
+        scrollToAnchor(initialAnchor);
+    }
+
+
     // function togglePlayVideo() {
     //     const video = document.querySelector('.main__video');
     //     const playButton = document.querySelector('.main__play');
