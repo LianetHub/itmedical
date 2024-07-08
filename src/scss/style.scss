@@ -131,7 +131,7 @@ source[data-srcset] {
 	flex: 1 1 auto;
 	overflow-x: clip;
 	& > * {
-		scroll-margin-top: rem(110);
+		scroll-padding-top: rem(110);
 	}
 }
 // ========================================================

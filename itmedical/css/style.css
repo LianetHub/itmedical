@@ -1760,7 +1760,7 @@ source[data-srcset] {
 }
 
 .page > * {
-  scroll-margin-top: 6.875rem;
+  scroll-padding-top: 6.875rem;
 }
 
 .main {
