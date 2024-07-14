@@ -1,9 +1,6 @@
 export const formSubmit = () => {
-	const forms = document.querySelectorAll("form");
-	forms.forEach((form) => {
-		form.addEventListener("submit", formSend);
-
-	});
+	const form = document.querySelector(".contacts__request");
+	form.addEventListener("submit", formSend);
 
 	document.addEventListener("input", (e) => {
 		let target = e.target;
