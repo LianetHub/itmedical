@@ -432,6 +432,10 @@
 			transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
 			cursor: pointer;
 		}
+		.orig {
+			@extend .search__form-input;
+			@extend .form__input;
+		}
 	}
 	// .search__body
 	&__body {

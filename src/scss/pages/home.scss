@@ -1415,5 +1415,8 @@
 				grid-column: span 2;
 			}
 		}
+		& [data-name="message"] {
+			grid-column: span 2;
+		}
 	}
 }

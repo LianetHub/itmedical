@@ -29,7 +29,7 @@ export const scss = () => {
                 groupCssMediaQueries()
             )
         )
-    
+
         .pipe(
             app.plugins.if(
                 app.isBuild,
@@ -67,6 +67,45 @@ export const scss = () => {
             extname: ".min.css"
         }))
         .pipe(app.gulp.dest(app.path.build.css))
+        .pipe(app.plugins.browsersync.stream());
+}
+
+export const scssWP = () => {
+    return app.gulp.src(app.path.src.scss, { sourcemaps: false })
+        .pipe(app.plugins.plumber(
+            app.plugins.notify.onError({
+                title: "SCSS",
+                message: "Error: <%= error.message %>"
+            }))
+        )
+        .pipe(sass({
+            outputStyle: 'expanded'
+        }))
+        .pipe(groupCssMediaQueries())
+        .pipe(
+            webpcss({
+                webpClass: '.webp',
+                noWebpClass: '.no-webp'
+            })
+        )
+        .pipe(
+            autoprefixer({
+                grid: true,
+                overrideBrowserslist: ['last 3 versions'],
+                cascade: true
+            })
+        )
+        .pipe(app.plugins.replace(/@img\//g, '../img/'))
+        .pipe(app.gulp.dest(app.path.build.css))
+        .pipe(app.gulp.dest(app.path.build.cssWP))
+        .pipe(
+            cleanCss()
+        )
+        .pipe(rename({
+            extname: ".min.css"
+        }))
+        .pipe(app.gulp.dest(app.path.build.css))
+        .pipe(app.gulp.dest(app.path.build.cssWP))
         .pipe(app.plugins.browsersync.stream());
 }
 

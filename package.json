@@ -8,7 +8,8 @@
     "dev": "gulp",
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
-    "deploy": "npm run build && git add . && git commit -m \"commit\" && git push"
+    "deploy": "npm run build && git add . && git commit -m \"commit\" && git push",
+    "wpDev": "gulp wpDev"
   },
   "author": "Liana",
   "license": "ISC",

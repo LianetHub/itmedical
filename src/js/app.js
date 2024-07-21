@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.OS();
     devFunctions.lazy();
     devFunctions.intInputMask();
-    devFunctions.formSubmit();
+    // devFunctions.formSubmit();
     devFunctions.spollers();
     devFunctions.inputFile();
 
