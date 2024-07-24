@@ -92,6 +92,15 @@
 			}
 		}
 	}
+	&.promo-certs {
+		.promo__background {
+			& img {
+				@media (min-width: $md3) {
+					object-position: 50% 60%;
+				}
+			}
+		}
+	}
 	&.promo-healthcare-customer {
 		.promo__background {
 			@media (max-width: $md5) {
