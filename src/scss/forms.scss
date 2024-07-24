@@ -1,3 +1,21 @@
+.wpcf7 {
+	min-height: 100%;
+}
+.wpcf7-form {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	&._success {
+		& > * {
+			display: none;
+		}
+		.form__succes {
+			display: block;
+		}
+	}
+}
+
 .form {
 	&._success {
 		& > * {
@@ -241,6 +259,14 @@
 			}
 		}
 	}
+	&__submit {
+		margin-top: 2rem;
+		display: flex;
+		gap: 0.25rem;
+		.form__btn.btn {
+			margin-top: 0;
+		}
+	}
 	// .form__btn
 	&__btn {
 		&.btn {
@@ -391,11 +417,28 @@
 		margin-top: rem(30);
 
 		@media (min-width: $md3) {
-			margin-top: 3.13rem;
+			margin-top: 2rem;
 		}
 		.codedropz-upload-handler {
-			border: 2px dashed #0057b8;
-			background: #f2f8ff;
+			background-color: #f2f8ff;
+			position: relative;
+			border: 0;
+			&::before {
+				content: "";
+				border-radius: 5px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='5' ry='5' stroke='%230057B8FF' stroke-width='2' stroke-dasharray='8%2c 8' stroke-dashoffset='20' stroke-linecap='square'/%3e%3c/svg%3e");
+				background-size: cover;
+				background-repeat: no-repeat;
+				pointer-events: none;
+			}
+		}
+		.codedropz-upload-container {
+			padding: 15px 33px;
 		}
 		.codedropz-upload-inner {
 			@media (min-width: $md4) {
@@ -403,7 +446,7 @@
 			}
 			text-align: left;
 			font-weight: 500;
-			min-height: 7rem;
+			min-height: 6.6rem;
 			align-content: center;
 			position: relative;
 			padding-left: 2rem;
@@ -412,13 +455,13 @@
 				top: 50%;
 				transform: translateY(-50%);
 				left: 0;
-				font-size: 1.5rem;
+				font-size: 1.75rem;
 				@extend %ic, .icon-attach;
 				color: #0057b8;
 			}
 			& h3 {
 				font-size: 1rem;
-				line-height: 1;
+				line-height: math.div(22.4, 16);
 				margin: 0;
 			}
 			.codedropz-btn-wrap {
@@ -432,12 +475,17 @@
 				}
 			}
 		}
+		.dnd-upload-counter {
+			display: none;
+		}
 		.form__file-description {
 			position: absolute;
 			top: 0;
 			right: 0;
-			height: 10rem;
-			width: 60%;
+			height: 8.2rem;
+			font-size: rem(14);
+			line-height: math.div(19.6, 14);
+			width: 63.6%;
 			display: flex;
 			align-items: center;
 			pointer-events: none;
@@ -445,6 +493,9 @@
 			@media (min-width: $md4) {
 				display: flex;
 			}
+		}
+		& + .form__checkbox {
+			margin-top: 1rem;
 		}
 	}
 	// .form__file-body
@@ -632,6 +683,7 @@
 .btn {
 	position: relative;
 	z-index: 1;
+	cursor: pointer;
 	display: inline-flex;
 	background-clip: padding-box;
 	justify-content: center;
@@ -642,7 +694,6 @@
 	white-space: nowrap;
 	text-align: center;
 	border-radius: 9.375rem;
-
 	font-weight: 500;
 	font-size: 0.9375rem;
 	padding: 0.94rem 3.75rem;
@@ -752,6 +803,7 @@
 
 div.asl_w {
 	box-shadow: none !important;
+	overflow: visible !important;
 }
 #ajaxsearchlite1 .probox,
 div.asl_w .probox {
@@ -759,7 +811,9 @@ div.asl_w .probox {
 }
 div.asl_m .probox {
 	align-items: center;
+	overflow: visible !important;
 }
+
 #ajaxsearchlite1 .probox .proinput input,
 div.asl_w .probox .proinput input {
 	text-overflow: ellipsis !important;
@@ -799,5 +853,134 @@ div.asl_w .probox .proinput input {
 	&.autocomplete,
 	&[type="submit"] {
 		@extend .hidden;
+	}
+}
+
+div.asl_w .probox .proloading,
+div.asl_w .probox .proclose,
+div.asl_w .probox .prosettings {
+	position: absolute !important;
+	top: 1rem;
+	right: 12.5rem;
+}
+
+div.asl_w .probox .proclose {
+	& svg {
+		display: none;
+	}
+	display: inline-block;
+	width: 2em !important;
+	height: 2em !important;
+	background-repeat: no-repeat !important;
+	background-size: 100% 100% !important;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z'/%3E%3C/svg%3E") !important;
+}
+
+div.asl_w .probox .promagnifier {
+	width: auto !important;
+	height: auto !important;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0.75rem;
+	font-size: 1.25rem !important;
+	float: none !important;
+	clip-path: none !important;
+	overflow: visible !important;
+	box-sizing: border-box !important;
+	&::after {
+		display: none;
+	}
+	color: currentColor;
+	background: none !important;
+	& span {
+		display: none;
+		box-sizing: border-box !important;
+	}
+	@media (min-width: $md4) {
+		& span {
+			display: inline-block;
+		}
+		transition: none;
+		position: relative;
+		top: auto;
+		transform: none;
+		color: #fff;
+		background: linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%) !important;
+		&::before {
+			display: none;
+		}
+		&::after {
+			display: block;
+		}
+		margin-left: 1rem;
+	}
+	border-radius: 9.375rem !important;
+	border: none !important;
+	box-shadow: none !important;
+	font-weight: 500 !important;
+	padding: 0.94rem 3.75rem !important;
+	gap: 0.25rem !important;
+
+	position: relative;
+	color: #fff;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition: opacity 0.3s ease 0s;
+		z-index: -1;
+		background: linear-gradient(271deg, #0e4eb6 4.14%, #166ed0 71.64%);
+		opacity: 0;
+		will-change: opacity;
+		border-radius: inherit;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			&::after {
+				opacity: 1;
+			}
+		}
+	}
+
+	&:disabled,
+	&[aria-disabled="true"] {
+		background: #ffeab4;
+		color: rgba(0, 0, 0, 0.14);
+	}
+	& svg {
+		display: none !important;
+	}
+	& span {
+		&::before {
+			content: "Search";
+		}
+	}
+}
+
+.wpcf7 form .wpcf7-response-output {
+	order: -1;
+	margin-top: 1.88rem;
+	color: #d80027;
+	font-weight: 300;
+	text-align: center;
+	font-size: 0.875rem;
+	border: 0;
+	@media (min-width: $md5) {
+		font-size: 1rem;
+	}
+}
+.wpcf7-not-valid-tip {
+	margin-top: 0.25rem;
+	color: #d80027;
+	font-weight: 300;
+	font-size: 0.875rem;
+	@media (min-width: $md5) {
+		font-size: 1rem;
 	}
 }

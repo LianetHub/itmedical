@@ -243,6 +243,37 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    if (document.querySelector('.case__slider')) {
+        new Swiper('.case__slider', {
+            slidesPerView: "auto",
+            spaceBetween: 25,
+            watchOverflow: true,
+            pagination: {
+                el: '.case__slider-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                991.98: {
+                    slidesPerView: 2,
+                },
+                1199.98: {
+                    slidesPerView: 4,
+                }
+            }
+        })
+    }
+
+    if (document.querySelector('.related-cases__slider')) {
+        new Swiper('.related-cases__slider', {
+            slidesPerView: "auto",
+            navigation: {
+                nextEl: ".related-cases__next",
+                prevEl: ".related-cases__prev",
+            }
+
+        })
+    }
+
     if (document.querySelector('.solutions__list')) {
         getConditionSlider('.solutions__list', {
             slidesPerView: "auto",

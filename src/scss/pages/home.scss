@@ -1399,11 +1399,12 @@
 			background: #f8f8f8;
 			padding: 4.37rem 3.75rem 5rem;
 			.form__btn {
-				margin-top: 3rem;
+				margin-top: 2rem;
 			}
 		}
 	}
 	&__request-grid {
+		order: -1;
 		display: grid;
 		width: 100%;
 		gap: 1.25rem;
