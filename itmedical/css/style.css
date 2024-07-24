@@ -5762,6 +5762,9 @@ div.asl_w .probox .promagnifier span::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -5769,6 +5772,11 @@ div.asl_w .probox .promagnifier span::before {
 
 .case__banner.case__banner_green {
   background: #389520;
+  color: #fff;
+}
+
+.case__banner.case__banner_auqa {
+  background: #16cbc2;
   color: #fff;
 }
 
@@ -6220,6 +6228,10 @@ div.asl_w .probox .promagnifier span::before {
   height: auto;
 }
 
+.case__slide img {
+  height: auto;
+}
+
 .case__nums {
   margin-top: 3.13rem;
   position: relative;
@@ -6240,7 +6252,7 @@ div.asl_w .probox .promagnifier span::before {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
-  gap: 2rem;
+  gap: 1.625rem;
 }
 
 .case__nums::before {
@@ -6255,6 +6267,26 @@ div.asl_w .probox .promagnifier span::before {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.case__nums.case__nums_aqua::before {
+  background: #f4fcfc;
+}
+
+.case__nums.case__nums_aqua .case__nums-value {
+  color: #16cbc2;
+}
+
+.case__nums.case__nums_aqua .case__nums-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
+}
+
+.case__nums.case__nums_aqua .case__nums-item:last-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.33%;
+          flex: 0 0 33.33%;
 }
 
 .case__nums-item {
@@ -6277,6 +6309,10 @@ div.asl_w .probox .promagnifier span::before {
   font-family: "NotoSerif";
   line-height: 100%;
   font-size: 2.8125rem;
+}
+
+.case__nums-value small {
+  vertical-align: top;
 }
 
 .case__nums-desc {
@@ -9745,6 +9781,7 @@ div.asl_w .probox .promagnifier span::before {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 calc(33.33% - 1.5rem);
             flex: 0 1 calc(33.33% - 1.5rem);
+    max-width: 19.5625rem;
   }
 }
 
