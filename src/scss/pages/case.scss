@@ -54,6 +54,10 @@
 			background: #16cbc2;
 			color: #fff;
 		}
+		&.case__banner_light {
+			background: #86bc25;
+			color: #fff;
+		}
 		.case__container {
 			display: flex;
 			align-items: center;
@@ -649,6 +653,14 @@
 				}
 			}
 		}
+		&.case__nums_light {
+			&::before {
+				background: #edf1f8;
+			}
+			.case__nums-value {
+				color: #86bc25;
+			}
+		}
 	}
 	// .case__nums-item
 	&__nums-item {
@@ -678,6 +690,9 @@
 
 		& small {
 			vertical-align: top;
+			font-size: 0.5em;
+			display: inline-block;
+			transform: translateY(-0.55rem);
 		}
 	}
 	// .case__nums-desc

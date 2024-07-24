@@ -5780,6 +5780,11 @@ div.asl_w .probox .promagnifier span::before {
   color: #fff;
 }
 
+.case__banner.case__banner_light {
+  background: #86bc25;
+  color: #fff;
+}
+
 .case__banner .case__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6289,6 +6294,14 @@ div.asl_w .probox .promagnifier span::before {
           flex: 0 0 33.33%;
 }
 
+.case__nums.case__nums_light::before {
+  background: #edf1f8;
+}
+
+.case__nums.case__nums_light .case__nums-value {
+  color: #86bc25;
+}
+
 .case__nums-item {
   max-width: 13.4375rem;
   display: -webkit-box;
@@ -6313,6 +6326,11 @@ div.asl_w .probox .promagnifier span::before {
 
 .case__nums-value small {
   vertical-align: top;
+  font-size: 0.5em;
+  display: inline-block;
+  -webkit-transform: translateY(-0.55rem);
+      -ms-transform: translateY(-0.55rem);
+          transform: translateY(-0.55rem);
 }
 
 .case__nums-desc {
