@@ -8,6 +8,7 @@ export { toggleLocking } from "./toggleLocking.js";
 export { intInputMask } from './intInputMask.js';
 export { lazy } from './lazy.js';
 export { inputFile } from './inputFile.js';
+// export { observeTheme } from './observeTheme.js';
 
 
 

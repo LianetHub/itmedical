@@ -539,6 +539,13 @@
 			object-fit: cover;
 			min-height: rem(245);
 		}
+		&.management__image-start {
+			& img {
+				@media (min-width: $md3) {
+					object-position: 0% center;
+				}
+			}
+		}
 	}
 	// .management__list
 	&__list {
@@ -801,6 +808,12 @@
 			height: rem(40);
 			width: auto;
 		}
+		&.lg-icon {
+			& img {
+				width: auto;
+				height: auto;
+			}
+		}
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -819,6 +832,11 @@
 		line-height: 140%;
 		&:first-child {
 			font-size: 1.5625rem;
+		}
+		&.lg-caption {
+			@media (min-width: $md5) {
+				font-size: rem(22);
+			}
 		}
 	}
 	// .teams__item-desc
@@ -1086,6 +1104,9 @@
 		margin-top: 1.25rem;
 		flex: 1 1 auto;
 		line-height: 140%;
+		&.sm-height {
+			flex: 0 1 auto;
+		}
 	}
 }
 
