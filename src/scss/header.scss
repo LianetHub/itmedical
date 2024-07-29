@@ -483,7 +483,10 @@
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
-			left: 0.75rem;
+			left: 1.75rem;
+			@media (max-width: $md4) {
+				padding: 1rem;
+			}
 			font-size: 1.25rem;
 			&::after {
 				display: none;

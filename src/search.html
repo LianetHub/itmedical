@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': 'Search | IT Medical',
+    'keywords': 'IT medical',
+    'url': 'https://www.itmedical.com/search/',
+    'desc': "Review the terms and conditions for using IT Medical's services. Understand your rights & our commitments to providing quality healthcare IT solutions."
+    })
+
+    <div class="wrapper">
+        @@include('html/_header.html', {
+        "fixed": false,
+        "active": 0
+        })
+        <main class="page">
+            <section class="search-page">
+                <div class="search-page__container">
+                    <nav class="breadcrumbs" aria-label="breadcrumbs menu">
+                        <div class="breadcrumbs__container">
+                            <ul class="breadcrumbs__items">
+                                <li class="breadcrumbs__item">
+                                    <a href="/" class="breadcrumbs__link">Home</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link active">Search</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <h1 class="search-page__title title">
+                        Search Results
+                    </h1>
+                    <form action="#" class="search-page__form">
+                        <input type="text" type="text" autocomplete="off" name="search" class="search__form-input form__input" placeholder="DNA">
+                        <button type="submit" class="search__form-btn btn btn-primary btn-sm icon-search"><span>Search</span></button>
+                    </form>
+                    <ul class="search-page__results">
+                        <li class="search-page__result">
+                            <a href="" class="search-page__result-name">AI is in our DNA</a>
+                            <p class="search-page__result-desc">
+                                Explore how has been developing AI to revolutionise healthcare, and request a meeting with us to find out more.
+                            </p>
+                            <a href="/ai-at-overview-page" class="search-page__result-link">itmedical.com/ai-at-overview-page</a>
+                        </li>
+                        <li class="search-page__result">
+                            <a href="" class="search-page__result-name">How we help tackle cardiac surgical waiting lists</a>
+                            <p class="search-page__result-desc">
+                                A peer-reviewed service evaluation with Royal Brompton and Harefield hospitals shows how remote patient monitoring platform can support surgical waiting
+                            </p>
+                            <a href="/ai-at-overview-page" class="search-page__result-link">itmedical.com/insights/how-we-help-tackle-cardiac-surgical-waiting-lists</a>
+                        </li>
+                        <li class="search-page__result">
+                            <a href="" class="search-page__result-name">How Digital Health can drive transformation in MedTech</a>
+                            <p class="search-page__result-desc">
+                                Download our 21 page guide, and discover how senior executives are using technology and real world evidence collection to support remote patient monitoring and improve patient outcomes in neurology, cardiology and orthopaedic surgery.
+                            </p>
+                            <a href="/ai-at-overview-page" class="search-page__result-link">itmedical.com/insights/resources/medtech-ebook-download</a>
+                        </li>
+                        <li class="search-page__result">
+                            <a href="" class="search-page__result-name">How remote patient monitoring can help drive MedTech revenue</a>
+                            <p class="search-page__result-desc">
+                                MedTech has helped healthcare providers transform care, outcomes and revenue opportunities. Find out how.
+                            </p>
+                            <a href="/ai-at-overview-page" class="search-page__result-link">itmedical.com/resources/medtech-revenue-remote-patient-monitoring</a>
+                        </li>
+                        <li class="search-page__result">
+                            <a href="" class="search-page__result-name">AI is in our DNA</a>
+                            <p class="search-page__result-desc">
+                                Explore how has been developing AI to revolutionise healthcare, and request a meeting with us to find out more.
+                            </p>
+                            <a href="/ai-at-overview-page" class="search-page__result-link">itmedical.com/ai-at-overview-page</a>
+                        </li>
+                        <li class="search-page__result">
+                            <a href="" class="search-page__result-name">How we help tackle cardiac surgical waiting lists</a>
+                            <p class="search-page__result-desc">
+                                A peer-reviewed service evaluation with Royal Brompton and Harefield hospitals shows how remote patient monitoring platform can support surgical waiting
+                            </p>
+                            <a href="/ai-at-overview-page" class="search-page__result-link">itmedical.com/insights/how-we-help-tackle-cardiac-surgical-waiting-lists</a>
+                        </li>
+                        <li class="search-page__result">
+                            <a href="" class="search-page__result-name">How Digital Health can drive transformation in MedTech</a>
+                            <p class="search-page__result-desc">
+                                Download our 21 page guide, and discover how senior executives are using technology and real world evidence collection to support remote patient monitoring and improve patient outcomes in neurology, cardiology and orthopaedic surgery.
+                            </p>
+                            <a href="/ai-at-overview-page" class="search-page__result-link">itmedical.com/insights/resources/medtech-ebook-download</a>
+                        </li>
+                        <li class="search-page__result">
+                            <a href="" class="search-page__result-name">How remote patient monitoring can help drive MedTech revenue</a>
+                            <p class="search-page__result-desc">
+                                MedTech has helped healthcare providers transform care, outcomes and revenue opportunities. Find out how.
+                            </p>
+                            <a href="/ai-at-overview-page" class="search-page__result-link">itmedical.com/resources/medtech-revenue-remote-patient-monitoring</a>
+                        </li>
+                    </ul>
+                    <div class="search-page__pagination pagination">
+                        <button class="pagination__prev icon-left"></button>
+                        <a href="" class="pagination__item active">1</a>
+                        <a href="" class="pagination__item">2</a>
+                        <a href="" class="pagination__item">3</a>
+                        <a href="" class="pagination__item">4</a>
+                        <a href="" class="pagination__item">5</a>
+                        <button class="pagination__next icon-right"></button>
+                    </div>
+                    <a href="" class="search-page__loadmore btn btn-secondary">Load more</a>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.html', {})
+    </div>
+    @@include('html/_js.html', {})
+
+</html>
