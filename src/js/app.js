@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return -1;
     }
 
-
+    // sliders
     if (document.querySelector('.blog__slider')) {
         new Swiper('.blog__slider', {
             slidesPerView: "auto",
@@ -351,13 +351,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // case sidebar animation
-
-    const caseSections = document.querySelectorAll('.case__block');
-
-    if (caseSections.length > 0) {
-
-        const navLinks = document.querySelectorAll('.case__sidebar-link');
+    // Общая функция для обработки секций и ссылок
+    function handleSectionAnimation(sectionsSelector, linksSelector) {
+        const sections = document.querySelectorAll(sectionsSelector);
+        const navLinks = document.querySelectorAll(linksSelector);
         const header = document.querySelector('.header');
         let isScrolling = false;
 
@@ -366,14 +363,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function animOnScroll() {
-
             if (isScrolling) return;
 
             let currentSection = null;
             const headerHeight = getHeaderHeight();
 
-            for (let i = 0; i < caseSections.length; i++) {
-                const section = caseSections[i];
+            sections.forEach(section => {
                 const sectionHeight = section.offsetHeight;
                 const sectionTop = section.getBoundingClientRect().top + window.scrollY - headerHeight;
                 const sectionBottom = sectionTop + sectionHeight;
@@ -384,7 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     section.classList.remove('active');
                 }
-            }
+            });
 
             if (currentSection) {
                 navLinks.forEach(link => {
@@ -400,7 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
             isScrolling = true;
 
-            const targetId = this.getAttribute('href').substring(1);
+            const targetId = event.target.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
             const headerHeight = getHeaderHeight();
             const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - headerHeight;
@@ -411,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             navLinks.forEach(link => link.classList.remove('active'));
-            this.classList.add('active');
+            event.target.classList.add('active');
 
             window.setTimeout(() => {
                 isScrolling = false;
@@ -427,9 +422,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
-
-
+    // Инициализация для различных секций
+    handleSectionAnimation('.case__block', '.case__sidebar-link');
+    handleSectionAnimation('.policy__body-section', '.policy__sidebar-link');
 
 
 })
