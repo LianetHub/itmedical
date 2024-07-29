@@ -6073,7 +6073,8 @@ div.asl_r p.showmore {
 }
 
 .policy__body-section:not(:first-child) {
-  padding-top: 1.87rem;
+  margin-top: 1rem;
+  padding-top: 0.87rem;
 }
 
 .policy__body-footer {
@@ -6526,6 +6527,7 @@ div.asl_r p.showmore {
   max-width: 53rem;
   font-weight: 500;
   line-height: 150%;
+  color: #272727;
 }
 
 .case__faq-question::before {
@@ -10795,6 +10797,10 @@ div.asl_r p.showmore {
   .banner__title.title-sm {
     font-size: 1.75rem;
     margin: 0 -0.5rem;
+  }
+
+  .promo.promo-certs {
+    min-height: 26.3125rem;
   }
 
   .promo.promo-healthcare-customer .promo__background img {

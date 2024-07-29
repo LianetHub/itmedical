@@ -14,8 +14,7 @@ export function observeTheme() {
 
     function updateThemeIcons() {
         const isDarkMode = matchMedia('(prefers-color-scheme: dark)').matches;
-        console.log(isDarkMode);
-        const timestamp = new Date().getTime(); // Это помогает избежать кэширования
+        const timestamp = new Date().getTime();
 
         if (isDarkMode) {
             setFaviconAndAppleIcon(`/favicon-32x32-dark.png?v=${timestamp}`, `/apple-touch-icon-dark.png?v=${timestamp}`);
@@ -24,10 +23,9 @@ export function observeTheme() {
         }
     }
 
-    // Изначальная установка темы
+
     updateThemeIcons();
 
-    // Обработка изменения темы
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateThemeIcons);
 
 

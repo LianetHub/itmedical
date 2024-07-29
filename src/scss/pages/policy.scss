@@ -172,7 +172,8 @@
 	}
 	&__body-section {
 		&:not(:first-child) {
-			padding-top: 1.87rem;
+			margin-top: 1rem;
+			padding-top: 0.87rem;
 		}
 	}
 	// .policy__body-footer

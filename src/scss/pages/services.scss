@@ -93,6 +93,9 @@
 		}
 	}
 	&.promo-certs {
+		@media (max-width: $md5) {
+			min-height: rem(421);
+		}
 		.promo__background {
 			margin-left: -1px;
 			& img {
