@@ -875,8 +875,7 @@
 			&::before {
 				content: "";
 				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
+				top: 0.35em;
 				left: 0;
 				width: 0.4375rem;
 				height: 0.4375rem;
@@ -1094,7 +1093,7 @@
 			order: 1;
 			padding: 0.5rem 0;
 			font-size: 1.25rem;
-			color: $accent;
+			color: #0057b8;
 			align-self: flex-start;
 			transform: rotate(0deg);
 		}

@@ -4045,10 +4045,7 @@ div.asl_r p.showmore {
 .teams__item-list li::before {
   content: "";
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 0.35em;
   left: 0;
   width: 0.4375rem;
   height: 0.4375rem;
