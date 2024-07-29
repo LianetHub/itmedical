@@ -94,6 +94,7 @@
 	}
 	&.promo-certs {
 		.promo__background {
+			margin-left: -1px;
 			& img {
 				@media (min-width: $md3) {
 					object-position: 50% 60%;
