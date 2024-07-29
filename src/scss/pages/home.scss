@@ -1472,7 +1472,9 @@
 			}
 		}
 		& [data-name="message"] {
-			grid-column: span 2;
+			@media (min-width: $md5) {
+				grid-column: span 2;
+			}
 		}
 	}
 }

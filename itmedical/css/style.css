@@ -906,6 +906,7 @@ div.asl_w .probox .proinput input[type=submit] {
   line-height: inherit !important;
   font-weight: inherit !important;
   color: inherit !important;
+  cursor: pointer;
 }
 
 .form__btn.btn {
@@ -1453,7 +1454,7 @@ div.asl_w .probox .proinput input {
           box-sizing: border-box !important;
   border-radius: 9.375rem !important;
   font-size: 1rem !important;
-  padding: 1.4rem 1.88rem 1.4rem 3.7rem !important;
+  padding: 1.4rem 3rem 1.4rem 3.7rem !important;
 }
 
 #ajaxsearchlite1 .probox .proinput input:hover,
@@ -3407,11 +3408,6 @@ div.asl_r p.showmore {
   width: 100%;
   gap: 1.25rem;
   row-gap: 1.25rem;
-}
-
-.contacts__request-grid [data-name=message] {
-  -ms-grid-column-span: 2;
-  grid-column: span 2;
 }
 
 .promo {
@@ -6016,7 +6012,6 @@ div.asl_r p.showmore {
 }
 
 .policy__body h2 {
-  margin-top: 1.87rem;
   font-weight: 500;
   line-height: 140%;
   font-size: 2rem;
@@ -6071,6 +6066,10 @@ div.asl_r p.showmore {
   font-size: 1rem;
   line-height: 140%;
   text-decoration: underline;
+}
+
+.policy__body-section:not(:first-child) {
+  padding-top: 1.87rem;
 }
 
 .policy__body-footer {
@@ -6565,8 +6564,8 @@ div.asl_r p.showmore {
 
 .case__faq-answer {
   margin-top: 1.25rem;
-  color: #303030;
   line-height: 140%;
+  color: #080808;
 }
 
 .case__tags {
@@ -6985,6 +6984,7 @@ div.asl_r p.showmore {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  padding: 0.83rem 1.88rem 0.83rem 3.7rem;
 }
 
 .search-page__form .search__form-btn {
@@ -7022,7 +7022,7 @@ div.asl_r p.showmore {
 }
 
 .search-page__result-desc {
-  margin-top: 1.25rem;
+  margin-top: 0.94rem;
   font-size: 1rem;
   line-height: 140%;
 }
@@ -7394,6 +7394,11 @@ div.asl_r p.showmore {
   }
 
   .contacts__request-grid .form__input-lg {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+  }
+
+  .contacts__request-grid [data-name=message] {
     -ms-grid-column-span: 2;
     grid-column: span 2;
   }
@@ -7812,6 +7817,7 @@ div.asl_r p.showmore {
   }
 
   .case__faq-answer {
+    color: #303030;
     line-height: 150%;
     margin-top: 1.75rem;
     font-size: 1.125rem;
@@ -7860,6 +7866,10 @@ div.asl_r p.showmore {
 
   .search-page {
     padding-bottom: 6.25rem;
+  }
+
+  .search-page__result-desc {
+    margin-top: 1.25rem;
   }
 
   .search-page__loadmore {
@@ -8526,13 +8536,10 @@ div.asl_r p.showmore {
     max-height: 18.125rem;
   }
 
-  .search-page__form {
-    margin-top: 2rem;
-  }
-
   .search-page__form .form__input,
   .search-page__form .search__form .orig,
   .search__form .search-page__form .orig {
+    padding: 0.83rem 1.88rem;
     border-radius: 0.625rem;
   }
 
@@ -8541,6 +8548,7 @@ div.asl_r p.showmore {
   }
 
   .search-page__form .search__form-btn.btn-primary {
+    font-size: 1rem;
     margin-left: 0;
   }
 }

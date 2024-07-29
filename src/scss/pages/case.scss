@@ -585,9 +585,10 @@
 	// .case__faq-answer
 	&__faq-answer {
 		margin-top: 1.25rem;
-		color: #303030;
 		line-height: 140%;
+		color: #080808;
 		@media (min-width: $md5) {
+			color: #303030;
 			line-height: 150%;
 			margin-top: 1.75rem;
 			font-size: 1.125rem;

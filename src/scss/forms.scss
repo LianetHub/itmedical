@@ -324,6 +324,7 @@
 				line-height: inherit !important;
 				font-weight: inherit !important;
 				color: inherit !important;
+				cursor: pointer;
 			}
 		}
 	}
@@ -923,7 +924,7 @@ div.asl_w .probox .proinput input {
 	}
 	border-radius: rem(150) !important;
 	font-size: 1rem !important;
-	padding: 1.4rem 1.88rem 1.4rem 3.7rem !important;
+	padding: 1.4rem 3rem 1.4rem 3.7rem !important;
 	@media (min-width: $md4) {
 		padding: 1.83rem 1.88rem !important;
 		border-radius: rem(10) !important;

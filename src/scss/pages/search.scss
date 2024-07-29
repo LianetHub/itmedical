@@ -15,16 +15,15 @@
 	&__form {
 		position: relative;
 		margin-top: 2.5rem;
-		@media (min-width: $md4) {
-			margin-top: 2rem;
-		}
 		max-width: 59.4rem;
 		display: flex;
 		gap: 0.66rem;
 		.form__input {
 			width: 100%;
 			flex: 1 1 auto;
+			padding: 0.83rem 1.88rem 0.83rem 3.7rem;
 			@media (min-width: $md4) {
+				padding: 0.83rem 1.88rem;
 				border-radius: rem(10);
 			}
 		}
@@ -36,6 +35,7 @@
 			@media (min-width: $md4) {
 				left: auto;
 				&.btn-primary {
+					font-size: 1rem;
 					margin-left: 0;
 				}
 			}
@@ -74,7 +74,10 @@
 	}
 	// .search-page__result-desc
 	&__result-desc {
-		margin-top: 1.25rem;
+		margin-top: 0.94rem;
+		@media (min-width: $md5) {
+			margin-top: 1.25rem;
+		}
 		font-size: 1rem;
 		line-height: 140%;
 	}
