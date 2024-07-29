@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     devFunctions.isWebp();
     devFunctions.OS();
-    // devFunctions.observeTheme();
+    devFunctions.observeTheme();
     devFunctions.lazy();
     devFunctions.intInputMask();
     // devFunctions.formSubmit();
