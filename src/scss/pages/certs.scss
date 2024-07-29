@@ -40,11 +40,12 @@
 		flex-direction: column;
 		padding: 2.5rem 1.25rem 2.5rem 1.25rem;
 		@media (min-width: $md4) {
-			padding: 2.5rem 2rem 2.5rem 2.75rem;
+			padding: 2.5rem 2rem 2.5rem rem(40);
 		}
 	}
 	// .certs__item-header
 	&__item-header {
+		margin-top: auto;
 		margin-bottom: auto;
 		display: flex;
 		align-items: center;
@@ -88,7 +89,7 @@
 	&__image {
 		position: relative;
 		width: fit-content;
-		margin-bottom: auto;
+		max-width: rem(400);
 		&::before {
 			content: "";
 			position: absolute;
@@ -125,6 +126,7 @@
 		}
 		margin-top: 2.19rem;
 		& img {
+			border-radius: rem(10);
 			@media (min-width: $md4) {
 				max-height: 26.625rem;
 			}
