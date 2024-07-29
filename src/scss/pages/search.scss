@@ -35,8 +35,10 @@
 			}
 			@media (min-width: $md4) {
 				left: auto;
+				&.btn-primary {
+					margin-left: 0;
+				}
 			}
-			margin-left: 0;
 		}
 	}
 	// .search-page__results

@@ -6953,7 +6953,6 @@ div.asl_r p.showmore {
 
 .search-page__form .search__form-btn {
   left: 2rem;
-  margin-left: 0;
 }
 
 .search-page__results {
@@ -8503,6 +8502,10 @@ div.asl_r p.showmore {
 
   .search-page__form .search__form-btn {
     left: auto;
+  }
+
+  .search-page__form .search__form-btn.btn-primary {
+    margin-left: 0;
   }
 }
 
