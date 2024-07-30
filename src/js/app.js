@@ -366,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isScrolling) return;
 
             let currentSection = null;
-            const headerHeight = getHeaderHeight();
+            const headerHeight = getHeaderHeight() * 3;
 
             sections.forEach(section => {
                 const sectionHeight = section.offsetHeight;
