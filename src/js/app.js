@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // devFunctions.formSubmit();
     devFunctions.spollers();
     devFunctions.inputFile();
+    devFunctions.shareLinks();
 
 
     if (document.querySelector('.main__video')) {
