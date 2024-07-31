@@ -8,7 +8,8 @@ export const shareLinks = () => {
 
     // Устанавливаем ссылки, если кнопки существуют
     if (facebookBtn) {
-        var facebookShareUrl = `https://www.facebook.com/sharer.php?u=${pageUrl}&quote=${pageTitle}`;
+        https://www.facebook.com/sharer.php?p\[url\]=\*url 
+        var facebookShareUrl = `https://www.facebook.com/sharer.php?p[url]=${pageUrl}&p[title]=${pageTitle}`;
         facebookBtn.setAttribute('href', facebookShareUrl);
     }
 
