@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.observeTheme();
     devFunctions.lazy();
     devFunctions.intInputMask();
-    // devFunctions.formSubmit();
+    devFunctions.formSubmit();
     devFunctions.spollers();
     devFunctions.inputFile();
     devFunctions.shareLinks();
