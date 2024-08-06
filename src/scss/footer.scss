@@ -273,6 +273,18 @@
 			flex-direction: row;
 		}
 	}
+	&__bottom-desc {
+		font-weight: 300;
+		color: #606060;
+		margin-top: rem(15);
+		font-size: rem(15);
+		line-height: math.div(27, 15);
+		@media (min-width: $md5) {
+			line-height: math.div(28.8, 16);
+			margin-top: rem(20);
+			font-size: 1rem;
+		}
+	}
 	// .footer__copy
 	&__copy {
 		color: #606060;

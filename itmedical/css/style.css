@@ -2380,6 +2380,14 @@ div.asl_r p.showmore {
   gap: 1.25rem;
 }
 
+.footer__bottom-desc {
+  font-weight: 300;
+  color: #606060;
+  margin-top: 0.9375rem;
+  font-size: 0.9375rem;
+  line-height: 1.8;
+}
+
 .footer__copy {
   color: #606060;
 }
@@ -6657,8 +6665,8 @@ div.asl_r p.showmore {
 
 .case__nums.case__nums_aqua .case__nums-item:last-child {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 33.33%;
-          flex: 0 0 33.33%;
+      -ms-flex: 0 1 33%;
+          flex: 0 1 33%;
 }
 
 .case__nums.case__nums_light::before {
@@ -7222,6 +7230,12 @@ div.asl_r p.showmore {
   .footer__address {
     margin-top: 0.62rem;
     line-height: 200%;
+  }
+
+  .footer__bottom-desc {
+    line-height: 1.8;
+    margin-top: 1.25rem;
+    font-size: 1rem;
   }
 
   .footer__list {
