@@ -3,6 +3,9 @@
 	@media (min-width: $md5) {
 		padding-bottom: 6.25rem;
 	}
+	.breadcrumbs__container {
+		padding: 0;
+	}
 	// .search-page__container
 	&__container {
 	}

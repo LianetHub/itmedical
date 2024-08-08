@@ -1003,27 +1003,29 @@
 		@media (min-width: $md5) {
 			min-height: rem(250);
 		}
-		&:hover {
-			.services__item-link {
-				color: #fff;
-
-				.services__item-body {
-					height: 0;
-					overflow: hidden;
-					padding: 0;
-					margin: 0;
-					max-height: 0;
-					transition: all 0.3s ease 0s;
-				}
-				&::after,
-				& .services__item-image {
-					opacity: 1;
-				}
-
-				.services__item-header {
-					margin: auto em(0) em(0) em(0);
-					&::before {
-						color: currentColor;
+		@media (any-hover: hover) {
+			&:hover {
+				.services__item-link {
+					color: #fff;
+	
+					.services__item-body {
+						height: 0;
+						overflow: hidden;
+						padding: 0;
+						margin: 0;
+						max-height: 0;
+						transition: all 0.3s ease 0s;
+					}
+					&::after,
+					& .services__item-image {
+						opacity: 1;
+					}
+	
+					.services__item-header {
+						margin: auto em(0) em(0) em(0);
+						&::before {
+							color: currentColor;
+						}
 					}
 				}
 			}

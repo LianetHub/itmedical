@@ -2534,6 +2534,11 @@ div.asl_r p.showmore {
   line-height: 1.8;
 }
 
+.footer__bottom-desc a {
+  color: #0057b8;
+  text-decoration: underline;
+}
+
 .footer__copy {
   color: #606060;
 }
@@ -4270,34 +4275,6 @@ div.asl_r p.showmore {
   display: grid;
   gap: 1.25rem;
   margin-top: 2.5rem;
-}
-
-.services__item:hover .services__item-link {
-  color: #fff;
-}
-
-.services__item:hover .services__item-link .services__item-body {
-  height: 0;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  max-height: 0;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.services__item:hover .services__item-link::after,
-.services__item:hover .services__item-link .services__item-image {
-  opacity: 1;
-}
-
-.services__item:hover .services__item-link .services__item-header {
-  margin: auto 0em 0em 0em;
-}
-
-.services__item:hover .services__item-link .services__item-header::before {
-  color: currentColor;
 }
 
 .services__item-image {
@@ -7127,6 +7104,10 @@ div.asl_r p.showmore {
 
 .search-page {
   padding-bottom: 3.13rem;
+}
+
+.search-page .breadcrumbs__container {
+  padding: 0;
 }
 
 .search-page__title {
@@ -11259,6 +11240,10 @@ div.asl_r p.showmore {
     color: #e1f0ff;
   }
 
+  .footer__bottom-desc a:hover {
+    text-decoration: none;
+  }
+
   .footer__link:hover {
     color: #0057b8;
   }
@@ -11290,6 +11275,34 @@ div.asl_r p.showmore {
 
   .blog__item-name:hover {
     color: #0057b8;
+  }
+
+  .services__item:hover .services__item-link {
+    color: #fff;
+  }
+
+  .services__item:hover .services__item-link .services__item-body {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .services__item:hover .services__item-link::after,
+  .services__item:hover .services__item-link .services__item-image {
+    opacity: 1;
+  }
+
+  .services__item:hover .services__item-link .services__item-header {
+    margin: auto 0em 0em 0em;
+  }
+
+  .services__item:hover .services__item-link .services__item-header::before {
+    color: currentColor;
   }
 
   .services__item-link:hover {
