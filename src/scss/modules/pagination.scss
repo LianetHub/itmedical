@@ -1,5 +1,8 @@
 .pagination {
-	margin-top: 4.25rem;
+	margin-top: 3.25rem;
+	@media (min-width: $md5) {
+		margin-top: 4.25rem;
+	}
 	display: flex;
 	justify-content: center;
 	align-items: center;

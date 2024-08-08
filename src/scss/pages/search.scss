@@ -95,9 +95,6 @@
 		}
 	}
 	&__pagination {
-		@media (max-width: $md5) {
-			display: none;
-		}
 	}
 	&__loadmore {
 		margin-top: 3.13rem;
