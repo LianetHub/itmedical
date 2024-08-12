@@ -7,7 +7,7 @@ export { spollers } from './spoller.js';
 export { toggleLocking } from "./toggleLocking.js";
 export { intInputMask } from './intInputMask.js';
 export { lazy } from './lazy.js';
-export { inputFile } from './inputFile.js';
+// export { inputFile } from './inputFile.js';
 export { observeTheme } from './observeTheme.js';
 export { shareLinks } from './shareLinks.js';
 

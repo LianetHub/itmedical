@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     devFunctions.intInputMask();
     // devFunctions.formSubmit();
     devFunctions.spollers();
-    devFunctions.inputFile();
+    // devFunctions.inputFile();
     // devFunctions.shareLinks();
 
 
