@@ -870,23 +870,11 @@
 	&__list-item {
 		line-height: 150%;
 		font-size: 0.75rem;
-		padding-left: 1.35em;
-		@media (min-width: $md5) {
-			font-size: 1rem;
-		}
-		position: relative;
 
-		&::before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 0.5em;
-			width: 0.35em;
-			height: 0.35em;
-			background: #fff;
-			border-radius: 50%;
-			transform: translateY(-50%);
+		@media (min-width: $md5) {
+			font-size: rem(18);
 		}
+
 		& strong {
 			font-weight: 500;
 		}

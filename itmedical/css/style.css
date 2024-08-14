@@ -2722,6 +2722,8 @@ div.asl_r p.showmore {
 }
 
 .what__item-link {
+  position: relative;
+  z-index: 1;
   border-radius: 0.625rem;
   border: 1px solid #d6d6d6;
   background: #fff;
@@ -2733,12 +2735,44 @@ div.asl_r p.showmore {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100%;
-  -webkit-transition: -webkit-box-shadow 0.3s ease 0s;
-  transition: -webkit-box-shadow 0.3s ease 0s;
-  -o-transition: box-shadow 0.3s ease 0s;
-  transition: box-shadow 0.3s ease 0s;
-  transition: box-shadow 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+  -webkit-transition: color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+  transition: color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+  -o-transition: box-shadow 0.3s ease 0s, color 0.3s ease 0s;
+  transition: box-shadow 0.3s ease 0s, color 0.3s ease 0s;
+  transition: box-shadow 0.3s ease 0s, color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
   padding: 1.8rem 1.69rem 1.8rem 1.87rem;
+}
+
+.what__item-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.625rem;
+  z-index: -1;
+  -webkit-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.what__item-image img {
+  border-radius: 0.625rem;
+}
+
+.what__item-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.625rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 }
 
 .what__item-name {
@@ -2748,7 +2782,6 @@ div.asl_r p.showmore {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  color: #080808;
   gap: 1rem;
   line-height: 140%;
   -webkit-box-pack: justify;
@@ -5850,6 +5883,21 @@ div.asl_r p.showmore {
   padding: 1.87rem 0 2.5rem;
 }
 
+.solutions__content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--background-solutions) center/cover no-repeat, -o-linear-gradient(179deg, #023384 4.14%, #0057b8 71.64%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--background-solutions) center/cover no-repeat, linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
+  z-index: -1;
+}
+
 .solutions__item {
   display: none;
 }
@@ -6980,22 +7028,6 @@ div.asl_r p.showmore {
 .related-case__list-item {
   line-height: 150%;
   font-size: 0.75rem;
-  padding-left: 1.35em;
-  position: relative;
-}
-
-.related-case__list-item::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0.5em;
-  width: 0.35em;
-  height: 0.35em;
-  background: #fff;
-  border-radius: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 .related-case__list-item strong {
@@ -8040,7 +8072,7 @@ div.asl_r p.showmore {
   }
 
   .related-case__list-item {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 
   .certs {
@@ -10789,6 +10821,15 @@ div.asl_r p.showmore {
     font-size: 1.25rem;
   }
 
+  .solutions__content::before {
+    left: 0;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    width: calc(31rem + (100vw - 81.25rem) / 2);
+    min-width: 32.25rem;
+  }
+
   .solutions__content {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 31rem;
@@ -11290,6 +11331,12 @@ div.asl_r p.showmore {
   .what__item-link:hover {
     -webkit-box-shadow: 0px 8px 8px -4px rgba(24, 39, 75, 0.08), 0px 4px 6px -4px rgba(24, 39, 75, 0.12);
             box-shadow: 0px 8px 8px -4px rgba(24, 39, 75, 0.08), 0px 4px 6px -4px rgba(24, 39, 75, 0.12);
+    color: #fff;
+  }
+
+  .what__item-link:hover .what__item-image {
+    opacity: 1;
+    visibility: visible;
   }
 
   .nums__item-link:hover {
