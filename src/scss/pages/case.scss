@@ -5,15 +5,14 @@
 	// .case__banner
 	&__banner {
 		position: relative;
-
 		width: 100%;
-
 		z-index: 1;
 		display: flex;
 		padding: 2.5rem 0;
 		@media (min-width: $md4) {
 			padding: 0;
 		}
+		min-height: rem(410);
 		&.case__banner_default {
 			min-height: rem(395);
 			@media (min-width: 2600px) {
