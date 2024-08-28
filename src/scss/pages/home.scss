@@ -988,6 +988,13 @@
 }
 
 .case-card {
+	@media (any-hover: hover) {
+		&:hover {
+			.case-card__image img {
+				transform: scale(1.1);
+			}
+		}
+	}
 	// .case-card__content
 	&__content {
 		display: flex;
@@ -1005,6 +1012,7 @@
 	&__image {
 		& img {
 			width: 100%;
+			transition: transform 0.3s ease 0s;
 		}
 		@media (min-width: $md4) {
 			& img {

@@ -677,12 +677,12 @@
 			.case__nums-value {
 				color: #16cbc2;
 			}
-			.case__nums-item {
-				flex: 0 1 30%;
-				&:last-child {
-					flex: 0 1 33%;
-				}
-			}
+			// .case__nums-item {
+			// 	flex: 0 1 30%;
+			// 	&:last-child {
+			// 		flex: 0 1 33%;
+			// 	}
+			// }
 		}
 		&.case__nums_light {
 			&::before {
@@ -714,6 +714,7 @@
 		color: #389520;
 		font-family: $font-noto;
 		line-height: 100%;
+		font-weight: 400;
 		font-size: 2.8125rem;
 		@media (min-width: $md5) {
 			font-size: 4.375rem;
@@ -791,7 +792,7 @@
 	}
 	// .related-cases__slider
 	&__slider {
-		margin-top: 2.5rem;
+		margin: 2.5rem -1.25rem 0;
 	}
 }
 

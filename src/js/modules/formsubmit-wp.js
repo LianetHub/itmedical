@@ -32,6 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		let fileFields = [];
 
 		formData.forEach((value, key) => {
+
+			if (key.startsWith('_wpcf7')) {
+				return;
+			}
+
 			if (value instanceof File) {
 				if (value.size > 0) {
 					fileUploadPromises.push(uploadFile(value).then(url => {
