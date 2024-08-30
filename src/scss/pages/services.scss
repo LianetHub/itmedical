@@ -119,6 +119,13 @@
 			}
 		}
 	}
+	&.promo-blog {
+		.promo__background {
+			&::before {
+				background: linear-gradient(180deg, rgba(255, 255, 255, 0) -57.94%, rgba(7, 39, 68, 0.7) 70.94%);
+			}
+		}
+	}
 	// .promo__container
 	&__container {
 		width: 100%;
@@ -1007,7 +1014,7 @@
 			&:hover {
 				.services__item-link {
 					color: #fff;
-	
+
 					.services__item-body {
 						height: 0;
 						overflow: hidden;
@@ -1020,7 +1027,7 @@
 					& .services__item-image {
 						opacity: 1;
 					}
-	
+
 					.services__item-header {
 						margin: auto em(0) em(0) em(0);
 						&::before {

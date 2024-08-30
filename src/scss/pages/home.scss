@@ -725,8 +725,10 @@
 	color: #fff;
 	padding: 2rem 0 3rem;
 	text-align: center;
-	@media (min-width: $md3) {
+	@media (min-width: $md4) {
 		text-align: left;
+	}
+	@media (min-width: $md3) {
 		padding: 4.37rem 0 4.4rem;
 	}
 	& + .contacts {
@@ -744,6 +746,25 @@
 	// .compliance__container
 	&__container {
 	}
+	// .compliance__header
+	&__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		@media (min-width: $md4) {
+			align-items: flex-start;
+			flex-direction: row;
+		}
+	}
+	// .compliance__main
+	&__main {
+		flex: 1 1 auto;
+	}
+
+	// .compliance__btn
+	&__btn {
+	}
 	// .compliance__title
 	&__title {
 		font-size: 1.875rem;
@@ -760,11 +781,13 @@
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 1.4rem;
-		@media (min-width: $md3) {
-			margin-top: 1rem;
+		@media (min-width: $md4) {
 			margin-left: 0;
 			margin-right: 0;
 			max-width: rem(992);
+		}
+		@media (min-width: $md3) {
+			margin-top: 1rem;
 			font-size: 1.375rem;
 		}
 		&.compliance__subtitle-lg {
@@ -972,7 +995,7 @@
 	&__content {
 		display: none;
 		&.active {
-			animation: fadeIn 1s;
+			animation: fadeIn 0.5s;
 			display: block;
 		}
 	}

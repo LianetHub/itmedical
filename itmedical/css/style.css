@@ -2547,7 +2547,6 @@ div.asl_r p.showmore {
 }
 
 .footer__bottom-desc a {
-  color: #0057b8;
   text-decoration: underline;
 }
 
@@ -3088,6 +3087,26 @@ div.asl_r p.showmore {
   padding-top: 3.125rem;
 }
 
+.compliance__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.compliance__main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
 .compliance__title {
   font-size: 1.875rem;
   line-height: 140%;
@@ -3253,8 +3272,8 @@ div.asl_r p.showmore {
 }
 
 .cases__content.active {
-  -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
+  -webkit-animation: fadeIn 0.5s;
+          animation: fadeIn 0.5s;
   display: block;
 }
 
@@ -3714,6 +3733,12 @@ div.asl_r p.showmore {
 
 .promo.promo-certs .promo__background {
   margin-left: -1px;
+}
+
+.promo.promo-blog .promo__background::before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-57.94%, rgba(255, 255, 255, 0)), color-stop(70.94%, rgba(7, 39, 68, 0.7)));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) -57.94%, rgba(7, 39, 68, 0.7) 70.94%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) -57.94%, rgba(7, 39, 68, 0.7) 70.94%);
 }
 
 .promo__container {
@@ -8354,6 +8379,26 @@ div.asl_r p.showmore {
     margin-bottom: 1.65rem;
   }
 
+  .compliance {
+    text-align: left;
+  }
+
+  .compliance__header {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .compliance__subtitle {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 62rem;
+  }
+
   .help__header-btn {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9385,7 +9430,6 @@ div.asl_r p.showmore {
   }
 
   .compliance {
-    text-align: left;
     padding: 4.37rem 0 4.4rem;
   }
 
@@ -9403,9 +9447,6 @@ div.asl_r p.showmore {
 
   .compliance__subtitle {
     margin-top: 1rem;
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 62rem;
     font-size: 1.375rem;
   }
 
@@ -10891,6 +10932,10 @@ div.asl_r p.showmore {
         -ms-flex: 0 1 calc(33.33% - 1.5rem);
             flex: 0 1 calc(33.33% - 1.5rem);
     max-width: 19.5625rem;
+  }
+
+  .related-cases__slider {
+    margin: 2.5rem 0rem 0;
   }
 
   .search-page__results {

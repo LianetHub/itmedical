@@ -793,6 +793,9 @@
 	// .related-cases__slider
 	&__slider {
 		margin: 2.5rem -1.25rem 0;
+		@media (min-width: $md2) {
+			margin: 2.5rem 0rem 0;
+		}
 	}
 }
 
