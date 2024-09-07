@@ -1,0 +1,40 @@
+.copy-btn {
+	position: relative;
+}
+
+.tooltip {
+	position: absolute;
+	background: #080808;
+	border-radius: 9.375rem;
+	padding: rem(10) rem(30);
+	z-index: 100000000;
+	color: #fff;
+	top: calc(100% + 0.69rem);
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 0.875rem;
+	min-width: rem(141);
+
+	pointer-events: none;
+	user-select: none;
+	text-align: center;
+	&.fade {
+		animation: fadeOut 0.5s;
+	}
+	&::after {
+		top: rem(-8);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		width: 0.875rem;
+		height: 0.875rem;
+		top: -0.5rem;
+		background-image: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.13397 0.5C5.51887 -0.166667 6.48113 -0.166667 6.86603 0.5L11.1962 8C11.5811 8.66667 11.0999 9.5 10.3301 9.5H1.66987C0.900073 9.5 0.418948 8.66667 0.803848 8L5.13397 0.5Z' fill='%23080808'/%3E%3C/svg%3E%0A");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		left: calc(50%);
+		transform: translateX(-50%);
+	}
+}

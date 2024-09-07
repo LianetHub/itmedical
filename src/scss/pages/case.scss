@@ -24,7 +24,7 @@
 				padding: rem(100) 0 rem(90);
 			}
 			&::before {
-				content: "";
+				content: '';
 				position: absolute;
 				top: 0;
 				right: 0;
@@ -33,7 +33,7 @@
 					width: 50%;
 				}
 				height: 100%;
-				background: linear-gradient(90deg, #f2f8ff 0%, rgba(242, 248, 255, 0) 100%) 0 0 / 25.5rem 100% no-repeat, url("@img/case-banner.jpg") 1px center / cover no-repeat;
+				background: linear-gradient(90deg, #f2f8ff 0%, rgba(242, 248, 255, 0) 100%) 0 0 / 25.5rem 100% no-repeat, url('@img/case-banner.jpg') 1px center / cover no-repeat;
 				z-index: -1;
 			}
 			.case__title {
@@ -90,9 +90,9 @@
 		}
 		@media (min-width: $md3) {
 			margin-right: 2rem;
-			margin-bottom: -1.4rem;
+			margin-bottom: -2rem;
 			&.lg-offset {
-				margin-bottom: -1.75rem;
+				margin-bottom: -3rem;
 			}
 		}
 	}
@@ -154,7 +154,7 @@
 	&__sidebar {
 		position: relative;
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -215,7 +215,7 @@
 		position: relative;
 		padding-bottom: 0.5rem;
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -306,7 +306,7 @@
 		padding-bottom: 0.65rem;
 		position: relative;
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -393,7 +393,7 @@
 					padding-left: 2.25rem;
 				}
 				&::before {
-					content: counter(num) ".";
+					content: counter(num) '.';
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -409,7 +409,7 @@
 			& li {
 				padding-left: 1.75rem;
 				&::before {
-					content: "";
+					content: '';
 					position: absolute;
 					top: 0.65rem;
 					left: 0;
@@ -528,7 +528,7 @@
 		position: relative;
 		counter-increment: num;
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -559,7 +559,7 @@
 		line-height: 150%;
 		color: #272727;
 		&::before {
-			content: counter(num) ".";
+			content: counter(num) '.';
 			color: #002f9c;
 		}
 		&[data-spoller] {
@@ -655,7 +655,7 @@
 		flex-wrap: wrap;
 		position: relative;
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			top: 0;
 			width: 100vw;
@@ -817,7 +817,7 @@
 	background-size: cover;
 	background-position: center;
 	&::before {
-		content: "";
+		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;

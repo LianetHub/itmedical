@@ -148,6 +148,32 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        if (target.classList.contains('copy-btn')) {
+            e.preventDefault()
+            let textToCopy = target.getAttribute('href');
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(textToCopy).then(function () {
+                    showTooltip(target);
+                }).catch(function (err) {
+                    console.error('Ошибка при копировании: ', err);
+                });
+            } else {
+                let textArea = document.createElement("textarea");
+                textArea.value = textToCopy;
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    showTooltip(target);
+                } catch (err) {
+                    console.error('Ошибка при копировании: ', err);
+                }
+                document.body.removeChild(textArea);
+            }
+        }
+
     });
 
 
@@ -207,6 +233,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return -1;
     }
+
+    function showTooltip(element) {
+        element.innerHTML += '<span class="tooltip">Link Copied!</span>';
+
+        setTimeout(function () {
+            let tooltip = element.querySelector('.tooltip');
+            tooltip.classList.remove('fade');
+            tooltip.classList.add('fade');
+            setTimeout(function () {
+                let tooltip = element.querySelector('.tooltip');
+                if (tooltip) {
+                    tooltip.remove();
+                }
+            }, 500);
+        }, 2000);
+    }
+
 
     // sliders
     if (document.querySelector('.blog__slider')) {

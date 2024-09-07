@@ -61,7 +61,7 @@ export const html = () => {
         .pipe(app.plugins.if(app.isBuild, app.plugins.replace('src="img/', function handleReplace(match) {
             return 'src="img/1x1.png"' + ' ' + 'data-' + match;
         })))
-
+        .pipe(app.plugins.replace(/<imga(\s|>)/g, "<img$1"))
 
         .pipe(
             app.plugins.if(

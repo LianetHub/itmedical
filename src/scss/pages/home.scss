@@ -9,7 +9,7 @@
 	flex-direction: column;
 	justify-content: center;
 	@media (max-width: $md4) {
-		background: linear-gradient(0deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0) 104.62%), url("@img/poster.jpg") 0 0 / cover no-repeat;
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0) 104.62%), url('@img/poster.jpg') 0 0 / cover no-repeat;
 	}
 	@media (min-width: $md4) {
 		padding: 7.38rem 0 2.5rem;
@@ -218,7 +218,7 @@
 		opacity: 0;
 		visibility: hidden;
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -258,9 +258,9 @@
 .who {
 	color: #fff;
 	padding: 12.75rem 0rem 3.65rem;
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 11.48%, rgba(0, 0, 0, 0) 76.29%), url("@img/who.png") 50% 0 / cover no-repeat;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 11.48%, rgba(0, 0, 0, 0) 76.29%), url('@img/who.png') 50% 0 / cover no-repeat;
 	@media (min-width: $md5) {
-		background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 11.48%, rgba(0, 0, 0, 0) 76.29%), url("@img/who.png") 39% 0 / cover no-repeat;
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 11.48%, rgba(0, 0, 0, 0) 76.29%), url('@img/who.png') 39% 0 / cover no-repeat;
 		padding: 13.5rem 2rem 3.65rem;
 	}
 	@media (min-width: $md3) {
@@ -1009,12 +1009,20 @@
 		opacity: 1;
 	}
 }
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
 
 .case-card {
 	@media (any-hover: hover) {
 		&:hover {
 			.case-card__image img {
-				transform: scale(1.1);
+				transform: scale(1.05);
 			}
 		}
 	}
@@ -1538,7 +1546,7 @@
 				grid-column: span 2;
 			}
 		}
-		& [data-name="message"] {
+		& [data-name='message'] {
 			@media (min-width: $md5) {
 				grid-column: span 2;
 			}

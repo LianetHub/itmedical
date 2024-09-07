@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		formData.forEach((value, key) => {
 
-			if (key.startsWith('_wpcf7')) {
+			if (key.startsWith('_wpcf7') || key.indexOf('_wpcf7') === 0) {
 				return;
 			}
 

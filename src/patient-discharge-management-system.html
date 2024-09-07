@@ -30,7 +30,7 @@
                             </div>
                         </div>
                         <div class="case__main-image">
-                            <img src="@img/cases/patient-discharge-management-system.png" alt="case image">
+                            <img data-no-transform src="@img/cases/patient-discharge-management-system.png" alt="case image">
                         </div>
                     </div>
                 </div>
@@ -59,16 +59,7 @@
                                     <li class="case__sidebar-item"><a href="#technologies" class="case__sidebar-link">Technologies</a></li>
                                     <li class="case__sidebar-item"><a href="#faq" class="case__sidebar-link">FAQ</a></li>
                                 </ul>
-                                <div class="case__share">
-                                    <div class="case__share-text">
-                                        Share
-                                    </div>
-                                    <div class="case__share-btns">
-                                        <a href="" target="_blank" class="case__share-btn icon-facebook"></a>
-                                        <a href="" target="_blank" class="case__share-btn icon-linkedin"></a>
-                                        <!-- <a href="" class="case__share-btn icon-share"></a> -->
-                                    </div>
-                                </div>
+                                @@include('./html/_case-side-share.html')
                             </aside>
                             <article class="case__article">
                                 <div id="overview" class="case__block">

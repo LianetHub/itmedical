@@ -3,7 +3,6 @@ export const lazy = () => {
     const lazyImages = document.querySelectorAll('img[data-src], source[data-srcset]');
 
 
-
     const imageObserver = new IntersectionObserver((entries, imgObserver) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {

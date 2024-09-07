@@ -23,7 +23,7 @@
 		padding: 0 0 2.5rem 0;
 		position: relative;
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -41,6 +41,12 @@
 			position: sticky;
 			top: 8rem;
 			flex: 0 0 15rem;
+			max-height: calc(100vh - rem(140));
+			overflow-y: auto;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+			scrollbar-width: none;
 		}
 		@media (min-width: $md2) {
 			flex: 0 0 25.5rem;
@@ -82,7 +88,7 @@
 			}
 		}
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			bottom: 0;
 			left: 0;
