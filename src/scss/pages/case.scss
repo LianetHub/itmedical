@@ -2,6 +2,12 @@
 	@media (max-width: $md4) {
 		overflow: hidden;
 	}
+	& + .blog {
+		padding-top: rem(50);
+		@media (min-width: $md4) {
+			padding-top: 6.25rem;
+		}
+	}
 	// .case__banner
 	&__banner {
 		position: relative;
@@ -278,7 +284,7 @@
 	// .case__caption
 	&__caption {
 		font-family: $font-noto;
-		line-height: 100%;
+		line-height: 140%;
 		font-size: 2rem;
 		@media (min-width: $md5) {
 			font-size: 2.8125rem;
@@ -335,20 +341,28 @@
 			}
 		}
 	}
+	// .case__heading
+	&__heading {
+		margin-top: 1.88rem;
+		font-size: 1.5625rem;
+		font-weight: 500;
+		line-height: 140%;
+	}
 	// .case__promo
 	&__promo {
 		margin-top: 2.5rem;
 		max-width: 36.125rem;
 	}
+
 	// .case__tagline
 	&__tagline {
 		margin-top: 1.5rem;
 		color: #272727;
 		font-weight: 500;
-		line-height: 150%;
+		line-height: 140%;
 		font-size: 1.125rem;
 		@media (min-width: $md5) {
-			font-size: 1.5625rem;
+			font-size: rem(22);
 		}
 		& + .case__desc {
 			margin-top: 1.25rem;
@@ -437,6 +451,15 @@
 				margin-bottom: 0.75rem;
 				@media (min-width: $md5) {
 					margin-bottom: 0.8rem;
+				}
+			}
+			& a {
+				color: #0057b8;
+				text-decoration: underline;
+				@media (any-hover: hover) {
+					&:hover {
+						text-decoration: none;
+					}
 				}
 			}
 		}

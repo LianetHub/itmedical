@@ -138,6 +138,12 @@
 		&.title-md {
 			font-weight: 400;
 		}
+		&.text-left {
+			text-align: left;
+			@media (max-width: $md3) {
+				font-size: 2.5rem;
+			}
+		}
 		font-size: 3rem;
 		@media (min-width: $md2) {
 			min-height: rem(90);

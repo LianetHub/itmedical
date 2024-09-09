@@ -3822,6 +3822,10 @@ div.asl_r p.showmore {
   font-weight: 400;
 }
 
+.promo__title.text-left {
+  text-align: left;
+}
+
 .promo__background {
   position: absolute;
   top: 50%;
@@ -6394,6 +6398,10 @@ div.asl_r p.showmore {
   margin-top: 6.87rem;
 }
 
+.case + .blog {
+  padding-top: 3.125rem;
+}
+
 .case__banner {
   position: relative;
   width: 100%;
@@ -6619,7 +6627,7 @@ div.asl_r p.showmore {
 
 .case__caption {
   font-family: "NotoSerif";
-  line-height: 100%;
+  line-height: 140%;
   font-size: 2rem;
 }
 
@@ -6666,6 +6674,13 @@ div.asl_r p.showmore {
   margin-top: 1.2rem;
 }
 
+.case__heading {
+  margin-top: 1.88rem;
+  font-size: 1.5625rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+
 .case__promo {
   margin-top: 2.5rem;
   max-width: 36.125rem;
@@ -6675,7 +6690,7 @@ div.asl_r p.showmore {
   margin-top: 1.5rem;
   color: #272727;
   font-weight: 500;
-  line-height: 150%;
+  line-height: 140%;
   font-size: 1.125rem;
 }
 
@@ -6746,6 +6761,11 @@ div.asl_r p.showmore {
 
 .case__list li:not(:last-child) {
   margin-bottom: 0.75rem;
+}
+
+.case__list li a {
+  color: #0057b8;
+  text-decoration: underline;
 }
 
 .case__list + .case__desc {
@@ -8075,7 +8095,7 @@ div.asl_r p.showmore {
   }
 
   .case__tagline {
-    font-size: 1.5625rem;
+    font-size: 1.375rem;
   }
 
   .case__list {
@@ -8769,6 +8789,10 @@ div.asl_r p.showmore {
   .policy__body {
     border-left: 0.0625rem solid #dadada;
     padding-left: 2.31rem;
+  }
+
+  .case + .blog {
+    padding-top: 6.25rem;
   }
 
   .case__banner {
@@ -11103,6 +11127,10 @@ div.asl_r p.showmore {
        object-position: 30%;
   }
 
+  .promo__title.text-left {
+    font-size: 2.5rem;
+  }
+
   .management__desc.mobile-top {
     margin-bottom: 1.25rem;
     margin-top: 0;
@@ -11563,6 +11591,10 @@ div.asl_r p.showmore {
 
   .case__share-btn:hover {
     color: #003f85;
+  }
+
+  .case__list li a:hover {
+    text-decoration: none;
   }
 
   .case__tag:hover {
