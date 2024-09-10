@@ -2821,9 +2821,9 @@ div.asl_r p.showmore {
   width: 100%;
   height: 100%;
   border-radius: 0.625rem;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4)));
-  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6)));
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 }
 
 .what__item-name {
@@ -6492,11 +6492,11 @@ div.asl_r p.showmore {
 }
 
 .case__main-image {
-  max-width: 44.625rem;
-  margin-top: 2.5rem;
   margin-left: -3rem;
   margin-right: -1rem;
-  margin-bottom: -3.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: -3.85rem;
+  max-width: 24.375rem;
 }
 
 .case__title {
@@ -8130,6 +8130,11 @@ div.asl_r p.showmore {
     padding: 6.25rem 0 5.625rem;
   }
 
+  .case__main-image {
+    margin-bottom: -4.4rem;
+    max-width: 35.625rem;
+  }
+
   .case__block:not(:first-child) {
     padding-top: 3.3rem;
   }
@@ -8869,6 +8874,7 @@ div.asl_r p.showmore {
   }
 
   .case__main-image {
+    max-width: 44.625rem;
     margin-right: 0;
     margin-left: 0;
     margin-top: 0;

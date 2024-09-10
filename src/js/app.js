@@ -161,6 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 let textArea = document.createElement("textarea");
                 textArea.value = textToCopy;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-9999px";
                 document.body.appendChild(textArea);
                 textArea.focus();
                 textArea.select();
