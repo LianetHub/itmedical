@@ -121,8 +121,12 @@
 	}
 	&.promo-blog {
 		.promo__background {
-			img {
-				margin-top: rem(-1);
+		
+			& img {
+				margin: rem(-2);
+				width: calc(100% + rem(2));
+				height: calc(100% + rem(2));
+				max-width: calc(100vw + rem(4));
 			}
 			// &::before {
 			// 	background: linear-gradient(180deg, rgba(255, 255, 255, 0) -57.94%, rgba(7, 39, 68, 0.7) 70.94%);

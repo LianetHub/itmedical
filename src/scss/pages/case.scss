@@ -17,8 +17,11 @@
 		padding: 2.5rem 0;
 		@media (min-width: $md4) {
 			padding: 0;
+			min-height: rem(320);
 		}
-		min-height: rem(410);
+		@media (min-width: $md2) {
+			min-height: rem(410);
+		}
 		&.case__banner_default {
 			min-height: rem(395);
 			@media (min-width: 2600px) {
@@ -69,6 +72,7 @@
 			width: 100%;
 			flex-direction: column;
 			@media (min-width: $md4) {
+				align-items: flex-end;
 				flex-direction: row;
 			}
 		}
@@ -78,6 +82,9 @@
 	}
 	// .case__offer
 	&__offer {
+		padding: 1rem 0;
+		min-width: 40%;
+		align-self: center;
 	}
 
 	// .case__main-image
@@ -86,19 +93,28 @@
 		margin-top: 2.5rem;
 		margin-left: -3rem;
 		margin-right: -1rem;
-		margin-bottom: -4.25rem;
+		margin-bottom: -3.75rem;
 		@media (min-width: $md4) {
 			margin-right: 0;
 			margin-left: 0;
 			margin-top: 0;
-			margin-bottom: 0;
+			margin-bottom: -0.5rem;
 			transform: translateY(1rem);
+			&.lg-offset {
+				margin-bottom: -0.75rem;
+			}
 		}
 		@media (min-width: $md3) {
 			margin-right: 2rem;
-			margin-bottom: -2rem;
+			margin-bottom: -0.875rem;
 			&.lg-offset {
-				margin-bottom: -3rem;
+				margin-bottom: -1.125rem;
+			}
+		}
+		@media (min-width: $md2) {
+			margin-bottom: -1.45rem;
+			&.lg-offset {
+				margin-bottom: -1.75rem;
 			}
 		}
 	}
@@ -281,6 +297,28 @@
 			}
 		}
 	}
+
+	// .case__block-header
+	&__block-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .case__date
+	&__date {
+		color: #606060;
+		font-size: 0.875rem;
+		line-height: 150%;
+	}
+	// .case__time
+	&__time {
+		color: #5383b9;
+		font-weight: 500;
+		font-size: 0.875rem;
+		padding: 0.62rem 1.88rem;
+		border-radius: 9.375rem;
+		border: 1px solid #9bc3ef;
+	}
 	// .case__caption
 	&__caption {
 		font-family: $font-noto;
@@ -340,6 +378,13 @@
 				margin-top: 2rem !important;
 			}
 		}
+		& sup {
+			vertical-align: top;
+			display: inline-block;
+			font-size: 0.7em;
+			font-weight: 400;
+			transform: translateY(-0.3rem);
+		}
 	}
 	// .case__heading
 	&__heading {
@@ -366,6 +411,13 @@
 		}
 		& + .case__desc {
 			margin-top: 1.25rem;
+		}
+		& sup {
+			vertical-align: top;
+			display: inline-block;
+			font-weight: 400;
+			font-size: 0.7em;
+			transform: translateY(-0.3rem);
 		}
 	}
 	// .case__list
@@ -829,7 +881,7 @@
 	padding: 2rem 2rem 2rem;
 	@media (min-width: $md4) {
 		padding: 4.5rem 4.5rem 5rem;
-		height: 51rem;
+		height: rem(665);
 		width: rem(600);
 	}
 	display: flex;

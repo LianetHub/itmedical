@@ -18,8 +18,9 @@
 	pointer-events: none;
 	user-select: none;
 	text-align: center;
+	user-select: none;
 	&.fade {
-		animation: fadeOut 0.5s;
+		animation: fadeOut 0.5s forwards;
 	}
 	&::after {
 		top: rem(-8);
