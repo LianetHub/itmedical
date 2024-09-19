@@ -322,10 +322,15 @@
 			@extend .case__caption;
 		}
 		& h3:not([class]) {
+			@extend .case__heading;
+		}
+		& > strong:not([class]) {
+			display: block;
 			@extend .case__tagline;
 		}
 		& > img:not([class]) {
 			@extend .case__image;
+			border-radius: rem(10);
 		}
 		& ul:not([class]) {
 			@extend .case__list;
