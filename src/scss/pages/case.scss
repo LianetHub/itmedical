@@ -292,6 +292,20 @@
 			border-left: rem(1) solid #dadada;
 			padding-left: 4.5rem;
 		}
+		&.green-markers {
+			& li {
+				&::before {
+					color: #389520;
+				}
+			}
+		}
+		&.dark-markers {
+			& li {
+				&::before {
+					background: #303030;
+				}
+			}
+		}
 	}
 	// .case__block
 	&__block {
@@ -299,6 +313,68 @@
 			padding-top: 2.75rem;
 			@media (min-width: $md5) {
 				padding-top: 3.3rem;
+			}
+		}
+		& p:not([class]) {
+			@extend .case__desc;
+		}
+		& h2:not([class]) {
+			@extend .case__caption;
+		}
+		& h3:not([class]) {
+			@extend .case__tagline;
+		}
+		& > img:not([class]) {
+			@extend .case__image;
+		}
+		& ul:not([class]) {
+			@extend .case__list;
+		}
+		& ol:not([class]) {
+			margin-top: 1.25rem;
+			color: #303030;
+			@media (min-width: $md5) {
+				margin-top: 1.5rem;
+				font-size: 1.125rem;
+			}
+			line-height: 150%;
+			& span {
+				display: block;
+				font-weight: 500;
+			}
+			& li {
+				position: relative;
+				&:not(:last-child) {
+					margin-bottom: 0.75rem;
+					@media (min-width: $md5) {
+						margin-bottom: 0.8rem;
+					}
+				}
+				& a {
+					color: #0057b8;
+					text-decoration: underline;
+					@media (any-hover: hover) {
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+				counter-increment: num;
+				padding-left: 1.5rem;
+				@media (min-width: $md5) {
+					padding-left: 2.25rem;
+				}
+				&::before {
+					content: counter(num) '.';
+					position: absolute;
+					top: 0;
+					left: 0;
+					color: #0057b8;
+					font-size: 1.125rem;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 150%;
+				}
 			}
 		}
 	}
