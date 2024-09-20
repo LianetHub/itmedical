@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': 'IT Medical | Blog',
+    'keywords': 'IT medical',
+    'url': 'https://itmedical.com/blog',
+    'desc': ''
+    })
+
+    <div class="wrapper">
+        @@include('html/_header.html', {
+        "fixed": true,
+        "active": 4
+        })
+        <main class="page">
+            <section class="promo promo-blog">
+                <div class="promo__container">
+                    <h1 class="promo__title title-md text-left">
+                        AI in Healthcare: <br> It’s Time for Healthcare <br> to Make Better Use of Data
+                    </h1>
+                </div>
+                <div class="promo__background promo__background-gradient black-gradient">
+                    <img src="@img/promo-blog-article.jpg" preload class="cover-image" alt="promo">
+                </div>
+            </section>
+            <section class="case">
+                <div class="case__body">
+                    <div class="case__container">
+                        <nav class="breadcrumbs" aria-label="breadcrumbs menu">
+                            <ul class="breadcrumbs__items">
+                                <li class="breadcrumbs__item">
+                                    <a href="/" class="breadcrumbs__link">Home</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <a href="/" class="breadcrumbs__link">Blog</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link active">AI in Healthcare: It’s Time for Healthcare to Make Better Use of Data</span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="case__content">
+                            <aside class="case__sidebar">
+                                <ul class="case__sidebar-list">
+                                    <li class="case__sidebar-item"><a href="#background" class="case__sidebar-link">Background</a></li>
+                                    <li class="case__sidebar-item"><a href="#running-out-of-patience" class="case__sidebar-link">Running out of patience</a></li>
+                                    <li class="case__sidebar-item"><a href="#ai-applications-in-healthcare-data-management" class="case__sidebar-link">AI applications in healthcare data management</a></li>
+                                    <li class="case__sidebar-item"><a href="#reducing-manual-labor" class="case__sidebar-link">Reducing manual labor</a></li>
+                                    <li class="case__sidebar-item"><a href="#revolutionizing-treatment-plans" class="case__sidebar-link">Revolutionizing treatment plans</a></li>
+                                    <li class="case__sidebar-item"><a href="#continuous-patient-monitoring-and-predictive-analysis" class="case__sidebar-link">Continuous patient monitoring and predictive analysis</a></li>
+                                    <li class="case__sidebar-item"><a href="#continued-advancements-in-machine-learning" class="case__sidebar-link">Continued advancements in machine learning</a></li>
+                                    <li class="case__sidebar-item"><a href="#references" class="case__sidebar-link">References</a></li>
+                                </ul>
+                                @@include('./html/_case-side-share.html')
+                            </aside>
+                            <article class="case__article">
+                                <div class="case__block">
+                                    <div class="case__block-header">
+                                        <div class="case__date">20 September 2024</div>
+                                        <div class="case__time">4 minutes read</div>
+                                    </div>
+                                    <p>Reviewing several real-life technology applications in a healthcare setting highlights the benefits of harnessing AI.</p>
+                                </div>
+                                <div id="case-1" class="case__block">
+                                    <h2>Case 1</h2>
+                                    <h3>Client</h3>
+                                    <p>Large company managing numerous outpatient clinics in the US. They required a custom Electronic Health Record (EHR) system with easy input, intelligent storage, and the ability to display patient data in a digital format.</p>
+                                    <div class="color-blue">The Situation:</div>
+                                    <h2>A digital transformation is underway.  But what exactly do hospitals of the future look like?</h2>
+                                    <p>Existing Electronic Health Records (EHRs) were based on a one-size-fits-all approach created for generalist clinics and insurance companies. They failed to consider the unique needs of different healthcare providers and individual clinicians’ workflows. The challenge was creating an EHR solution that simplified a complex workflow and built-in telehealth features to enable further growth.</p>
+                                    <h3>Solution</h3>
+                                    <p>IT Medical developed a custom cloud solution to automate the following business processes:</p>
+                                    <ul>
+                                        <li aria-level="1">scheduling patient appointments</li>
+                                        <li aria-level="1">managing reminders and cancellations</li>
+                                        <li aria-level="1">storing medical records/notes</li>
+                                        <li aria-level="1">invoicing, and more.</li>
+                                    </ul>
+                                    <h3 class="color-blue">The “Questions” that we need to ask:</h3>
+                                    <ol class="lg-list">
+                                        <li>How do we get closer to Ted’s reality?</li>
+                                        <li>What do we need to do differently to meet the needs of the patient of the future?</li>
+                                        <li>How will the business model need to change?</li>
+                                    </ol>
+                                    <p>The system enables users to store a medical entry for 5-28 years, making the volume of processed data reasonably large.</p>
+                                    <p>Previously, patients with certain conditions had to be monitored constantly, and frequent home visits were conducted. However, remote consultations are now possible via a secure HIPAA-compliant portal, and in-person consultations are not always required.</p>
+                                    <h3>Results</h3>
+                                    <p>Remote consultations are now possible via a secure HIPAA-compliant portal, which minimizes readmission rates. The solution is currently used by 700+ healthcare employees from 30+ medical institutions across the USA, with over 1,000 therapy orders created monthly.</p>
+                                    <p>The IT Medical team continues to enhance the platform, constantly adding new features and integrations with input from laboratories and insurance companies and as more clinics adopt the system.</p>
+                                </div>
+                                <div id="case-2" class="case__block">
+                                    <h2>Case 2</h2>
+                                    <h3>Client</h3>
+                                    <p>Large UK-based company specializing in clinical and residential care. They operate several care homes and provide mental health rehabilitative services.</p>
+                                    <h3>Challenge</h3>
+                                    <p>The client needed a custom Patient Management System (PMS) with several subsystems. The PMS aimed to help control and analyze medication intake as well as collect data on treatment dynamics for each patient. The accumulated information would then support selecting and recommending a suitable treatment for each patient, facilitating care providers’ decision-making.</p>
+                                    <h3>Solution</h3>
+                                    <p>Within ten months, the IT Medical product team developed a cloud-based application. This allowed care home staff to effectively manage their tasks and performance, including monitoring, tracking, analysis, and reporting. The application included an API so other parts of this in-progress ecosystem could interact with the solution.</p>
+                                    <p>The system supports an unlimited number of automatic tasks and the possibility of automated assignee selection. Auto-tasks are preconfigured in the admin panel and activated when triggered inside the system or by an external source via the API. Tasks can be allocated to as many employees as required, with one primary employee managing the process.</p>
+                                    <h3>Results</h3>
+                                    <p>With 1,000s of predefined tasks and automations, the solution accelerated existing workflows and increased productivity. The improvements have led to a 2x cost reduction at the agency’s care homes.</p>
+                                </div>
+                                <div id="case-3" class="case__block">
+                                    <h2>Case 3</h2>
+                                    <h3>Client</h3>
+                                    <p>Leading dental clinic in Singapore with several locations. They provide services to local healthcare companies and generate over $10 million in sales annually.</p>
+                                    <h3>Challenge</h3>
+                                    <p>The client’s platform was outdated and limited in capacity. The goal was to better support the link between patients, physicians, and pharmacies. They required additional features to cover the highest quality standards in the industry. The solution needed to optimize and modernize the current platform capabilities, addressing a number of critical business and architectural challenges, and introducing new modules and features.</p>
+                                    <h3>Solution</h3>
+                                    <p>The IT Medical team developed iOS and Android mobile applications that securely connect the patient’s nurses in remote areas with the client’s doctors via video, audio, or text chat. Our team also developed a web portal for managing video conferences, users, and patient cases.</p>
+                                    <p>Since the client needed to provide doctors in various locations with maximum capability for remote examinations, we made it possible for patients to upload and store high-resolution videos and photos taken by them, which they attached directly to the Electronic Health Record (EHR) in the mobile application or patient portal. Patients can also upload external examinations and laboratory results.</p>
+                                    <h3>Results</h3>
+                                    <p>High-resolution image and video quality, 3x faster case creation compared to legacy processes, and fully HIPAA-compliant patient data management are just a few of the important benefits of our work for this client. The solution is now being distributed by our client to their partner hospitals along with iOS and Android devices to run the application.</p>
+                                </div>
+                                <div id="looking-ahead" class="case__block">
+                                    <h2>Looking Ahead</h2>
+                                    <p>From giving doctors more time to focus on patients and revolutionizing treatment plans to contributing to public health, AI is a formidable ally in the quest for better patient outcomes.</p>
+                                    <p>Healthcare providers are encouraged to embrace AI technologies, recognizing them not as replacements but as partners in delivering high-quality, patient-centric care. The future of healthcare is intertwined with the possibilities presented by AI, and the journey towards a healthier tomorrow begins with integration</p>
+                                </div>
+                                <div id="looking-ahead" class="case__block">
+                                    <h3>Integrating Emerging Technologies</h3>
+                                    <p>
+                                        Incorporating new technology into patient care is paving the way to create <strong>“the world as Ted imagines it.”</strong> <br>
+                                        A small glimpse of the <strong>“trends”</strong> are described below:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                <strong>Artificial Intelligence (AI):</strong> Eliminates the time when patients are not receiving direct care. Enhances diagnosis, improves predictive interventions, and optimizes clinical productivity.
+                                            </p>
+                                            <ol>
+                                                <li>
+                                                    Automation power: Humber River Hospital (HRH) in Toronto launched a brand-new facility that automates approximately 80 percent of its front and back-of-the-hospital services, compared to 38% 5 years ago, resulting in a more seamless patient experience (4).
+                                                </li>
+                                                <li>
+                                                    Diagnostic assistance: AI can provide “real-time” decision support and improve clinicians' diagnostic accuracy.  It can help identify conditions such as ADHD and sleep disorders and quantify coronary artery calcification(5,6,7)
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li>
+                                            <strong>Devices:</strong> Portable, wearable, ingestible, and/or implantable devices can monitor health information and deliver therapies autonomously. Several are available:
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="looking-ahead" class="case__block">
+                                    <h3>Integrating Emerging Technologies</h3>
+                                    <p>
+                                        Incorporating new technology into patient care is paving the way to create <strong>“the world as Ted imagines it.”</strong> <br>
+                                        A small glimpse of the <strong>“trends”</strong> are described below:
+                                    </p>
+                                    <ol>
+                                        <li>
+                                            <p>
+                                                <strong>Artificial Intelligence (AI):</strong> Eliminates the time when patients are not receiving direct care. Enhances diagnosis, improves predictive interventions, and optimizes clinical productivity.
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    Automation power: Humber River Hospital (HRH) in Toronto launched a brand-new facility that automates approximately 80 percent of its front and back-of-the-hospital services, compared to 38% 5 years ago, resulting in a more seamless patient experience (4).
+                                                </li>
+                                                <li>
+                                                    Diagnostic assistance: AI can provide “real-time” decision support and improve clinicians' diagnostic accuracy.  It can help identify conditions such as ADHD and sleep disorders and quantify coronary artery calcification(5,6,7)
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>Devices:</strong> Portable, wearable, ingestible, and/or implantable devices can monitor health information and deliver therapies autonomously. Several are available:
+                                        </li>
+                                    </ol>
+                                </div>
+
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @@include('html/_blog-slider.html', {"title": "Related Articles"})
+            @@include('html/_contacts-2.html', {})
+        </main>
+        @@include('html/_footer.html', {})
+    </div>
+
+    @@include('html/_js.html', {})
+
+</html>

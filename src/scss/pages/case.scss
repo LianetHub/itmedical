@@ -317,12 +317,33 @@
 		}
 		& p:not([class]) {
 			@extend .case__desc;
+			& strong {
+				font-weight: 600;
+			}
 		}
 		& h2:not([class]) {
 			@extend .case__caption;
+			margin-bottom: 40px;
 		}
 		& h3:not([class]) {
 			@extend .case__heading;
+			& + p {
+				margin-top: rem(20);
+			}
+			& + ul {
+				margin-top: rem(15);
+			}
+		}
+		& > .color-blue {
+			@extend .case__heading;
+			& + p {
+				margin-top: rem(20);
+			}
+			& + ul,
+			& + h2,
+			& + ol.lg-list {
+				margin-top: rem(13);
+			}
 		}
 		& > strong:not([class]) {
 			display: block;
@@ -332,8 +353,70 @@
 			@extend .case__image;
 			border-radius: rem(10);
 		}
+		& picture:not([class]) {
+			display: block;
+			margin-top: rem(30);
+			@media (min-width: $md5) {
+				margin-top: rem(50);
+			}
+			& img,
+			& source {
+				border-radius: rem(10);
+				width: 100%;
+			}
+		}
 		& ul:not([class]) {
-			@extend .case__list;
+			margin-top: 1.25rem;
+			color: #303030;
+			@media (min-width: $md5) {
+				margin-top: 1.5rem;
+				font-size: 1.125rem;
+			}
+			line-height: 150%;
+			& span {
+				display: block;
+				font-weight: 500;
+			}
+			& > li {
+				position: relative;
+
+				& a {
+					color: #0057b8;
+					text-decoration: underline;
+					@media (any-hover: hover) {
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+				padding-left: 1.75rem;
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0.65rem;
+					left: 0;
+					@media (min-width: $md5) {
+						left: 0.65rem;
+					}
+					width: 0.45rem;
+					height: 0.45rem;
+					flex-shrink: 0;
+					background: currentColor;
+					border-radius: 50%;
+				}
+				&:not(:last-child) {
+					margin-bottom: 0.75rem;
+					@media (min-width: $md5) {
+						margin-bottom: 0.8rem;
+					}
+				}
+			}
+			& ol {
+				margin-top: 1rem;
+				& > li {
+					padding-left: 1.45rem;
+				}
+			}
 		}
 		& ol:not([class]) {
 			margin-top: 1.25rem;
@@ -347,7 +430,7 @@
 				display: block;
 				font-weight: 500;
 			}
-			& li {
+			& > li {
 				position: relative;
 				&:not(:last-child) {
 					margin-bottom: 0.75rem;
@@ -374,8 +457,49 @@
 					position: absolute;
 					top: 0;
 					left: 0;
-					color: #0057b8;
+					color: currentColor;
 					font-size: 1.125rem;
+					font-style: normal;
+					line-height: 150%;
+				}
+			}
+			& ul {
+				margin-top: 1rem;
+			}
+		}
+		& ol.lg-list {
+			margin-top: 1.25rem;
+			color: #272727;
+			@media (min-width: $md5) {
+				margin-top: 1.5rem;
+				font-weight: 500;
+				font-size: rem(22);
+			}
+			line-height: 150%;
+
+			& > li {
+				position: relative;
+				&:not(:last-child) {
+					margin-bottom: 0.5rem;
+				}
+				& a {
+					color: #0057b8;
+					text-decoration: underline;
+					@media (any-hover: hover) {
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+				counter-increment: num;
+				padding-left: 1.5rem;
+
+				&::before {
+					content: counter(num) '.';
+					position: absolute;
+					top: 0;
+					left: 0;
+					font-size: rem(22);
 					font-style: normal;
 					font-weight: 500;
 					line-height: 150%;
@@ -474,7 +598,7 @@
 	}
 	// .case__heading
 	&__heading {
-		margin-top: 1.88rem;
+		margin-top: rem(30);
 		font-size: 1.5625rem;
 		font-weight: 500;
 		line-height: 140%;
