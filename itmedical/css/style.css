@@ -6812,6 +6812,18 @@ div.asl_r p.showmore {
   line-height: 150%;
 }
 
+.case__block sup {
+  vertical-align: top;
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: 400;
+  -webkit-transform: translateY(-0.3rem);
+      -ms-transform: translateY(-0.3rem);
+          transform: translateY(-0.3rem);
+  -webkit-margin-start: 0.25em;
+          margin-inline-start: 0.25em;
+}
+
 .case__block-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6893,17 +6905,6 @@ div.asl_r p.showmore {
   margin-top: 1.2rem;
 }
 
-.case__desc sup,
-.case__block p:not([class]) sup {
-  vertical-align: top;
-  display: inline-block;
-  font-size: 0.7em;
-  font-weight: 400;
-  -webkit-transform: translateY(-0.3rem);
-      -ms-transform: translateY(-0.3rem);
-          transform: translateY(-0.3rem);
-}
-
 .case__heading,
 .case__block h3:not([class]),
 .case__block > .color-blue {
@@ -6932,17 +6933,6 @@ div.asl_r p.showmore {
 .case__block .case__tagline + p:not([class]),
 .case__block > strong:not([class]) + p:not([class]) {
   margin-top: 1.25rem;
-}
-
-.case__tagline sup,
-.case__block > strong:not([class]) sup {
-  vertical-align: top;
-  display: inline-block;
-  font-weight: 400;
-  font-size: 0.7em;
-  -webkit-transform: translateY(-0.3rem);
-      -ms-transform: translateY(-0.3rem);
-          transform: translateY(-0.3rem);
 }
 
 .case__list {

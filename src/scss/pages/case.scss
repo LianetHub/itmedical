@@ -506,6 +506,14 @@
 				}
 			}
 		}
+		& sup {
+			vertical-align: top;
+			display: inline-block;
+			font-size: 0.7em;
+			font-weight: 400;
+			transform: translateY(-0.3rem);
+			margin-inline-start: 0.25em;
+		}
 	}
 
 	// .case__block-header
@@ -588,13 +596,6 @@
 				margin-top: 2rem !important;
 			}
 		}
-		& sup {
-			vertical-align: top;
-			display: inline-block;
-			font-size: 0.7em;
-			font-weight: 400;
-			transform: translateY(-0.3rem);
-		}
 	}
 	// .case__heading
 	&__heading {
@@ -621,13 +622,6 @@
 		}
 		& + .case__desc {
 			margin-top: 1.25rem;
-		}
-		& sup {
-			vertical-align: top;
-			display: inline-block;
-			font-weight: 400;
-			font-size: 0.7em;
-			transform: translateY(-0.3rem);
 		}
 	}
 	// .case__list
