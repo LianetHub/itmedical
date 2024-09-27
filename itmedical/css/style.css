@@ -6652,6 +6652,11 @@ div.asl_r p.showmore {
   font-weight: 600;
 }
 
+.case__block p:not([class]) a {
+  color: #0057b8;
+  text-decoration: underline;
+}
+
 .case__block h2:not([class]) {
   margin-bottom: 40px;
 }
@@ -11906,6 +11911,10 @@ div.asl_r p.showmore {
 
   .case__share-btn:hover {
     color: #003f85;
+  }
+
+  .case__block p:not([class]) a:hover {
+    text-decoration: none;
   }
 
   .case__block ul:not([class]) > li a:hover {
