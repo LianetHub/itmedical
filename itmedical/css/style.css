@@ -6652,7 +6652,7 @@ div.asl_r p.showmore {
   font-weight: 600;
 }
 
-.case__block p:not([class]) a {
+.case__block p:not([class]) > a {
   color: #0057b8;
   text-decoration: underline;
 }
@@ -6714,7 +6714,7 @@ div.asl_r p.showmore {
   padding-left: 1.75rem;
 }
 
-.case__block ul:not([class]) > li a {
+.case__block ul:not([class]) > li > a {
   color: #0057b8;
   text-decoration: underline;
 }
@@ -6765,7 +6765,7 @@ div.asl_r p.showmore {
   margin-bottom: 0.75rem;
 }
 
-.case__block ol:not([class]) > li a {
+.case__block ol:not([class]) > li > a {
   color: #0057b8;
   text-decoration: underline;
 }
@@ -6801,7 +6801,7 @@ div.asl_r p.showmore {
   margin-bottom: 0.5rem;
 }
 
-.case__block ol.lg-list > li a {
+.case__block ol.lg-list > li > a {
   color: #0057b8;
   text-decoration: underline;
 }
@@ -6825,8 +6825,6 @@ div.asl_r p.showmore {
   -webkit-transform: translateY(-0.3rem);
       -ms-transform: translateY(-0.3rem);
           transform: translateY(-0.3rem);
-  -webkit-margin-start: 0.25em;
-          margin-inline-start: 0.25em;
 }
 
 .case__block-header {
@@ -11913,19 +11911,19 @@ div.asl_r p.showmore {
     color: #003f85;
   }
 
-  .case__block p:not([class]) a:hover {
+  .case__block p:not([class]) > a:hover {
     text-decoration: none;
   }
 
-  .case__block ul:not([class]) > li a:hover {
+  .case__block ul:not([class]) > li > a:hover {
     text-decoration: none;
   }
 
-  .case__block ol:not([class]) > li a:hover {
+  .case__block ol:not([class]) > li > a:hover {
     text-decoration: none;
   }
 
-  .case__block ol.lg-list > li a:hover {
+  .case__block ol.lg-list > li > a:hover {
     text-decoration: none;
   }
 

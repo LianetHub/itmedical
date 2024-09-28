@@ -320,7 +320,7 @@
 			& strong {
 				font-weight: 600;
 			}
-			& a {
+			& > a {
 				color: #0057b8;
 				text-decoration: underline;
 				@media (any-hover: hover) {
@@ -389,7 +389,7 @@
 			& > li {
 				position: relative;
 
-				& a {
+				& > a {
 					color: #0057b8;
 					text-decoration: underline;
 					@media (any-hover: hover) {
@@ -447,7 +447,7 @@
 						margin-bottom: 0.8rem;
 					}
 				}
-				& a {
+				& > a {
 					color: #0057b8;
 					text-decoration: underline;
 					@media (any-hover: hover) {
@@ -491,7 +491,7 @@
 				&:not(:last-child) {
 					margin-bottom: 0.5rem;
 				}
-				& a {
+				& > a {
 					color: #0057b8;
 					text-decoration: underline;
 					@media (any-hover: hover) {
@@ -521,7 +521,7 @@
 			font-size: 0.7em;
 			font-weight: 400;
 			transform: translateY(-0.3rem);
-			margin-inline-start: 0.25em;
+			// margin-inline-start: 0.125em;
 		}
 	}
 
