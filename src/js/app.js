@@ -316,6 +316,10 @@ document.addEventListener('DOMContentLoaded', () => {
             navigation: {
                 nextEl: ".related-cases__next",
                 prevEl: ".related-cases__prev",
+            },
+            pagination: {
+                el: ".related-cases__pagination",
+                clickable: true
             }
 
         })
