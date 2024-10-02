@@ -10800,16 +10800,6 @@ div.asl_r p.showmore {
     font-size: 1.125rem;
   }
 
-  .footer__body {
-    -ms-grid-columns: 0.85fr 1.1fr 1fr 0.65fr;
-    grid-template-columns: 0.85fr 1.1fr 1fr 0.65fr;
-  }
-
-  .footer__contacts {
-    -ms-grid-columns: (1fr)[2] 0.65fr;
-    grid-template-columns: repeat(2, 1fr) 0.65fr;
-  }
-
   .main {
     padding: 13rem 0 6.75rem;
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.86)), color-stop(104.62%, rgba(0, 0, 0, 0)));
