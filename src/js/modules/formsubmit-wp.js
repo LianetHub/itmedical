@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	async function formSend(e) {
 
 		const form = e.target;
-		const portalId = 144397095;
-		const formGuid = '161a42bc-521e-479d-9083-7895938f524c';
+		const portalId = 7649479;
+		const formGuid = '4e51554c-e02d-4831-adf7-e4ce1dc392eb';
 		const hubspotUrl = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`;
 
 		e.preventDefault();

@@ -121,7 +121,6 @@
 	}
 	&.promo-blog {
 		.promo__background {
-		
 			& img {
 				margin: rem(-2);
 				width: calc(100% + rem(2));
@@ -971,8 +970,10 @@
 		display: grid;
 		gap: 1.31rem;
 		@media (min-width: $md5) {
-			grid-auto-rows: rem(282);
 			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (min-width: $md4) {
+			grid-auto-rows: rem(282);
 		}
 		@media (min-width: $md2) {
 			gap: 2.19rem;

@@ -99,20 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
 
-        if (target.classList.contains('cases__btn')) {
-            const caseBtns = document.querySelectorAll('.cases__btn');
-            const caseContents = document.querySelectorAll('.cases__content');
-
-            caseBtns.forEach(caseBtn => caseBtn.classList.remove('active'));
-            caseContents.forEach(caseContent => caseContent.classList.remove('active'));
-
-            let currentBtnIndex = getIndexInParent(target);
-
-            caseBtns[currentBtnIndex].classList.add('active');
-            caseContents[currentBtnIndex].classList.add('active');
-
-        }
-
 
         if (target.classList.contains('solutions__link')) {
             const solutionsBtns = document.querySelectorAll('.solutions__link');
@@ -382,9 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
     textareas.forEach(textarea => {
 
         function autoResize() {
-
             textarea.style.height = '3.375rem';
-
             textarea.style.height = (textarea.scrollHeight / 16) + 'rem';
         }
 

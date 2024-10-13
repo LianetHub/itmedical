@@ -46,11 +46,11 @@
 	<meta property="twitter:image:src" content="/OG.png">
 	<!-- Twitter -->
 	<!-- plugnis -->
-	<link rel="stylesheet" defer href="css/libs/swiper-bundle.min.css?_v=20241003102319">
-	<link rel="stylesheet" defer href="css/libs/fancybox.css?_v=20241003102319">
+	<link rel="stylesheet" defer href="css/libs/swiper-bundle.min.css?_v=20241013110947">
+	<link rel="stylesheet" defer href="css/libs/fancybox.css?_v=20241013110947">
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20241003102319">
-	<link rel="stylesheet" href="css/style.min.css?_v=20241003102319">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20241013110947">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241013110947">
 	<!-- Google Tag Manager -->
 	<script>
 		(function(w, d, s, l, i) {
@@ -70,7 +70,7 @@
 	</script>
 	<!-- End Google Tag Manager -->
 	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HN412DPLT1&_v=20241003102319"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HN412DPLT1&_v=20241013110947"></script>
 	<!-- End Google tag (gtag.js) -->
 	<!-- Hotjar Tracking Code for IT Medical -->
 	<script>
@@ -171,8 +171,17 @@
 								<!-- <li class="menu__item">
                             <a href="/blog" class="menu__link">Blog</a>
                         </li> -->
-								<li class="menu__item">
+								<li class="menu__item menu-parent">
 									<a href="/about" class="menu__link">About Us</a>
+									<button aria-label="get submenu" class="menu__arrow icon-chevron"></button>
+									<div class="submenu">
+										<ul class="submenu__list">
+											<li class="submenu__item"><a href="/about/#overview" class="submenu__link">Overview</a></li>
+											<li class="submenu__item"><a href="/about/#team" class="submenu__link">Team</a></li>
+											<li class="submenu__item"><a href="/about/#approach" class="submenu__link">Approach</a></li>
+											<li class="submenu__item"><a href="/certifications" class="submenu__link">Certifications</a></li>
+										</ul>
+									</div>
 								</li>
 							</ul>
 						</nav>
@@ -448,166 +457,103 @@
 					</ul>
 				</div>
 			</section>
-			<section class="cases">
-				<div class="cases__container container-sm">
-					<h2 class="cases__title title"> Case studies </h2>
-					<div class="cases__btns">
-						<button type="button" class="cases__btn active">Diagnostic System </button>
-						<button type="button" class="cases__btn">Discharge Platform</button>
-						<button type="button" class="cases__btn">Telehealth Solution</button>
-						<button type="button" class="cases__btn">Patient Management System</button>
+			<section class="related-cases">
+				<div class="related-cases__container">
+					<div class="related-cases__header">
+						<h2 class="related-cases__title title">Case studies</h2>
+						<div class="related-cases__controls">
+							<button type="button" class="related-cases__prev swiper-button-prev"></button>
+							<button type="button" class="related-cases__next swiper-button-next"></button>
+						</div>
 					</div>
-					<div class="cases__body">
-						<div class="cases__content active">
-							<a href="/case-1" class="case-card">
-								<span class="case-card__content">
-									<span class="case-card__image">
-										<picture>
-											<source srcset="img/1x1.webp" data-srcset="img/cases/case-1.webp" type="image/webp"><img src="img/1x1.png" data-src="img/cases/case-1.png" alt="cases">
-										</picture>
+					<div class="related-cases__slider swiper">
+						<div class="swiper-wrapper">
+							<a href="" class="related-case swiper-slide" style="background-image: url('../img/related-cases/related-case-1.jpg');">
+								<span class="related-case__name"> Аutomating report generation and&nbsp;digitalising the patient journey </span>
+								<span class="related-case__desc"> Our team was working with clinicians at The Functional Gut Clinic and Owlstone Medical to automate report generation for GI testing. </span>
+								<span class="related-case__logos">
+									<span class="related-case__logo">
+										<img src="img/1x1.png" data-src="img/cases/logotypes/functional-gut-clinic-white.svg" height="26" alt="company logo">
 									</span>
-									<span class="case-card__body">
-										<span class="case-card__logotypes">
-											<span class="case-card__logotype"><img src="img/1x1.png" data-src="img/cases/logotypes/functional-gut-clinic.svg" alt="functional gut clinic logo"></span>
-											<span class="case-card__logotype"><img src="img/1x1.png" data-src="img/cases/logotypes/owlstone-logo.svg" alt="owlstone logo"></span>
-											<span class="case-card__logotype"><img src="img/1x1.png" data-src="img/cases/logotypes/it-clinical.svg" alt="it clinical logo"></span>
-										</span>
-										<span class="case-card__caption"> Аutomating report generation and digitalising the patient journey </span>
-										<span class="case-card__desc"> Our team was working with clinicians at The Functional Gut Clinic and Owlstone Medical to automate report generation for gastrointestinal disorder testing and create an online platform for patients. Our solution has shown to increase testing capacity by almost two-fold, reduce human errors and improve patient experience. </span>
+									<span class="related-case__logo">
+										<img src="img/1x1.png" data-src="img/cases/logotypes/owlstone-white.svg" height="42" alt="company logo">
+									</span>
+									<span class="related-case__logo">
+										<img src="img/1x1.png" data-src="img/cases/logotypes/it-medical-white.svg" height="35" alt="company logo">
 									</span>
 								</span>
-								<span class="case-card__footer">
-									<span class="case-card__num">
-										<span class="case-card__num-value"> 68<small>%</small>
-										</span>
-										<span class="case-card__num-subtitle"> increase in<br class="mobile-only"> capacity </span>
+							</a>
+							<a href="" class="related-case swiper-slide" style="background-image: url('../img/related-cases/related-case-2.jpg');">
+								<span class="related-case__name"> Improving internal hospital efficiency and resource utilisation </span>
+								<span class="related-case__desc"> Working with the clinical team at The Manor Hospital and the NHS, our team has created a cloud platform for live patient discharge management. </span>
+								<span class="related-case__logos">
+									<span class="related-case__logo">
+										<img src="img/1x1.png" data-src="img/cases/logotypes/nuffield-health-white.svg" height="25" alt="company logo">
 									</span>
-									<span class="case-card__num">
-										<span class="case-card__num-value"> 17<small>%</small>
-										</span>
-										<span class="case-card__num-subtitle"> reduction <br class="mobile-only"> in&nbsp;invalid tests </span>
+									<span class="related-case__logo">
+										<img src="img/1x1.png" data-src="img/cases/logotypes/nhs-white.svg" height="28" alt="company logo">
 									</span>
-									<span class="case-card__num">
-										<span class="case-card__num-value"> >85<small>%</small>
-										</span>
-										<span class="case-card__num-subtitle"> of&nbsp;reports are<br class="mobile-only"> auto-generated </span>
+									<span class="related-case__logo">
+										<img src="img/1x1.png" data-src="img/cases/logotypes/it-medical-white.svg" height="35" alt="company logo">
+									</span>
+								</span>
+							</a>
+							<a href="" class="related-case swiper-slide" style="background-image: url('../img/related-cases/related-case-3.jpg');">
+								<span class="related-case__name"> Developing Cloud-based Telehealth Solution for Enhanced Patient Care </span>
+								<span class="related-case__desc"> Our team has developed a white-label telehealth solution that allows medical organisations to offer a range of digital services to their patients. </span>
+								<span class="related-case__logos">
+									<span class="related-case__logo">
+										<img src="img/1x1.png" data-src="img/cases/logotypes/rocketdoc-white.svg" height="25" alt="company logo">
+									</span>
+									<span class="related-case__logo">
+										<img src="img/1x1.png" data-src="img/cases/logotypes/it-medical-white.svg" height="35" alt="company logo">
+									</span>
+								</span>
+							</a>
+							<a href="" class="related-case swiper-slide" style="background-image: url('../img/related-cases/related-case-1.jpg');">
+								<span class="related-case__name"> Аutomating report generation and&nbsp;digitalising the patient journey </span>
+								<span class="related-case__desc"> Our team was working with clinicians at The Functional Gut Clinic and Owlstone Medical to automate report generation for GI testing. </span>
+								<span class="related-case__logos">
+									<span class="related-case__logo">
+										<img src="img/1x1.png" data-src="img/cases/logotypes/functional-gut-clinic-white.svg" height="26" alt="company logo">
+									</span>
+									<span class="related-case__logo">
+										<img src="img/1x1.png" data-src="img/cases/logotypes/owlstone-white.svg" height="42" alt="company logo">
+									</span>
+									<span class="related-case__logo">
+										<img src="img/1x1.png" data-src="img/cases/logotypes/it-medical-white.svg" height="35" alt="company logo">
+									</span>
+								</span>
+							</a>
+							<a href="" class="related-case swiper-slide" style="background-image: url('../img/related-cases/related-case-2.jpg');">
+								<span class="related-case__name"> Improving internal hospital efficiency and resource utilisation </span>
+								<span class="related-case__desc"> Working with the clinical team at The Manor Hospital and the NHS, our team has created a cloud platform for live patient discharge management. </span>
+								<span class="related-case__logos">
+									<span class="related-case__logo">
+										<img src="img/1x1.png" data-src="img/cases/logotypes/nuffield-health-white.svg" height="25" alt="company logo">
+									</span>
+									<span class="related-case__logo">
+										<img src="img/1x1.png" data-src="img/cases/logotypes/nhs-white.svg" height="28" alt="company logo">
+									</span>
+									<span class="related-case__logo">
+										<img src="img/1x1.png" data-src="img/cases/logotypes/it-medical-white.svg" height="35" alt="company logo">
+									</span>
+								</span>
+							</a>
+							<a href="" class="related-case swiper-slide" style="background-image: url('../img/related-cases/related-case-3.jpg');">
+								<span class="related-case__name"> Developing Cloud-based Telehealth Solution for Enhanced Patient Care </span>
+								<span class="related-case__desc"> Our team has developed a white-label telehealth solution that allows medical organisations to offer a range of digital services to their patients. </span>
+								<span class="related-case__logos">
+									<span class="related-case__logo">
+										<img src="img/1x1.png" data-src="img/cases/logotypes/rocketdoc-white.svg" height="25" alt="company logo">
+									</span>
+									<span class="related-case__logo">
+										<img src="img/1x1.png" data-src="img/cases/logotypes/it-medical-white.svg" height="35" alt="company logo">
 									</span>
 								</span>
 							</a>
 						</div>
-						<div class="cases__content">
-							<a href="/case-2" class="case-card">
-								<span class="case-card__content">
-									<span class="case-card__image">
-										<picture>
-											<source srcset="img/1x1.webp" data-srcset="img/cases/case-2.webp" type="image/webp"><img src="img/1x1.png" data-src="img/cases/case-2.png" alt="cases">
-										</picture>
-									</span>
-									<span class="case-card__body">
-										<span class="case-card__logotypes">
-											<span class="case-card__logotype"><img src="img/1x1.png" data-src="img/cases/logotypes/nuffield-health.svg" alt="nuffield health logo"></span>
-											<span class="case-card__logotype"><img src="img/1x1.png" data-src="img/cases/logotypes/nhs.svg" alt="NHS logo"></span>
-											<span class="case-card__logotype"><img src="img/1x1.png" data-src="img/cases/logotypes/it-clinical.svg" alt="it clinical logo"></span>
-										</span>
-										<span class="case-card__caption"> Improving internal hospital <br class="pc-only"> efficiency and resource utilisation </span>
-										<span class="case-card__desc"> Working with the clinical team at The Manor Hospital and the NHS, our team has created a cloud platform for live patient discharge with medical task management dashboard and direct patient-clinician communication. The solution has shown to increase bed turnover, improve patient convenience and hospital resource utilisation. </span>
-									</span>
-								</span>
-								<span class="case-card__footer">
-									<span class="case-card__num">
-										<span class="case-card__num-value"> 12<small>%</small>
-										</span>
-										<span class="case-card__num-subtitle"> increase <br class="mobile-only"> in&nbsp;bed turnover </span>
-									</span>
-									<span class="case-card__num">
-										<span class="case-card__num-value"> 11<small>%</small>
-										</span>
-										<span class="case-card__num-subtitle"> reduction <br class="mobile-only"> in&nbsp;length of&nbsp;stay </span>
-									</span>
-									<span class="case-card__num">
-										<span class="case-card__num-value"> 8000<small>+</small>
-										</span>
-										<span class="case-card__num-subtitle"> patients discharged </span>
-									</span>
-								</span>
-							</a>
-						</div>
-						<div class="cases__content">
-							<a href="/case-3" class="case-card">
-								<span class="case-card__content">
-									<span class="case-card__image">
-										<picture>
-											<source srcset="img/1x1.webp" data-srcset="img/cases/case-3.webp" type="image/webp"><img src="img/1x1.png" data-src="img/cases/case-3.png" alt="cases">
-										</picture>
-									</span>
-									<span class="case-card__body">
-										<span class="case-card__logotypes">
-											<span class="case-card__logotype"><img src="img/1x1.png" data-src="img/cases/logotypes/rocketdoc.svg" alt="rocketdoc logo"></span>
-											<span class="case-card__logotype"><img src="img/1x1.png" data-src="img/cases/logotypes/it-clinical.svg" alt="it clinical logo"></span>
-										</span>
-										<span class="case-card__caption"> Creating digital patient experience and&nbsp;improving access to&nbsp;healthcare </span>
-										<span class="case-card__desc"> Our team has developed a white-label telehealth solution in collaboration with the RocketDoc team that allows medical organisations to offer digital services to patients including online bookings, remote consultations and a patient portal. This results in increased patient satisfaction, better outcomes and reduced costs. </span>
-									</span>
-								</span>
-								<span class="case-card__footer">
-									<span class="case-card__num">
-										<span class="case-card__num-value"> 250<small>+</small>
-										</span>
-										<span class="case-card__num-subtitle"> organisations onboarded </span>
-									</span>
-									<span class="case-card__num">
-										<span class="case-card__num-value"> >23<small>%</small>
-										</span>
-										<span class="case-card__num-subtitle"> reduction <br class="mobile-only"> in&nbsp;DNA rates </span>
-									</span>
-									<span class="case-card__num">
-										<span class="case-card__num-value"> >13<small>%</small>
-										</span>
-										<span class="case-card__num-subtitle"> reduction in&nbsp;<br> follow-up visits </span>
-									</span>
-								</span>
-							</a>
-						</div>
-						<div class="cases__content">
-							<a href="/case-4" class="case-card">
-								<span class="case-card__content">
-									<span class="case-card__image">
-										<picture>
-											<source srcset="img/1x1.webp" data-srcset="img/cases/case-4.webp" type="image/webp"><img src="img/1x1.png" data-src="img/cases/case-4.png" alt="cases">
-										</picture>
-									</span>
-									<span class="case-card__body">
-										<span class="case-card__logotypes">
-											<span class="case-card__logotype">
-												<picture>
-													<source srcset="img/1x1.webp" data-srcset="img/cases/logotypes/manchester.webp" type="image/webp"><img src="img/1x1.png" data-src="img/cases/logotypes/manchester.png" alt="functional gut clinic logo">
-												</picture>
-											</span>
-											<span class="case-card__logotype"><img src="img/1x1.png" data-src="img/cases/logotypes/it-clinical.svg" alt="it clinical logo"></span>
-										</span>
-										<span class="case-card__caption"> Redesign of the outdated Patient Management System (PMS) </span>
-										<span class="case-card__desc"> Our team was tasked with the complete redesign of the outdated Patient Management System. In collaboration with the Manchester Private Hospital we have introduced a number of new features including telehealth, patient area and procedure management module, all while improving efficiency and stability of the outdated system. </span>
-									</span>
-								</span>
-								<span class="case-card__footer">
-									<span class="case-card__num">
-										<span class="case-card__num-value"> 250<small>+</small>
-										</span>
-										<span class="case-card__num-subtitle"> organisations onboarded </span>
-									</span>
-									<span class="case-card__num">
-										<span class="case-card__num-value"> >23<small>%</small>
-										</span>
-										<span class="case-card__num-subtitle"> reduction <br class="mobile-only"> in&nbsp;DNA rates </span>
-									</span>
-									<span class="case-card__num">
-										<span class="case-card__num-value"> 2500<small>+</small>
-										</span>
-										<span class="case-card__num-subtitle"> remote patient <br class="pc-only"> consultationbs </span>
-									</span>
-								</span>
-							</a>
-						</div>
+						<div class="related-cases__pagination swiper-pagination"></div>
 					</div>
 				</div>
 			</section>
@@ -882,11 +828,11 @@
 			</div>
 		</footer>
 	</div> <!-- plugnis -->
-	<script defer src="js/libs/swiper-bundle.min.js?_v=20241003102319"></script>
-	<script defer src="js/libs/fancybox.umd.js?_v=20241003102319"></script>
+	<script defer src="js/libs/swiper-bundle.min.js?_v=20241013110947"></script>
+	<script defer src="js/libs/fancybox.umd.js?_v=20241013110947"></script>
 	<!-- plugnis -->
-	<script src="js/app.min.js?_v=20241003102319"></script>
-	<!-- <script src="js/formsubmit.js?_v=20241003102319"></script> -->
+	<script src="js/app.min.js?_v=20241013110947"></script>
+	<!-- <script src="js/formsubmit.js?_v=20241013110947"></script> -->
 </body>
 
 </html>
