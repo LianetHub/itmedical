@@ -1441,9 +1441,9 @@
 			}
 			@media (min-width: $md3) {
 				grid-template-columns: repeat(4, 1fr);
-				// .approach__item-title {
-				// 	font-size: 1.5625rem;
-				// }
+				.approach__item-title {
+					font-size: 1.5625rem;
+				}
 				.approach__item-desc {
 					font-size: 1rem;
 				}
