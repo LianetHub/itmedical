@@ -90,24 +90,27 @@
 	justify-content: center;
 	.swiper-pagination-bullet {
 		position: relative;
-		width: rem(5);
 		height: rem(5);
+		width: rem(5);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
 		opacity: 1;
-		color: #737474;
 		transition: color 0.3s ease 0s;
 		background: currentColor;
 		--swiper-pagination-bullet-horizontal-gap: 0.625rem;
 		color: #737474;
-		display: block;
 		&::before {
 			content: '';
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: scale(0) translate(-50%, -50%);
-			border: 1px solid currentColor;
+			border: rem(1) solid currentColor;
 			width: rem(21);
 			height: rem(21);
+			display: block;
 			border-radius: 50%;
 			transition: transform 0.2s linear 0s;
 			transform-origin: 0 0;

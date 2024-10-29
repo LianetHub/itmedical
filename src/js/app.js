@@ -300,6 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
         new Swiper('.ai__slider', {
             slidesPerView: 1,
             watchOverflow: true,
+            loop: true,
             pagination: {
                 el: '.ai__pagination',
                 clickable: true,
