@@ -26,7 +26,7 @@
 				display: none;
 			}
 			&::after {
-				content: "";
+				content: '';
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -68,12 +68,12 @@
 	}
 	&._sending {
 		pointer-events: none;
-		button[type="submit"] {
+		button[type='submit'] {
 			position: relative;
 			pointer-events: none;
 			color: transparent;
 			&::before {
-				content: "";
+				content: '';
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -452,7 +452,7 @@
 		user-select: none;
 		cursor: pointer;
 		&::before {
-			content: "";
+			content: '';
 			border: 1px solid #aeaeae;
 			background: #fff;
 			width: 1.75rem;
@@ -485,7 +485,7 @@
 			position: relative;
 			border: 0;
 			&::before {
-				content: "";
+				content: '';
 				border-radius: 5px;
 				position: absolute;
 				top: 0;
@@ -767,7 +767,7 @@
 		color: #fff;
 		background: linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
 		&::after {
-			content: "";
+			content: '';
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -790,7 +790,7 @@
 		}
 
 		&:disabled,
-		&[aria-disabled="true"] {
+		&[aria-disabled='true'] {
 			background: #ffeab4;
 			color: rgba(0, 0, 0, 0.14);
 		}
@@ -801,7 +801,7 @@
 		color: #0057b8;
 		padding: 0.875rem 3.75rem;
 		&::after {
-			content: "";
+			content: '';
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -843,6 +843,20 @@
 			border-color: darken($color: #fff, $amount: 15);
 		}
 	}
+	&.btn-white-outline {
+		border: 1px solid #fff;
+		color: #fff;
+		@media (any-hover: hover) {
+			&:hover {
+				background: #fff;
+				color: $text;
+			}
+		}
+		&:active {
+			background: #fff;
+			color: $text;
+		}
+	}
 	&.btn-md {
 		padding: 0.75rem 2.5rem;
 	}
@@ -856,9 +870,9 @@
 	}
 
 	&:disabled,
-	&[aria-disabled="true"] {
+	&[aria-disabled='true'] {
 		cursor: default;
 		pointer-events: none;
 	}
 }
-@import "./modules/wp";
+@import './modules/wp';

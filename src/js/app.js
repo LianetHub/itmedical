@@ -296,6 +296,22 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    if (document.querySelector('.ai__slider')) {
+        new Swiper('.ai__slider', {
+            slidesPerView: 1,
+            watchOverflow: true,
+            pagination: {
+                el: '.ai__pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".ai__next",
+                prevEl: ".ai__prev",
+            },
+
+        })
+    }
+
     if (document.querySelector('.related-cases__slider')) {
         new Swiper('.related-cases__slider', {
             slidesPerView: "auto",
