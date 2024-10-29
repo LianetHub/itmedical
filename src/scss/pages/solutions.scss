@@ -937,6 +937,9 @@
 	&__pagination {
 		color: #fff;
 		margin: 0;
+		&.swiper-pagination {
+			padding: 0.55rem 0;
+		}
 		.swiper-pagination-bullet {
 			color: #fff;
 			&.swiper-pagination-bullet-active {

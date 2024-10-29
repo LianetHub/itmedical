@@ -5808,6 +5808,10 @@ div.asl_r p.showmore {
   margin: 0;
 }
 
+.ai__pagination.swiper-pagination {
+  padding: 0.55rem 0;
+}
+
 .ai__pagination .swiper-pagination-bullet {
   color: #fff;
 }
