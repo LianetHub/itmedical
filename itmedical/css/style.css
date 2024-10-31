@@ -5810,6 +5810,7 @@ div.asl_r p.showmore {
 
 .ai__pagination.swiper-pagination {
   padding: 0.55rem 0;
+  margin-top: 0 !important;
 }
 
 .ai__pagination .swiper-pagination-bullet {
