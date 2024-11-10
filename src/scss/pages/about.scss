@@ -117,7 +117,7 @@
 		position: relative;
 		transition: color 0.3s ease 0s;
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -148,7 +148,7 @@
 		z-index: 1;
 
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 0;
 			left: 50%;
@@ -183,7 +183,7 @@
 			animation: fadeIn 1s;
 		}
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 0;
 			left: 50%;
@@ -254,7 +254,7 @@
 			position: relative;
 
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
 				left: 0;
 				top: 50%;
@@ -485,7 +485,7 @@
 		position: relative;
 		margin-top: rem(40);
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			background: #d9d9d9;
 			width: 0.0625rem;
@@ -532,7 +532,7 @@
 			}
 			position: relative;
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
 				top: rem(10);
 				left: rem(7);
@@ -572,7 +572,7 @@
 					margin-top: -1rem;
 				}
 				&::before {
-					content: '';
+					content: "";
 					position: absolute;
 					top: 0;
 					z-index: 2;
@@ -692,7 +692,7 @@
 
 				gap: rem(35);
 				&::after {
-					content: '';
+					content: "";
 					flex: 1 1 auto;
 					height: rem(1);
 					width: 100%;
@@ -701,7 +701,7 @@
 				& span {
 					position: relative;
 					&::before {
-						content: '';
+						content: "";
 						position: absolute;
 						top: 50%;
 						transform: translateY(-50%);
@@ -721,7 +721,7 @@
 			margin-top: 1rem;
 			line-height: 0.5;
 			&::after {
-				content: '';
+				content: "";
 				position: absolute;
 				top: -#{math.div(0.5625, 2)}rem;
 				right: -#{math.div(0.5625, 2)}rem;
@@ -732,7 +732,7 @@
 				background: linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
 			}
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
 				bottom: -#{math.div(1.4375, 2)}rem;
 				right: -#{math.div(1.4375, 2)}rem;
@@ -768,7 +768,7 @@
 		overflow: hidden;
 		position: relative;
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;

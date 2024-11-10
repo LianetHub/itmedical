@@ -2,22 +2,44 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	const forms = document.querySelectorAll("form.contacts__request, .contacts__request > .wpcf7 > form ");
-	forms.forEach(form => {
-		form.addEventListener("submit", formSend);
-	})
+	let hubspotSent = false;
+	let reCaptchaPassed = false;
+	let akismetPassed = false;
 
-	async function formSend(e) {
+	document.addEventListener('wpcf7mailsent', async function (event) {
+		const response = event.detail.apiResponse;
+		if (response && response.status === 'mail_sent') {
+			reCaptchaPassed = true;
+			akismetPassed = true;
+			checkAllConditions(event.target);
+			console.log("Contact Form 7: Успешная отправка Hubspot, reCAPTCHA и Akismet прошли проверку.");
+		}
+	}, false);
 
-		const form = e.target;
+	document.addEventListener('wpcf7invalid', function () {
+		console.log("Contact Form 7: Ошибка при проверке формы, возможно, reCAPTCHA или Akismet не прошли проверку.");
+		reCaptchaPassed = false;
+		akismetPassed = false;
+	});
+
+	document.addEventListener('wpcf7spam', function () {
+		console.log("Contact Form 7: Форма отклонена как спам, Akismet не прошел проверку.");
+		akismetPassed = false;
+	});
+
+	async function checkAllConditions(form) {
+		if (reCaptchaPassed && akismetPassed) {
+			await sendToHubspot(form);
+			sendGtmEvent();
+		}
+	}
+
+	async function sendToHubspot(form) {
 		const portalId = 7649479;
 		const formGuid = '4e51554c-e02d-4831-adf7-e4ce1dc392eb';
 		const hubspotUrl = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`;
 
-		e.preventDefault();
-
 		let formData = new FormData(form);
-
 		form.classList.add("_sending");
 
 		let hubspotData = {
@@ -32,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		let fileFields = [];
 
 		formData.forEach((value, key) => {
-
 			if (key.startsWith('_wpcf7') || key.indexOf('_wpcf7') === 0) {
 				return;
 			}
@@ -46,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
 					}));
 				}
 			} else {
-
 				if (key === 'nda') {
 					value = value === 'on' ? 'true' : 'false';
 				}
@@ -64,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			await Promise.all(fileUploadPromises);
 			hubspotData.fields.push(...fileFields);
 
-
 			let response = await fetch(hubspotUrl, {
 				method: "POST",
 				headers: {
@@ -74,15 +93,14 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 
 			if (response.ok) {
-				form.reset();
+				hubspotSent = true;
 				form.classList.remove("_sending");
 				form.classList.add('_success');
 				setTimeout(() => {
 					form.classList.remove('_success');
-					form.reset()
-				}, 10000)
-
-				sendGtmEvent();
+					form.reset();
+					hubspotSent = false;
+				}, 10000);
 
 				console.log("Success sending");
 			} else {
@@ -119,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
-
 	function sendGtmEvent() {
 		window.dataLayer = window.dataLayer || [];
 		window.dataLayer.push({
@@ -132,4 +149,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 });
+
 

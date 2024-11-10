@@ -297,19 +297,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (document.querySelector('.ai__slider')) {
+
+        const pagination = document.querySelector('.ai__pagination');
+        const mobileContainer = document.querySelector('.ai__controls-mobile');
+        const originalParent = pagination.parentNode;
+
         new Swiper('.ai__slider', {
             slidesPerView: 1,
             watchOverflow: true,
             loop: true,
             pagination: {
-                el: '.ai__pagination',
+                el: pagination,
                 clickable: true,
             },
             navigation: {
                 nextEl: ".ai__next",
                 prevEl: ".ai__prev",
             },
+            on: {
+                resize: () => {
+                    if (window.innerWidth < 992) {
+                        if (pagination.parentNode !== mobileContainer) {
+                            mobileContainer.appendChild(pagination);
+                        }
+                    } else {
+                        if (pagination.parentNode !== originalParent) {
+                            originalParent.appendChild(pagination);
+                        }
+                    }
+                },
+                init: () => {
 
+                    if (window.innerWidth < 992) {
+                        if (pagination.parentNode !== mobileContainer) {
+                            mobileContainer.appendChild(pagination);
+                        }
+                    }
+                }
+            }
         })
     }
 

@@ -33,7 +33,7 @@
 				padding: rem(100) 0 rem(90);
 			}
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
 				top: 0;
 				right: 0;
@@ -42,7 +42,7 @@
 					width: 50%;
 				}
 				height: 100%;
-				background: linear-gradient(90deg, #f2f8ff 0%, rgba(242, 248, 255, 0) 100%) 0 0 / 25.5rem 100% no-repeat, url('@img/case-banner.jpg') 1px center / cover no-repeat;
+				background: linear-gradient(90deg, #f2f8ff 0%, rgba(242, 248, 255, 0) 100%) 0 0 / 25.5rem 100% no-repeat, url("@img/case-banner.jpg") 1px center / cover no-repeat;
 				z-index: -1;
 			}
 			.case__title {
@@ -181,7 +181,7 @@
 	&__sidebar {
 		position: relative;
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -200,6 +200,12 @@
 			position: sticky;
 			top: 8rem;
 			flex: 0 0 15rem;
+			max-height: calc(100vh - rem(140));
+			overflow-y: auto;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+			scrollbar-width: none;
 		}
 		@media (min-width: $md3) {
 			flex: 0 0 21rem;
@@ -242,7 +248,7 @@
 		position: relative;
 		padding-bottom: 0.5rem;
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -330,6 +336,12 @@
 				}
 			}
 		}
+		& i:not([class]) {
+			margin-top: 0.25rem;
+			display: inline-block;
+			@extend .case__desc;
+			font-weight: 500;
+		}
 		& h2:not([class]) {
 			@extend .case__caption;
 			margin-bottom: 40px;
@@ -400,7 +412,7 @@
 				}
 				padding-left: 1.75rem;
 				&::before {
-					content: '';
+					content: "";
 					position: absolute;
 					top: 0.65rem;
 					left: 0;
@@ -462,7 +474,7 @@
 					padding-left: 2.25rem;
 				}
 				&::before {
-					content: counter(num) '.';
+					content: counter(num) ".";
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -504,7 +516,7 @@
 				padding-left: 1.5rem;
 
 				&::before {
-					content: counter(num) '.';
+					content: counter(num) ".";
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -577,7 +589,7 @@
 		padding-bottom: 0.65rem;
 		position: relative;
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -672,7 +684,7 @@
 					padding-left: 2.25rem;
 				}
 				&::before {
-					content: counter(num) '.';
+					content: counter(num) ".";
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -688,7 +700,7 @@
 			& li {
 				padding-left: 1.75rem;
 				&::before {
-					content: '';
+					content: "";
 					position: absolute;
 					top: 0.65rem;
 					left: 0;
@@ -816,7 +828,7 @@
 		position: relative;
 		counter-increment: num;
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -847,7 +859,7 @@
 		line-height: 150%;
 		color: #272727;
 		&::before {
-			content: counter(num) '.';
+			content: counter(num) ".";
 			color: #002f9c;
 		}
 		&[data-spoller] {
@@ -943,7 +955,7 @@
 		flex-wrap: wrap;
 		position: relative;
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 0;
 			width: 100vw;
@@ -1104,7 +1116,7 @@
 	overflow: hidden;
 	z-index: 1;
 	&::after {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -1114,7 +1126,7 @@
 		z-index: -1;
 	}
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;
