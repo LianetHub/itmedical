@@ -11500,10 +11500,7 @@ div.asl_r p.showmore {
   }
 
   .ai__list li::before {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+    top: 1rem;
   }
 
   .solutions__container {
