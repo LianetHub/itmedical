@@ -1000,14 +1000,20 @@
 	&__controls {
 		display: flex;
 		align-items: center;
-		gap: rem(60);
+		gap: rem(20);
+		@media (min-width: $md6) {
+			gap: rem(60);
+		}
 	}
 	&__controls-mobile {
 		margin-top: rem(30);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: rem(60);
+		gap: rem(10);
+		@media (min-width:$md6) {
+			gap: rem(60);
+		}
 		@media (min-width: $md3) {
 			display: none;
 		}

@@ -5817,7 +5817,7 @@ div.asl_r p.showmore {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 3.75rem;
+  gap: 1.25rem;
 }
 
 .ai__controls-mobile {
@@ -5831,7 +5831,7 @@ div.asl_r p.showmore {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 3.75rem;
+  gap: 0.625rem;
 }
 
 .ai__prev,
@@ -7710,6 +7710,14 @@ div.asl_r p.showmore {
 @media (min-width: 389.98px) {
   .title-xl {
     font-size: 3rem;
+  }
+
+  .ai__controls {
+    gap: 3.75rem;
+  }
+
+  .ai__controls-mobile {
+    gap: 3.75rem;
   }
 }
 
