@@ -3068,6 +3068,10 @@ div.asl_r p.showmore {
   padding-top: 1.5625rem;
 }
 
+.banner + .development {
+  margin-top: 1.5625rem;
+}
+
 .banner__body {
   background: -o-linear-gradient(179deg, #023384 4.14%, #0057b8 71.64%);
   background: linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
@@ -9847,6 +9851,10 @@ div.asl_r p.showmore {
 
   .banner + .why {
     padding-top: 3.125rem;
+  }
+
+  .banner + .development {
+    margin-top: 3.125rem;
   }
 
   .banner__body {
