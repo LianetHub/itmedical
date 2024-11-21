@@ -16,6 +16,10 @@
 			grid-template-columns: 0.98fr 3fr;
 			padding-bottom: rem(40);
 		}
+		& + .footer__feedback {
+			margin-top: 0;
+			border-top: 0;
+		}
 	}
 	// .footer__logo
 	&__logo {
@@ -244,7 +248,7 @@
 	}
 	// .footer__feedback-link
 	&__feedback-link {
-		display: flex;
+		display: inline-flex;
 		align-items: center;
 		gap: 0.75rem;
 		&::before {

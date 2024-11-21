@@ -829,6 +829,24 @@
 	@media (min-width: 2600px) {
 		padding: 16rem 0 4rem;
 	}
+	&.role-lg {
+		@media (min-width: $md4) {
+			padding: 8.75rem 1rem 3.25rem 2rem;
+		}
+		@media (min-width: $md3) {
+			padding: 12.5rem 0 5rem;
+		}
+		.role__subtitle {
+			font-size: 1.375rem;
+			max-width: 100%;
+			margin-top: rem(20);
+			@media (min-width: $md3) {
+				margin-top: rem(30);
+				max-width: 50rem;
+				font-size: 1.4375rem;
+			}
+		}
+	}
 	// .role__container
 	&__container {
 	}

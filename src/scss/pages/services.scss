@@ -1401,6 +1401,7 @@
 	// .approach__container
 	&__container {
 	}
+	// .approach__heading
 	&__heading {
 		margin-bottom: 2.5rem;
 	}
@@ -1414,6 +1415,15 @@
 		font-size: 1.125rem;
 		line-height: 140%;
 		max-width: 47rem;
+		&.approach__subtitle-lg {
+			margin-top: 1.25rem;
+			max-width: 100%;
+			font-size: 1.125rem;
+			@media (min-width: $md3) {
+				font-size: 1.375rem;
+				max-width: 53.4375rem;
+			}
+		}
 	}
 	// .approach__list
 	&__list {
@@ -1470,6 +1480,39 @@
 		}
 		@media (min-width: $md3) {
 			padding-top: 2.2rem;
+		}
+		&.approach__item-alternate {
+			@media (max-width: $md3) {
+				@media (min-width: $md4) {
+					padding-top: 0;
+					&::before {
+						display: none;
+					}
+				}
+			}
+			.approach__item-title {
+				@media (max-width: $md3) {
+					@media (min-width: $md4) {
+						position: relative;
+						min-height: 6rem;
+						&::before {
+							content: "";
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							width: 100%;
+							height: rem(3);
+							background: linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
+						}
+					}
+				}
+				@media (min-width: $md3) {
+					font-size: 1.5625rem;
+					& + .approach__item-desc {
+						line-height: 150%;
+					}
+				}
+			}
 		}
 	}
 	// .approach__item-title
