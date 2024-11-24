@@ -4,10 +4,21 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	color: #fff;
-	// min-height: 100vh;
 	padding: rem(140) 0 rem(50);
 	@media (min-width: $md3) {
 		padding: rem(229) 0 rem(62);
+	}
+	&.hero-sm {
+		padding: rem(140) 0 rem(20);
+		@media (min-width: $md3) {
+			padding: rem(139) 0 rem(70);
+		}
+		.hero__body {
+			align-items: center;
+		}
+		.hero__title {
+			line-height: 1.2;
+		}
 	}
 	& ~ .help {
 		@media (min-width: $md3) {
@@ -27,6 +38,58 @@
 		overflow: hidden;
 		@media (min-width: $md3) {
 			padding: rem(58) 0 rem(70);
+		}
+	}
+	& ~ .nums + .banner {
+		padding-top: rem(10);
+		@media (min-width: $md3) {
+			padding-top: rem(40);
+		}
+	}
+	& ~ .banner {
+		padding-bottom: rem(50);
+		@media (min-width: $md3) {
+			padding-top: rem(80);
+			padding-bottom: rem(80);
+		}
+		& + .management {
+			padding-top: 0;
+		}
+		& + .development {
+			margin-top: 0;
+		}
+	}
+	& + .development {
+		@media (min-width: $md3) {
+			padding-top: rem(80);
+			padding-bottom: rem(80);
+		}
+	}
+	& ~ .management {
+		@media (min-width: $md3) {
+			padding-top: rem(80);
+		}
+		& + .teams {
+			@media (min-width: $md3) {
+				padding-top: rem(20);
+			}
+			.teams__list {
+				margin-top: 0;
+			}
+		}
+	}
+	& ~ .related-cases {
+		padding-bottom: rem(40);
+		@media (min-width: $md3) {
+			padding-bottom: rem(80);
+		}
+	}
+	& ~ .teams {
+		@media (min-width: $md3) {
+			padding-bottom: rem(40);
+		}
+		& + .banner {
+			padding-top: rem(8);
 		}
 	}
 	// .hero__container
@@ -63,7 +126,7 @@
 		margin-bottom: 1.25rem;
 		order: -1;
 		@media (min-width: $md5) {
-			margin-bottom: 3.31rem;
+			margin-bottom: 2.75rem;
 			font-size: 3.4375rem;
 		}
 		@media (min-width: $md3) {
@@ -81,6 +144,7 @@
 			display: block;
 			flex: 0 1 calc(100% - 22.25rem);
 			padding-right: 3rem;
+			align-self: flex-start;
 		}
 		@media (min-width: $md3) {
 			margin-top: 1.5rem;
@@ -120,22 +184,34 @@
 			&:not(:last-child) {
 				margin-bottom: 0.25rem;
 			}
-			@media (min-width: $md2) {
-				&:not(:last-child) {
-					margin-bottom: 0;
-				}
-			}
 		}
 		line-height: 150%;
 		font-size: 0.9375rem;
-		margin-top: 2rem;
+		&:not(:first-child) {
+			margin-top: 2rem;
+		}
 		@media (min-width: $md4) {
 			font-size: 1.125rem;
-			margin-top: 1.87rem;
+			&:not(:first-child) {
+				margin-top: 1.87rem;
+			}
 		}
 		@media (min-width: $md2) {
 			line-height: 140%;
 			font-size: 1.375rem;
+		}
+	}
+	// .hero__text
+	&__text {
+		max-width: 47.5rem;
+		line-height: 150%;
+		font-size: 0.9375rem;
+		@media (min-width: $md4) {
+			font-size: 1.125rem;
+		}
+		@media (min-width: $md2) {
+			line-height: 140%;
+			font-size: 1.5rem;
 		}
 	}
 	// .hero__btn
@@ -227,5 +303,102 @@
 		font-size: 0.53669rem;
 		font-weight: 500;
 		line-height: 140%;
+	}
+	// .hero__form
+	&__form {
+		border-radius: 0.625rem;
+		background: #fff;
+		display: flex;
+		flex-direction: column;
+		padding: 2.5rem 1.25rem 2.5rem;
+		gap: 0.94rem;
+		flex: 0 0 100%;
+		margin-top: rem(30);
+		@media (min-width: $md4) {
+			margin-top: 0;
+			flex: 0 0 22.25rem;
+		}
+		@media (min-width: $md3) {
+			gap: 1.25rem;
+			padding: 2.5rem 3.12rem 2.19rem;
+			flex: 0 0 28.125rem;
+		}
+		.form__privacy {
+			margin-top: 0.75rem;
+			font-size: 0.8125rem;
+			@media (min-width: $md3) {
+				font-size: 0.875rem;
+			}
+		}
+		.form__btn {
+			min-height: 3.25rem;
+			margin-top: 0.875rem;
+			@media (min-width: $md3) {
+				margin-top: 1.75rem;
+			}
+		}
+	}
+	// .hero__form-title
+	&__form-title {
+		color: #080808;
+		text-align: center;
+		font-family: $font-noto;
+		font-weight: 500;
+		line-height: 130%;
+		margin-bottom: 0.75rem;
+		font-size: 2rem;
+		@media (min-width: $md3) {
+			font-size: 2.1875rem;
+		}
+	}
+}
+
+.logotypes {
+	background: linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
+	padding: 1.88rem 0;
+	@media (min-width: $md3) {
+		padding: 1.0625rem 0;
+	}
+	// .logotypes__container
+	&__container {
+	}
+	// .logotypes__items
+	&__items {
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		max-width: rem(650);
+		flex-wrap: wrap;
+		gap: rem(30);
+		@media (min-width: $md4) {
+			gap: 0;
+			flex-wrap: nowrap;
+		}
+		@media (min-width: $md3) {
+			justify-content: space-between;
+			max-width: rem(940);
+		}
+	}
+	// .logotypes__item
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 0 0 calc(33.333% - rem(20));
+		@media (min-width: $md4) {
+			flex: 0 1 auto;
+		}
+		& img {
+			@media (max-width: $md4) {
+				max-height: rem(43);
+			}
+			@media (min-width: $md4) {
+				width: 75%;
+			}
+			@media (min-width: $md3) {
+				width: 100%;
+			}
+		}
 	}
 }

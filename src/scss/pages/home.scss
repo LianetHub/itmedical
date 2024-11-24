@@ -435,6 +435,61 @@
 			padding-top: rem(100);
 		}
 	}
+	&.nums-blue {
+		background: transparent;
+		padding: rem(50) 0 rem(40);
+		@media (min-width: $md3) {
+			padding: rem(80) 0 rem(40);
+		}
+		.nums__list {
+			width: 100%;
+			padding: rem(40) 0;
+			position: relative;
+			z-index: 1;
+			@media (max-width: $md3) {
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					transform: translateX(-50%);
+					left: 50%;
+					width: 100vw;
+					height: 100%;
+					background: linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
+					z-index: -1;
+				}
+			}
+			@media (min-width: $md3) {
+				background: linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
+				padding: 3.38rem 0 3.13rem;
+				border-radius: rem(10);
+			}
+		}
+		.nums__item-value {
+			color: #fff;
+			@media (max-width: $md3) {
+				font-size: rem(45);
+			}
+		}
+		.nums__item-text {
+			color: #fff;
+			@media (max-width: $md3) {
+				font-size: rem(13);
+			}
+		}
+		.nums__container {
+			padding: 0 rem(20);
+			@media (min-width: $md4) {
+				max-width: rem(727);
+			}
+			@media (min-width: $md3) {
+				max-width: rem(960);
+			}
+			@media (min-width: $md2) {
+				max-width: $maxWidthContainer;
+			}
+		}
+	}
 	// .nums__container
 	&__container {
 		padding: 0 0.5rem;
@@ -451,6 +506,31 @@
 			}
 		}
 	}
+	// .nums__header
+	&__header {
+		margin-bottom: rem(50);
+		@media (min-width: $md3) {
+			margin-bottom: rem(40);
+		}
+	}
+	// .nums__header-title
+	&__header-title {
+	}
+	// .nums__header-text
+	&__header-text {
+		max-width: rem(855);
+		line-height: 140%;
+		margin-top: rem(20);
+		font-size: 1.375rem;
+		@media (min-width: $md4) {
+			font-size: 1.125rem;
+		}
+		@media (min-width: $md3) {
+			margin-top: 1rem;
+			font-size: 1.375rem;
+		}
+	}
+
 	// .nums__grid
 	&__grid {
 		display: flex;

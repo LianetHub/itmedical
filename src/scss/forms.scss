@@ -349,6 +349,15 @@
 			margin-top: 1.88rem;
 			font-size: 1rem;
 		}
+		& a {
+			color: #014898;
+			text-decoration: underline;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
 	}
 	// .form__privacy-link
 	&__privacy-link {
