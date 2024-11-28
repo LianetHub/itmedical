@@ -969,11 +969,17 @@
 		font-size: 0.875rem;
 		padding: 0.62rem 1.8rem;
 	}
-
+	&.btn-lg {
+		@media (min-width: $md2) {
+			font-size: 1.25rem;
+			padding: 0.94rem 3.12rem;
+		}
+	}
 	&:disabled,
 	&[aria-disabled="true"] {
 		cursor: default;
 		pointer-events: none;
 	}
 }
+
 @import "./modules/wp";

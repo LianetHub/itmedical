@@ -566,6 +566,7 @@
 			padding: 0;
 		}
 	}
+	// .management__info
 	&__info {
 		display: flex;
 		flex-direction: column-reverse;
@@ -727,6 +728,9 @@
 			justify-content: space-between;
 			text-align: left;
 			cursor: pointer;
+			@media (min-width: $md2) {
+				gap: 2rem;
+			}
 			&::before {
 				order: 1;
 				@extend %ic, .icon-arrow;
@@ -2285,6 +2289,9 @@
 	&__item-icon {
 		width: 2.5rem;
 		flex-shrink: 0;
+		& img {
+			max-width: none;
+		}
 	}
 	// .automation__item-text
 	&__item-text {

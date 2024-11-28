@@ -366,7 +366,6 @@
 		}
 		.nums__item-value {
 			font-size: 2.8125rem;
-
 			@media (min-width: $md3) {
 				font-size: 5rem;
 			}
@@ -461,7 +460,7 @@
 			}
 			@media (min-width: $md3) {
 				background: linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
-				padding: 3.38rem 0 3.13rem;
+				padding: 3.38rem 4rem 3.13rem;
 				border-radius: rem(10);
 			}
 		}
@@ -473,6 +472,7 @@
 		}
 		.nums__item-text {
 			color: #fff;
+			font-size: rem(22);
 			@media (max-width: $md3) {
 				font-size: rem(13);
 			}
@@ -771,6 +771,9 @@
 		@media (min-width: $md3) {
 			// margin-top: 1.91rem;
 			min-width: 14.125rem;
+		}
+		&.btn-lg {
+			min-width: 0;
 		}
 	}
 }

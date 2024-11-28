@@ -2,7 +2,28 @@
 	background: linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
 	color: #fff;
 	padding: 2.46rem 0 0 0;
-
+	&.footer-sm {
+		padding: 3rem 0 0 0;
+		.footer__header {
+			@media (min-width: $md3) {
+				grid-template-columns: 0.78fr 3fr;
+			}
+		}
+		.footer__caption {
+			&::before {
+				height: 1.75rem;
+				font-size: 2rem;
+			}
+		}
+		.footer__contacts {
+			display: flex;
+			justify-content: space-between;
+		}
+		.footer__address {
+			font-size: rem(18);
+			line-height: 1.8;
+		}
+	}
 	// .footer__container
 	&__container {
 	}
