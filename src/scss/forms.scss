@@ -488,6 +488,9 @@
 		.wpcf7-list-item {
 			margin-left: 0;
 		}
+		.wpcf7-list-item-label {
+			@extend .form__checkbox-content;
+		}
 	}
 	// .form__checkbox-input
 	&__checkbox-input {

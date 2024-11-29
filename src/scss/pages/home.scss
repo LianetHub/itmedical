@@ -1039,7 +1039,8 @@
 		}
 		padding: 1.87rem 1.87rem 1.88rem 1.94rem;
 		@media (min-width: $md3) {
-			padding: 2.5rem 1.69rem 1.75rem 2.19rem;
+			// padding: 2.5rem 1.69rem 1.75rem 2.19rem;
+			padding: rem(40) rem(20) rem(40) rem(40);
 		}
 	}
 	// .help__item-header
@@ -1069,6 +1070,9 @@
 		font-weight: 500;
 		line-height: 140%;
 		font-size: 1.375rem;
+		&:first-child:last-child {
+			margin-right: auto;
+		}
 		@media (min-width: $md3) {
 			font-size: 1.5625rem;
 		}

@@ -1593,6 +1593,11 @@
 					}
 				}
 			}
+			@media (min-width: $md3) {
+				&::before {
+					height: rem(5);
+				}
+			}
 		}
 	}
 	// .approach__item-title
@@ -1607,6 +1612,7 @@
 			font-size: 2.1875rem;
 		}
 	}
+	// .approach__item-list
 	&__item-list {
 		line-height: 220%;
 		font-size: 1.125rem;

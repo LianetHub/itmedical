@@ -82,6 +82,7 @@
 			padding: 1.87rem 0;
 			.header-lg:not(.scroll) & {
 				padding: 3rem 0;
+				transition: background-color 0.5s ease-out, border-color 0.1s ease-out, padding 0.1s ease-out;
 			}
 		}
 	}
@@ -486,12 +487,14 @@
 	}
 	// .search__form-input
 	&__form-input {
-		border-radius: rem(150);
-		font-size: 1rem;
-		padding: 0.83rem 1.88rem 0.83rem 3.7rem;
-		@media (min-width: $md4) {
-			padding: 0.83rem 1.88rem;
-			border-radius: rem(10);
+		&.form__input {
+			border-radius: rem(150);
+			font-size: 1rem;
+			padding: 0.83rem 1.88rem 0.83rem 3.7rem;
+			@media (min-width: $md4) {
+				padding: 0.83rem 1.88rem;
+				border-radius: rem(10);
+			}
 		}
 	}
 	// .search__form-btn

@@ -108,7 +108,7 @@
 			padding-top: rem(8);
 		}
 	}
-	& ~ .role {
+	& ~ .role:not(.role-lg) {
 		.role__container {
 			@media (min-width: $md2) {
 				max-width: 69rem;
@@ -221,6 +221,9 @@
 		&:not(:first-child) {
 			margin-top: 2rem;
 		}
+		@media (max-width: $md4) {
+			flex: 0 0 100%;
+		}
 		@media (min-width: $md4) {
 			margin-top: 0;
 			&:not(:first-child) {
@@ -250,6 +253,7 @@
 		padding: 0.94rem 2.5rem;
 		font-size: 1.125rem;
 		margin-top: 2rem;
+		align-self: flex-end;
 		@media (min-width: $md2) {
 			margin-top: 2.5rem;
 		}
@@ -301,7 +305,7 @@
 		width: 100%;
 		flex-direction: column;
 		align-items: flex-start;
-		background: linear-gradient(180deg, #fff 54%, rgba(255, 255, 255, 0) 70%), url("@img/card-image.jpg") 0 100% / 100% auto no-repeat #fff;
+		background: linear-gradient(180deg, #fff 54%, rgba(255, 255, 255, 0) 70%), url("@img/card-image.jpg") 0 calc(100% + 1px) / 100% auto no-repeat, #fff;
 	}
 	// .hero__card-logo
 	&__card-logo {

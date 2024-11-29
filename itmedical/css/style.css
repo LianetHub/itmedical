@@ -63,7 +63,10 @@
 .form__file-item.complete .form__file-header::before,
 .form__dropzone .codedropz-upload-inner::before,
 .form__checkbox-input:checked + .wpcf7-list-item-label .form__checkbox-content::before,
+.form__checkbox-input:checked + .wpcf7-list-item-label .form__checkbox .wpcf7-list-item-label::before,
+.form__checkbox .form__checkbox-input:checked + .wpcf7-list-item-label .wpcf7-list-item-label::before,
 .form__checkbox-input:checked + .form__checkbox-content::before,
+.form__checkbox .form__checkbox-input:checked + .wpcf7-list-item-label::before,
 .swiper-button-next,
 .swiper-button-prev,
 [class^=icon-]:before,
@@ -105,7 +108,10 @@
 
 .icon-check:before,
 .form__checkbox-input:checked + .wpcf7-list-item-label .form__checkbox-content:before,
-.form__checkbox-input:checked + .form__checkbox-content:before {
+.form__checkbox-input:checked + .wpcf7-list-item-label .form__checkbox .wpcf7-list-item-label:before,
+.form__checkbox .form__checkbox-input:checked + .wpcf7-list-item-label .wpcf7-list-item-label:before,
+.form__checkbox-input:checked + .form__checkbox-content:before,
+.form__checkbox .form__checkbox-input:checked + .wpcf7-list-item-label:before {
   content: "\e903";
 }
 
@@ -1068,11 +1074,13 @@ div.asl_w .probox .proinput input[type=submit] {
   margin-left: 0;
 }
 
-.form__checkbox-input._error + .form__checkbox-content::before {
+.form__checkbox-input._error + .form__checkbox-content::before,
+.form__checkbox .form__checkbox-input._error + .wpcf7-list-item-label::before {
   border-color: #d80027;
 }
 
-.form__checkbox-content {
+.form__checkbox-content,
+.form__checkbox .wpcf7-list-item-label {
   font-size: 1rem;
   line-height: 140%;
   display: -webkit-box;
@@ -1089,7 +1097,8 @@ div.asl_w .probox .proinput input[type=submit] {
   cursor: pointer;
 }
 
-.form__checkbox-content::before {
+.form__checkbox-content::before,
+.form__checkbox .wpcf7-list-item-label::before {
   content: "";
   border: 1px solid #aeaeae;
   background: #fff;
@@ -1110,7 +1119,8 @@ div.asl_w .probox .proinput input[type=submit] {
           align-items: center;
 }
 
-.form__checkbox-content:has(.form__checkbox-text)::before {
+.form__checkbox-content:has(.form__checkbox-text)::before,
+.form__checkbox .wpcf7-list-item-label:has(.form__checkbox-text)::before {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -2313,7 +2323,7 @@ div.asl_r p.showmore {
   display: none;
 }
 
-.search__form-input,
+.search__form-input.form__input,
 .search__form .orig {
   border-radius: 9.375rem;
   font-size: 1rem;
@@ -3476,6 +3486,10 @@ div.asl_r p.showmore {
   font-weight: 500;
   line-height: 140%;
   font-size: 1.375rem;
+}
+
+.help__item-name:first-child:last-child {
+  margin-right: auto;
 }
 
 .blog {
@@ -8017,7 +8031,7 @@ div.asl_r p.showmore {
   padding-top: 0.5rem;
 }
 
-.hero ~ .role {
+.hero ~ .role:not(.role-lg) {
   padding: 8.5rem 0 2rem;
 }
 
@@ -8097,6 +8111,8 @@ div.asl_r p.showmore {
   padding: 0.94rem 2.5rem;
   font-size: 1.125rem;
   margin-top: 2rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .hero__card {
@@ -8127,9 +8143,9 @@ div.asl_r p.showmore {
 }
 
 .no-webp .hero__card-wrapper {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(54%, #fff), color-stop(70%, rgba(255, 255, 255, 0))), url("../img/card-image.jpg") 0 100%/100% auto no-repeat #fff;
-  background: -o-linear-gradient(top, #fff 54%, rgba(255, 255, 255, 0) 70%), url("../img/card-image.jpg") 0 100%/100% auto no-repeat #fff;
-  background: linear-gradient(180deg, #fff 54%, rgba(255, 255, 255, 0) 70%), url("../img/card-image.jpg") 0 100%/100% auto no-repeat #fff; }
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(54%, #fff), color-stop(70%, rgba(255, 255, 255, 0))), url("../img/card-image.jpg") 0 calc(100% + 1px)/100% auto no-repeat, #fff;
+  background: -o-linear-gradient(top, #fff 54%, rgba(255, 255, 255, 0) 70%), url("../img/card-image.jpg") 0 calc(100% + 1px)/100% auto no-repeat, #fff;
+  background: linear-gradient(180deg, #fff 54%, rgba(255, 255, 255, 0) 70%), url("../img/card-image.jpg") 0 calc(100% + 1px)/100% auto no-repeat, #fff; }
 
 .hero__card-wrapper {
   position: relative;
@@ -9342,7 +9358,7 @@ div.asl_r p.showmore {
             flex-direction: row;
   }
 
-  .search__form-input,
+  .search__form-input.form__input,
   .search__form .orig {
     padding: 0.83rem 1.88rem;
     border-radius: 0.625rem;
@@ -10131,6 +10147,9 @@ div.asl_r p.showmore {
 
   .header-lg:not(.scroll) .header__wrapper {
     padding: 3rem 0;
+    -webkit-transition: background-color 0.5s ease-out, border-color 0.1s ease-out, padding 0.1s ease-out;
+    -o-transition: background-color 0.5s ease-out, border-color 0.1s ease-out, padding 0.1s ease-out;
+    transition: background-color 0.5s ease-out, border-color 0.1s ease-out, padding 0.1s ease-out;
   }
 
   .header__logo {
@@ -10727,7 +10746,7 @@ div.asl_r p.showmore {
   }
 
   .help__item {
-    padding: 2.5rem 1.69rem 1.75rem 2.19rem;
+    padding: 2.5rem 1.25rem 2.5rem 2.5rem;
   }
 
   .help__item-header {
@@ -11063,6 +11082,10 @@ div.asl_r p.showmore {
 
   .approach__item.approach__item-alternate .approach__item-title + .approach__item-desc {
     line-height: 150%;
+  }
+
+  .approach__item.approach__item-alternate::before {
+    height: 0.3125rem;
   }
 
   .approach__item-title {
@@ -12635,11 +12658,11 @@ div.asl_r p.showmore {
     padding: 0;
   }
 
-  .hero ~ .role .role__container {
+  .hero ~ .role:not(.role-lg) .role__container {
     max-width: 69rem;
   }
 
-  .hero ~ .role .role__subtitle {
+  .hero ~ .role:not(.role-lg) .role__subtitle {
     font-size: 1.4375rem;
     max-width: 52rem;
   }
@@ -12936,6 +12959,12 @@ div.asl_r p.showmore {
 
   .search-page__form .search__form-btn {
     padding: 0;
+  }
+
+  .hero__list {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
   }
 
   .logotypes__item img {
@@ -13598,7 +13627,7 @@ div.asl_r p.showmore {
 
 .webp .case__banner.case__banner_default::before { background: -webkit-gradient(linear, left top, right top, from(#f2f8ff), to(rgba(242, 248, 255, 0))) 0 0/25.5rem 100% no-repeat, url(../img/case-banner.webp) 1px center/cover no-repeat; background: -o-linear-gradient(left, #f2f8ff 0%, rgba(242, 248, 255, 0) 100%) 0 0/25.5rem 100% no-repeat, url(../img/case-banner.webp) 1px center/cover no-repeat; background: linear-gradient(90deg, #f2f8ff 0%, rgba(242, 248, 255, 0) 100%) 0 0/25.5rem 100% no-repeat, url(../img/case-banner.webp) 1px center/cover no-repeat; }
 
-.webp .hero__card-wrapper { background: -webkit-gradient(linear, left top, left bottom, color-stop(54%, #fff), color-stop(70%, rgba(255, 255, 255, 0))), url(../img/card-image.webp) 0 100%/100% auto no-repeat #fff; background: -o-linear-gradient(top, #fff 54%, rgba(255, 255, 255, 0) 70%), url(../img/card-image.webp) 0 100%/100% auto no-repeat #fff; background: linear-gradient(180deg, #fff 54%, rgba(255, 255, 255, 0) 70%), url(../img/card-image.webp) 0 100%/100% auto no-repeat #fff; }
+.webp .hero__card-wrapper { background: -webkit-gradient(linear, left top, left bottom, color-stop(54%, #fff), color-stop(70%, rgba(255, 255, 255, 0))), url(../img/card-image.webp) 0 calc(100% + 1px)/100% auto no-repeat, #fff; background: -o-linear-gradient(top, #fff 54%, rgba(255, 255, 255, 0) 70%), url(../img/card-image.webp) 0 calc(100% + 1px)/100% auto no-repeat, #fff; background: linear-gradient(180deg, #fff 54%, rgba(255, 255, 255, 0) 70%), url(../img/card-image.webp) 0 calc(100% + 1px)/100% auto no-repeat, #fff; }
 
 @media (min-width: 575.98px) {
 
