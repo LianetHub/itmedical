@@ -118,20 +118,27 @@ document.addEventListener('DOMContentLoaded', () => {
         //     togglePlayVideo()
         // }
 
-        if (target.tagName === 'A' && target.getAttribute('href') === '#contacts') {
+        if (target.closest('a')?.getAttribute('href') === '#contacts') {
 
 
             const contactsBlock = document.getElementById('contacts');
             const form = contactsBlock.querySelector('form');
 
-            const firstInput = form.querySelector('input');
+            if (!form) return;
 
-            if (firstInput) {
+            const firstInput = form.querySelector('input:not([type="hidden"])');
+            if (!firstInput) return;
 
-                setTimeout(() => {
-                    firstInput.focus();
-                }, 1000)
-            }
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        firstInput.focus();
+                        observer.disconnect();
+                    }
+                });
+            });
+            observer.observe(contactsBlock);
         }
 
         if (target.classList.contains('copy-btn')) {

@@ -1,8 +1,8 @@
 //============ МОДУЛИ ====================
 // @import "modules/popup";
-@import 'modules/breadcrumbs';
-@import 'modules/pagination';
-@import 'modules/tooltip';
+@import "modules/breadcrumbs";
+@import "modules/pagination";
+@import "modules/tooltip";
 
 //============ МОДУЛИ ====================
 
@@ -102,7 +102,7 @@
 		--swiper-pagination-bullet-horizontal-gap: 0.625rem;
 		color: #737474;
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -116,7 +116,7 @@
 			transform-origin: 0 0;
 		}
 		&::after {
-			content: '';
+			content: "";
 			position: absolute;
 			width: rem(21);
 			height: rem(21);

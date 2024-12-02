@@ -507,6 +507,9 @@
 		display: grid;
 		padding: rem(40) 0 0 0;
 		margin: 0 rem(-20);
+		@media (min-width: $md4) {
+			margin: 0;
+		}
 		@media (min-width: $md3) {
 			gap: 1.3rem;
 			row-gap: 2.12rem;
@@ -514,7 +517,6 @@
 			padding: 0;
 		}
 		@media (min-width: $md2) {
-			margin: 0;
 			grid-template-columns: repeat(2, 1fr);
 			gap: 2rem;
 		}
@@ -536,6 +538,7 @@
 			gap: 2rem;
 		}
 	}
+	// .management__side
 	&__side {
 		@media (min-width: $md2) {
 			margin: em(0) em(-35) em(0) em(0);
@@ -1539,6 +1542,11 @@
 				.approach__item-desc {
 					font-size: 1rem;
 				}
+			}
+		}
+		&:has(.approach__item-alternate) {
+			@media (min-width: $md3) {
+				margin-top: rem(35.2);
 			}
 		}
 	}

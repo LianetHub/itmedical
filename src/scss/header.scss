@@ -82,7 +82,7 @@
 			padding: 1.87rem 0;
 			.header-lg:not(.scroll) & {
 				padding: 3rem 0;
-				transition: background-color 0.5s ease-out, border-color 0.1s ease-out, padding 0.1s ease-out;
+				transition: background-color 0.5s ease-out, border-color 0.1s ease-out, padding 0.1s ease-in 0.5s;
 			}
 		}
 	}
@@ -108,6 +108,7 @@
 				}
 				.header-lg:not(.scroll) & {
 					max-width: rem(277);
+					transition: filter 0.3s ease 0s, max-width 0.1s ease-in 0.5s;
 				}
 			}
 		}
