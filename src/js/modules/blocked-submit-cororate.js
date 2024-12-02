@@ -1,40 +1,20 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     // Получаем форму по нужному action
-//     const form = document.querySelector('form[action*="/gated-content/#wpcf7-f1729-o1"]');
-
-//     // Находим поле email
-//     const emailField = form.querySelector('input[name="email"]');
-
-//     // Проверка на допустимые домены
-//     const blockedDomains = /@(gmail\.com|yahoo\.com|yandex\.ru|mail\.ru|hotmail\.com|outlook\.com)$/;
-
-//     // Функция для проверки email и управления состоянием кнопки отправки
-//     function validateEmail() {
-//         const emailValue = emailField.value;
-
-//         // Проверка, не принадлежит ли почтовый адрес к заблокированным доменам
-//         if (blockedDomains.test(emailValue)) {
-//             emailField.setCustomValidity('Please use a corporate Email address (Gmail, Yahoo, Yandex, etc. are not acceptable).');
-//             form.querySelector('input[type="submit"]').disabled = true; // Отключаем кнопку отправки
-//         } else {
-//             emailField.setCustomValidity(''); // Убираем сообщение об ошибке
-//             form.querySelector('input[type="submit"]').disabled = false; // Включаем кнопку отправки
-//         }
-//     }
-
-//     // Добавляем обработчик события ввода в поле email
-//     emailField.addEventListener('input', validateEmail);
-// });
-
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.wpcf7-form');
-    const emailInput = form.querySelector('input[name="email"]');
-    const submitButton = form.querySelector('input[type="submit"]');
-    const errorContainer = form.querySelector('.wpcf7-response-output');
-    const forbiddenDomains = [
-        'gmail.com', 'yahoo.com', 'yandex.ru', 'mail.ru', 'outlook.com', 'hotmail.com'
-    ];
+    if (!form) return;
 
+    const emailWrap = form.querySelector('[data-name="email"]');
+    if (!emailWrap) return;
+
+    const emailInput = emailWrap.querySelector('input[name="email"]');
+    if (!emailInput) return;
+
+    const submitButton = form.querySelector('input[type="submit"]');
+    if (!submitButton) return;
+
+    const forbiddenDomains = [
+        'gmail.com', 'yahoo.com', 'yandex.ru', 'mail.ru', 'outlook.com', 'hotmail.com',
+        'aol.com', 'icloud.com', 'msn.com', 'live.com', 'zoho.com', 'protonmail.com'
+    ];
 
     const isCorporateEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -44,22 +24,33 @@ document.addEventListener('DOMContentLoaded', () => {
         return emailDomain && !forbiddenDomains.includes(emailDomain.toLowerCase());
     };
 
+    const getEmailTip = () => {
+        let emailTip = emailWrap.querySelector('.wpcf7-not-valid-tip');
+        if (!emailTip) {
+            emailTip = document.createElement('span');
+            emailTip.classList.add('wpcf7-not-valid-tip');
+            emailTip.setAttribute('aria-hidden', 'true');
+            emailWrap.appendChild(emailTip);
+        }
+        return emailTip;
+    };
+
     const validateEmailInput = () => {
         const emailValue = emailInput.value.trim();
-
+        const emailTip = getEmailTip();
 
         if (isCorporateEmail(emailValue)) {
-            if (errorContainer) {
-                errorContainer.textContent = '';
-                errorContainer.classList.remove('wpcf7-validation-errors');
-            }
+            emailInput.classList.remove('wpcf7-not-valid');
+            emailInput.setAttribute('aria-invalid', 'false');
+            emailTip.setAttribute('aria-hidden', 'true');
+            emailTip.textContent = '';
             submitButton.disabled = false;
         } else {
-
-            if (errorContainer) {
-                errorContainer.textContent = 'Please use a corporate email address.';
-                errorContainer.classList.add('wpcf7-validation-errors');
-            }
+            emailInput.classList.add('wpcf7-not-valid');
+            emailInput.setAttribute('aria-invalid', 'true');
+            emailTip.setAttribute('aria-hidden', 'false');
+            emailTip.classList.add('aria-hidden', 'false');
+            emailTip.textContent = 'Please use a corporate email address.';
             submitButton.disabled = true;
         }
     };
@@ -68,22 +59,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', (event) => {
         const emailValue = emailInput.value.trim();
+        const emailTip = getEmailTip();
 
         if (!isCorporateEmail(emailValue)) {
             event.preventDefault();
-
-
-            if (errorContainer) {
-                errorContainer.textContent = 'Please use a corporate email address.';
-                errorContainer.classList.add('wpcf7-validation-errors');
-            }
-
-
+            emailInput.classList.add('wpcf7-not-valid');
+            emailInput.setAttribute('aria-invalid', 'true');
+            emailTip.setAttribute('aria-hidden', 'false');
+            emailTip.textContent = 'Please use a corporate email address.';
+            submitButton.disabled = true;
             emailInput.focus();
         }
     });
 
-
-    validateEmailInput();
 });
 

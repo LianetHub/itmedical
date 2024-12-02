@@ -81,8 +81,11 @@
 		@media (min-width: $md3) {
 			padding: 1.87rem 0;
 			.header-lg:not(.scroll) & {
-				padding: 3rem 0;
-				transition: background-color 0.5s ease-out, border-color 0.1s ease-out, padding 0.1s ease-in 0.5s;
+				opacity: 0;
+				pointer-events: none;
+			}
+			.header-lg & {
+				transition: background-color 0.3s ease-out 0s, padding 0.15s ease-out, color 0.3s ease-out 0s, border-color 0.3s ease-out 0s, opacity 0.3s ease-out !important;
 			}
 		}
 	}
@@ -101,16 +104,6 @@
 		@media (min-width: $md3) {
 			z-index: 1;
 			max-width: rem(157);
-			&.header__logo-lg {
-				width: 100%;
-				& img {
-					width: 100%;
-				}
-				.header-lg:not(.scroll) & {
-					max-width: rem(277);
-					transition: filter 0.3s ease 0s, max-width 0.1s ease-in 0.5s;
-				}
-			}
 		}
 	}
 	// .header__menu

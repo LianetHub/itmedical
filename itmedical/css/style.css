@@ -6268,28 +6268,6 @@ div.asl_r p.showmore {
   position: static;
   opacity: 1;
   z-index: 2;
-  -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
 
 .solutions__item::before {
@@ -8018,6 +7996,7 @@ div.asl_r p.showmore {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 0;
 }
 
 .hero.hero-sm .hero__title {
@@ -8067,6 +8046,10 @@ div.asl_r p.showmore {
 
 .hero ~ .role:not(.role-lg) {
   padding: 8.5rem 0 2rem;
+}
+
+.hero__logo {
+  display: none;
 }
 
 .hero__body {
@@ -8138,7 +8121,7 @@ div.asl_r p.showmore {
 .hero__text {
   max-width: 47.5rem;
   line-height: 150%;
-  font-size: 0.9375rem;
+  font-size: 1.125rem;
 }
 
 .hero__btn {
@@ -8177,9 +8160,9 @@ div.asl_r p.showmore {
 }
 
 .no-webp .hero__card-wrapper {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(54%, #fff), color-stop(70%, rgba(255, 255, 255, 0))), url("../img/card-image.jpg") -5px calc(100% + 5px)/calc(100% + 10px) auto no-repeat, #fff;
-  background: -o-linear-gradient(top, #fff 54%, rgba(255, 255, 255, 0) 70%), url("../img/card-image.jpg") -5px calc(100% + 5px)/calc(100% + 10px) auto no-repeat, #fff;
-  background: linear-gradient(180deg, #fff 54%, rgba(255, 255, 255, 0) 70%), url("../img/card-image.jpg") -5px calc(100% + 5px)/calc(100% + 10px) auto no-repeat, #fff; }
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(54%, #fff), color-stop(70%, rgba(255, 255, 255, 0))), url("../img/card-image.jpg") -5px calc(100% + 5px)/calc(100% + 10px) auto no-repeat;
+  background: -o-linear-gradient(top, #fff 54%, rgba(255, 255, 255, 0) 70%), url("../img/card-image.jpg") -5px calc(100% + 5px)/calc(100% + 10px) auto no-repeat;
+  background: linear-gradient(180deg, #fff 54%, rgba(255, 255, 255, 0) 70%), url("../img/card-image.jpg") -5px calc(100% + 5px)/calc(100% + 10px) auto no-repeat; }
 
 .hero__card-wrapper {
   position: relative;
@@ -9235,10 +9218,6 @@ div.asl_r p.showmore {
   .search-page__loadmore {
     display: none;
   }
-
-  .hero__text {
-    font-size: 1.125rem;
-  }
 }
 
 @media (min-width: 766.98px) {
@@ -9575,7 +9554,13 @@ div.asl_r p.showmore {
   }
 
   .management + .benefits {
-    padding: 2.8rem 3rem;
+    background: transparent;
+    padding: 0;
+  }
+
+  .management + .benefits .benefits__items {
+    padding: 3.12rem 2rem;
+    background: #f2f8ff;
   }
 
   .management + .benefits .benefits__item {
@@ -10184,32 +10169,19 @@ div.asl_r p.showmore {
   }
 
   .header-lg:not(.scroll) .header__wrapper {
-    padding: 3rem 0;
-    -webkit-transition: background-color 0.5s ease-out, border-color 0.1s ease-out, padding 0.1s ease-in 0.5s;
-    -o-transition: background-color 0.5s ease-out, border-color 0.1s ease-out, padding 0.1s ease-in 0.5s;
-    transition: background-color 0.5s ease-out, border-color 0.1s ease-out, padding 0.1s ease-in 0.5s;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .header-lg .header__wrapper {
+    -webkit-transition: background-color 0.3s ease-out 0s, padding 0.15s ease-out, color 0.3s ease-out 0s, border-color 0.3s ease-out 0s, opacity 0.3s ease-out !important;
+    -o-transition: background-color 0.3s ease-out 0s, padding 0.15s ease-out, color 0.3s ease-out 0s, border-color 0.3s ease-out 0s, opacity 0.3s ease-out !important;
+    transition: background-color 0.3s ease-out 0s, padding 0.15s ease-out, color 0.3s ease-out 0s, border-color 0.3s ease-out 0s, opacity 0.3s ease-out !important;
   }
 
   .header__logo {
     z-index: 1;
     max-width: 9.8125rem;
-  }
-
-  .header__logo.header__logo-lg {
-    width: 100%;
-  }
-
-  .header__logo.header__logo-lg img {
-    width: 100%;
-  }
-
-  .header-lg:not(.scroll) .header__logo.header__logo-lg {
-    max-width: 17.3125rem;
-    -webkit-transition: max-width 0.1s ease-in 0.5s, -webkit-filter 0.3s ease 0s;
-    transition: max-width 0.1s ease-in 0.5s, -webkit-filter 0.3s ease 0s;
-    -o-transition: filter 0.3s ease 0s, max-width 0.1s ease-in 0.5s;
-    transition: filter 0.3s ease 0s, max-width 0.1s ease-in 0.5s;
-    transition: filter 0.3s ease 0s, max-width 0.1s ease-in 0.5s, -webkit-filter 0.3s ease 0s;
   }
 
   .header__btn.btn-sm {
@@ -11926,11 +11898,11 @@ div.asl_r p.showmore {
   }
 
   .hero {
-    padding: 14.3125rem 0 3.875rem;
+    padding: 4.375rem 0 3.875rem;
   }
 
   .hero.hero-sm {
-    padding: 8.6875rem 0 4.375rem;
+    padding: 3.125rem 0 4.375rem;
   }
 
   .hero ~ .help {
@@ -11979,7 +11951,18 @@ div.asl_r p.showmore {
     padding-bottom: 2.5rem;
   }
 
+  .hero__logo {
+    display: inline-block;
+    max-width: 17.3125rem;
+    width: 100%;
+  }
+
+  .hero__logo img {
+    width: 100%;
+  }
+
   .hero__body {
+    margin-top: 4.6rem;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     -webkit-box-pack: justify;
@@ -12329,18 +12312,11 @@ div.asl_r p.showmore {
             flex: 0 1 auto;
   }
 
-  .management + .benefits {
-    padding: 0;
-    background: transparent;
-  }
-
   .management + .benefits .benefits__items {
-    background: #f2f8ff;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     gap: 6rem;
-    padding: 3.12rem 2rem;
   }
 
   .management__body {
@@ -13673,7 +13649,7 @@ div.asl_r p.showmore {
 
 .webp .case__banner.case__banner_default::before { background: -webkit-gradient(linear, left top, right top, from(#f2f8ff), to(rgba(242, 248, 255, 0))) 0 0/25.5rem 100% no-repeat, url(../img/case-banner.webp) 1px center/cover no-repeat; background: -o-linear-gradient(left, #f2f8ff 0%, rgba(242, 248, 255, 0) 100%) 0 0/25.5rem 100% no-repeat, url(../img/case-banner.webp) 1px center/cover no-repeat; background: linear-gradient(90deg, #f2f8ff 0%, rgba(242, 248, 255, 0) 100%) 0 0/25.5rem 100% no-repeat, url(../img/case-banner.webp) 1px center/cover no-repeat; }
 
-.webp .hero__card-wrapper { background: -webkit-gradient(linear, left top, left bottom, color-stop(54%, #fff), color-stop(70%, rgba(255, 255, 255, 0))), url(../img/card-image.webp) -5px calc(100% + 5px)/calc(100% + 10px) auto no-repeat, #fff; background: -o-linear-gradient(top, #fff 54%, rgba(255, 255, 255, 0) 70%), url(../img/card-image.webp) -5px calc(100% + 5px)/calc(100% + 10px) auto no-repeat, #fff; background: linear-gradient(180deg, #fff 54%, rgba(255, 255, 255, 0) 70%), url(../img/card-image.webp) -5px calc(100% + 5px)/calc(100% + 10px) auto no-repeat, #fff; }
+.webp .hero__card-wrapper { background: -webkit-gradient(linear, left top, left bottom, color-stop(54%, #fff), color-stop(70%, rgba(255, 255, 255, 0))), url(../img/card-image.webp) -5px calc(100% + 5px)/calc(100% + 10px) auto no-repeat; background: -o-linear-gradient(top, #fff 54%, rgba(255, 255, 255, 0) 70%), url(../img/card-image.webp) -5px calc(100% + 5px)/calc(100% + 10px) auto no-repeat; background: linear-gradient(180deg, #fff 54%, rgba(255, 255, 255, 0) 70%), url(../img/card-image.webp) -5px calc(100% + 5px)/calc(100% + 10px) auto no-repeat; }
 
 @media (min-width: 575.98px) {
 
