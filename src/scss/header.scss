@@ -71,6 +71,11 @@
 			}
 		}
 	}
+	&.header-lg {
+		@media (min-width: $md3) {
+			display: none;
+		}
+	}
 	// .header__wrapper
 	&__wrapper {
 		transition: background-color 0.3s ease-in-out 0s, padding 0.15s ease-in-out, color 0.3s ease-in-out 0s, border-color 0.3s ease-in-out 0s;

@@ -397,28 +397,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // header animation
 
     const headerElement = document.querySelector('.header');
-    const heroElement = document.querySelector('.hero');
-
     if (headerElement) {
-        const isHeaderLg = headerElement.classList.contains('header-lg');
-
         const callback = function (entries, observer) {
-            const viewportWidth = window.innerWidth;
-
-            if (isHeaderLg && heroElement && viewportWidth > 991.98) {
-                const heroBottom = heroElement.getBoundingClientRect().bottom;
-
-                if (heroBottom <= 0) {
-                    headerElement.classList.add('scroll');
-                } else {
-                    headerElement.classList.remove('scroll');
-                }
+            if (entries[0].isIntersecting) {
+                headerElement.classList.remove('scroll');
             } else {
-                if (entries[0].isIntersecting) {
-                    headerElement.classList.remove('scroll');
-                } else {
-                    headerElement.classList.add('scroll');
-                }
+                headerElement.classList.add('scroll');
             }
         };
 
@@ -429,14 +413,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const headerObserver = new IntersectionObserver(callback, observerOptions);
 
-        if (isHeaderLg && heroElement) {
-            headerObserver.observe(heroElement);
-        } else {
-            headerObserver.observe(headerElement);
-        }
+        headerObserver.observe(headerElement);
     }
-
-
 
 
     const textareas = document.querySelectorAll('.form__textarea');
@@ -454,7 +432,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         textarea.addEventListener('keydown', function (event) {
             if (event.key === 'Enter') {
-                // event.preventDefault();
                 autoResize();
             }
         });

@@ -10158,6 +10158,10 @@ div.asl_r p.showmore {
     display: none;
   }
 
+  .header.header-lg {
+    display: none;
+  }
+
   .header__wrapper {
     padding: 1.87rem 0;
   }
