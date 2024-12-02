@@ -6257,6 +6257,7 @@ div.asl_r p.showmore {
   top: 0;
   left: 0;
   z-index: 1;
+  opacity: 0.001;
 }
 
 .solutions__item.active {
