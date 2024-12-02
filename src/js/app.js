@@ -397,19 +397,46 @@ document.addEventListener('DOMContentLoaded', () => {
     // header animation
 
     const headerElement = document.querySelector('.header');
+    const heroElement = document.querySelector('.hero');
+
     if (headerElement) {
+        const isHeaderLg = headerElement.classList.contains('header-lg');
 
         const callback = function (entries, observer) {
-            if (entries[0].isIntersecting) {
-                headerElement.classList.remove('scroll');
+            const viewportWidth = window.innerWidth;
+
+            if (isHeaderLg && heroElement && viewportWidth > 991.98) {
+                const heroBottom = heroElement.getBoundingClientRect().bottom;
+
+                if (heroBottom <= 0) {
+                    headerElement.classList.add('scroll');
+                } else {
+                    headerElement.classList.remove('scroll');
+                }
             } else {
-                headerElement.classList.add('scroll');
+                if (entries[0].isIntersecting) {
+                    headerElement.classList.remove('scroll');
+                } else {
+                    headerElement.classList.add('scroll');
+                }
             }
         };
 
-        const headerObserver = new IntersectionObserver(callback);
-        headerObserver.observe(headerElement);
+        const observerOptions = {
+            root: null,
+            threshold: 0,
+        };
+
+        const headerObserver = new IntersectionObserver(callback, observerOptions);
+
+        if (isHeaderLg && heroElement) {
+            headerObserver.observe(heroElement);
+        } else {
+            headerObserver.observe(headerElement);
+        }
     }
+
+
 
 
     const textareas = document.querySelectorAll('.form__textarea');
