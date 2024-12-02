@@ -745,6 +745,10 @@ div.asl_w .probox .proinput input[type=submit] {
   margin-top: 1.88rem !important;
 }
 
+.form__grid .wpcf7-not-valid-tip {
+  text-align: left;
+}
+
 .form__req-tooltip {
   font-size: 0.875rem;
   color: #d80027;
