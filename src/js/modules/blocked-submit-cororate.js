@@ -2,75 +2,71 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.wpcf7-form');
     if (!form) return;
 
-    const emailWrap = form.querySelector('[data-name="email"]');
-    if (!emailWrap) return;
-
-    const emailInput = emailWrap.querySelector('input[name="email"]');
-    if (!emailInput) return;
-
-    const submitButton = form.querySelector('input[type="submit"]');
-    if (!submitButton) return;
-
     const forbiddenDomains = [
-        'gmail.com', 'yahoo.com', 'yandex.ru', 'mail.ru', 'outlook.com', 'hotmail.com',
-        'aol.com', 'icloud.com', 'msn.com', 'live.com', 'zoho.com', 'protonmail.com'
+        'gmail', 'yahoo', 'yandex', 'mail', 'outlook', 'hotmail',
+        'aol', 'icloud', 'msn', 'live', 'zoho', 'protonmail'
     ];
 
     const isCorporateEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) return false;
 
-        const emailDomain = email.split('@')[1];
-        return emailDomain && !forbiddenDomains.includes(emailDomain.toLowerCase());
+        const emailDomain = email.split('@')[1]?.toLowerCase();
+        const domainWithoutTLD = emailDomain?.split('.')[0];
+        return emailDomain && !forbiddenDomains.some(domain => domainWithoutTLD === domain);
     };
 
-    const getEmailTip = () => {
-        let emailTip = emailWrap.querySelector('.wpcf7-not-valid-tip');
-        if (!emailTip) {
-            emailTip = document.createElement('span');
-            emailTip.classList.add('wpcf7-not-valid-tip');
-            emailTip.setAttribute('aria-hidden', 'true');
-            emailWrap.appendChild(emailTip);
-        }
-        return emailTip;
-    };
+    const extendCF7Validation = () => {
+        const emailInput = form.querySelector('input[name="email"]');
+        if (!emailInput) return;
 
-    const validateEmailInput = () => {
-        const emailValue = emailInput.value.trim();
-        const emailTip = getEmailTip();
+        const validateEmail = () => {
+            const emailValue = emailInput.value.trim();
 
-        if (isCorporateEmail(emailValue)) {
+            if (!isCorporateEmail(emailValue)) {
+                emailInput.classList.add('wpcf7-not-valid');
+                emailInput.setAttribute('aria-invalid', 'true');
+
+                const errorEvent = new Event('wpcf7invalid', {
+                    bubbles: true,
+                    detail: { input: emailInput }
+                });
+                emailInput.dispatchEvent(errorEvent);
+                return false;
+            }
+
             emailInput.classList.remove('wpcf7-not-valid');
             emailInput.setAttribute('aria-invalid', 'false');
-            emailTip.setAttribute('aria-hidden', 'true');
-            emailTip.textContent = '';
-            submitButton.disabled = false;
-        } else {
-            emailInput.classList.add('wpcf7-not-valid');
-            emailInput.setAttribute('aria-invalid', 'true');
-            emailTip.setAttribute('aria-hidden', 'false');
-            emailTip.classList.add('aria-hidden', 'false');
-            emailTip.textContent = 'Please use a corporate email address.';
-            submitButton.disabled = true;
-        }
+            return true;
+        };
+
+        emailInput.addEventListener('input', () => {
+            const isValid = validateEmail();
+            console.log('valid', isValid);
+
+        });
+        emailInput.addEventListener('blur', () => {
+            const isValid = validateEmail();
+            console.log('valid', isValid);
+        });
+
     };
 
-    emailInput.addEventListener('input', validateEmailInput);
-
     form.addEventListener('submit', (event) => {
-        const emailValue = emailInput.value.trim();
-        const emailTip = getEmailTip();
+        const emailInput = form.querySelector('input[name="email"]');
+        if (!emailInput) return;
 
-        if (!isCorporateEmail(emailValue)) {
+        const isValid = isCorporateEmail(emailInput.value.trim());
+
+        if (!isValid) {
             event.preventDefault();
-            emailInput.classList.add('wpcf7-not-valid');
-            emailInput.setAttribute('aria-invalid', 'true');
-            emailTip.setAttribute('aria-hidden', 'false');
-            emailTip.textContent = 'Please use a corporate email address.';
-            submitButton.disabled = true;
-            emailInput.focus();
+            const errorEvent = new CustomEvent('wpcf7invalid', {
+                bubbles: true,
+                detail: { input: emailInput }
+            });
+            form.dispatchEvent(errorEvent);
         }
     });
 
+    extendCF7Validation();
 });
-

@@ -1477,12 +1477,6 @@ div.asl_w .probox .proinput input[type=submit] {
   border-radius: inherit;
 }
 
-.btn.btn-primary:disabled,
-.btn.btn-primary[aria-disabled=true] {
-  background: #ffeab4;
-  color: rgba(0, 0, 0, 0.14);
-}
-
 .btn.btn-secondary {
   border: 1px solid #0057b8;
   background: #fff;

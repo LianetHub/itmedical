@@ -895,12 +895,6 @@
 				}
 			}
 		}
-
-		&:disabled,
-		&[aria-disabled="true"] {
-			background: #ffeab4;
-			color: rgba(0, 0, 0, 0.14);
-		}
 	}
 	&.btn-secondary {
 		border: 1px solid #0057b8;
