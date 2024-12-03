@@ -3620,6 +3620,10 @@ div.asl_r p.showmore {
   width: 100%;
 }
 
+.contacts__form .wpcf7-spinner {
+  display: none !important;
+}
+
 .contacts__content {
   display: -webkit-box;
   display: -ms-flexbox;
