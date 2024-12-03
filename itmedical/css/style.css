@@ -652,6 +652,10 @@ div.asl_w .probox .proinput input[type=submit] {
   color: transparent !important;
 }
 
+.wpcf7-form:has(.contacts__form) {
+  display: block;
+}
+
 .form._success > * {
   display: none;
 }
@@ -747,10 +751,6 @@ div.asl_w .probox .proinput input[type=submit] {
 
 .form__grid .wpcf7-not-valid-tip {
   text-align: left;
-}
-
-.form__grid .wpcf7-spinner {
-  display: none;
 }
 
 .form__req-tooltip {
@@ -1546,6 +1546,13 @@ div.asl_w .probox .proinput input[type=submit] {
 .btn[aria-disabled=true] {
   cursor: default;
   pointer-events: none;
+  opacity: 0.5;
+}
+
+.btn:has(input:disabled) {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .asl_w_container {
@@ -3620,8 +3627,10 @@ div.asl_r p.showmore {
   width: 100%;
 }
 
-.contacts__form .wpcf7-spinner {
-  display: none !important;
+.contacts__form .form__submit {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contacts__content {

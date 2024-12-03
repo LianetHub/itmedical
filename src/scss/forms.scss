@@ -55,6 +55,9 @@
 			}
 		}
 	}
+	&:has(.contacts__form) {
+		display: block;
+	}
 }
 
 .form {
@@ -203,9 +206,6 @@
 		}
 		.wpcf7-not-valid-tip {
 			text-align: left;
-		}
-		.wpcf7-spinner {
-			display: none;
 		}
 	}
 	// .form__req-tooltip
@@ -982,6 +982,12 @@
 	&[aria-disabled="true"] {
 		cursor: default;
 		pointer-events: none;
+		opacity: 0.5;
+	}
+	&:has(input:disabled) {
+		cursor: default;
+		pointer-events: none;
+		opacity: 0.5;
 	}
 }
 
