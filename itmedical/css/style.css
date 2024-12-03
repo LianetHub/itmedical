@@ -749,6 +749,10 @@ div.asl_w .probox .proinput input[type=submit] {
   text-align: left;
 }
 
+.form__grid .wpcf7-spinner {
+  display: none;
+}
+
 .form__req-tooltip {
   font-size: 0.875rem;
   color: #d80027;
@@ -3613,6 +3617,7 @@ div.asl_r p.showmore {
 
 .contacts__form {
   text-align: center;
+  width: 100%;
 }
 
 .contacts__content {
