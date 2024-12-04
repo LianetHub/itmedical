@@ -169,6 +169,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        if (target.matches('.form__succes-btn')) {
+            target.closest('form').classList.remove('_success')
+        }
+
     });
 
 

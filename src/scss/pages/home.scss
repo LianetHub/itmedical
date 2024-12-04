@@ -1276,6 +1276,8 @@
 	&__form {
 		text-align: center;
 		width: 100%;
+		display: flex;
+		flex-direction: column;
 		@media (min-width: $md3) {
 			border-radius: 0.625rem;
 			border: 1px solid #d6d6d6;
@@ -1283,9 +1285,22 @@
 			max-width: rem(770);
 			margin: 0 auto;
 			padding: rem(70) 2.44rem;
+			min-height: rem(572);
 		}
 		.form__submit {
 			justify-content: center;
+		}
+		&._success {
+			.form__succes {
+				display: flex;
+			}
+		}
+		.form__succes {
+			flex: 1 1 auto;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
 		}
 	}
 	// .contacts__content

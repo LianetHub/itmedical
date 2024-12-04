@@ -8,10 +8,7 @@
     })
 
     <div class="wrapper">
-        @@include('html/_header-landings.html', {
-        "fixed": true,
-        "active": 0
-        })
+
         <main class="page">
             <section class="hero" style="background-image: url('../img/gated-bg.jpg');">
                 <div class="hero__container">
@@ -195,7 +192,7 @@
             </section>
             <section id="contacts" class="contacts">
                 <div class="contacts__container">
-                    <form action="#" class="contacts__form form">
+                    <form action="#" class="contacts__form form ">
                         <h2 class="form__title title">
                             Get your free copy
                         </h2>
@@ -221,14 +218,17 @@
                             <button type="submit" class="form__btn btn btn-primary">
                                 Download the report
                             </button>
-                            <div class="form__succes">
-                                <h2 class="form__succes-title title">
-                                    Thank you <br> for your message
-                                </h2>
-                                <p class="form__succes-subtitle">
-                                    Your details have been submitted and we will get in touch with you shortly
-                                </p>
-                            </div>
+                        </div>
+                        <div class="form__succes">
+                            <span class="form__succes-icon"></span>
+                            <h2 class="form__succes-title title">
+                                Thank you!
+                            </h2>
+                            <p class="form__succes-subtitle">
+                                Your guide is ready. <br>
+                                Enjoy reading!
+                            </p>
+                            <button type="button" class="form__succes-btn btn btn-primary">Ok</button>
                         </div>
                     </form>
                 </div>
