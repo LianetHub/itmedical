@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        if (target.matches('.form__succes-btn')) {
+        if (target.classList.contains('form__succes-btn')) {
             target.closest('form').classList.remove('_success')
         }
 
@@ -599,3 +599,5 @@ function _s(el, duration, callback, isDown) {
 
     window.requestAnimationFrame(step);
 }
+
+
