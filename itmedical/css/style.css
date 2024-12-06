@@ -1743,6 +1743,10 @@ div.asl_w .probox .promagnifier {
   font-size: 0.875rem;
 }
 
+.wpcf7-not-valid-tip[aria-hidden=true] {
+  margin: 0 !important;
+}
+
 .dnd-upload-image {
   display: none !important;
 }
