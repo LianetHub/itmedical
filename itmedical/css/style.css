@@ -8142,6 +8142,11 @@ div.asl_r p.showmore {
 
 .hero__logo {
   margin-bottom: 2rem;
+  max-width: 8.125rem;
+}
+
+.hero__logo img {
+  width: 100%;
 }
 
 .hero__body {
@@ -12070,6 +12075,7 @@ div.asl_r p.showmore {
 
   .hero__logo {
     margin-bottom: 1rem;
+    max-width: 9.8125rem;
   }
 
   .hero__body {

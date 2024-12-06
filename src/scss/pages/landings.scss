@@ -132,8 +132,13 @@
 	// .hero__logo
 	&__logo {
 		margin-bottom: 2rem;
+		max-width: rem(130);
 		@media (min-width: $md3) {
 			margin-bottom: 1rem;
+			max-width: rem(157);
+		}
+		& img {
+			width: 100%;
 		}
 	}
 	// .hero__body
