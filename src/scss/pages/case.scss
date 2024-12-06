@@ -8,6 +8,12 @@
 			padding-top: 6.25rem;
 		}
 	}
+	& + .whitepaper {
+		padding-top: rem(50);
+		@media (min-width: $md4) {
+			padding-top: 6.25rem;
+		}
+	}
 	// .case__banner
 	&__banner {
 		position: relative;

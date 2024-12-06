@@ -1242,6 +1242,12 @@
 			padding-top: rem(100);
 		}
 	}
+	& + .whitepaper {
+		margin-top: rem(50);
+		@media (min-width: $md3) {
+			margin-top: rem(100);
+		}
+	}
 	// .development__container
 	&__container {
 	}
@@ -1681,6 +1687,13 @@
 			margin-top: rem(100);
 		}
 	}
+	& + .whitepaper {
+		margin-top: rem(50);
+		@media (min-width: $md3) {
+			margin-top: rem(100);
+		}
+	}
+
 	// .why__container
 	&__container {
 	}

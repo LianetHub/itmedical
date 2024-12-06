@@ -4,12 +4,12 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	color: #fff;
-	padding: rem(140) 0 rem(50);
+	padding: rem(40) 0 rem(50);
 	@media (min-width: $md3) {
 		padding: rem(70) 0 rem(62);
 	}
 	&.hero-sm {
-		padding: rem(140) 0 rem(20);
+		padding: rem(40) 0 rem(20);
 		@media (min-width: $md3) {
 			padding: rem(50) 0 rem(70);
 		}
@@ -131,14 +131,9 @@
 	}
 	// .hero__logo
 	&__logo {
-		display: none;
+		margin-bottom: 2rem;
 		@media (min-width: $md3) {
-			display: inline-block;
-			max-width: rem(277);
-			width: 100%;
-			& img {
-				width: 100%;
-			}
+			margin-bottom: 1rem;
 		}
 	}
 	// .hero__body
