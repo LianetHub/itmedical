@@ -1496,6 +1496,12 @@
 }
 
 .whitepaper {
+	& + .teams {
+		padding-top: rem(50);
+		@media (min-width: $md3) {
+			padding-top: rem(100);
+		}
+	}
 	// .whitepaper__container
 	&__container {
 		@media (max-width: $md4) {

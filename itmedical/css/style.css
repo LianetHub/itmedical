@@ -3811,6 +3811,10 @@ div.asl_r p.showmore {
   row-gap: 1.25rem;
 }
 
+.whitepaper + .teams {
+  padding-top: 3.125rem;
+}
+
 .no-webp .whitepaper__banner {
   background: url("../img/whitepaper-decor-mobile.svg") 0 0/100% auto no-repeat, -o-linear-gradient(top, #0149a3 55.51%, rgba(1, 73, 163, 0) 80%), url("../img/whitepaper.jpg") 0 100%/100% auto no-repeat, -o-linear-gradient(179deg, #023384 4.14%, #0057b8 71.64%);
   background: url("../img/whitepaper-decor-mobile.svg") 0 0/100% auto no-repeat, linear-gradient(180deg, #0149a3 55.51%, rgba(1, 73, 163, 0) 80%), url("../img/whitepaper.jpg") 0 100%/100% auto no-repeat, linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%); }
@@ -10932,6 +10936,10 @@ div.asl_r p.showmore {
     min-height: 35.75rem;
   }
 
+  .whitepaper + .teams {
+    padding-top: 6.25rem;
+  }
+
   .promo.promo-solutions ~ .solutions {
     margin-top: 2.5rem;
   }
@@ -12093,6 +12101,7 @@ div.asl_r p.showmore {
   .hero__offer {
     max-width: 53.4375rem;
     display: block;
+    padding-right: 1rem;
   }
 
   .hero__title {
