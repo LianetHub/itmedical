@@ -1050,6 +1050,9 @@
 	@media (min-width: $md4) {
 		padding: 6.25rem 0 rem(100);
 	}
+	& + .banner {
+		padding-top: 0;
+	}
 	// .related-cases__container
 	&__container {
 	}

@@ -692,6 +692,12 @@
 			margin-top: rem(50);
 		}
 	}
+	& + .contacts {
+		margin-top: rem(25);
+		@media (min-width: $md3) {
+			margin-top: rem(50);
+		}
+	}
 	@media (min-width: $md3) {
 		padding: 6.25rem 0 3.125rem;
 		& + .approach {

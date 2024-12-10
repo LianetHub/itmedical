@@ -3281,6 +3281,10 @@ div.asl_r p.showmore {
   margin-top: 1.5625rem;
 }
 
+.banner + .contacts {
+  margin-top: 1.5625rem;
+}
+
 .banner__body {
   background: -o-linear-gradient(179deg, #023384 4.14%, #0057b8 71.64%);
   background: linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
@@ -7730,6 +7734,10 @@ div.asl_r p.showmore {
   padding: 3.125rem 0;
 }
 
+.related-cases + .banner {
+  padding-top: 0;
+}
+
 .related-cases__header {
   position: relative;
   display: -webkit-box;
@@ -10749,6 +10757,10 @@ div.asl_r p.showmore {
   }
 
   .banner + .whitepaper {
+    margin-top: 3.125rem;
+  }
+
+  .banner + .contacts {
     margin-top: 3.125rem;
   }
 
