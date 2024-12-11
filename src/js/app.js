@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (target.classList.contains('form__succes-btn')) {
-            target.closest('.form').classList.remove('_success')
+            target.closest('._success').classList.remove('_success')
         }
 
     });
