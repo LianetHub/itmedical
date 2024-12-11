@@ -8186,6 +8186,10 @@ div.asl_r p.showmore {
   width: 100%;
 }
 
+.hero__body > .wpcf7 .wpcf7-response-output {
+  margin: 0 !important;
+}
+
 .hero__body > .wpcf7 .wpcf7-form._success {
   text-align: center;
   border-radius: 0.625rem;

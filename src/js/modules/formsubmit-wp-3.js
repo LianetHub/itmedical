@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}, false);
 
-	document.addEventListener('wpcf7invalid', function () {
+	document.addEventListener('wpcf7invalid', function (event) {
 		console.log("Contact Form 7: Ошибка при проверке формы, возможно, reCAPTCHA или Akismet не прошли проверку.");
 		reCaptchaPassed = false;
 		akismetPassed = false;
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	async function checkAllConditions(form) {
 		if (reCaptchaPassed && akismetPassed) {
-			const isFirstForm = form.id === 'wpcf7-f1756-o1';
+			const isFirstForm = event.target.closest('.wpcf7').id === 'wpcf7-f1756-o1';
 			await sendToHubspot(form, isFirstForm);
 			sendGtmEvent(isFirstForm);
 		}

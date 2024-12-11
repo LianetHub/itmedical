@@ -163,6 +163,9 @@
 				order: -1;
 				width: 100%;
 			}
+			.wpcf7-response-output {
+				margin: 0 !important;
+			}
 			.wpcf7-form {
 				&._success {
 					text-align: center;
