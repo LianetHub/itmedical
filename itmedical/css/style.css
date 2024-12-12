@@ -3285,6 +3285,10 @@ div.asl_r p.showmore {
   margin-top: 1.5625rem;
 }
 
+.banner + .ai {
+  margin-top: 1.5625rem;
+}
+
 .banner__body {
   background: -o-linear-gradient(179deg, #023384 4.14%, #0057b8 71.64%);
   background: linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
@@ -4980,6 +4984,10 @@ div.asl_r p.showmore {
   margin-top: 3.125rem;
 }
 
+.why + .ai {
+  margin-top: 3.125rem;
+}
+
 .why__title.title {
   line-height: 1.375;
 }
@@ -6097,6 +6105,10 @@ div.asl_r p.showmore {
   font-size: 1.125rem;
   max-width: 35rem;
   margin-top: 2.15rem;
+}
+
+.ai + .whitepaper {
+  margin-top: 3.125rem;
 }
 
 .ai__wrapper {
@@ -10812,6 +10824,10 @@ div.asl_r p.showmore {
     margin-top: 3.125rem;
   }
 
+  .banner + .ai {
+    margin-top: 3.125rem;
+  }
+
   .banner {
     padding: 6.25rem 0 3.125rem;
   }
@@ -11329,6 +11345,10 @@ div.asl_r p.showmore {
     margin-top: 6.25rem;
   }
 
+  .why + .ai {
+    margin-top: 6.25rem;
+  }
+
   .why__subtitle {
     padding-bottom: 1.25rem;
     margin-top: 1.87rem;
@@ -11729,6 +11749,10 @@ div.asl_r p.showmore {
 
   .ai {
     padding: 0;
+  }
+
+  .ai + .whitepaper {
+    margin-top: 6.25rem;
   }
 
   .ai__wrapper {

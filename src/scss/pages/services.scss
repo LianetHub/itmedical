@@ -1694,6 +1694,12 @@
 			margin-top: rem(100);
 		}
 	}
+	& + .ai {
+		margin-top: rem(50);
+		@media (min-width: $md3) {
+			margin-top: rem(100);
+		}
+	}
 
 	// .why__container
 	&__container {

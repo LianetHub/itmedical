@@ -879,6 +879,12 @@
 	@media (min-width: $md3) {
 		padding: 0;
 	}
+	& + .whitepaper {
+		margin-top: rem(50);
+		@media (min-width: $md3) {
+			margin-top: rem(100);
+		}
+	}
 	&__wrapper {
 		background: linear-gradient(271.35deg, #023384 4.14%, #0057b8 71.64%);
 		color: #fff;
