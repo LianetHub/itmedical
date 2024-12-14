@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	async function checkAllConditions(form) {
 		if (reCaptchaPassed && akismetPassed) {
-			const isFirstForm = event.target.closest('.wpcf7').id === 'wpcf7-f1756-o1';
+			const isFirstForm = form.closest('.wpcf7').id === 'wpcf7-f1756-o1';
+			form.classList.add('_success');
 			await sendToHubspot(form, isFirstForm);
 			sendGtmEvent(isFirstForm);
 		}

@@ -167,6 +167,7 @@
 				margin: 0 !important;
 			}
 			.wpcf7-form {
+				min-height: rem(497);
 				&._success {
 					text-align: center;
 					border-radius: 0.625rem;
@@ -420,6 +421,9 @@
 		.form__btn {
 			min-height: 3.25rem;
 			width: 100%;
+		}
+		&._sending {
+			pointer-events: none;
 		}
 	}
 	// .hero__form-title

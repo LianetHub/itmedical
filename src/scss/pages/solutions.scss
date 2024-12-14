@@ -1025,10 +1025,15 @@
 		display: flex;
 		align-items: center;
 		gap: rem(20);
+		position: absolute;
+
+		left: 50%;
+		transform: translateX(-50%);
 		@media (min-width: $md6) {
 			gap: rem(60);
 		}
 	}
+	// .ai__controls-mobile
 	&__controls-mobile {
 		margin-top: rem(30);
 		display: flex;

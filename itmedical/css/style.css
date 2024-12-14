@@ -6199,6 +6199,11 @@ div.asl_r p.showmore {
       -ms-flex-align: center;
           align-items: center;
   gap: 1.25rem;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .ai__controls-mobile {
@@ -8202,6 +8207,10 @@ div.asl_r p.showmore {
   margin: 0 !important;
 }
 
+.hero__body > .wpcf7 .wpcf7-form {
+  min-height: 31.0625rem;
+}
+
 .hero__body > .wpcf7 .wpcf7-form._success {
   text-align: center;
   border-radius: 0.625rem;
@@ -8406,6 +8415,10 @@ div.asl_r p.showmore {
 .hero__form .form__btn {
   min-height: 3.25rem;
   width: 100%;
+}
+
+.hero__form._sending {
+  pointer-events: none;
 }
 
 .hero__form-title {
