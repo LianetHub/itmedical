@@ -2,6 +2,39 @@
 
 import * as devFunctions from './modules/functions.js';
 
+(function checkMixBlendModeSupport() {
+    const supportsBlendMode = window.CSS && CSS.supports('mix-blend-mode', 'screen');
+
+    const onBodyReady = (callback) => {
+        if (document.body) {
+            callback();
+        } else {
+            document.addEventListener('DOMContentLoaded', callback);
+        }
+    };
+
+    onBodyReady(() => {
+
+        if (!supportsBlendMode) {
+            document.body.classList.add('no-mix-blend-mode');
+            return;
+        }
+
+        const video = document.createElement('video');
+        video.style.mixBlendMode = 'screen';
+        document.body.appendChild(video);
+
+        const computedStyle = getComputedStyle(video).mixBlendMode;
+
+        if (computedStyle !== 'screen') {
+            document.body.classList.add('no-mix-blend-mode-video-support');
+        } else {
+            document.body.classList.add('mix-blend-mode-video-support');
+        }
+
+        document.body.removeChild(video);
+    });
+})();
 
 document.addEventListener('DOMContentLoaded', () => {
 

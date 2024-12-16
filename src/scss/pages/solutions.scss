@@ -873,6 +873,7 @@
 }
 
 .ai {
+	position: relative;
 	@media (min-width: $md4) {
 		padding: 0 rem(20);
 	}
@@ -885,8 +886,14 @@
 			margin-top: rem(100);
 		}
 	}
+	// .ai__wrapper
 	&__wrapper {
-		background: linear-gradient(271.35deg, #023384 4.14%, #0057b8 71.64%);
+		@supports (mix-blend-mode: screen) {
+			background: linear-gradient(271.35deg, #023384 4.14%, #0057b8 71.64%);
+		}
+		@supports not (mix-blend-mode: screen) {
+			background: #0057b8;
+		}
 		color: #fff;
 		padding: rem(40) 0;
 		overflow: hidden;
@@ -1091,6 +1098,7 @@
 	}
 	// .ai__video
 	&__video {
+		position: relative;
 		flex-shrink: 0;
 		max-width: rem(330);
 		margin: -5rem 0;
@@ -1107,8 +1115,28 @@
 		display: block;
 		& video {
 			max-width: 100%;
-			mix-blend-mode: screen;
-			// height: 100%;
+			@supports (mix-blend-mode: screen) {
+				mix-blend-mode: screen;
+			}
+			@supports not (mix-blend-mode: screen) {
+				filter: brightness(1.2);
+			}
 		}
+		@supports not (mix-blend-mode: screen) {
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: -1px;
+				height: 100%;
+				pointer-events: none;
+				background: #0057b8;
+				mix-blend-mode: screen;
+			}
+		}
+	}
+	// .ai__video-overlay
+	&__video-overlay {
 	}
 }

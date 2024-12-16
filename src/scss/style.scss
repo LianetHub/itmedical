@@ -70,6 +70,37 @@ body {
 			overflow: visible;
 		}
 	}
+	&.mix-blend-mode-video-support {
+		.ai__video {
+			& video {
+				mix-blend-mode: screen;
+			}
+		}
+		.ai__wrapper {
+			background: linear-gradient(271.35deg, #023384 4.14%, #0057b8 71.64%);
+		}
+	}
+	&.no-mix-blend-mode-video-support {
+		.ai__video {
+			& video {
+				filter: brightness(1.2);
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: -1px;
+				height: 100%;
+				pointer-events: none;
+				background: #0057b8;
+				mix-blend-mode: screen;
+			}
+		}
+		.ai__wrapper {
+			background: #0057b8;
+		}
+	}
 }
 source[data-srcset] {
 	width: 100%;

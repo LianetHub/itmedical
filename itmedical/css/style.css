@@ -200,6 +200,36 @@ body.lock {
   overflow: hidden;
 }
 
+body.mix-blend-mode-video-support .ai__video video {
+  mix-blend-mode: screen;
+}
+
+body.mix-blend-mode-video-support .ai__wrapper {
+  background: -o-linear-gradient(178.65deg, #023384 4.14%, #0057b8 71.64%);
+  background: linear-gradient(271.35deg, #023384 4.14%, #0057b8 71.64%);
+}
+
+body.no-mix-blend-mode-video-support .ai__video video {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}
+
+body.no-mix-blend-mode-video-support .ai__video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -1px;
+  height: 100%;
+  pointer-events: none;
+  background: #0057b8;
+  mix-blend-mode: screen;
+}
+
+body.no-mix-blend-mode-video-support .ai__wrapper {
+  background: #0057b8;
+}
+
 source[data-srcset] {
   width: 100%;
   height: 100%;
@@ -6107,16 +6137,31 @@ div.asl_r p.showmore {
   margin-top: 2.15rem;
 }
 
+.ai {
+  position: relative;
+}
+
 .ai + .whitepaper {
   margin-top: 3.125rem;
 }
 
 .ai__wrapper {
-  background: -o-linear-gradient(178.65deg, #023384 4.14%, #0057b8 71.64%);
-  background: linear-gradient(271.35deg, #023384 4.14%, #0057b8 71.64%);
   color: #fff;
   padding: 2.5rem 0;
   overflow: hidden;
+}
+
+@supports (mix-blend-mode: screen) {
+  .ai__wrapper {
+    background: -o-linear-gradient(178.65deg, #023384 4.14%, #0057b8 71.64%);
+    background: linear-gradient(271.35deg, #023384 4.14%, #0057b8 71.64%);
+  }
+}
+
+@supports not (mix-blend-mode: screen) {
+  .ai__wrapper {
+    background: #0057b8;
+  }
 }
 
 .ai__container {
@@ -6252,6 +6297,7 @@ div.asl_r p.showmore {
 }
 
 .ai__video {
+  position: relative;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   max-width: 20.625rem;
@@ -6265,7 +6311,33 @@ div.asl_r p.showmore {
 
 .ai__video video {
   max-width: 100%;
-  mix-blend-mode: screen;
+}
+
+@supports (mix-blend-mode: screen) {
+  .ai__video video {
+    mix-blend-mode: screen;
+  }
+}
+
+@supports not (mix-blend-mode: screen) {
+  .ai__video video {
+    -webkit-filter: brightness(1.2);
+            filter: brightness(1.2);
+  }
+}
+
+@supports not (mix-blend-mode: screen) {
+  .ai__video::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -1px;
+    height: 100%;
+    pointer-events: none;
+    background: #0057b8;
+    mix-blend-mode: screen;
+  }
 }
 
 .about {
