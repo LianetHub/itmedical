@@ -84,17 +84,19 @@ body {
 		.ai__video {
 			& video {
 				filter: brightness(1.2);
+				mix-blend-mode: normal;
 			}
 			&::before {
 				content: "";
 				position: absolute;
 				top: 0;
 				left: 0;
-				right: -1px;
+				right: 0;
 				height: 100%;
 				pointer-events: none;
 				background: #0057b8;
 				mix-blend-mode: screen;
+				z-index: 1;
 			}
 		}
 		.ai__wrapper {

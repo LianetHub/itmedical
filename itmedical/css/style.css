@@ -212,6 +212,7 @@ body.mix-blend-mode-video-support .ai__wrapper {
 body.no-mix-blend-mode-video-support .ai__video video {
   -webkit-filter: brightness(1.2);
           filter: brightness(1.2);
+  mix-blend-mode: normal;
 }
 
 body.no-mix-blend-mode-video-support .ai__video::before {
@@ -219,11 +220,12 @@ body.no-mix-blend-mode-video-support .ai__video::before {
   position: absolute;
   top: 0;
   left: 0;
-  right: -1px;
+  right: 0;
   height: 100%;
   pointer-events: none;
   background: #0057b8;
   mix-blend-mode: screen;
+  z-index: 1;
 }
 
 body.no-mix-blend-mode-video-support .ai__wrapper {
@@ -6146,16 +6148,11 @@ div.asl_r p.showmore {
 }
 
 .ai__wrapper {
+  background: -o-linear-gradient(178.65deg, #023384 4.14%, #0057b8 71.64%);
+  background: linear-gradient(271.35deg, #023384 4.14%, #0057b8 71.64%);
   color: #fff;
   padding: 2.5rem 0;
   overflow: hidden;
-}
-
-@supports (mix-blend-mode: screen) {
-  .ai__wrapper {
-    background: -o-linear-gradient(178.65deg, #023384 4.14%, #0057b8 71.64%);
-    background: linear-gradient(271.35deg, #023384 4.14%, #0057b8 71.64%);
-  }
 }
 
 @supports not (mix-blend-mode: screen) {
@@ -6311,18 +6308,14 @@ div.asl_r p.showmore {
 
 .ai__video video {
   max-width: 100%;
-}
-
-@supports (mix-blend-mode: screen) {
-  .ai__video video {
-    mix-blend-mode: screen;
-  }
+  mix-blend-mode: screen;
 }
 
 @supports not (mix-blend-mode: screen) {
   .ai__video video {
     -webkit-filter: brightness(1.2);
             filter: brightness(1.2);
+    mix-blend-mode: normal;
   }
 }
 
@@ -6332,11 +6325,12 @@ div.asl_r p.showmore {
     position: absolute;
     top: 0;
     left: 0;
-    right: -1px;
+    right: 0;
     height: 100%;
     pointer-events: none;
     background: #0057b8;
     mix-blend-mode: screen;
+    z-index: 1;
   }
 }
 

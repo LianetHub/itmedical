@@ -888,9 +888,7 @@
 	}
 	// .ai__wrapper
 	&__wrapper {
-		@supports (mix-blend-mode: screen) {
-			background: linear-gradient(271.35deg, #023384 4.14%, #0057b8 71.64%);
-		}
+		background: linear-gradient(271.35deg, #023384 4.14%, #0057b8 71.64%);
 		@supports not (mix-blend-mode: screen) {
 			background: #0057b8;
 		}
@@ -1115,11 +1113,10 @@
 		display: block;
 		& video {
 			max-width: 100%;
-			@supports (mix-blend-mode: screen) {
-				mix-blend-mode: screen;
-			}
+			mix-blend-mode: screen;
 			@supports not (mix-blend-mode: screen) {
 				filter: brightness(1.2);
+				mix-blend-mode: normal;
 			}
 		}
 		@supports not (mix-blend-mode: screen) {
@@ -1128,11 +1125,12 @@
 				position: absolute;
 				top: 0;
 				left: 0;
-				right: -1px;
+				right: 0;
 				height: 100%;
 				pointer-events: none;
 				background: #0057b8;
 				mix-blend-mode: screen;
+				z-index: 1;
 			}
 		}
 	}
