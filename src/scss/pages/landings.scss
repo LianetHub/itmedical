@@ -97,6 +97,9 @@
 				padding: 0;
 			}
 		}
+		& + .benefits {
+			margin-top: 0;
+		}
 	}
 	& ~ .related-cases {
 		padding-bottom: rem(40);
@@ -109,7 +112,9 @@
 			padding-bottom: rem(40);
 		}
 		& + .banner {
-			padding-top: rem(8);
+			@media (min-width: $md3) {
+				padding-top: rem(40);
+			}
 		}
 	}
 	& ~ .role:not(.role-lg) {

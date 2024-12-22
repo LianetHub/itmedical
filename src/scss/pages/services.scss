@@ -433,6 +433,10 @@
 		}
 	}
 	& + .benefits {
+		margin-top: rem(50);
+		@media (min-width: $md3) {
+			margin-top: rem(100);
+		}
 		padding: 2.8rem 0rem;
 		@media (min-width: $md4) {
 			background: transparent;
@@ -447,7 +451,7 @@
 				background: #f2f8ff;
 			}
 			@media (min-width: $md2) {
-				justify-content: center;
+				justify-content: space-evenly;
 				gap: 6rem;
 			}
 		}
@@ -501,6 +505,22 @@
 			font-size: 1.375rem;
 		}
 	}
+	// .management__blocks
+	&__blocks {
+		& .management__body:nth-child(even) {
+			.management__main {
+				order: 1;
+				padding-left: 0;
+			}
+			.management__image {
+				margin-left: 0;
+				margin-right: 0;
+				& img {
+					object-position: 10% center;
+				}
+			}
+		}
+	}
 	// .management__body
 	&__body {
 		background: #f2f8ff;
@@ -519,6 +539,12 @@
 		@media (min-width: $md2) {
 			grid-template-columns: repeat(2, 1fr);
 			gap: 2rem;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(50);
+			@media (min-width: $md3) {
+				margin-bottom: rem(100);
+			}
 		}
 	}
 	// .management__content
@@ -615,11 +641,15 @@
 	&__image {
 		flex: 1 1 auto;
 		@media (min-width: $md4) {
-			margin-top: rem(30);
+			&:not(:first-child) {
+				margin-top: rem(30);
+			}
 			height: rem(350);
 		}
 		@media (min-width: $md3) {
-			margin-top: 2.5rem;
+			&:not(:first-child) {
+				margin-top: 2.5rem;
+			}
 			flex: 1 1 auto;
 			margin-right: -2rem;
 			margin-left: -1.56rem;
@@ -834,7 +864,7 @@
 	// .teams__subtitle
 	&__subtitle {
 		line-height: 140%;
-		max-width: 47.5rem;
+		max-width: 56.5rem;
 		font-size: 1.125rem;
 		margin-top: 1.25rem;
 		@media (min-width: $md3) {
@@ -1243,6 +1273,12 @@
 		}
 	}
 	& + .whitepaper {
+		margin-top: rem(50);
+		@media (min-width: $md3) {
+			margin-top: rem(100);
+		}
+	}
+	& + .compliance {
 		margin-top: rem(50);
 		@media (min-width: $md3) {
 			margin-top: rem(100);

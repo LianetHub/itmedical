@@ -770,7 +770,7 @@
 			}
 		}
 		@media (min-width: $md3) {
-			max-width: rem(1000);
+			max-width: rem(1060);
 		}
 	}
 	// .banner__subtitle
@@ -786,6 +786,11 @@
 		}
 		@media (min-width: $md3) {
 			font-size: 1.375rem;
+		}
+		& strong {
+			margin-top: 0.25em;
+			display: block;
+			font-weight: 500;
 		}
 	}
 	// .banner__btn

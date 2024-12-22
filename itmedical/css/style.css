@@ -3351,6 +3351,13 @@ div.asl_r p.showmore {
   max-width: 18.125rem;
 }
 
+.banner__subtitle strong,
+.form__succes-subtitle strong {
+  margin-top: 0.25em;
+  display: block;
+  font-weight: 500;
+}
+
 .banner__btn {
   margin-top: 1.25rem;
   font-size: 1.125rem;
@@ -4200,6 +4207,7 @@ div.asl_r p.showmore {
 }
 
 .management + .benefits {
+  margin-top: 3.125rem;
   padding: 2.8rem 0rem;
 }
 
@@ -4228,12 +4236,33 @@ div.asl_r p.showmore {
   margin-top: 1.25rem;
 }
 
+.management__blocks .management__body:nth-child(even) .management__main {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  padding-left: 0;
+}
+
+.management__blocks .management__body:nth-child(even) .management__image {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.management__blocks .management__body:nth-child(even) .management__image img {
+  -o-object-position: 10% center;
+     object-position: 10% center;
+}
+
 .management__body {
   background: #f2f8ff;
   display: -ms-grid;
   display: grid;
   padding: 2.5rem 0 0 0;
   margin: 0 -1.25rem;
+}
+
+.management__body:not(:last-child) {
+  margin-bottom: 3.125rem;
 }
 
 .management__content {
@@ -4476,7 +4505,7 @@ div.asl_r p.showmore {
 
 .teams__subtitle {
   line-height: 140%;
-  max-width: 47.5rem;
+  max-width: 56.5rem;
   font-size: 1.125rem;
   margin-top: 1.25rem;
 }
@@ -4776,6 +4805,10 @@ div.asl_r p.showmore {
 }
 
 .development + .whitepaper {
+  margin-top: 3.125rem;
+}
+
+.development + .compliance {
   margin-top: 3.125rem;
 }
 
@@ -8227,12 +8260,12 @@ div.asl_r p.showmore {
   margin-top: 0;
 }
 
-.hero ~ .related-cases {
-  padding-bottom: 2.5rem;
+.hero ~ .management + .benefits {
+  margin-top: 0;
 }
 
-.hero ~ .teams + .banner {
-  padding-top: 0.5rem;
+.hero ~ .related-cases {
+  padding-bottom: 2.5rem;
 }
 
 .hero ~ .role:not(.role-lg) {
@@ -9828,8 +9861,11 @@ div.asl_r p.showmore {
   }
 
   .management__image {
-    margin-top: 1.875rem;
     height: 21.875rem;
+  }
+
+  .management__image:not(:first-child) {
+    margin-top: 1.875rem;
   }
 
   .teams {
@@ -10952,7 +10988,7 @@ div.asl_r p.showmore {
   }
 
   .banner__title {
-    max-width: 62.5rem;
+    max-width: 66.25rem;
   }
 
   .banner__subtitle,
@@ -11138,6 +11174,10 @@ div.asl_r p.showmore {
     padding-top: 6.25rem;
   }
 
+  .management + .benefits {
+    margin-top: 6.25rem;
+  }
+
   .management + .benefits .benefits__item {
     gap: 0;
     -webkit-box-orient: vertical;
@@ -11164,6 +11204,10 @@ div.asl_r p.showmore {
     -ms-grid-columns: 1fr 1.11fr;
     grid-template-columns: 1fr 1.11fr;
     padding: 0;
+  }
+
+  .management__body:not(:last-child) {
+    margin-bottom: 6.25rem;
   }
 
   .management__content {
@@ -11202,12 +11246,15 @@ div.asl_r p.showmore {
   }
 
   .management__image {
-    margin-top: 2.5rem;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
     margin-right: -2rem;
     margin-left: -1.56rem;
+  }
+
+  .management__image:not(:first-child) {
+    margin-top: 2.5rem;
   }
 
   .management__image.management__image-start img {
@@ -11299,6 +11346,10 @@ div.asl_r p.showmore {
   }
 
   .development + .whitepaper {
+    margin-top: 6.25rem;
+  }
+
+  .development + .compliance {
     margin-top: 6.25rem;
   }
 
@@ -12248,6 +12299,10 @@ div.asl_r p.showmore {
     padding-bottom: 2.5rem;
   }
 
+  .hero ~ .teams + .banner {
+    padding-top: 2.5rem;
+  }
+
   .hero__logo {
     margin-bottom: 1rem;
     max-width: 9.8125rem;
@@ -12617,9 +12672,9 @@ div.asl_r p.showmore {
   }
 
   .management + .benefits .benefits__items {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     gap: 6rem;
   }
 
