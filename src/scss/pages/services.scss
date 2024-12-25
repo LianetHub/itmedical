@@ -399,9 +399,9 @@
 	// .benefits__item-text
 	&__item-text {
 		font-weight: 500;
-		margin-top: 0.75rem;
+		margin-top: 0.62rem;
 		line-height: math.div(28, 20);
-		font-size: 1rem;
+		font-size: 1.25rem;
 		@media (min-width: $md5) {
 			margin-top: 2rem;
 			font-size: rem(20);
@@ -444,21 +444,22 @@
 		}
 
 		.benefits__items {
-			row-gap: 1.5rem;
+			row-gap: 2rem;
 			justify-content: space-between;
 			@media (min-width: $md4) {
 				padding: 3.12rem 2rem;
 				background: #f2f8ff;
 			}
 			@media (min-width: $md2) {
-				justify-content: space-evenly;
-				gap: 6rem;
+				justify-content: center;
+				gap: 6.25rem;
 			}
 		}
 		.benefits__item {
-			gap: rem(30);
 			flex: 0 0 50%;
+			gap: rem(10);
 			@media (min-width: $md4) {
+				gap: rem(30);
 				flex-direction: row;
 				flex: 0 0 35%;
 			}
@@ -507,16 +508,28 @@
 	}
 	// .management__blocks
 	&__blocks {
-		& .management__body:nth-child(even) {
-			.management__main {
-				order: 1;
-				padding-left: 0;
+		& .management__body {
+			@media (max-width: $md2) {
+				grid-template-columns: 1fr;
 			}
-			.management__image {
-				margin-left: 0;
-				margin-right: 0;
-				& img {
-					object-position: 10% center;
+			&:nth-child(even) {
+				@media (min-width: $md2) {
+					.management__main {
+						order: 1;
+						padding-left: 0;
+						padding-top: 4rem;
+					}
+					.management__image {
+						margin-left: 0;
+						margin-right: 0;
+						& img {
+							object-position: 10% center;
+						}
+					}
+					.management__list {
+						padding-right: 1.5rem;
+					}
+					grid-template-columns: 1fr 1.11fr;
 				}
 			}
 		}
@@ -641,6 +654,7 @@
 	&__image {
 		flex: 1 1 auto;
 		@media (min-width: $md4) {
+			margin-top: 1rem;
 			&:not(:first-child) {
 				margin-top: rem(30);
 			}

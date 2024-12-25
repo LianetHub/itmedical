@@ -804,6 +804,9 @@
 		&.btn-lg {
 			min-width: 0;
 		}
+		&.banner__btn-lg {
+			min-width: rem(265);
+		}
 	}
 }
 
