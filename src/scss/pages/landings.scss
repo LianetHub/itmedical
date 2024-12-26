@@ -69,6 +69,13 @@
 			padding-bottom: rem(80);
 		}
 	}
+	& ~ .development {
+		+ .compliance {
+			@media (min-width: $md3) {
+				margin-top: rem(80);
+			}
+		}
+	}
 	& ~ .management {
 		@media (min-width: $md3) {
 			padding-top: rem(80);
