@@ -70,7 +70,7 @@
 		}
 	}
 	& ~ .development {
-		+ .compliance {
+		& + .compliance {
 			@media (min-width: $md3) {
 				margin-top: rem(80);
 			}

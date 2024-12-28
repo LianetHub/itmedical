@@ -2758,7 +2758,7 @@ div.asl_r p.showmore {
   line-height: 180%;
 }
 
-.footer__bottom .footer__container {
+.footer__bottom-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2790,6 +2790,14 @@ div.asl_r p.showmore {
 
 .footer__bottom-desc a {
   text-decoration: underline;
+}
+
+.footer__bottom-text {
+  margin-top: 0.9375rem;
+  max-width: 54.6875rem;
+  font-size: 0.75rem;
+  line-height: 1.8;
+  color: #606060;
 }
 
 .footer__copy {
@@ -3892,6 +3900,41 @@ div.asl_r p.showmore {
 
 .whitepaper__banner-btn {
   margin-top: 1.88rem;
+}
+
+.we-are {
+  background: #f3f8fe;
+  margin-top: 1.5625rem;
+  padding: 1.875rem 0;
+  margin-bottom: 1.5625rem;
+}
+
+.we-are__title {
+  text-align: center;
+}
+
+.we-are__logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3.125rem;
+  row-gap: 1.4375rem;
+  margin-top: 1.875rem;
+  max-width: 13.75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.we-are__logos img {
+  max-height: 1.875rem;
 }
 
 .promo {
@@ -9793,6 +9836,16 @@ div.asl_r p.showmore {
     margin-top: 2.5rem;
   }
 
+  .we-are__logos {
+    padding: 0;
+    max-width: 100%;
+    margin-top: 3.125rem;
+  }
+
+  .we-are__logos img {
+    max-height: none;
+  }
+
   .promo {
     min-height: 35.8125rem;
     padding: 5.625rem 0;
@@ -10739,7 +10792,7 @@ div.asl_r p.showmore {
     padding-left: 0;
   }
 
-  .footer__bottom .footer__container {
+  .footer__bottom-wrapper {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -11122,6 +11175,12 @@ div.asl_r p.showmore {
 
   .whitepaper + .teams {
     padding-top: 6.25rem;
+  }
+
+  .we-are {
+    margin-bottom: 0rem;
+    padding: 4.375rem 0;
+    margin-top: 3.125rem;
   }
 
   .promo.promo-solutions ~ .solutions {
