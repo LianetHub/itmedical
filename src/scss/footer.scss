@@ -16,12 +16,21 @@
 			}
 		}
 		.footer__contacts {
-			display: flex;
-			justify-content: space-between;
+			@media (min-width: $md3) {
+				display: flex;
+				justify-content: space-between;
+			}
 		}
 		.footer__address {
 			font-size: rem(18);
 			line-height: 1.8;
+		}
+		.footer__bottom {
+			.footer__container {
+				display: flex;
+				justify-content: space-between;
+				gap: 1rem;
+			}
 		}
 	}
 	// .footer__container
@@ -90,6 +99,7 @@
 			grid-template-columns: repeat(4, 1fr);
 		}
 	}
+	// .footer__column
 	&__column {
 		@media (min-width: $md5) {
 			display: flex;
@@ -135,6 +145,7 @@
 	&__menu-list {
 		margin-top: 1.5rem;
 	}
+	// .footer__more
 	&__more {
 		margin-top: 1.77rem;
 		display: flex;
