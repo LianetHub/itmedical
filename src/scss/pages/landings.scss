@@ -44,10 +44,18 @@
 			padding: rem(58) 0 rem(70);
 		}
 	}
-	& ~ .nums + .banner {
-		padding-top: rem(10);
-		@media (min-width: $md3) {
-			padding-top: rem(40);
+	& ~ .nums {
+		& + .banner {
+			padding-top: rem(10);
+			@media (min-width: $md3) {
+				padding-top: rem(40);
+			}
+		}
+		& + .service {
+			padding-top: rem(50);
+			@media (min-width: $md3) {
+				padding-top: rem(80);
+			}
 		}
 	}
 	& ~ .banner {
@@ -143,6 +151,12 @@
 		@media (min-width: $md3) {
 			padding-top: rem(80);
 			padding-bottom: rem(80);
+		}
+		.why__item-title {
+			@media (min-width: $md3) {
+				flex: 0 0 rem(500);
+				margin-right: rem(60);
+			}
 		}
 	}
 	& ~ .service {
@@ -340,6 +354,7 @@
 		@media (min-width: $md2) {
 			margin-top: 2.5rem;
 		}
+		border: rem(1) solid #0057b8;
 	}
 	// .hero__card
 	&__card {

@@ -3636,6 +3636,10 @@ div.asl_r p.showmore {
   margin-right: auto;
 }
 
+.help__item-text.lg-text {
+  font-size: 1rem;
+}
+
 .blog {
   padding: 1.75rem 0 3rem;
 }
@@ -8375,6 +8379,10 @@ div.asl_r p.showmore {
   padding-top: 0.625rem;
 }
 
+.hero ~ .nums + .service {
+  padding-top: 3.125rem;
+}
+
 .hero ~ .banner {
   padding-bottom: 3.125rem;
 }
@@ -8545,6 +8553,7 @@ div.asl_r p.showmore {
   margin-top: 2rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  border: 0.0625rem solid #0057b8;
 }
 
 .hero__card {
@@ -10000,9 +10009,10 @@ div.asl_r p.showmore {
 
   .service__logos {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+        -ms-flex: 0 0 48.5%;
+            flex: 0 0 48.5%;
     margin-left: auto;
+    margin-right: auto;
   }
 
   .service__info {
@@ -11299,6 +11309,10 @@ div.asl_r p.showmore {
     font-size: 1.5625rem;
   }
 
+  .help__item-text.lg-text {
+    font-size: 1.375rem;
+  }
+
   .blog {
     padding: 3.125rem 0 6.25rem;
   }
@@ -11359,6 +11373,7 @@ div.asl_r p.showmore {
 
   .service__logos {
     margin-left: 6rem;
+    margin-right: 0;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 24.625rem;
             flex: 0 0 24.625rem;
@@ -12506,6 +12521,10 @@ div.asl_r p.showmore {
     padding-top: 2.5rem;
   }
 
+  .hero ~ .nums + .service {
+    padding-top: 5rem;
+  }
+
   .hero ~ .banner {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -12547,6 +12566,13 @@ div.asl_r p.showmore {
   .hero ~ .why {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .hero ~ .why .why__item-title {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 31.25rem;
+            flex: 0 0 31.25rem;
+    margin-right: 3.75rem;
   }
 
   .hero ~ .service {

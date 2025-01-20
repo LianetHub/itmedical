@@ -1152,6 +1152,12 @@
 	// .help__item-text
 	&__item-text {
 		@extend .what__item-text;
+		&.lg-text {
+			font-size: 1rem;
+			@media (min-width: $md3) {
+				font-size: 1.375rem;
+			}
+		}
 	}
 }
 
