@@ -550,6 +550,17 @@ document.addEventListener('DOMContentLoaded', () => {
     handleSectionAnimation('.case__block', '.case__sidebar-link');
     handleSectionAnimation('.policy__body-section', '.policy__sidebar-link');
 
+    // 
+    document.querySelectorAll('.stats__item-num')?.forEach(item => {
+        const percentage = parseInt(item.querySelector('.percentage').textContent);
+        const circle = item.querySelector('.progress-ring');
+        const radius = circle.r.baseVal.value;
+        const circumference = 2 * Math.PI * radius;
+
+        circle.style.strokeDasharray = circumference;
+        circle.style.strokeDashoffset = circumference * (1 - percentage / 100);
+    });
+
 
 })
 

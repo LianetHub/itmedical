@@ -10,6 +10,16 @@
 		& > * {
 			display: none;
 		}
+		& .contacts__form {
+			display: flex !important;
+			& > * {
+				display: none;
+			}
+			.form__succes {
+				display: flex;
+				flex-direction: column;
+			}
+		}
 		.form__succes {
 			display: block;
 		}

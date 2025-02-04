@@ -660,6 +660,35 @@
 				margin-bottom: rem(100);
 			}
 		}
+		&.management__body-reverse {
+			@media (min-width: $md2) {
+				.management__main {
+					order: 1;
+					padding-left: 0;
+					padding-top: 4rem;
+				}
+				.management__image {
+					margin-left: 0;
+					margin-right: 0;
+					& img {
+						object-position: 10% center;
+					}
+				}
+				.management__list {
+					padding-right: 1.5rem;
+				}
+				grid-template-columns: 1fr 1.11fr;
+			}
+		}
+		&.management__body-column-tablet {
+			@media (max-width: $md2) {
+				grid-template-columns: 1fr;
+			}
+			.management__image {
+				height: auto;
+				margin-right: 0;
+			}
+		}
 	}
 	// .management__content
 	&__content {
@@ -856,6 +885,15 @@
 			}
 			margin-bottom: 1.2rem;
 		}
+	}
+	// .management__item-heading
+	&__item-heading {
+		color: #0057b8;
+		font-size: 1.875rem;
+		font-family: $font-noto;
+		font-weight: 500;
+		line-height: 130%;
+		margin-bottom: 2.5rem;
 	}
 	// .management__item-title
 	&__item-title {
@@ -1399,6 +1437,12 @@
 			margin-top: rem(100);
 		}
 	}
+	& + .solutions {
+		margin-top: rem(50);
+		@media (min-width: $md3) {
+			margin-top: rem(100);
+		}
+	}
 	// .development__container
 	&__container {
 	}
@@ -1490,6 +1534,17 @@
 				}
 			}
 		}
+		&.development__steps-lg {
+			@media (min-width: $md4) {
+				grid-template-columns: repeat(4, 1fr);
+			}
+			.development__step-num {
+				@media (min-width: $md4) {
+					font-size: 3.125rem;
+					font-weight: 500;
+				}
+			}
+		}
 	}
 	// .development__step
 	&__step {
@@ -1570,6 +1625,7 @@
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 		}
 	}
+	// 	.development__step-num
 	&__step-num {
 		color: #1371d5;
 		line-height: 120%;
@@ -1614,6 +1670,7 @@
 		@media (min-width: $md3) {
 			margin-top: 1.75rem;
 			line-height: 150%;
+			max-width: 16.8125rem;
 		}
 	}
 }
@@ -1944,6 +2001,7 @@
 		@media (min-width: $md3) {
 			min-height: 5rem;
 			padding: 1.4rem 0;
+			gap: 3rem;
 			flex-direction: row;
 			align-items: center;
 		}
@@ -1960,6 +2018,9 @@
 			padding: 0.44rem 0;
 			font-size: 1.5625rem;
 			flex: 0 0 rem(386);
+			&.why__item-title-lg {
+				flex: 0 0 27.625rem;
+			}
 		}
 	}
 	// .why__item-text

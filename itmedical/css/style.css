@@ -626,6 +626,26 @@ div.asl_w .probox .proinput input[type=submit] {
   display: none;
 }
 
+.wpcf7-form._success .contacts__form {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.wpcf7-form._success .contacts__form > * {
+  display: none;
+}
+
+.wpcf7-form._success .contacts__form .form__succes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .wpcf7-form._success .form__succes {
   display: block;
 }
@@ -3485,6 +3505,10 @@ div.asl_r p.showmore {
   padding-top: 3.125rem;
 }
 
+.compliance + .development.bg-tablet-blue {
+  margin-top: 3.125rem;
+}
+
 .compliance__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4392,6 +4416,11 @@ div.asl_r p.showmore {
   margin-bottom: 3.125rem;
 }
 
+.management__body.management__body-column-tablet .management__image {
+  height: auto;
+  margin-right: 0;
+}
+
 .management__content {
   background: #f2f8ff;
   display: -ms-grid;
@@ -4509,6 +4538,15 @@ div.asl_r p.showmore {
   width: 100%;
   height: 0.1875rem;
   background: #fff;
+}
+
+.management__item-heading {
+  color: #0057b8;
+  font-size: 1.875rem;
+  font-family: "NotoSerif";
+  font-weight: 500;
+  line-height: 130%;
+  margin-bottom: 2.5rem;
 }
 
 .management__item-title {
@@ -4936,6 +4974,10 @@ div.asl_r p.showmore {
 }
 
 .development + .compliance {
+  margin-top: 3.125rem;
+}
+
+.development + .solutions {
   margin-top: 3.125rem;
 }
 
@@ -6500,6 +6542,74 @@ div.asl_r p.showmore {
     mix-blend-mode: screen;
     z-index: 1;
   }
+}
+
+.stats {
+  padding: 3.125rem 0;
+}
+
+.stats__body {
+  background: #f2f8ff;
+  padding: 2.5rem 1.25rem;
+}
+
+.stats__title {
+  text-align: center;
+  max-width: 60.625rem;
+  margin: 0 auto;
+}
+
+.stats__list {
+  margin-top: 2.5rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+}
+
+.stats__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.stats__item-num {
+  position: relative;
+}
+
+.stats__item-num .percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #023384;
+  text-align: center;
+  font-family: "NotoSerif";
+  font-size: 2.375rem;
+  line-height: 130%;
+}
+
+.stats__item-circle {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.stats__item-desc {
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 140%;
+  font-weight: 500;
+  max-width: 16.875rem;
 }
 
 .about {
@@ -9379,6 +9489,15 @@ div.asl_r p.showmore {
     margin-bottom: 0.5rem;
   }
 
+  .stats__body {
+    padding: 2.5rem 3.75rem;
+  }
+
+  .stats__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .solutions__body {
     padding: 2.5rem 0 1.87rem;
   }
@@ -10084,6 +10203,16 @@ div.asl_r p.showmore {
             column-gap: 1.56rem;
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .development__steps.development__steps-lg {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .development__steps.development__steps-lg .development__step-num {
+    font-size: 3.125rem;
+    font-weight: 500;
   }
 
   .approach {
@@ -11270,6 +11399,10 @@ div.asl_r p.showmore {
     padding-top: 6.25rem;
   }
 
+  .compliance + .development.bg-tablet-blue {
+    margin-top: 6.25rem;
+  }
+
   .compliance__title {
     font-size: 2.8125rem;
   }
@@ -11602,6 +11735,10 @@ div.asl_r p.showmore {
     margin-top: 6.25rem;
   }
 
+  .development + .solutions {
+    margin-top: 6.25rem;
+  }
+
   .development__steps.ordered .development__step:not(:last-child) .development__step-header::after {
     width: calc(100% + 0.94rem);
   }
@@ -11638,6 +11775,7 @@ div.asl_r p.showmore {
   .development__step-desc {
     margin-top: 1.75rem;
     line-height: 150%;
+    max-width: 16.8125rem;
   }
 
   .approach {
@@ -11745,6 +11883,7 @@ div.asl_r p.showmore {
   .why__item {
     min-height: 5rem;
     padding: 1.4rem 0;
+    gap: 3rem;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -11760,6 +11899,12 @@ div.asl_r p.showmore {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 24.125rem;
             flex: 0 0 24.125rem;
+  }
+
+  .why__item-title.why__item-title-lg {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 27.625rem;
+            flex: 0 0 27.625rem;
   }
 
   .why__item-text {
@@ -12203,6 +12348,19 @@ div.asl_r p.showmore {
     width: 40%;
     max-width: 100%;
     margin: -5rem -5rem -5rem 0;
+  }
+
+  .stats {
+    padding: 6.25rem 0;
+  }
+
+  .stats__title {
+    font-size: 2.625rem;
+  }
+
+  .stats__list {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .values {
@@ -12994,6 +13152,33 @@ div.asl_r p.showmore {
     gap: 2rem;
   }
 
+  .management__body.management__body-reverse {
+    -ms-grid-columns: 1fr 1.11fr;
+    grid-template-columns: 1fr 1.11fr;
+  }
+
+  .management__body.management__body-reverse .management__main {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    padding-left: 0;
+    padding-top: 4rem;
+  }
+
+  .management__body.management__body-reverse .management__image {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .management__body.management__body-reverse .management__image img {
+    -o-object-position: 10% center;
+       object-position: 10% center;
+  }
+
+  .management__body.management__body-reverse .management__list {
+    padding-right: 1.5rem;
+  }
+
   .management__content {
     margin: 0;
     -ms-grid-columns: (1fr)[2];
@@ -13445,6 +13630,11 @@ div.asl_r p.showmore {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
+
+  .management__body.management__body-column-tablet {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -13778,6 +13968,10 @@ div.asl_r p.showmore {
 
   .ai__title {
     font-size: 1.875rem;
+  }
+
+  .stats__body {
+    margin: 0 -1.25rem;
   }
 
   .history__content {

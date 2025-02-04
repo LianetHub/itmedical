@@ -959,6 +959,12 @@
 			padding-top: rem(100);
 		}
 	}
+	& + .development.bg-tablet-blue {
+		margin-top: rem(50);
+		@media (min-width: $md3) {
+			margin-top: rem(100);
+		}
+	}
 	// .compliance__container
 	&__container {
 	}
