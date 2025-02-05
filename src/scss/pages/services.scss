@@ -1536,7 +1536,7 @@
 		}
 		&.development__steps-lg {
 			@media (min-width: $md4) {
-				grid-template-columns: repeat(4, 1fr);
+				grid-template-columns: repeat(4, 1fr) !important;
 			}
 			.development__step-num {
 				@media (min-width: $md4) {

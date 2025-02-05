@@ -10206,8 +10206,8 @@ div.asl_r p.showmore {
   }
 
   .development__steps.development__steps-lg {
-    -ms-grid-columns: (1fr)[4];
-    grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr)[4] !important;
+    grid-template-columns: repeat(4, 1fr) !important;
   }
 
   .development__steps.development__steps-lg .development__step-num {
@@ -11335,6 +11335,18 @@ div.asl_r p.showmore {
 
   .banner__title {
     max-width: 66.25rem;
+  }
+
+  .banner__title.title {
+    font-size: 2.625rem;
+    max-width: 100%;
+  }
+
+  .banner__title.title ~ .banner__btn {
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+    min-width: 16.5625rem;
+    min-height: 3.25rem;
   }
 
   .banner__subtitle,
@@ -13532,10 +13544,6 @@ div.asl_r p.showmore {
 
   .hero ~ .management .management__title {
     padding: 0;
-  }
-
-  .hero ~ .role:not(.role-lg) .role__container {
-    max-width: 69rem;
   }
 
   .hero ~ .role:not(.role-lg) .role__subtitle {
