@@ -1588,6 +1588,12 @@
 			padding-top: rem(100);
 		}
 	}
+	& + .contacts {
+		margin-top: rem(50);
+		@media (min-width: $md3) {
+			margin-top: rem(100);
+		}
+	}
 	// .whitepaper__container
 	&__container {
 		@media (max-width: $md4) {

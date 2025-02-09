@@ -3940,6 +3940,10 @@ div.asl_r p.showmore {
   padding-top: 3.125rem;
 }
 
+.whitepaper + .contacts {
+  margin-top: 3.125rem;
+}
+
 .no-webp .whitepaper__banner {
   background: url("../img/whitepaper-decor-mobile.svg") 0 0/100% auto no-repeat, -o-linear-gradient(top, #0149a3 55.51%, rgba(1, 73, 163, 0) 80%), url("../img/whitepaper.jpg") 0 100%/100% auto no-repeat, -o-linear-gradient(179deg, #023384 4.14%, #0057b8 71.64%);
   background: url("../img/whitepaper-decor-mobile.svg") 0 0/100% auto no-repeat, linear-gradient(180deg, #0149a3 55.51%, rgba(1, 73, 163, 0) 80%), url("../img/whitepaper.jpg") 0 100%/100% auto no-repeat, linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%); }
@@ -11501,6 +11505,10 @@ div.asl_r p.showmore {
     padding-top: 6.25rem;
   }
 
+  .whitepaper + .contacts {
+    margin-top: 6.25rem;
+  }
+
   .we-are {
     margin-bottom: 0rem;
     padding: 4.375rem 0;
@@ -13544,6 +13552,10 @@ div.asl_r p.showmore {
 
   .hero ~ .management .management__title {
     padding: 0;
+  }
+
+  .hero ~ .role:not(.role-lg) .role__container {
+    max-width: 75rem;
   }
 
   .hero ~ .role:not(.role-lg) .role__subtitle {

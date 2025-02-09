@@ -133,11 +133,11 @@
 		}
 	}
 	& ~ .role:not(.role-lg) {
-		// .role__container {
-		// 	@media (min-width: $md2) {
-		// 		max-width: 69rem;
-		// 	}
-		// }
+		.role__container {
+			@media (min-width: $md2) {
+				max-width: 75rem;
+			}
+		}
 		.role__subtitle {
 			@media (min-width: $md2) {
 				font-size: 1.4375rem;
