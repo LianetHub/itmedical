@@ -793,3 +793,91 @@
 		}
 	}
 }
+
+.focus {
+	// .focus__container
+	&__container {
+		@media (min-width: $md1) {
+			max-width: rem(1440);
+		}
+	}
+	// .focus__content
+	&__content {
+		background: #f2f8ff;
+		margin: 0 rem(-20);
+		display: flex;
+		flex-direction: column;
+		padding: rem(40) rem(20);
+		@media (min-width: $md2) {
+			padding: 2.5rem 1.56rem;
+			display: grid;
+			align-items: center;
+			padding: 0;
+			grid-template-columns: 560px 1fr;
+		}
+	}
+	// .focus__body
+	&__body {
+		display: contents;
+		@media (min-width: $md2) {
+			display: block;
+		}
+		@media (min-width: $md1) {
+			padding: rem(50) rem(50) rem(50) rem(70);
+		}
+	}
+	// .focus__title
+	&__title {
+		@media (max-width: $md2) {
+			font-size: rem(32);
+		}
+		order: -1;
+	}
+
+	// .focus__caption
+	&__caption {
+		margin-top: 2.5rem;
+		font-weight: 500;
+		font-size: 1.5625rem;
+		line-height: 140%;
+		order: 1;
+	}
+
+	// .focus__image
+	&__image {
+		margin: rem(30) rem(-20) 0;
+		@media (min-width: $md2) {
+			height: 100%;
+			position: relative;
+			margin: 0;
+			flex-shrink: 0;
+			& img {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+	// .focus__desc
+	&__desc {
+		margin-top: rem(20);
+		@media (min-width: $md4) {
+			margin-top: rem(32);
+		}
+		font-size: 1.125rem;
+		line-height: 140%;
+		& p {
+			&:not(:last-child) {
+				margin-bottom: 1.5em;
+			}
+		}
+	}
+	// .focus__btn
+	&__btn {
+		margin-top: rem(20);
+		@media (min-width: $md4) {
+			margin-top: rem(30);
+		}
+		align-self: flex-start;
+	}
+}

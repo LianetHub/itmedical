@@ -3437,6 +3437,10 @@ div.asl_r p.showmore {
   padding: 1.57rem 0 3rem;
 }
 
+.geography + .why {
+  padding-top: 0;
+}
+
 .geography__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3476,6 +3480,11 @@ div.asl_r p.showmore {
   max-width: 34.8125rem;
   font-size: 1.125rem;
   margin-top: 1.29rem;
+}
+
+.geography__text.lg-text {
+  margin-top: 1.875rem;
+  max-width: 45.5rem;
 }
 
 .geography__image {
@@ -4687,6 +4696,11 @@ div.asl_r p.showmore {
   row-gap: 1.5rem;
 }
 
+.teams__list.teams__list-xl {
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+
 .teams__item-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4759,7 +4773,7 @@ div.asl_r p.showmore {
 
 .teams__item-text.text-sm {
   font-size: 1rem;
-  line-height: 140%;
+  line-height: 150%;
 }
 
 .teams__item-list {
@@ -5031,6 +5045,31 @@ div.asl_r p.showmore {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   left: calc(100% + 3.16rem);
+}
+
+.development__steps.development__steps-xl {
+  margin-top: 2.5rem;
+  -ms-grid-columns: 1fr !important;
+  grid-template-columns: 1fr !important;
+}
+
+.development__steps.development__steps-xl .development__step-num {
+  margin-bottom: 0;
+}
+
+.development__steps.development__steps-xl .development__step-header {
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.development__steps.development__steps-xl .development__step-header::after {
+  margin-bottom: 0 !important;
+}
+
+.development__steps.development__steps-xl .development__step-desc {
+  max-width: 100%;
+  margin-top: 0.5rem;
 }
 
 .development__step {
@@ -5308,6 +5347,10 @@ div.asl_r p.showmore {
   margin-top: 0.85rem;
 }
 
+.why__item-text strong {
+  font-weight: 500;
+}
+
 .expertise {
   padding: 3.125em 0em;
 }
@@ -5569,6 +5612,14 @@ div.asl_r p.showmore {
   margin: 0 -1.25rem;
 }
 
+.automation__content.automation__content-lg {
+  display: contents;
+}
+
+.automation__content.automation__content-lg .automation__image {
+  min-height: 25rem;
+}
+
 .automation__body {
   display: contents;
 }
@@ -5628,6 +5679,20 @@ div.asl_r p.showmore {
 .automation__image {
   margin: 1.875rem -1.56rem 0;
   height: 29.4375rem;
+}
+
+.automation__desc {
+  margin-top: 2rem;
+  font-size: 1.125rem;
+  line-height: 140%;
+}
+
+.automation__desc p:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+.automation__btn {
+  margin-top: 1.875rem;
 }
 
 .smart-teams {
@@ -6336,6 +6401,11 @@ div.asl_r p.showmore {
   margin-top: 1.25rem;
 }
 
+.role + .teams {
+  margin-top: 1.5625rem;
+  padding-top: 1.5625rem;
+}
+
 .role__title {
   line-height: 130%;
 }
@@ -6592,14 +6662,19 @@ div.asl_r p.showmore {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -54%);
+      -ms-transform: translate(-50%, -54%);
+          transform: translate(-50%, -54%);
   color: #023384;
   text-align: center;
   font-family: "NotoSerif";
   font-size: 2.375rem;
   line-height: 130%;
+}
+
+.stats__item-num .percentage small {
+  font-size: 0.6em;
+  vertical-align: super;
 }
 
 .stats__item-circle {
@@ -7002,6 +7077,59 @@ div.asl_r p.showmore {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(153, 184, 245, 0.2)), to(rgba(153, 184, 245, 0.2)));
   background: -o-linear-gradient(bottom, rgba(153, 184, 245, 0.2) 0%, rgba(153, 184, 245, 0.2) 100%);
   background: linear-gradient(0deg, rgba(153, 184, 245, 0.2) 0%, rgba(153, 184, 245, 0.2) 100%);
+}
+
+.focus__content {
+  background: #f2f8ff;
+  margin: 0 -1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2.5rem 1.25rem;
+}
+
+.focus__body {
+  display: contents;
+}
+
+.focus__title {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+.focus__caption {
+  margin-top: 2.5rem;
+  font-weight: 500;
+  font-size: 1.5625rem;
+  line-height: 140%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.focus__image {
+  margin: 1.875rem -1.25rem 0;
+}
+
+.focus__desc {
+  margin-top: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 140%;
+}
+
+.focus__desc p:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+.focus__btn {
+  margin-top: 1.25rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .error {
@@ -9349,6 +9477,10 @@ div.asl_r p.showmore {
     margin: 0 0 0.75rem 1rem;
   }
 
+  .development__steps.development__steps-xl .development__step-header {
+    margin-bottom: 2.5rem !important;
+  }
+
   .development__step:last-child .development__step-header::after {
     display: none;
   }
@@ -10191,6 +10323,17 @@ div.asl_r p.showmore {
     padding: 1.75rem 0 3.12rem;
   }
 
+  .teams__list.teams__list-xl {
+    margin-top: 2.1875rem;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .teams__list.teams__list-xl .teams__item-caption {
+    font-size: 1.5625rem;
+    padding-bottom: 1.25rem;
+  }
+
   .related-services__list {
     grid-auto-rows: 17.625rem;
   }
@@ -10217,6 +10360,17 @@ div.asl_r p.showmore {
   .development__steps.development__steps-lg .development__step-num {
     font-size: 3.125rem;
     font-weight: 500;
+  }
+
+  .development__steps.development__steps-xl {
+    -ms-grid-columns: (1fr)[2] !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .development__steps.development__steps-xl .development__step-num {
+    font-size: 3.125rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
   }
 
   .approach {
@@ -10390,6 +10544,14 @@ div.asl_r p.showmore {
 
   .values__image {
     margin: 0;
+  }
+
+  .focus__desc {
+    margin-top: 2rem;
+  }
+
+  .focus__btn {
+    margin-top: 1.875rem;
   }
 
   .error {
@@ -11788,6 +11950,12 @@ div.asl_r p.showmore {
     left: 0;
   }
 
+  .development__steps.development__steps-xl {
+    -ms-grid-columns: (1fr)[3] !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    row-gap: 1.75rem;
+  }
+
   .development__step-header {
     padding-right: 0.35rem;
   }
@@ -12286,6 +12454,11 @@ div.asl_r p.showmore {
     margin-top: 1.875rem;
     max-width: 50rem;
     font-size: 1.4375rem;
+  }
+
+  .role + .teams {
+    margin-top: 3.125rem;
+    padding-top: 3.125rem;
   }
 
   .role__subtitle {
@@ -13305,6 +13478,10 @@ div.asl_r p.showmore {
     grid-template-columns: repeat(4, 1fr) 0.75fr;
   }
 
+  .development__steps.development__steps-xl .development__step-num {
+    margin-bottom: -0.5rem;
+  }
+
   .cloud__body {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
@@ -13330,6 +13507,17 @@ div.asl_r p.showmore {
   .process__body table td,
   .process__body table th {
     padding: 0.69rem 1.38rem;
+  }
+
+  .automation__content.automation__content-lg {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 560px 1fr;
+    grid-template-columns: 560px 1fr;
+  }
+
+  .automation__content.automation__content-lg .automation__image {
+    min-height: auto;
   }
 
   .results__item {
@@ -13507,6 +13695,36 @@ div.asl_r p.showmore {
     margin-top: 1.75rem;
   }
 
+  .focus__content {
+    padding: 2.5rem 1.56rem;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+    -ms-grid-columns: 560px 1fr;
+    grid-template-columns: 560px 1fr;
+  }
+
+  .focus__body {
+    display: block;
+  }
+
+  .focus__image {
+    height: 100%;
+    position: relative;
+    margin: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+
+  .focus__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   .policy__sidebar {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 25.5rem;
@@ -13610,6 +13828,14 @@ div.asl_r p.showmore {
     margin-right: -4.25rem;
   }
 
+  .focus__container {
+    max-width: 90rem;
+  }
+
+  .focus__body {
+    padding: 3.125rem 3.125rem 3.125rem 4.375rem;
+  }
+
   .certs__item-logo {
     max-width: 12rem;
   }
@@ -13654,6 +13880,10 @@ div.asl_r p.showmore {
   .management__body.management__body-column-tablet {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+
+  .focus__title {
+    font-size: 2rem;
   }
 }
 
@@ -13799,6 +14029,10 @@ div.asl_r p.showmore {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+
+  .development__steps.development__steps-xl .development__step-title {
+    max-width: 11.125rem;
   }
 
   .smart-teams__item:last-child::before {

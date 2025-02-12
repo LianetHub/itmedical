@@ -1068,6 +1068,17 @@
 				}
 			}
 		}
+		&.teams__list-xl {
+			grid-template-columns: 1fr;
+			@media (min-width: $md4) {
+				margin-top: rem(35);
+				grid-template-columns: repeat(2, 1fr);
+				.teams__item-caption {
+					font-size: rem(25);
+					padding-bottom: 1.25rem;
+				}
+			}
+		}
 	}
 	// .teams__item
 	&__item {
@@ -1145,7 +1156,7 @@
 		font-size: 1.125rem;
 		&.text-sm {
 			font-size: 1rem;
-			line-height: 140%;
+			line-height: 150%;
 		}
 	}
 	// .teams__item-list
@@ -1543,6 +1554,46 @@
 					font-size: 3.125rem;
 					font-weight: 500;
 				}
+			}
+		}
+		&.development__steps-xl {
+			margin-top: 2.5rem;
+			grid-template-columns: 1fr !important;
+			@media (min-width: $md4) {
+				grid-template-columns: repeat(2, 1fr) !important;
+			}
+			@media (min-width: $md3) {
+				grid-template-columns: repeat(3, 1fr) !important;
+				row-gap: 1.75rem;
+			}
+			.development__step-num {
+				@media (min-width: $md4) {
+					font-size: 3.125rem;
+					font-weight: 500;
+					margin-right: 0.5rem;
+				}
+				margin-bottom: 0;
+				@media (min-width: $md2) {
+					margin-bottom: -0.5rem;
+				}
+			}
+			.development__step-title {
+				@media (max-width: $md3) {
+					max-width: rem(178);
+				}
+			}
+			.development__step-header {
+				align-items: center !important;
+				@media (min-width: $md5) {
+					margin-bottom: 2.5rem !important;
+				}
+				&::after {
+					margin-bottom: 0 !important;
+				}
+			}
+			.development__step-desc {
+				max-width: 100%;
+				margin-top: 0.5rem;
 			}
 		}
 	}
@@ -2032,6 +2083,9 @@
 			font-size: 1.125rem;
 			margin-top: 0;
 		}
+		& strong {
+			font-weight: 500;
+		}
 	}
 }
 
@@ -2491,6 +2545,19 @@
 			padding: 0;
 			grid-template-columns: repeat(2, 1fr);
 		}
+		&.automation__content-lg {
+			display: contents;
+			.automation__image {
+				min-height: rem(400);
+			}
+			@media (min-width: $md2) {
+				display: grid;
+				grid-template-columns: 560px 1fr;
+				.automation__image {
+					min-height: auto;
+				}
+			}
+		}
 	}
 	// .automation__body
 	&__body {
@@ -2566,6 +2633,21 @@
 				left: 0;
 			}
 		}
+	}
+	// .automation__desc
+	&__desc {
+		margin-top: rem(32);
+		font-size: 1.125rem;
+		line-height: 140%;
+		& p {
+			&:not(:last-child) {
+				margin-bottom: 1.5em;
+			}
+		}
+	}
+	// .automation__btn
+	&__btn {
+		margin-top: rem(30);
 	}
 }
 

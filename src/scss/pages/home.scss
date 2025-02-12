@@ -867,6 +867,9 @@
 	@media (min-width: $md3) {
 		padding: 6.28rem 0 6.28rem;
 	}
+	& + .why {
+		padding-top: 0;
+	}
 	// .geography__container
 	&__container {
 		@media (min-width: $md3) {
@@ -926,6 +929,10 @@
 		@media (min-width: $md3) {
 			margin-top: 1rem;
 			font-size: 1.375rem;
+		}
+		&.lg-text {
+			margin-top: rem(30);
+			max-width: rem(728);
 		}
 	}
 	&__btn {
