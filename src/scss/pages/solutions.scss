@@ -1211,12 +1211,16 @@
 			font-family: $font-noto;
 			font-size: rem(38);
 			line-height: 130%;
-
+			padding-bottom: 0.5rem;
 			& small {
 				font-size: 0.6em;
 
 				vertical-align: super;
 			}
+		}
+		.progress-ring {
+			transform: rotate(-70deg);
+			transform-origin: center;
 		}
 	}
 	// .stats__item-circle

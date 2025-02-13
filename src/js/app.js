@@ -551,6 +551,76 @@ document.addEventListener('DOMContentLoaded', () => {
     handleSectionAnimation('.policy__body-section', '.policy__sidebar-link');
 
 
+    function initStatsAnimation() {
+        document.querySelectorAll('.stats__item-num')?.forEach(item => {
+            const percentageEl = item.querySelector('.percentage');
+            const percentage = parseInt(percentageEl.textContent);
+            const circle = item.querySelector('.progress-ring');
+            const radius = circle.r.baseVal.value;
+            const circumference = 2 * Math.PI * radius;
+
+            circle.style.strokeDasharray = circumference;
+            circle.style.strokeDashoffset = circumference;
+
+            let hasAnimated = false;
+
+            function startAnimation() {
+                if (hasAnimated) return;
+                hasAnimated = true;
+
+                let currentNum = 0;
+                const duration = 1000;
+                const startTime = performance.now();
+
+                function animateNumber(time) {
+                    const progress = Math.min((time - startTime) / duration, 1);
+                    currentNum = Math.round(progress * percentage);
+                    percentageEl.innerHTML = `${currentNum}<small>%</small>`;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(animateNumber);
+                    }
+                }
+
+                function animateCircle() {
+                    let startOffset = circumference;
+                    let endOffset = circumference * (1 - percentage / 100);
+                    let startTime = performance.now();
+
+                    function step(time) {
+                        let progress = Math.min((time - startTime) / duration, 1);
+                        circle.style.strokeDashoffset = startOffset - progress * (startOffset - endOffset);
+
+                        if (progress < 1) {
+                            requestAnimationFrame(step);
+                        }
+                    }
+
+                    requestAnimationFrame(step);
+                }
+
+                requestAnimationFrame(animateNumber);
+                requestAnimationFrame(animateCircle);
+            }
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        startAnimation();
+                        observer.disconnect();
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            observer.observe(item);
+        });
+    }
+
+
+    if (document.querySelector('.stats')) {
+        initStatsAnimation()
+    }
+
 
 
 })

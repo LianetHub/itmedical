@@ -6670,11 +6670,21 @@ div.asl_r p.showmore {
   font-family: "NotoSerif";
   font-size: 2.375rem;
   line-height: 130%;
+  padding-bottom: 0.5rem;
 }
 
 .stats__item-num .percentage small {
   font-size: 0.6em;
   vertical-align: super;
+}
+
+.stats__item-num .progress-ring {
+  -webkit-transform: rotate(-70deg);
+      -ms-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
 }
 
 .stats__item-circle {
