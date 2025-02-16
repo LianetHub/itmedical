@@ -3383,6 +3383,10 @@ div.asl_r p.showmore {
   margin-top: 1.5625rem;
 }
 
+.banner + .teams.teams-lg {
+  padding-top: 1.5625rem;
+}
+
 .banner__body {
   background: -o-linear-gradient(179deg, #023384 4.14%, #0057b8 71.64%);
   background: linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
@@ -7130,6 +7134,7 @@ div.asl_r p.showmore {
   margin-top: 1.25rem;
   font-size: 1.125rem;
   line-height: 140%;
+  max-width: 45rem;
 }
 
 .focus__desc p:not(:last-child) {
@@ -11465,6 +11470,10 @@ div.asl_r p.showmore {
     margin-top: 3.125rem;
   }
 
+  .banner + .teams.teams-lg {
+    padding-top: 3.125rem;
+  }
+
   .banner {
     padding: 6.25rem 0 3.125rem;
   }
@@ -13486,10 +13495,6 @@ div.asl_r p.showmore {
   .development__steps.ordered {
     -ms-grid-columns: (1fr)[4] 0.75fr;
     grid-template-columns: repeat(4, 1fr) 0.75fr;
-  }
-
-  .development__steps.development__steps-xl .development__step-num {
-    margin-bottom: -0.5rem;
   }
 
   .cloud__body {

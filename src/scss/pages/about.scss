@@ -866,6 +866,7 @@
 		}
 		font-size: 1.125rem;
 		line-height: 140%;
+		max-width: rem(720);
 		& p {
 			&:not(:last-child) {
 				margin-bottom: 1.5em;
