@@ -84,6 +84,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 
+		const utmParams = getUTMParams();
+
+		Object.entries(utmParams).forEach(([key, value]) => {
+			if (value) {
+				hubspotData.fields.push({
+					"name": key,
+					"value": value
+				});
+			}
+		});
+
 		try {
 			await Promise.all(fileUploadPromises);
 			hubspotData.fields.push(...fileFields);
@@ -142,8 +153,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function sendGtmEvent(isFirstForm) {
+
 		window.dataLayer = window.dataLayer || [];
-		const eventName = isFirstForm ? 'contact_form_submit' : 'clutch_landing_form_submit';
+		const eventName = isFirstForm ? 'clutch_landing_form_submit' : 'contact_form_submit';
+		console.log("GTM Event Submited", "Event Name:", eventName);
+
 
 		window.dataLayer.push({
 			'event': eventName,
@@ -152,5 +166,14 @@ document.addEventListener('DOMContentLoaded', () => {
 			'v_label': 'Contact Form Submission',
 			'v_value': 1
 		});
+	}
+
+	function getUTMParams() {
+		const params = new URLSearchParams(window.location.search);
+		return {
+			utm_source: params.get('utm_source') || '',
+			utm_medium: params.get('utm_medium') || '',
+			utm_campaign: params.get('utm_campaign') || ''
+		};
 	}
 });
