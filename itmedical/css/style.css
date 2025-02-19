@@ -2805,7 +2805,7 @@ div.asl_r p.showmore {
   font-weight: 300;
   color: #606060;
   margin-top: 0.9375rem;
-  font-size: 0.9375rem;
+  font-size: 0.75rem;
   line-height: 1.8;
 }
 
@@ -4248,6 +4248,10 @@ div.asl_r p.showmore {
   display: grid;
   margin-top: 1.45rem;
   gap: 1.31rem;
+}
+
+.service__cards.service__cards-lg .service__card {
+  padding: 1.75rem 1.45rem 1.875rem 1.88rem;
 }
 
 .service__card {
@@ -9190,12 +9194,6 @@ div.asl_r p.showmore {
     font-size: 0.9375rem;
     margin-top: 0.62rem;
     line-height: 200%;
-  }
-
-  .footer__bottom-desc {
-    line-height: 1.8;
-    margin-top: 1.25rem;
-    font-size: 1rem;
   }
 
   .footer__list {
