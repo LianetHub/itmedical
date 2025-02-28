@@ -393,6 +393,11 @@
 		display: flex;
 		gap: 0.25rem;
 		position: relative;
+		&.form__submit-center {
+			width: fit-content;
+			margin-left: auto;
+			margin-right: auto;
+		}
 		.wpcf7-spinner {
 			position: absolute;
 			top: 50%;

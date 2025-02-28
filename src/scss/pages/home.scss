@@ -1422,7 +1422,6 @@
 			border-radius: 0.625rem;
 			border: 1px solid #d6d6d6;
 			background: #fff;
-			overflow: hidden;
 			flex-direction: row;
 		}
 	}
@@ -1444,6 +1443,23 @@
 		@media (min-width: $md2) {
 			text-align: left;
 		}
+	}
+	// .contacts__hint
+	&__hint {
+		margin-top: 0.5rem;
+		font-size: 1.25rem;
+		font-weight: 500;
+		line-height: 140%;
+	}
+	// .contacts__text
+	&__text {
+		margin-top: 0.94rem;
+		font-size: 1.0625rem;
+		line-height: 140%;
+	}
+	// .contacts__logo
+	&__logo {
+		margin-top: 2.5rem;
 	}
 	// .contacts__subtitle
 	&__subtitle {
@@ -1587,6 +1603,11 @@
 			}
 		}
 		& [data-name="message"] {
+			@media (min-width: $md5) {
+				grid-column: span 2;
+			}
+		}
+		.dropdown {
 			@media (min-width: $md5) {
 				grid-column: span 2;
 			}

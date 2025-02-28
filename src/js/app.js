@@ -63,6 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // devFunctions.shareLinks();
 
 
+    // init selects
+
+    document.querySelectorAll('.select')?.forEach(element => {
+        new devFunctions.CustomSelect(element);
+    });
+
     if (document.querySelector('.main__video')) {
         if (window.innerWidth >= 1200) {
             document.querySelector('.main__video').setAttribute('autoplay', true);

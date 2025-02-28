@@ -10,6 +10,7 @@ export { lazy } from './lazy.js';
 // export { inputFile } from './inputFile.js';
 export { observeTheme } from './observeTheme.js';
 export { shareLinks } from './shareLinks.js';
+export { CustomSelect } from './select.js';
 
 
 
