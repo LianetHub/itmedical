@@ -266,49 +266,7 @@
                     </ul>
                 </div>
             </div>
-            <section id="contacts" class="contacts">
-                <div class="contacts__container">
-                    <form action="#" class="contacts__form form ">
-                        <h2 class="form__title title">
-                            Get your free copy
-                        </h2>
-                        <p class="form__subtitle">
-                            Fill in the form to download the&nbsp;whitepaper
-                        </p>
-                        <p class="form__hint">
-                            Download the whitepaper to explore how AI-powered assistants can enhance patient care and streamline healthcare operations.
-                        </p>
-                        <div class="form__content">
-                            <div class="form__grid">
-                                <input type="text" name="name" data-required class="form__input form__input-underline" placeholder="Full name">
-                                <input type="text" name="email" data-required class="form__input form__input-underline" placeholder="Work Email">
-                                <label class="form__checkbox">
-                                    <input type="checkbox" name="nda" class="form__checkbox-input hidden" hidden="">
-                                    <span class="form__checkbox-content">
-                                        <span class="form__checkbox-text">
-                                            I agree to receive communications from IT Medical in accordance with the <a href="">Privacy Policy</a>.
-                                        </span>
-                                    </span>
-                                </label>
-                            </div>
-                            <button type="submit" class="form__btn btn btn-primary">
-                                Download the report
-                            </button>
-                        </div>
-                        <div class="form__succes">
-                            <span class="form__succes-icon"></span>
-                            <h2 class="form__succes-title title">
-                                Thank you!
-                            </h2>
-                            <p class="form__succes-subtitle">
-                                Your guide is ready. <br>
-                                Enjoy reading!
-                            </p>
-                            <button type="button" class="form__succes-btn btn btn-primary">Ok</button>
-                        </div>
-                    </form>
-                </div>
-            </section>
+            @@include('./html/_contacts-3.html', {})
         </main>
         @@include('html/_footer-landing.html', {})
     </div>

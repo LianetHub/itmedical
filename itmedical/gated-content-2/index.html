@@ -46,11 +46,11 @@
 	<meta property="twitter:image:src" content="/OG.png">
 	<!-- Twitter -->
 	<!-- plugnis -->
-	<link rel="stylesheet" defer href="../css/libs/swiper-bundle.min.css?_v=20250228162807">
-	<link rel="stylesheet" defer href="../css/libs/fancybox.css?_v=20250228162807">
+	<link rel="stylesheet" defer href="../css/libs/swiper-bundle.min.css?_v=20250228170240">
+	<link rel="stylesheet" defer href="../css/libs/fancybox.css?_v=20250228170240">
 	<!-- plugnis -->
-	<link rel="stylesheet" href="../css/reset.min.css?_v=20250228162807">
-	<link rel="stylesheet" href="../css/style.min.css?_v=20250228162807">
+	<link rel="stylesheet" href="../css/reset.min.css?_v=20250228170240">
+	<link rel="stylesheet" href="../css/style.min.css?_v=20250228170240">
 </head>
 
 <body>
@@ -244,32 +244,46 @@
 					</ul>
 				</div>
 			</div>
-			<section id="contacts" class="contacts">
+			<section id="contacts" class="contacts contacts-md">
 				<div class="contacts__container">
-					<form action="#" class="contacts__form form ">
-						<h2 class="form__title title"> Get your free copy </h2>
-						<p class="form__subtitle"> Fill in the form to download the&nbsp;whitepaper </p>
-						<p class="form__hint"> Download the whitepaper to explore how AI-powered assistants can enhance patient care and streamline healthcare operations. </p>
-						<div class="form__content">
-							<div class="form__grid">
-								<input type="text" name="name" data-required class="form__input form__input-underline" placeholder="Full name">
-								<input type="text" name="email" data-required class="form__input form__input-underline" placeholder="Work Email">
-								<label class="form__checkbox">
-									<input type="checkbox" name="nda" class="form__checkbox-input hidden" hidden="">
-									<span class="form__checkbox-content">
-										<span class="form__checkbox-text"> I agree to receive communications from IT Medical in accordance with the <a href="">Privacy Policy</a>. </span>
-									</span>
-								</label>
+					<div class="contacts__content">
+						<div class="contacts__side">
+							<h2 class="contacts__title title">Get your free copy</h2>
+							<p class="contacts__hint">Fill in the form to download the whitepaper</p>
+							<p class="contacts__text">Download the whitepaper to discover how AI-assisted discharge solutions can revolutionize patient care, boost hospital efficiency, and reduce readmission rates.</p>
+							<div class="contacts__logo">
+								<img src="../img/1x1.png" data-src="../img/logos/5-on-clutch.svg" alt="logo">
 							</div>
-							<button type="submit" class="form__btn btn btn-primary"> Download the report </button>
 						</div>
-						<div class="form__succes">
-							<span class="form__succes-icon"></span>
-							<h2 class="form__succes-title title"> Thank you! </h2>
-							<p class="form__succes-subtitle"> Your guide is ready. <br> Enjoy reading! </p>
-							<button type="button" class="form__succes-btn btn btn-primary">Ok</button>
-						</div>
-					</form>
+						<form action="#" class="contacts__request form">
+							<div class="contacts__request-grid">
+								<input type="text" name="firstname" data-required class="form__input form__input-underline" placeholder="Full name">
+								<input type="text" name="email" data-required class="form__input form__input-underline" placeholder="Work E-mail">
+								<select name="industry" class="select" data-placeholder="Industry" data-list-caption="Please Select">
+									<option value="Hospitals / Clinical Services"> Hospitals / Clinical Services</option>
+									<option value="Pharmaceuticals">Pharmaceuticвals</option>
+									<option value="Medical Device / IoT">Medical Device / IoT</option>
+									<option value="Dentist">Dentist</option>
+									<option value="Oncology">Oncology</option>
+									<option value="Startup / Investments">Startup / Investments</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
+							<label class="form__checkbox">
+								<input type="checkbox" name="nda" class="form__checkbox-input hidden" hidden>
+								<span class="form__checkbox-content">
+									<span class="form__checkbox-text"> I agree to receive communications from IT Medical in accordance with the <a href="">Privacy Policy</a>. </span>
+								</span>
+							</label>
+							<button type="submit" class="form__submit form__submit-center btn btn-primary">Download the report</button>
+							<div class="form__succes">
+								<div class="form__succes-banner">
+									<h2 class="form__succes-title title"> Thank you <br> for your message </h2>
+									<p class="form__succes-subtitle"> Your details have been submitted and we will get in touch with you shortly </p>
+								</div>
+							</div>
+						</form>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -318,11 +332,11 @@
 			</div>
 		</footer>
 	</div> <!-- plugnis -->
-	<script defer src="../js/libs/swiper-bundle.min.js?_v=20250228162807"></script>
-	<script defer src="../js/libs/fancybox.umd.js?_v=20250228162807"></script>
+	<script defer src="../js/libs/swiper-bundle.min.js?_v=20250228170240"></script>
+	<script defer src="../js/libs/fancybox.umd.js?_v=20250228170240"></script>
 	<!-- plugnis -->
-	<script src="../js/app.min.js?_v=20250228162807"></script>
-	<!-- <script src="../js/formsubmit.js?_v=20250228162807"></script> -->
+	<script src="../js/app.min.js?_v=20250228170240"></script>
+	<!-- <script src="../js/formsubmit.js?_v=20250228170240"></script> -->
 </body>
 
 </html>
