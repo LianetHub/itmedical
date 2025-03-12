@@ -9797,6 +9797,11 @@ div.asl_r p.showmore {
     grid-column: span 2;
   }
 
+  .contacts__request-grid .wpcf7-form-control-wrap:has(.dropdown) {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+  }
+
   .contacts__request-grid .dropdown {
     -ms-grid-column-span: 2;
     grid-column: span 2;

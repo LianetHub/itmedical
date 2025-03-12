@@ -1617,6 +1617,11 @@
 				grid-column: span 2;
 			}
 		}
+		.wpcf7-form-control-wrap:has(.dropdown) {
+			@media (min-width: $md5) {
+				grid-column: span 2;
+			}
+		}
 		.dropdown {
 			@media (min-width: $md5) {
 				grid-column: span 2;
