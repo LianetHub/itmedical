@@ -294,6 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
         new Swiper('.blog__slider', {
             slidesPerView: "auto",
             spaceBetween: 37,
+            watchOverflow: true,
             navigation: {
                 nextEl: '.blog__next',
                 prevEl: '.blog__prev'

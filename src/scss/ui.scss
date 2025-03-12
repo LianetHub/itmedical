@@ -71,6 +71,9 @@
 			color: $accent;
 		}
 	}
+	&.swiper-button-lock {
+		display: none;
+	}
 }
 .swiper-button-next {
 	@extend .icon-right;

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/_head.html', {
+    'title': 'Contact Us | IT Medical',
+    'keywords': 'IT medical',
+    'url': 'https://www.itmedical.com/contacts/',
+    'desc': "Get in touch with IT Medical for expert healthcare software solutions. Contact us for support, inquiries. Learn more about our custom healthcare IT services."
+    })
+
+    <div class="wrapper">
+        @@include('html/_header.html', {
+        "fixed": false,
+        "active": 0
+        })
+        <main class="page">
+            <section class="thanks">
+                <div class="thanks__container">
+                    <h2 class="thanks__title title-xl">
+                        Thank You for&nbsp;Download!
+                    </h2>
+                    <p class="thanks__subtitle">
+                        You're on the right path in your AI healthcare journey. Explore more resources and see  how IT Medical can help you drive innovation and enhance patient care.
+                    </p>
+                    <div class="thanks__columns">
+                        <div class="thanks__column">
+                            <div class="thanks__column-header">
+                                <div class="thanks__column-icon">
+                                    <img src="img/benefits/19.svg" alt="icon">
+                                </div>
+                                <div class="thanks__column-name">AI-powered Solutions</div>
+                            </div>
+                            <div class="thanks__column-tagline">Learn more about Benefits for&nbsp;your&nbsp;Business:</div>
+                            <ul class="thanks__column-list">
+                                <li>Faster processes, stronger security</li>
+                                <li>Automate tasks, cut costs, focus on UX</li>
+                                <li>Accurate diagnoses & improved treatments</li>
+                                <li>Clear steps for easy implementation</li>
+                                <li>Know what’s next in AI and stay competitive</li>
+                            </ul>
+                            <a href="" class="thanks__column-btn btn btn-primary btn-md">Read More</a>
+                        </div>
+                        <div class="thanks__column">
+                            <div class="thanks__column-header">
+                                <div class="thanks__column-icon">
+                                    <img src="@img/benefits/34.svg" alt="icon">
+                                </div>
+                                <div class="thanks__column-name">AI-powered Assistants</div>
+                            </div>
+                            <div class="thanks__column-tagline">Discover how to revolutionizing healthcare:</div>
+                            <ul class="thanks__column-list">
+                                <li>Cut admin workload by 50%</li>
+                                <li>Boost patient satisfaction by 25%</li>
+                                <li>Improve precision by 15%</li>
+                                <li>Reduce hospital returns by 20%</li>
+                                <li>Cut patient wait times by 35%</li>
+                            </ul>
+                            <a href="" class="thanks__column-btn btn btn-primary btn-md">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @@include('html/_blog-slider-2.html', {
+            "title": "Learn more about AI&nbsp;in Healthare"
+            })
+            @@include('./html/_contacts-5.html')
+        </main>
+        @@include('html/_footer.html', {})
+    </div>
+    @@include('html/_js.html', {})
+
+</html>

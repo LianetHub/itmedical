@@ -1259,6 +1259,7 @@
 		display: flex;
 		align-items: center;
 		gap: 5.37rem;
+		min-width: rem(157);
 	}
 	// .blog__prev
 	&__prev,
@@ -1456,6 +1457,15 @@
 		margin-top: 0.94rem;
 		font-size: 1.0625rem;
 		line-height: 140%;
+	}
+	// .contacts__logos
+	&__logos {
+		margin-top: 2.5rem;
+		display: flex;
+		justify-content: space-between;
+		.contacts__logo {
+			margin-top: 0;
+		}
 	}
 	// .contacts__logo
 	&__logo {
