@@ -438,7 +438,6 @@ source[data-srcset] {
   padding-bottom: 1rem;
   padding-top: 1rem;
   line-height: 140%;
-  color: #303030;
   gap: 0.4375rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -450,10 +449,7 @@ source[data-srcset] {
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 1;
-}
-
-.dropdown__button.selected {
-  color: #232c32;
+  color: #080808;
 }
 
 .dropdown__button::before {
@@ -13334,7 +13330,7 @@ div.asl_r p.showmore {
   }
 
   .hero ~ .contacts {
-    padding: 3.625rem 0 4.375rem;
+    padding: 4.375rem 0 4.375rem;
   }
 
   .hero ~ .nums + .banner {
@@ -13717,6 +13713,10 @@ div.asl_r p.showmore {
 
   .contacts__request .form__btn {
     margin-top: 2rem;
+  }
+
+  .contacts__request:has(select) {
+    background: transparent;
   }
 
   .promo {

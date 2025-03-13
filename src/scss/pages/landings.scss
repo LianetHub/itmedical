@@ -39,9 +39,8 @@
 	}
 	& ~ .contacts {
 		padding: rem(50) 0 rem(0);
-
 		@media (min-width: $md3) {
-			padding: rem(58) 0 rem(70);
+			padding: rem(70) 0 rem(70);
 		}
 	}
 	& ~ .nums {
