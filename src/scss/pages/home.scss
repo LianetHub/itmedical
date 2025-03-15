@@ -1451,25 +1451,62 @@
 		font-size: 1.25rem;
 		font-weight: 500;
 		line-height: 140%;
+		text-align: center;
+		@media (min-width: $md2) {
+			text-align: left;
+		}
 	}
 	// .contacts__text
 	&__text {
 		margin-top: 0.94rem;
-		font-size: 1.0625rem;
 		line-height: 140%;
+		text-align: center;
+		font-size: rem(18);
+		@media (min-width: $md2) {
+			font-size: 1.0625rem;
+			text-align: left;
+		}
 	}
 	// .contacts__logos
 	&__logos {
 		margin-top: 2.5rem;
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
+		gap: rem(40);
+		@media (min-width: $md5) {
+			gap: rem(60);
+		}
+		@media (min-width: $md2) {
+			gap: rem(10);
+			justify-content: space-between;
+		}
 		.contacts__logo {
 			margin-top: 0;
+			&:first-child {
+				max-width: rem(138);
+				@media (min-width: $md5) {
+					max-width: rem(175);
+				}
+			}
+			&:last-child {
+				max-width: rem(151);
+				@media (min-width: $md5) {
+					max-width: rem(220);
+				}
+			}
 		}
 	}
 	// .contacts__logo
 	&__logo {
-		margin-top: 2.5rem;
+		text-align: center;
+		margin-top: rem(20);
+		@media (min-width: $md5) {
+			margin-top: rem(30);
+		}
+		@media (min-width: $md2) {
+			margin-top: 2.5rem;
+			text-align: left;
+		}
 	}
 	// .contacts__subtitle
 	&__subtitle {

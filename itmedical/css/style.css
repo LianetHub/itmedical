@@ -438,6 +438,7 @@ source[data-srcset] {
   padding-bottom: 1rem;
   padding-top: 1rem;
   line-height: 140%;
+  color: #606060;
   gap: 0.4375rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -449,6 +450,9 @@ source[data-srcset] {
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 1;
+}
+
+.dropdown__button.selected {
   color: #080808;
 }
 
@@ -584,12 +588,12 @@ source[data-srcset] {
   color: #aeaeae;
   font-size: 1.125rem;
   line-height: 220%;
-  padding: 0 3.19rem;
+  padding: 0 2rem;
 }
 
 .dropdown__list-item {
   cursor: pointer !important;
-  padding: 0 3.19rem;
+  padding: 0 2rem;
   white-space: nowrap;
   -webkit-transition: background-color 0.3s ease 0s;
   -o-transition: background-color 0.3s ease 0s;
@@ -1391,7 +1395,6 @@ div.asl_w .probox .proinput input[type=submit] {
 
 .form__checkbox-content,
 .form__checkbox .wpcf7-list-item-label {
-  font-size: 1rem;
   line-height: 140%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1399,21 +1402,22 @@ div.asl_w .probox .proinput input[type=submit] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.25rem;
+  gap: 1.25em;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
+  font-size: 0.75rem;
 }
 
 .form__checkbox-content::before,
 .form__checkbox .wpcf7-list-item-label::before {
   content: "";
-  border: 1px solid #aeaeae;
+  border: 0.0625em solid #aeaeae;
   background: #fff;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.75em;
+  height: 1.75em;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -ms-flex-item-align: start;
@@ -4084,12 +4088,14 @@ div.asl_r p.showmore {
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 140%;
+  text-align: center;
 }
 
 .contacts__text {
   margin-top: 0.94rem;
-  font-size: 1.0625rem;
   line-height: 140%;
+  text-align: center;
+  font-size: 1.125rem;
 }
 
 .contacts__logos {
@@ -4097,17 +4103,27 @@ div.asl_r p.showmore {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2.5rem;
 }
 
 .contacts__logos .contacts__logo {
   margin-top: 0;
 }
 
+.contacts__logos .contacts__logo:first-child {
+  max-width: 8.625rem;
+}
+
+.contacts__logos .contacts__logo:last-child {
+  max-width: 9.4375rem;
+}
+
 .contacts__logo {
-  margin-top: 2.5rem;
+  text-align: center;
+  margin-top: 1.25rem;
 }
 
 .contacts__subtitle {
@@ -4409,6 +4425,12 @@ div.asl_r p.showmore {
 
 .service + .help {
   padding-top: 0;
+}
+
+.service__title {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .service__subtitle {
@@ -9434,6 +9456,14 @@ div.asl_r p.showmore {
     font-size: 1.125rem;
   }
 
+  .dropdown__caption {
+    padding: 0 3.19rem;
+  }
+
+  .dropdown__list-item {
+    padding: 0 3.19rem;
+  }
+
   .title-md {
     font-size: 3.4375rem;
   }
@@ -9765,6 +9795,22 @@ div.asl_r p.showmore {
 
   .contacts {
     padding: 4.37rem 0;
+  }
+
+  .contacts__logos {
+    gap: 3.75rem;
+  }
+
+  .contacts__logos .contacts__logo:first-child {
+    max-width: 10.9375rem;
+  }
+
+  .contacts__logos .contacts__logo:last-child {
+    max-width: 13.75rem;
+  }
+
+  .contacts__logo {
+    margin-top: 1.875rem;
   }
 
   .contacts__item::before {
@@ -10708,7 +10754,6 @@ div.asl_r p.showmore {
         -ms-flex: 0 0 48.5%;
             flex: 0 0 48.5%;
     margin-left: auto;
-    margin-right: auto;
   }
 
   .service__info {
@@ -11364,6 +11409,14 @@ div.asl_r p.showmore {
     font-size: 1rem;
   }
 
+  .form__submit.form__submit-center-desktop {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .form__btn.btn {
     padding: 0.95rem 3.768rem;
     margin-top: 1.3rem;
@@ -11371,6 +11424,11 @@ div.asl_r p.showmore {
 
   .form__succes-banner {
     padding: 3.12rem 3.09rem 3.09rem;
+  }
+
+  .form__checkbox-content,
+  .form__checkbox .wpcf7-list-item-label {
+    font-size: 1rem;
   }
 
   .form__file {
@@ -12153,7 +12211,6 @@ div.asl_r p.showmore {
 
   .service__logos {
     margin-left: 6rem;
-    margin-right: 0;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 24.625rem;
             flex: 0 0 24.625rem;
@@ -13672,6 +13729,27 @@ div.asl_r p.showmore {
   }
 
   .contacts__title {
+    text-align: left;
+  }
+
+  .contacts__hint {
+    text-align: left;
+  }
+
+  .contacts__text {
+    font-size: 1.0625rem;
+    text-align: left;
+  }
+
+  .contacts__logos {
+    gap: 0.625rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .contacts__logo {
+    margin-top: 2.5rem;
     text-align: left;
   }
 

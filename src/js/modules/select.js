@@ -51,11 +51,11 @@ export class CustomSelect {
             </button>
         `;
 
-        // Основная структура dropdown
+
         this.$dropdown = document.createElement('div');
         this.$dropdown.classList.add('dropdown');
 
-        // Добавляем caption, если оно задано
+
         const captionTemplate = this.listCaption ? `<div class="dropdown__caption">${this.listCaption}</div>` : '';
 
         this.$dropdown.innerHTML = `
@@ -203,6 +203,9 @@ export class CustomSelect {
         item.classList.add('selected');
         item.setAttribute('aria-checked', 'true');
 
+
+
+        this.$dropdown.querySelector('.dropdown__button').classList.add('selected');
         this.$dropdown.querySelector('.dropdown__button-text').textContent = text;
         this.$select.value = value;
         this.$select.dispatchEvent(new Event('change'));
@@ -221,6 +224,7 @@ export class CustomSelect {
         });
 
         const selectedItem = this.$dropdown.querySelector(`.dropdown__list-item[data-value="${state.selectedValue}"]`);
+
         selectedItem.classList.add('selected');
         selectedItem.setAttribute('aria-checked', 'true');
 

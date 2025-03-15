@@ -234,6 +234,7 @@
 	}
 	// .service__title
 	&__title {
+		align-self: center;
 	}
 	// .service__subtitle
 	&__subtitle {
@@ -252,11 +253,10 @@
 		@media (min-width: $md4) {
 			flex: 0 0 48.5%;
 			margin-left: auto;
-			margin-right: auto;
 		}
 		@media (min-width: $md3) {
 			margin-left: 6rem;
-			margin-right: 0;
+
 			flex: 0 0 rem(394);
 		}
 	}

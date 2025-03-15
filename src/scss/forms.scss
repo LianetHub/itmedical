@@ -398,6 +398,13 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
+		&.form__submit-center-desktop {
+			@media (min-width: $md3) {
+				width: fit-content;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
 		.wpcf7-spinner {
 			position: absolute;
 			top: 50%;
@@ -562,19 +569,22 @@
 	}
 	// .form__checkbox-content
 	&__checkbox-content {
-		font-size: 1rem;
 		line-height: 140%;
 		display: flex;
 		align-items: center;
-		gap: 1.25rem;
+		gap: 1.25em;
 		user-select: none;
 		cursor: pointer;
+		font-size: rem(12);
+		@media (min-width: $md3) {
+			font-size: 1rem;
+		}
 		&::before {
 			content: "";
-			border: 1px solid #aeaeae;
+			border: em(1) solid #aeaeae;
 			background: #fff;
-			width: 1.75rem;
-			height: 1.75rem;
+			width: 1.75em;
+			height: 1.75em;
 			flex-shrink: 0;
 			align-self: flex-start;
 			display: flex;
