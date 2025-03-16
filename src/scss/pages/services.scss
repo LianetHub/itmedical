@@ -2042,8 +2042,8 @@
 			&:last-child,
 			&:nth-last-child(2) {
 				&:not(:nth-child(2)) {
-					border-bottom: 0;
-					padding-bottom: 0;
+					// border-bottom: 0;
+					// padding-bottom: 0;
 				}
 			}
 		}

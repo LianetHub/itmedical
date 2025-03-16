@@ -148,7 +148,7 @@
 	& ~ .why {
 		padding-bottom: rem(50);
 		@media (min-width: $md3) {
-			padding-top: rem(80);
+			padding-top: rem(50);
 			padding-bottom: rem(80);
 		}
 		.why__item-title {
@@ -160,7 +160,7 @@
 	}
 	& ~ .service {
 		@media (min-width: $md3) {
-			padding-bottom: rem(80);
+			padding-bottom: rem(40);
 		}
 		& + .help {
 			padding-top: 0;
