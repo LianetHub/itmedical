@@ -9,11 +9,11 @@
 
 .title-xl {
 	line-height: 120%;
-	letter-spacing: 0.025em;
+
 	font-family: $font-noto;
 	font-size: 2.75rem;
 	@media (min-width: $md6) {
-		font-size: 3rem;
+		font-size: 3.4375rem;
 	}
 	@media (min-width: $md2) {
 		font-size: 4.0625rem;

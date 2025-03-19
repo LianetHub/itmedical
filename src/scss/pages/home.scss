@@ -4,7 +4,7 @@
 
 	color: #fff;
 	padding: 9.75rem 0 2.4rem;
-	min-height: 100vh;
+	// min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -12,12 +12,12 @@
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0) 104.62%), url("@img/poster.jpg") 0 0 / cover no-repeat;
 	}
 	@media (min-width: $md4) {
-		padding: 7.38rem 0 2.5rem;
+		padding: 13.87rem 0 7.12rem;
 		// background: linear-gradient(0deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0) 104.62%), url("@img/main.png") 100% 0 / cover no-repeat;
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0) 104.62%);
 	}
 	@media (min-width: $md2) {
-		padding: rem(208) 0 rem(108);
+		padding: rem(258) 0 9.62rem;
 		// background: none;
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0) 104.62%);
 		// background: url("@img/main.png") 100% 0 / cover no-repeat;
@@ -45,10 +45,17 @@
 	// .main__container
 	&__container {
 		width: 100%;
+		padding-inline: 2.5rem;
+		@media (min-width: $md2) {
+			max-width: rem(1120);
+		}
 	}
 	// .main__title
 	&__title {
 		max-width: 25rem;
+		@media (min-width: $md4) {
+			max-width: 40.1875rem;
+		}
 		@media (min-width: $md2) {
 			max-width: 50rem;
 		}
@@ -67,6 +74,13 @@
 	// .main__btn
 	&__btn {
 		margin-top: 1.75rem;
+		@media (min-width: $md2) {
+			margin-top: 2.5rem;
+		}
+		&.btn {
+			font-size: 1.375rem;
+			padding: 0.94rem 3.12rem;
+		}
 	}
 	// .main__play
 	&__play {
@@ -1483,7 +1497,8 @@
 		.contacts__logo {
 			margin-top: 0;
 			gap: rem(15);
-
+			margin-left: 0;
+			margin-right: 0;
 			@media (min-width: $md5) {
 				gap: rem(20);
 			}
@@ -1516,24 +1531,24 @@
 			}
 		}
 	}
-	// .contacts__logo
-	&__logo {
-		margin-top: rem(20);
-		@media (min-width: $md5) {
-			margin-top: rem(30);
-		}
-		@media (min-width: $md2) {
-			margin-top: 2.5rem;
-		}
-	}
+
 	// .contacts__logo
 	&__logo {
 		display: flex;
 		align-items: center;
 		gap: rem(20);
-		justify-content: center;
+		width: fit-content;
+
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: rem(20);
+		@media (min-width: $md5) {
+			margin-left: 0;
+			margin-top: rem(30);
+		}
+
 		@media (min-width: $md2) {
-			width: fit-content;
+			margin-top: 2.5rem;
 		}
 	}
 	// .contacts__logo-icon
