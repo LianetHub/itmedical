@@ -266,7 +266,7 @@
 				font-size: 1.375rem;
 			}
 			&::placeholder {
-				color: #303030;
+				color: #666;
 			}
 		}
 		&:hover,
@@ -801,6 +801,7 @@
 			margin-top: 0;
 		}
 	}
+	// .form__file-error
 	&__file-error {
 		margin-top: 1rem;
 		font-weight: 500;

@@ -438,7 +438,7 @@ source[data-srcset] {
   padding-bottom: 1rem;
   padding-top: 1rem;
   line-height: 140%;
-  color: #303030;
+  color: #666;
   gap: 0.4375rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1060,24 +1060,24 @@ div.asl_w .probox .proinput input[type=submit] {
 }
 
 .form__input.form__input-underline::-webkit-input-placeholder, .search__form .form__input-underline.orig::-webkit-input-placeholder {
-  color: #303030;
+  color: #666;
 }
 
 .form__input.form__input-underline::-moz-placeholder, .search__form .form__input-underline.orig::-moz-placeholder {
-  color: #303030;
+  color: #666;
 }
 
 .form__input.form__input-underline:-ms-input-placeholder, .search__form .form__input-underline.orig:-ms-input-placeholder {
-  color: #303030;
+  color: #666;
 }
 
 .form__input.form__input-underline::-ms-input-placeholder, .search__form .form__input-underline.orig::-ms-input-placeholder {
-  color: #303030;
+  color: #666;
 }
 
 .form__input.form__input-underline::placeholder,
 .search__form .form__input-underline.orig::placeholder {
-  color: #303030;
+  color: #666;
 }
 
 .form__input:hover,
@@ -4186,6 +4186,10 @@ div.asl_r p.showmore {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.contacts__logo-title {
+  white-space: nowrap;
 }
 
 .contacts__logo-rate {
