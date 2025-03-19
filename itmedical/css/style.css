@@ -1164,23 +1164,23 @@ div.asl_w .probox .proinput input[type=submit] {
 }
 
 .form__textarea.form__textarea-underline::-webkit-input-placeholder {
-  color: #303030;
+  color: #666;
 }
 
 .form__textarea.form__textarea-underline::-moz-placeholder {
-  color: #303030;
+  color: #666;
 }
 
 .form__textarea.form__textarea-underline:-ms-input-placeholder {
-  color: #303030;
+  color: #666;
 }
 
 .form__textarea.form__textarea-underline::-ms-input-placeholder {
-  color: #303030;
+  color: #666;
 }
 
 .form__textarea.form__textarea-underline::placeholder {
-  color: #303030;
+  color: #666;
 }
 
 .form__textarea:hover,
