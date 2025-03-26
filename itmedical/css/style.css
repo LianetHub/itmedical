@@ -3099,6 +3099,7 @@ div.asl_r p.showmore {
   position: relative;
   color: #fff;
   padding: 10.75rem 0 3.75rem;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14706,7 +14707,7 @@ div.asl_r p.showmore {
   }
 
   .related-case__more.btn.btn-sm {
-    padding: 1.25rem 0.45rem;
+    padding: 0.45rem 1.25rem;
     font-size: 1rem;
   }
 
