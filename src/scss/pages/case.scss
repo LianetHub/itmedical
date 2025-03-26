@@ -1047,7 +1047,7 @@
 
 .related-cases {
 	padding: rem(50) 0;
-	@media (min-width: $md4) {
+	@media (min-width: $md3) {
 		padding: 6.25rem 0 rem(100);
 	}
 	& + .banner {
@@ -1103,51 +1103,25 @@
 	&__slider {
 		margin: 2.5rem -1.25rem 0;
 		@media (min-width: $md2) {
-			margin: 2.5rem 0rem 0;
+			margin: 3.75rem 0 0;
 		}
 	}
 }
 
 .related-case {
 	position: relative;
-	width: rem(320);
-	height: 30rem;
-	padding: 2rem 2rem 2rem;
-	@media (min-width: $md4) {
-		padding: rem(40) rem(35);
-		height: rem(440);
-		width: rem(440);
+	width: rem(340);
+	height: auto;
+
+	@media (min-width: $md2) {
+		width: rem(600);
 	}
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
 	color: #fff;
 	overflow: hidden;
 	z-index: 1;
-	&::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
-		z-index: -1;
-	}
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		background-image: var(--background-image);
-		z-index: -1;
-		transition: transform 0.3s ease 0s;
-	}
+
 	@media (any-hover: hover) {
 		&:hover {
 			&::before {
@@ -1155,17 +1129,117 @@
 			}
 		}
 	}
-	// .related-case__name
-	&__name {
-		line-height: 140%;
-		font-weight: 500;
-		font-size: 1.25rem;
-		margin-top: auto;
+
+	// .related-case__header
+	&__header {
+		position: relative;
+		height: rem(233);
+		padding: 1.9rem;
+		@media (min-width: $md2) {
+			height: 21.4rem;
+			padding: 3.12rem;
+		}
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			background-image: var(--background-image);
+			z-index: -1;
+			transition: transform 0.3s ease 0s;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+			z-index: -1;
+		}
+	}
+
+	// .related-case__number
+	&__number {
+		color: #fff;
+		font-family: $font-noto;
+		font-weight: 300;
+		line-height: 100%;
+		font-size: 3.4375rem;
+		@media (min-width: $md2) {
+			font-size: 5.625rem;
+		}
+		& small {
+			font-size: 0.6em;
+			vertical-align: super;
+		}
+	}
+	// .related-case__subtitle
+	&__subtitle {
+		margin-top: 1.15rem;
+		font-size: 0.9375rem;
+		@media (min-width: $md2) {
+			margin-top: 0.94rem;
+			font-size: 1.5625rem;
+		}
+		line-height: 120%;
+	}
+	&__body {
+		background: #0057b8;
+		padding: 1.88rem;
+		@media (min-width: $md2) {
+			padding: 2.5rem 3.12rem;
+		}
 		flex: 1 1 auto;
 		display: flex;
-		align-items: flex-end;
-		@media (min-width: $md4) {
-			font-size: rem(22);
+		align-items: flex-start;
+		flex-direction: column;
+	}
+	// .related-case__name
+	&__name {
+		line-height: 130%;
+		font-weight: 500;
+		font-size: 1.125rem;
+		flex: 1 1 auto;
+		margin-bottom: auto;
+		display: flex;
+		align-items: flex-start;
+		@media (min-width: $md2) {
+			font-size: 1.875rem;
+		}
+	}
+	&__more {
+		margin-top: 1.8rem;
+		gap: 0.62rem;
+		font-size: 0.625rem;
+		margin-bottom: auto;
+		&.btn.btn-sm {
+			font-size: 0.66163rem;
+			padding: 0.21rem 0.95rem;
+			border: rem(2) solid #fff;
+			@media (min-width: $md2) {
+				padding: 1.25rem 0.45rem;
+				font-size: 1rem;
+			}
+		}
+		&::after {
+			content: "";
+			width: 1.25rem;
+			height: 1.25rem;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='11' viewBox='0 0 20 11' fill='none'%3E%3Cg clip-path='url(%23clip0_7005_2487)'%3E%3Cpath d='M15.2786 1.33203L19.4453 5.4987M19.4453 5.4987L15.2786 9.66536M19.4453 5.4987L9.5 5.4987' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_7005_2487'%3E%3Crect width='10' height='20' fill='white' transform='translate(20 0.5) rotate(90)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 		}
 	}
 	// .related-case__desc
@@ -1181,14 +1255,15 @@
 	}
 	// .related-case__logos
 	&__logos {
-		margin-top: rem(30);
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
 		gap: 1.25rem;
 		min-height: rem(45);
-		@media (min-width: $md4) {
-			gap: rem(35);
+		margin-top: 2.27rem;
+		@media (min-width: $md2) {
+			margin-top: rem(47);
+			gap: rem(48);
 		}
 	}
 	// .related-case__logo

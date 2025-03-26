@@ -404,7 +404,32 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    if (document.querySelector('.solutions__list')) {
+    if (document.querySelector('.awards__slider')) {
+        new Swiper('.awards__slider', {
+            slidesPerView: 1,
+            spaceBetween: 37,
+            pagination: {
+                el: '.awards__pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                575.98: {
+                    slidesPerView: 2,
+                },
+                766.98: {
+                    slidesPerView: 3,
+                },
+                991.98: {
+                    slidesPerView: 4,
+                },
+                1199.98: {
+                    slidesPerView: 5,
+                }
+            }
+        })
+    }
+
+    if (document.querySelector('.awards__slider')) {
         getConditionSlider('.solutions__list', {
             slidesPerView: "auto",
             spaceBetween: 20,

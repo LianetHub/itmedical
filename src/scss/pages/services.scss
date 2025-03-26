@@ -847,9 +847,13 @@
 				}
 			}
 		}
+		&.management__list_spacing {
+			justify-content: space-between;
+		}
 		&.management__list-light {
 			background: #f2f8ff;
 			color: $text;
+
 			@media (max-width: $md4) {
 				padding-top: 0;
 			}
