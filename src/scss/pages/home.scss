@@ -4,24 +4,27 @@
 
 	color: #fff;
 	padding: 10.75rem 0 rem(60);
-	min-height: 100vh;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	@media (max-width: $md4) {
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0) 104.62%), url("@img/poster.jpg") 0 0 / cover no-repeat;
 	}
+	min-height: calc(100svh - rem(176));
 	@media (min-width: $md4) {
 		padding: 13.87rem 0 7.12rem;
-		// background: linear-gradient(0deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0) 104.62%), url("@img/main.png") 100% 0 / cover no-repeat;
+		min-height: calc(100svh - rem(90));
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0) 104.62%);
 	}
+	@media (min-width: $md3) {
+		min-height: calc(100svh - rem(98));
+	}
 	@media (min-width: $md2) {
+		min-height: calc(100svh - rem(146));
 		padding: rem(258) 0 9.62rem;
-		// background: none;
+
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0) 104.62%);
-		// background: url("@img/main.png") 100% 0 / cover no-repeat;
-		// color: $text;
 	}
 	&__video {
 		position: absolute;
@@ -44,12 +47,9 @@
 	}
 	// .main__container
 	&__container {
-		max-width: 100%;
+		width: 100%;
 		@media (min-width: $md4) {
 			padding-inline: 2.5rem;
-		}
-		@media (min-width: $md2) {
-			max-width: rem(1120);
 		}
 	}
 	// .main__title
@@ -75,6 +75,9 @@
 	}
 	// .main__btn
 	&__btn {
+		@media (max-width: $md5) {
+			display: none;
+		}
 		margin-top: 1.75rem;
 		@media (min-width: $md2) {
 			margin-top: 2.5rem;
@@ -161,12 +164,9 @@
 		align-self: center;
 		order: 1;
 		@media (min-width: $md3) {
-			align-self: flex-end;
 			margin-top: 0;
-			margin-bottom: 1.65rem;
 		}
 		@media (min-width: $md3) {
-			margin-bottom: 2.25rem;
 		}
 	}
 	// .what__list
@@ -915,6 +915,11 @@
 		&.geography__body-sm {
 			gap: 1.92rem;
 		}
+		.geography__btn {
+			@media (max-width: $md4) {
+				display: none;
+			}
+		}
 	}
 	// .geography__btn
 	&__btn {
@@ -927,6 +932,13 @@
 		// @media (min-width: $md3) {
 		// 	display: none;
 		// }
+		&.mobile-only {
+			padding: rem(10) rem(40);
+			font-size: 1rem;
+			@media (min-width: 766.98px) {
+				display: none;
+			}
+		}
 	}
 	// .geography__btn
 	&__more {
@@ -938,11 +950,6 @@
 	}
 	// .geography__main
 	&__main {
-		.geography__btn {
-			@media (max-width: $md4) {
-				display: none;
-			}
-		}
 	}
 	// .geography__title
 	&__title {
@@ -1033,6 +1040,7 @@
 			gap: 1rem;
 			align-items: flex-start;
 			flex-direction: row;
+			width: 100%;
 		}
 	}
 	// .compliance__main
@@ -1099,6 +1107,60 @@
 		@media (max-width: $md5) {
 			& img {
 				max-height: 2.28881rem;
+			}
+			&:nth-child(1) {
+				& img {
+					width: rem(95);
+					height: rem(37);
+				}
+			}
+			&:nth-child(2) {
+				& img {
+					width: rem(59);
+					height: rem(31);
+				}
+			}
+			&:nth-child(3) {
+				& img {
+					width: rem(46);
+					height: rem(41);
+				}
+			}
+			&:nth-child(4) {
+				& img {
+					width: rem(45);
+					height: rem(43);
+				}
+			}
+			&:nth-child(5) {
+				& img {
+					width: rem(45);
+					height: rem(37);
+				}
+			}
+			&:nth-child(6) {
+				& img {
+					width: rem(36);
+					height: rem(36);
+				}
+			}
+			&:nth-child(7) {
+				& img {
+					width: rem(42);
+					height: rem(36);
+				}
+			}
+			&:nth-child(8) {
+				& img {
+					width: rem(51);
+					height: rem(34);
+				}
+			}
+			&:nth-child(9) {
+				& img {
+					width: rem(37);
+					height: rem(39);
+				}
 			}
 		}
 		&:first-child {
@@ -1805,7 +1867,7 @@
 	}
 	// .whitepaper__container
 	&__container {
-		@media (max-width: $md4) {
+		@media (max-width: $md3) {
 			padding: 0;
 			max-width: 100%;
 		}
@@ -1817,11 +1879,14 @@
 		background: url("@img/whitepaper-decor-mobile.svg") 0 0 / 100% auto no-repeat, linear-gradient(180deg, #0149a3 55.51%, rgba(1, 73, 163, 0) 80%),
 			url("@img/whitepaper.jpg") 0 100% / 100% auto no-repeat, linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
 		@media (min-width: $md5) {
-			background: url("@img/whitepaper-decor.svg") 0 0 / contain no-repeat, linear-gradient(90deg, #0149a3 55.51%, rgba(1, 73, 163, 0) 80%),
+			background: url("@img/whitepaper-decor.svg") 120% 0 / contain no-repeat, linear-gradient(90deg, #0149a3 55.51%, rgba(1, 73, 163, 0) 100%),
 				url("@img/whitepaper.jpg") 100% 0 / auto 100% no-repeat, linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
 			padding: rem(70) rem(30);
 		}
 		@media (min-width: $md4) {
+			padding: rem(50) rem(70);
+		}
+		@media (min-width: $md3) {
 			padding: rem(80) rem(90);
 		}
 	}
@@ -1829,15 +1894,14 @@
 	&__banner-caption {
 		font-size: 1.5625rem;
 		line-height: 140%;
-		@media (min-width: $md4) {
-			font-size: 2.1875rem;
-		}
+		font-weight: 400;
 	}
 	// .whitepaper__banner-title
 	&__banner-title {
 		margin-top: 1.25rem;
 		font-weight: 400;
 		letter-spacing: normal;
+		font-family: $font-noto;
 		@media (min-width: $md4) {
 			margin-top: 0.5rem;
 		}
@@ -1907,8 +1971,14 @@
 	&__container {
 	}
 	& .clutch-widget {
+		background: #fafafa;
 		margin: 0 auto;
-		max-width: rem(915);
+		max-width: rem(925);
+		& iframe {
+			body {
+				background-color: #fafafa;
+			}
+		}
 	}
 }
 
@@ -1940,32 +2010,59 @@
 	}
 	// .awards__slider
 	&__slider {
-		margin-top: 3.12rem;
+		margin-top: rem(13);
+		@media (min-width: $md4) {
+			margin-top: 3.12rem;
+		}
 	}
 	// .awards__slide
 	&__slide {
 		display: flex;
 		flex-direction: column;
 		text-align: center;
+		@media (max-width: $md4) {
+			height: auto;
+			justify-content: center;
+		}
 	}
 	// .awards__slide-image
 	&__slide-image {
-		height: 10rem;
+		@media (max-width: $md4) {
+			max-width: rem(127);
+			margin: 0 auto;
+		}
+		@media (min-width: $md4) {
+			height: rem(151);
+		}
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		& img {
+			max-height: 100%;
+		}
 	}
 	// .awards__slide-desc
 	&__slide-desc {
-		margin-top: 1.93rem;
+		margin-top: rem(25);
+		@media (min-width: $md4) {
+			margin-top: 1.93rem;
+		}
 		color: #080808;
 		text-align: center;
 		font-size: 1rem;
 		font-weight: 500;
 		line-height: 140%;
+		@media (max-width: $md4) {
+			max-width: rem(187);
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 	// .awards__pagination
 	&__pagination {
-		margin-top: 4.5rem;
+		margin-top: 1.87rem !important;
+		@media (min-width: $md2) {
+			margin-top: 4.5rem !important;
+		}
 	}
 }

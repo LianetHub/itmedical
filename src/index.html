@@ -18,7 +18,7 @@
                     <h1 class="main__title title-xl">
                         AI-Powered Software for Smarter Healthcare
                     </h1>
-                    <a href="" class="main__btn btn btn-primary">Book a Call</a>
+                    <a href="#contacts" class="main__btn btn btn-primary">Book a Call</a>
                 </div>
                 <video class="main__video" muted loop playsinline autoplay="true" preload="metadata" poster="@img/poster.jpg">
                     <source src="./files/banner.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
@@ -28,7 +28,7 @@
             </section>
             <div class="logotypes logotypes-lg">
                 <div class="logotypes__container">
-                    <div class="logotypes__title">Featured In</div>
+                    <div class="logotypes__title">Featured In:</div>
                     <div class="logotypes__items">
                         <div class="logotypes__item">
                             <img src="@img/logos/forbes.svg" alt="Логотип">
@@ -243,10 +243,10 @@
             </section>
             <section class="ai">
                 <div class="ai__wrapper">
-                    <div class="ai__container">
+                    <div class="ai__container ai__container_no-padding-tablet">
                         <div class="ai__content">
                             <h2 class="ai__title title">
-                                AI-Powered Solutions in Healthcare
+                                AI-Powered Solutions in&nbsp;Healthcare
                             </h2>
                             <p class="ai__subtitle">
                                 AI is reshaping healthcare by improving efficiency, accuracy, and patient outcomes.
@@ -290,34 +290,35 @@
                 </div>
             </section>
             <section class="management">
-                <div class="management__container">
+                <div class="management__container management__container_no-padding-tablet">
                     <div class="management__body management__body-column-tablet">
                         <div class="management__main">
                             <h2 class="management__title title">
                                 Why Us?
                             </h2>
-                            <div class="management__info">
+                            <div class="management__info management__info_reverse-mobile">
                                 <p class="management__desc">We offer an extensive suite of testing and managed services, delivering solutions that align with your organisation’s objectives and project requirements.</p>
-                                <div class="management__image">
-                                    <img src="@img/home-page-managment.jpg" class="cover-image" alt="team">
-                                </div>
+                                <picture class="management__image">
+                                    <source media="(min-width: 991.98)" srcset="@img/home-page-managment.jpg">
+                                    <img src="@img/home-page-managment-tablet.jpg" class="cover-image" alt="team">
+                                </picture>
                             </div>
                         </div>
-                        <ul class="management__list management__list-light management__list_spacing">
+                        <ul class="management__list management__list-light management__list_spacing" data-one-spoller data-spollers="992, max">
                             <li class="management__item">
-                                <div class="management__item-caption">Healthcare-Focused Expertise</div>
+                                <div data-spoller class="management__item-caption _active">Healthcare-Focused Expertise</div>
                                 <div class="management__item-desc">Our expertise is dedicated entirely to healthcare industry - every solution we develop aligns with industry-specific regulations like HIPAA and FDA standards.</div>
                             </li>
                             <li class="management__item">
-                                <div class="management__item-caption">AI-Powered Efficiency</div>
+                                <div data-spoller class="management__item-caption">AI-Powered Efficiency</div>
                                 <div class="management__item-desc">Our expertise in AI, machine learning, and automation enables us to create intelligent healthcare applications that refine diagnostics, streamline operations, and reduce workload.</div>
                             </li>
                             <li class="management__item">
-                                <div class="management__item-caption">Proven Results</div>
+                                <div data-spoller class="management__item-caption">Proven Results</div>
                                 <div class="management__item-desc">With over 50 completed healthcare projects worldwide, we bring practical experience and a history of delivering reliable, high-performing solutions in real healthcare environments.</div>
                             </li>
                             <li class="management__item">
-                                <div class="management__item-caption">Tailored Approach & Custom Solutions</div>
+                                <div data-spoller class="management__item-caption">Tailored Approach & Custom Solutions</div>
                                 <div class="management__item-desc">Every healthcare organization operates differently. Our solutions fit into your existing infrastructure and scale with your needs, whether you're a small practice or a large network.</div>
                             </li>
                         </ul>
@@ -334,8 +335,8 @@
                             <p class="geography__text">
                                 At IT Medical, we transcend geographical limits — our exceptional team can choose to work wherever they have an internet access. This means we get to harness global talent and work with not just the best people in one location, but the entire world.
                             </p>
-                            <a href="" class="geography__btn btn btn-primary pc-only">About Us</a>
                         </div>
+                        <a href="" class="geography__btn btn btn-primary pc-only">About Us</a>
                     </div>
                     <div class="geography__image">
                         <img src="@img/map.svg" alt="map">
@@ -420,7 +421,7 @@
                                     <img src="@img/awards/designrush.png" alt="company logo">
                                 </div>
                                 <div class="awards__slide-desc">
-                                    2025 <br> Designrush — Top AI Company
+                                    2025 <br> Designrush — Top AI <br> Company
                                 </div>
                             </div>
                             <div class="awards__slide swiper-slide">

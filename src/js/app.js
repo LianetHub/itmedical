@@ -392,6 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.related-cases__slider')) {
         new Swiper('.related-cases__slider', {
             slidesPerView: "auto",
+            spaceBetween: 1,
             navigation: {
                 nextEl: ".related-cases__next",
                 prevEl: ".related-cases__prev",

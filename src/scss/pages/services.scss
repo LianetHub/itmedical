@@ -586,6 +586,14 @@
 	}
 	// .management__container
 	&__container {
+		&.management__container_no-padding-tablet {
+			@media (max-width: $md3) {
+				@media (min-width: $md5) {
+					padding: 0;
+					max-width: 100%;
+				}
+			}
+		}
 	}
 	// .management__header
 	&__header {
@@ -744,6 +752,15 @@
 		display: flex;
 		flex-direction: column-reverse;
 		padding: em(0) em(0) 2.5rem rem(0);
+		&.management__info_reverse-mobile {
+			@media (max-width: $md4) {
+				flex-direction: column;
+				.management__desc {
+					margin-top: 0;
+					margin-bottom: 1.87rem;
+				}
+			}
+		}
 		@media (min-width: $md4) {
 			padding: 0;
 			flex-direction: column;
@@ -769,9 +786,11 @@
 		@media (min-width: $md3) {
 			margin-top: rem(30);
 			padding: 0;
+			font-size: rem(18);
 		}
 		@media (min-width: $md2) {
 			margin-top: 0;
+			font-size: rem(22);
 		}
 		&.mobile-top {
 			@media (max-width: $md3) {
