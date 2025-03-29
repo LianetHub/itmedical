@@ -430,12 +430,30 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    if (document.querySelector('.awards__slider')) {
+    if (document.querySelector('.solutions__list')) {
         getConditionSlider('.solutions__list', {
             slidesPerView: "auto",
             spaceBetween: 20,
             slideToClickedSlide: true
         })
+    }
+
+    if (document.querySelector('.reviews__list')) {
+        getConditionSlider('.reviews__list', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            autoHeight: true,
+            pagination: {
+                el: ".reviews__pagination",
+                clickable: true
+            },
+            breakpoints: {
+                766.98: {
+                    slidesPerView: 2,
+                    autoHeight: false
+                }
+            }
+        }, () => window.innerWidth <= 992)
     }
 
     function getConditionSlider(sliderName, options, condition = () => window.innerWidth <= 1200) {
