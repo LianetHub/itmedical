@@ -4996,6 +4996,10 @@ div.asl_r p.showmore {
   gap: 0.625rem;
 }
 
+.management__heading {
+  margin-bottom: 1.875rem;
+}
+
 .management__header {
   margin-bottom: 3.125rem;
 }
@@ -9669,6 +9673,10 @@ div.asl_r p.showmore {
   max-height: 10rem;
 }
 
+.hero__form .spam-error-message {
+  margin-top: 0 !important;
+}
+
 .hero__form-title {
   color: #080808;
   text-align: center;
@@ -12788,6 +12796,10 @@ div.asl_r p.showmore {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
+  }
+
+  .management__heading {
+    margin-bottom: 3.125rem;
   }
 
   .management__header {

@@ -22,9 +22,28 @@ document.addEventListener('DOMContentLoaded', () => {
 		akismetPassed = false;
 	});
 
-	document.addEventListener('wpcf7spam', function () {
+	document.addEventListener('wpcf7spam', function (event) {
 		console.log("Contact Form 7: Форма отклонена как спам, Akismet не прошел проверку.");
 		akismetPassed = false;
+
+		let form = event.target;
+		let errorMessage = form.querySelector('.spam-error-message');
+
+		if (!errorMessage) {
+			errorMessage = document.createElement('div');
+			errorMessage.classList.add('form__error-message', 'spam-error-message', 'visible');
+			errorMessage.textContent = 'Your data has not been checked for spam. Try introducing yourself to the author later.';
+			form.appendChild(errorMessage);
+		}
+	});
+
+
+	document.addEventListener('wpcf7submit', function (event) {
+		let form = event.target;
+		let errorMessage = form.querySelector('.spam-error-message');
+		if (errorMessage) {
+			errorMessage.remove();
+		}
 	});
 
 	async function checkAllConditions(form) {
