@@ -8939,6 +8939,7 @@ div.asl_r p.showmore {
 
 .related-cases__slider {
   margin: 1.875rem -1.25rem 0;
+  overflow: visible;
 }
 
 .related-case {

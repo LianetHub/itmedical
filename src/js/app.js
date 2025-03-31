@@ -390,9 +390,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (document.querySelector('.related-cases__slider')) {
+        function toggleNavigation() {
+            const sliderElement = document.querySelector('.related-cases__slider');
+            if (!sliderElement || !sliderElement.swiper) return;
+
+            const slider = sliderElement.swiper;
+            const container = sliderElement;
+            const nextBtn = document.querySelector('.related-cases__next');
+            const prevBtn = document.querySelector('.related-cases__prev');
+
+            if (!container || !nextBtn || !prevBtn) return;
+
+            const sliderWidth = slider.virtualSize;
+
+            const containerWidth = container.clientWidth;
+            console.log(containerWidth);
+            const viewportWidth = window.innerWidth;
+
+
+            const marginRight = (viewportWidth - containerWidth) / 2;
+            const totalAvailableWidth = containerWidth + marginRight;
+
+            if (sliderWidth <= totalAvailableWidth) {
+                nextBtn.style.display = 'none';
+                prevBtn.style.display = 'none';
+            } else {
+                nextBtn.style.display = '';
+                prevBtn.style.display = '';
+            }
+        }
+
+        window.addEventListener("resize", () => {
+            toggleNavigation();
+        });
+
+
         new Swiper('.related-cases__slider', {
             slidesPerView: "auto",
             spaceBetween: 1,
+            observeParents: true,
+            watchSlidesProgress: true,
             navigation: {
                 nextEl: ".related-cases__next",
                 prevEl: ".related-cases__prev",
@@ -400,9 +437,14 @@ document.addEventListener('DOMContentLoaded', () => {
             pagination: {
                 el: ".related-cases__pagination",
                 clickable: true
+            },
+            on: {
+                init: toggleNavigation,
             }
-
         })
+
+
+
     }
 
     if (document.querySelector('.awards__slider')) {
