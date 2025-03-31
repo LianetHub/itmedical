@@ -4567,7 +4567,6 @@ div.asl_r p.showmore {
   border: 0.0625rem solid #d6d6d6;
   min-height: 13.4375rem;
   border-radius: 0.625rem;
-  height: auto;
   padding: 1.875rem 1.25rem 1.875rem 1.875rem;
 }
 
@@ -10315,8 +10314,8 @@ div.asl_r p.showmore {
   }
 
   .no-webp .whitepaper__banner {
-    background: url("../img/whitepaper-decor.svg") 120% 0/contain no-repeat, -o-linear-gradient(left, #0149a3 55.51%, rgba(1, 73, 163, 0) 100%), url("../img/whitepaper.jpg") 100% 0/auto 100% no-repeat, -o-linear-gradient(179deg, #023384 4.14%, #0057b8 71.64%);
-    background: url("../img/whitepaper-decor.svg") 120% 0/contain no-repeat, linear-gradient(90deg, #0149a3 55.51%, rgba(1, 73, 163, 0) 100%), url("../img/whitepaper.jpg") 100% 0/auto 100% no-repeat, linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%); }
+    background: url("../img/whitepaper-banner-bg.jpg") 0 0/cover no-repeat, -o-linear-gradient(179deg, #023384 4.14%, #0057b8 71.64%);
+    background: url("../img/whitepaper-banner-bg.jpg") 0 0/cover no-repeat, linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%); }
 
   .whitepaper__banner {
     padding: 4.375rem 1.875rem;
@@ -10341,6 +10340,8 @@ div.asl_r p.showmore {
   }
 
   .reviews__card {
+    height: auto;
+    min-height: 100%;
     padding: 1.44rem 2.1rem 1.44rem 2.19rem;
   }
 
@@ -10613,6 +10614,10 @@ div.asl_r p.showmore {
 
   .ai__list li:not(:last-child) {
     margin-bottom: 0.5rem;
+  }
+
+  .ai-logos__item:nth-last-child(2) img {
+    min-height: 2.625rem;
   }
 
   .ai-logos__item img {
@@ -11161,6 +11166,10 @@ div.asl_r p.showmore {
     font-size: 1.125rem;
   }
 
+  .geography__btn {
+    margin-top: 3.125rem;
+  }
+
   .geography__btn.mobile-only {
     display: none;
   }
@@ -11294,6 +11303,10 @@ div.asl_r p.showmore {
 
   .management__image:not(:first-child) {
     margin-top: 1.875rem;
+  }
+
+  .management__item-desc {
+    font-size: 1.125rem;
   }
 
   .teams {
@@ -12271,6 +12284,12 @@ div.asl_r p.showmore {
     margin-top: 0;
   }
 
+  .what__header-btn,
+  .help__header-btn {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+
   .what__list,
   .help__list {
     gap: 2.19rem;
@@ -12540,6 +12559,10 @@ div.asl_r p.showmore {
             flex-direction: column;
     gap: 0;
     padding: 0.5rem 0;
+  }
+
+  .geography__btn {
+    margin-top: 1.875rem;
   }
 
   .geography__text {
@@ -12888,10 +12911,6 @@ div.asl_r p.showmore {
 
   .management__item-caption {
     font-size: 1.5625rem;
-  }
-
-  .management__item-desc {
-    font-size: 1.125rem;
   }
 
   .teams__subtitle {
@@ -13613,6 +13632,15 @@ div.asl_r p.showmore {
     width: 40%;
     max-width: 100%;
     margin: -5rem -5rem -5rem 0;
+  }
+
+  .ai-logos__item:first-child img {
+    max-width: 11.8125rem;
+    max-height: 2.75rem;
+  }
+
+  .ai-logos__item:nth-last-child(2) img {
+    max-height: 3.25rem;
   }
 
   .stats {
@@ -15774,6 +15802,11 @@ div.asl_r p.showmore {
 }
 
 @media (min-width: 575.98px) and (max-width: 991.98px) {
+  .ai-logos__item:nth-last-child(1) img {
+    max-height: 2.0625rem;
+    max-width: 8.3125rem;
+  }
+
   .history__title {
     text-align: center;
   }
@@ -16249,7 +16282,7 @@ div.asl_r p.showmore {
 
 @media (min-width: 575.98px) {
 
-  .webp .whitepaper__banner { background: url(../img/whitepaper-decor.svg) 120% 0/contain no-repeat, -o-linear-gradient(left, #0149a3 55.51%, rgba(1, 73, 163, 0) 100%), url(../img/whitepaper.webp) 100% 0/auto 100% no-repeat, -o-linear-gradient(179deg, #023384 4.14%, #0057b8 71.64%); background: url(../img/whitepaper-decor.svg) 120% 0/contain no-repeat, linear-gradient(90deg, #0149a3 55.51%, rgba(1, 73, 163, 0) 100%), url(../img/whitepaper.webp) 100% 0/auto 100% no-repeat, linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%); }
+  .webp .whitepaper__banner { background: url(../img/whitepaper-banner-bg.webp) 0 0/cover no-repeat, -o-linear-gradient(179deg, #023384 4.14%, #0057b8 71.64%); background: url(../img/whitepaper-banner-bg.webp) 0 0/cover no-repeat, linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%); }
 }
 
 @media (min-width: 575.98px) {

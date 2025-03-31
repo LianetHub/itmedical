@@ -167,6 +167,7 @@
 			margin-top: 0;
 		}
 		@media (min-width: $md3) {
+			align-self: flex-end;
 		}
 	}
 	// .what__list
@@ -924,6 +925,12 @@
 	// .geography__btn
 	&__btn {
 		margin-top: 1.92rem;
+		@media (min-width: $md4) {
+			margin-top: rem(50);
+		}
+		@media (min-width: $md3) {
+			margin-top: rem(30);
+		}
 		align-self: flex-start;
 		// display: none;
 		// @media (min-width: $md5) {
@@ -1879,8 +1886,7 @@
 		background: url("@img/whitepaper-decor-mobile.svg") 0 0 / 100% auto no-repeat, linear-gradient(180deg, #0149a3 55.51%, rgba(1, 73, 163, 0) 80%),
 			url("@img/whitepaper.jpg") 0 100% / 100% auto no-repeat, linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
 		@media (min-width: $md5) {
-			background: url("@img/whitepaper-decor.svg") 120% 0 / contain no-repeat, linear-gradient(90deg, #0149a3 55.51%, rgba(1, 73, 163, 0) 100%),
-				url("@img/whitepaper.jpg") 100% 0 / auto 100% no-repeat, linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
+			background: url("@img/whitepaper-banner-bg.jpg") 0 0 / cover no-repeat, linear-gradient(271deg, #023384 4.14%, #0057b8 71.64%);
 			padding: rem(70) rem(30);
 		}
 		@media (min-width: $md4) {
@@ -2170,9 +2176,10 @@
 		border: rem(1) solid #d6d6d6;
 		min-height: rem(215);
 		border-radius: rem(10);
-		height: auto;
 		padding: rem(30) rem(20) rem(30) rem(30);
 		@media (min-width: $md5) {
+			height: auto;
+			min-height: 100%;
 			padding: 1.44rem 2.1rem 1.44rem 2.19rem;
 		}
 		.reviews__rate-stars img {

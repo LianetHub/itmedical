@@ -457,9 +457,10 @@ document.addEventListener('DOMContentLoaded', () => {
             breakpoints: {
                 766.98: {
                     slidesPerView: 2,
-                    autoHeight: false
+
                 }
-            }
+            },
+
         }, () => window.innerWidth <= 992)
     }
 
