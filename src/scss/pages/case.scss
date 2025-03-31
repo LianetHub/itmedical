@@ -1101,13 +1101,15 @@
 	}
 	// .related-cases__slider
 	&__slider {
-		margin: rem(30) -1.25rem 0;
+		margin: rem(30) auto 0;
 		overflow: visible;
+		width: fit-content;
+		max-width: 100%;
 		@media (min-width: $md4) {
-			margin: 2.5rem -1.25rem 0;
+			margin: 2.5rem auto 0;
 		}
 		@media (min-width: $md2) {
-			margin: 3.75rem 0 0;
+			margin: 3.75rem auto 0;
 		}
 	}
 }

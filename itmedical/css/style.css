@@ -3814,6 +3814,7 @@ div.asl_r p.showmore {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2rem;
+  width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
@@ -8938,8 +8939,12 @@ div.asl_r p.showmore {
 }
 
 .related-cases__slider {
-  margin: 1.875rem -1.25rem 0;
+  margin: 1.875rem auto 0;
   overflow: visible;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
 }
 
 .related-case {
@@ -11669,7 +11674,7 @@ div.asl_r p.showmore {
   }
 
   .related-cases__slider {
-    margin: 2.5rem -1.25rem 0;
+    margin: 2.5rem auto 0;
   }
 
   .related-case__desc {
@@ -14907,7 +14912,7 @@ div.asl_r p.showmore {
   }
 
   .related-cases__slider {
-    margin: 3.75rem 0 0;
+    margin: 3.75rem auto 0;
   }
 
   .related-case {
