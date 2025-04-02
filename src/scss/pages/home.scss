@@ -917,6 +917,10 @@
 			gap: 1.92rem;
 		}
 		.geography__btn {
+			@media (max-width: $md3) {
+				max-width: rem(148);
+				max-height: rem(39);
+			}
 			@media (max-width: $md4) {
 				display: none;
 			}
@@ -1116,6 +1120,7 @@
 				max-height: 2.28881rem;
 			}
 			&:nth-child(1) {
+				transform: translateY(-0.45rem);
 				& img {
 					width: rem(95);
 					height: rem(37);
@@ -1135,8 +1140,8 @@
 			}
 			&:nth-child(4) {
 				& img {
-					width: rem(45);
-					height: rem(43);
+					min-width: rem(45);
+					min-height: rem(43);
 				}
 			}
 			&:nth-child(5) {
@@ -1180,6 +1185,9 @@
 		}
 		@media (min-width: $md5) {
 			max-width: 100%;
+			&:nth-child(1) {
+				transform: translateY(-0.75rem);
+			}
 		}
 	}
 	// .compliance__video

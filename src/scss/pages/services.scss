@@ -898,6 +898,15 @@
 				}
 			}
 		}
+		&[data-spollers="992, max"] {
+			.management__item-caption {
+				@media (min-width: $md3) {
+					&::before {
+						display: none;
+					}
+				}
+			}
+		}
 	}
 	// .management__item
 	&__item {
