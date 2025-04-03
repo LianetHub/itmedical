@@ -38,24 +38,6 @@ import * as devFunctions from './modules/functions.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    function isIOSorMac() {
-        const userAgent = navigator.userAgent;
-
-        // Проверка на устройства iOS
-        const isIOS = /iPhone|iPad|iPod/.test(userAgent) && !window.MSStream;
-
-        // Проверка на устройства Mac
-        const isMac = /Macintosh/.test(userAgent);
-
-        return isIOS || isMac;
-    }
-
-
-
-
-    if (isIOSorMac()) {
-        document.body.classList.add('ios');
-    }
 
     //  init Fancybox
     if (typeof Fancybox !== "undefined" && Fancybox !== null) {

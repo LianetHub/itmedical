@@ -1154,28 +1154,31 @@
 	}
 	// .ai__video
 	&__video {
-		.ios & {
-			background: url("@img/ai-thumb.png") center / contain no-repeat !important;
-			height: rem(380);
-			@media (max-width: $md3) {
-				width: 100%;
-				margin-bottom: 0rem;
-			}
-			video {
-				display: none !important;
-			}
-		}
+		// .ios & {
+		// 	background: url("@img/ai-thumb.png") center / contain no-repeat !important;
+		// 	height: rem(380);
+		// 	@media (max-width: $md3) {
+		// 		width: 100%;
+		// 		margin-bottom: 0rem;
+		// 	}
+		// 	video {
+		// 		display: none !important;
+		// 	}
+		// }
 		position: relative;
 		flex-shrink: 0;
 		max-width: rem(330);
-		margin: -5rem 0;
+		// margin: -5rem 0;
+		margin: -5rem 0 0;
 		align-self: center;
 		@media (min-width: $md4) {
-			margin: -5rem -4rem;
+			// margin: -5rem -4rem;
+			margin: -5rem -4rem 0;
 		}
 		@media (min-width: $md3) {
 			width: 40%;
 			max-width: 100%;
+
 			margin: -5rem -5rem -5rem 0;
 		}
 		pointer-events: none;

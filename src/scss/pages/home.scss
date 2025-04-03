@@ -13,7 +13,7 @@
 	}
 	min-height: calc(100svh - rem(176));
 	@media (min-width: $md4) {
-		padding: rem(110) 0;
+		padding: rem(110) 0 rem(40);
 		// padding: 13.87rem 0 7.12rem;
 		min-height: calc(100svh - rem(90));
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0) 104.62%);
@@ -23,7 +23,8 @@
 	}
 	@media (min-width: $md2) {
 		min-height: calc(100svh - rem(146));
-		padding: rem(258) 0 9.62rem;
+		// padding: rem(258) 0 9.62rem;
+		padding: rem(110) 0 rem(80);
 
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0) 104.62%);
 	}
