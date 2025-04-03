@@ -1154,6 +1154,17 @@
 	}
 	// .ai__video
 	&__video {
+		.ios & {
+			background: url("@img/ai-thumb.png") center / contain no-repeat !important;
+			height: rem(380);
+			@media (max-width: $md3) {
+				width: 100%;
+				margin-bottom: 0rem;
+			}
+			video {
+				display: none !important;
+			}
+		}
 		position: relative;
 		flex-shrink: 0;
 		max-width: rem(330);

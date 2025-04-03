@@ -588,7 +588,7 @@
 	&__container {
 		&.management__container_no-padding-tablet {
 			@media (max-width: $md3) {
-				@media (min-width: $md5) {
+				@media (min-width: $md4) {
 					padding: 0;
 					max-width: 100%;
 				}
