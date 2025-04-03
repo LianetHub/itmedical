@@ -900,7 +900,9 @@
 		}
 		&[data-spollers="992, max"] {
 			.management__item-caption {
+				gap: 1rem;
 				@media (min-width: $md3) {
+					cursor: default;
 					&::before {
 						display: none;
 					}

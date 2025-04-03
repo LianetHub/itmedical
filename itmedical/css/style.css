@@ -5137,6 +5137,10 @@ div.asl_r p.showmore {
   color: #0057b8;
 }
 
+.management__list[data-spollers="992, max"] .management__item-caption {
+  gap: 1rem;
+}
+
 .management__item:not(:last-child) {
   padding-bottom: 1.8rem;
   position: relative;
@@ -11159,7 +11163,7 @@ div.asl_r p.showmore {
   }
 
   .main {
-    padding: 13.87rem 0 7.12rem;
+    padding: 6.875rem 0;
     min-height: calc(100svh - 5.625rem);
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.86)), color-stop(104.62%, rgba(0, 0, 0, 0)));
     background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0) 104.62%);
@@ -12931,6 +12935,10 @@ div.asl_r p.showmore {
 
   .management__list {
     padding: 4.37rem 3.75rem 2.75rem;
+  }
+
+  .management__list[data-spollers="992, max"] .management__item-caption {
+    cursor: default;
   }
 
   .management__list[data-spollers="992, max"] .management__item-caption::before {
