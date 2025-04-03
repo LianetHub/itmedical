@@ -3885,7 +3885,6 @@ div.asl_r p.showmore {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 100%;
   -webkit-transition: -webkit-box-shadow 0.3s ease 0s;
   transition: -webkit-box-shadow 0.3s ease 0s;
   -o-transition: box-shadow 0.3s ease 0s;
