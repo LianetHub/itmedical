@@ -1140,7 +1140,10 @@
 	&__header {
 		position: relative;
 		height: rem(233);
-		padding: 1.9rem;
+		padding: rem(30) rem(20);
+		@media (min-width: $md5) {
+			padding: rem(30);
+		}
 		@media (min-width: $md2) {
 			height: 21.4rem;
 			padding: 3.12rem;
@@ -1203,6 +1206,10 @@
 	&__body {
 		background: #0057b8;
 		padding: 1.88rem;
+		padding: rem(30) rem(20);
+		@media (min-width: $md5) {
+			padding: rem(30);
+		}
 		@media (min-width: $md2) {
 			padding: 2.5rem 3.12rem;
 		}

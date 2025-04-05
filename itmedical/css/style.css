@@ -7186,36 +7186,6 @@ div.asl_r p.showmore {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  pointer-events: none;
-  display: block;
-}
-
-.ai__video video {
-  max-width: 100%;
-  mix-blend-mode: screen;
-}
-
-@supports not (mix-blend-mode: screen) {
-  .ai__video video {
-    -webkit-filter: brightness(1.2);
-            filter: brightness(1.2);
-    mix-blend-mode: normal;
-  }
-}
-
-@supports not (mix-blend-mode: screen) {
-  .ai__video::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    pointer-events: none;
-    background: #0057b8;
-    mix-blend-mode: screen;
-    z-index: 1;
-  }
 }
 
 .ai-logos {
@@ -8948,7 +8918,7 @@ div.asl_r p.showmore {
 .related-case__header {
   position: relative;
   height: 14.5625rem;
-  padding: 1.9rem;
+  padding: 1.875rem 1.25rem;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9016,6 +8986,7 @@ div.asl_r p.showmore {
 .related-case__body {
   background: #0057b8;
   padding: 1.88rem;
+  padding: 1.875rem 1.25rem;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -10906,6 +10877,14 @@ div.asl_r p.showmore {
   .case__nums-desc {
     margin-top: 1.87rem;
     font-size: 1.125rem;
+  }
+
+  .related-case__header {
+    padding: 1.875rem;
+  }
+
+  .related-case__body {
+    padding: 1.875rem;
   }
 
   .certs {
@@ -13649,7 +13628,7 @@ div.asl_r p.showmore {
   }
 
   .ai__video {
-    width: 40%;
+    width: 35%;
     max-width: 100%;
     margin: -5rem -5rem -5rem 0;
   }

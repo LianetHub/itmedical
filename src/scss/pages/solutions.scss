@@ -1171,40 +1171,41 @@
 		// margin: -5rem 0;
 		margin: -5rem 0 0;
 		align-self: center;
+
 		@media (min-width: $md4) {
 			// margin: -5rem -4rem;
 			margin: -5rem -4rem 0;
 		}
 		@media (min-width: $md3) {
-			width: 40%;
+			width: 35%;
 			max-width: 100%;
 
 			margin: -5rem -5rem -5rem 0;
 		}
-		pointer-events: none;
-		display: block;
-		& video {
-			max-width: 100%;
-			mix-blend-mode: screen;
-			@supports not (mix-blend-mode: screen) {
-				filter: brightness(1.2);
-				mix-blend-mode: normal;
-			}
-		}
-		@supports not (mix-blend-mode: screen) {
-			&::before {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				height: 100%;
-				pointer-events: none;
-				background: #0057b8;
-				mix-blend-mode: screen;
-				z-index: 1;
-			}
-		}
+		// pointer-events: none;
+		// display: block;
+		// & video {
+		// 	max-width: 100%;
+		// 	mix-blend-mode: screen;
+		// 	@supports not (mix-blend-mode: screen) {
+		// 		filter: brightness(1.2);
+		// 		mix-blend-mode: normal;
+		// 	}
+		// }
+		// @supports not (mix-blend-mode: screen) {
+		// 	&::before {
+		// 		content: "";
+		// 		position: absolute;
+		// 		top: 0;
+		// 		left: 0;
+		// 		right: 0;
+		// 		height: 100%;
+		// 		pointer-events: none;
+		// 		background: #0057b8;
+		// 		mix-blend-mode: screen;
+		// 		z-index: 1;
+		// 	}
+		// }
 	}
 	// .ai__video-overlay
 	&__video-overlay {
