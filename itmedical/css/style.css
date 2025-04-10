@@ -4398,8 +4398,21 @@ div.asl_r p.showmore {
           justify-content: center;
 }
 
-.awards__slide-image img {
+.awards__slide-image picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.awards__slide-image img,
+.awards__slide-image source {
   max-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .awards__slide-desc {
