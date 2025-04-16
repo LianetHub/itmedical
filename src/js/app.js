@@ -36,7 +36,38 @@ import * as devFunctions from './modules/functions.js';
     });
 })();
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
+
+
+    // safari fallback
+    // function getSafariVersion() {
+    //     const ua = navigator.userAgent;
+    //     const isSafari = /^((?!chrome|android).)*safari/i.test(ua);
+
+    //     if (isSafari) {
+    //         const match = ua.match(/Version\/([\d.]+)/);
+    //         if (match && match[1]) {
+    //             return parseFloat(match[1]);
+    //         }
+    //     }
+
+    //     return false;
+    // }
+
+    // const safariVersion = getSafariVersion();
+
+    // if (safariVersion && safariVersion >= 17.0) {
+    //     const mp4Video = document.querySelector('.ai__video video');
+
+    //     if (mp4Video) {
+    //         const gif = document.createElement('img');
+    //         gif.src = 'fallback.gif';
+    //         gif.alt = 'Анимация';
+    //         mp4Video.parentNode.replaceChild(gif, mp4Video);
+    //     }
+    // }
 
 
     //  init Fancybox

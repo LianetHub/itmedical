@@ -168,6 +168,16 @@
 	color: #0057b8;
 }
 
+.link {
+	color: $accent;
+	text-decoration: underline;
+	@media (any-hover: hover) {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
 // .fw-normal {
 // 	font-weight: 400;
 // }
