@@ -56,6 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
     //     return false;
     // }
 
+
+
+
     // const safariVersion = getSafariVersion();
 
     // if (safariVersion && safariVersion >= 17.0) {
@@ -241,7 +244,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (target.classList.contains('form__succes-btn')) {
-            target.closest('._success').classList.remove('_success')
+            target.closest('form').reset();
+            target.closest('._success').classList.remove('_success');
         }
 
     });

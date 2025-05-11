@@ -2,12 +2,25 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+	const defaultSettings = {
+		form_guid: "4e51554c-e02d-4831-adf7-e4ce1dc392eb",
+		gtm_event: "contact_form_submit",
+		redirect_to_thanks_page: false,
+		redirect_url: ""
+	};
+
+	const formSettingsDataSafe = typeof formSettingsData !== 'undefined' ? formSettingsData : {};
+	const { formSettings = defaultSettings, formSettings2 } = formSettingsDataSafe;
+	const hasFormSettings2 = typeof formSettings2 !== 'undefined';
+
+
 	let hubspotSent = false;
 	let reCaptchaPassed = false;
 	let akismetPassed = false;
 
 	document.addEventListener('wpcf7mailsent', async function (event) {
 		const response = event.detail.apiResponse;
+		event.target.reset = function () { };
 		if (response && response.status === 'mail_sent') {
 			reCaptchaPassed = true;
 			akismetPassed = true;
@@ -22,21 +35,50 @@ document.addEventListener('DOMContentLoaded', () => {
 		akismetPassed = false;
 	});
 
-	document.addEventListener('wpcf7spam', function () {
+	document.addEventListener('wpcf7spam', function (event) {
 		console.log("Contact Form 7: Форма отклонена как спам, Akismet не прошел проверку.");
 		akismetPassed = false;
+
+		let form = event.target;
+		let errorMessage = form.querySelector('.spam-error-message');
+
+		if (!errorMessage) {
+			errorMessage = document.createElement('div');
+			errorMessage.classList.add('form__error-message', 'spam-error-message', 'visible');
+			errorMessage.textContent = 'Your data has not been checked for spam. Try introducing yourself to the author later.';
+			form.appendChild(errorMessage);
+		}
+	});
+
+
+	document.addEventListener('wpcf7submit', function (event) {
+		let form = event.target;
+		let errorMessage = form.querySelector('.spam-error-message');
+		if (errorMessage) {
+			errorMessage.remove();
+		}
 	});
 
 	async function checkAllConditions(form) {
 		if (reCaptchaPassed && akismetPassed) {
-			await sendToHubspot(form);
-			sendGtmEvent();
+			let isFirstForm = false;
+			let config = formSettings;
+
+			if (hasFormSettings2) {
+				isFirstForm = form.closest('.wpcf7').id === 'wpcf7-f1756-o1';
+				config = isFirstForm ? formSettings : formSettings2;
+			}
+
+			await sendToHubspot(form, config);
+			sendGtmEvent(config.gtm_event || formSettings.gtm_event);
 		}
 	}
 
-	async function sendToHubspot(form) {
+	async function sendToHubspot(form, config) {
+		console.log('form', form);
+
 		const portalId = 7649479;
-		const formGuid = '4e51554c-e02d-4831-adf7-e4ce1dc392eb';
+		const formGuid = config.form_guid;
 		const hubspotUrl = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`;
 
 		let formData = new FormData(form);
@@ -106,13 +148,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			if (response.ok) {
 				hubspotSent = true;
-				form.classList.remove("_sending");
-				form.classList.add('_success');
-				setTimeout(() => {
-					form.classList.remove('_success');
-					form.reset();
-					hubspotSent = false;
-				}, 10000);
+
+				if (config.redirect_to_thanks_page) {
+					window.location.href = '/thank-you/';
+				} else {
+					form.classList.remove("_sending");
+					form.classList.add('_success');
+					setTimeout(() => {
+						form.classList.remove('_success');
+						form.reset();
+						hubspotSent = false;
+					}, 10000);
+				}
+
+				if (config.redirect_url && config.redirect_url.length > 0) {
+					window.open(config.redirect_url, '_blank');
+				}
 
 				console.log("Success sending");
 			} else {
@@ -149,12 +200,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
-	function sendGtmEvent() {
+	function sendGtmEvent(eventName) {
 
-		console.log("GTM Event Submited", "Event Name:", "contact_form_submit");
+		console.log("GTM Event Submited", "Event Name:", eventName);
 		window.dataLayer = window.dataLayer || [];
 		window.dataLayer.push({
-			'event': 'contact_form_submit',
+			'event': eventName,
 			'v_category': 'Contact Form',
 			'v_action': 'Submit',
 			'v_label': 'Contact Form Submission',
@@ -170,6 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			utm_campaign: params.get('utm_campaign') || ''
 		};
 	}
+
 
 
 });

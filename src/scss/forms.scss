@@ -24,6 +24,12 @@
 			display: block;
 		}
 	}
+	&._sending {
+		.wpcf7-spinner {
+			visibility: visible;
+		}
+	}
+	&._sending,
 	&.submitting {
 		pointer-events: none;
 		.wpcf7-submit {

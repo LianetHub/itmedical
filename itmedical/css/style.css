@@ -838,23 +838,32 @@ div.asl_w .probox .proinput input[type=submit] {
   display: block;
 }
 
+.wpcf7-form._sending .wpcf7-spinner {
+  visibility: visible;
+}
+
+.wpcf7-form._sending,
 .wpcf7-form.submitting {
   pointer-events: none;
 }
 
+.wpcf7-form._sending .wpcf7-submit,
 .wpcf7-form.submitting .wpcf7-submit {
   color: transparent;
 }
 
+.wpcf7-form._sending .wpcf7-spinner,
 .wpcf7-form.submitting .wpcf7-spinner {
   background: transparent;
   opacity: 1;
 }
 
+.wpcf7-form._sending .wpcf7-spinner::before,
 .wpcf7-form.submitting .wpcf7-spinner::before {
   display: none;
 }
 
+.wpcf7-form._sending .wpcf7-spinner::after,
 .wpcf7-form.submitting .wpcf7-spinner::after {
   content: "";
   position: absolute;
@@ -888,6 +897,7 @@ div.asl_w .probox .proinput input[type=submit] {
   }
 }
 
+.wpcf7-form._sending .form__submit input,
 .wpcf7-form.submitting .form__submit input {
   color: transparent !important;
 }

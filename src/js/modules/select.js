@@ -213,22 +213,41 @@ export class CustomSelect {
     }
 
     restoreInitialState() {
-        const state = this.initialState;
-        this.$select.value = state.selectedValue;
-        this.$select.dispatchEvent(new Event('change'));
+        const hasPlaceholder = this.placeholder !== undefined;
 
-        const listItems = this.$dropdown.querySelectorAll('.dropdown__list-item');
-        listItems.forEach(listItem => {
-            listItem.classList.remove('selected');
-            listItem.setAttribute('aria-checked', 'false');
-        });
+        if (hasPlaceholder) {
+            this.$select.selectedIndex = -1;
+            this.$dropdown.querySelector('.dropdown__button-text').textContent = this.placeholder;
+            this.$dropdown.querySelector('.dropdown__button').classList.remove('selected');
 
-        const selectedItem = this.$dropdown.querySelector(`.dropdown__list-item[data-value="${state.selectedValue}"]`);
+            const listItems = this.$dropdown.querySelectorAll('.dropdown__list-item');
+            listItems.forEach(listItem => {
+                listItem.classList.remove('selected');
+                listItem.setAttribute('aria-checked', 'false');
+            });
 
-        selectedItem.classList.add('selected');
-        selectedItem.setAttribute('aria-checked', 'true');
+            this.$select.dispatchEvent(new Event('change'));
+        } else {
+            const state = this.initialState;
+            this.$select.value = state.selectedValue;
+            this.$select.dispatchEvent(new Event('change'));
 
-        this.$dropdown.querySelector('.dropdown__button-text').textContent = state.selectedText;
+            const listItems = this.$dropdown.querySelectorAll('.dropdown__list-item');
+            listItems.forEach(listItem => {
+                listItem.classList.remove('selected');
+                listItem.setAttribute('aria-checked', 'false');
+            });
+
+            const selectedItem = this.$dropdown.querySelector(`.dropdown__list-item[data-value="${state.selectedValue}"]`);
+
+            if (selectedItem) {
+                selectedItem.classList.add('selected');
+                selectedItem.setAttribute('aria-checked', 'true');
+            }
+
+            this.$dropdown.querySelector('.dropdown__button-text').textContent = state.selectedText;
+            this.$dropdown.querySelector('.dropdown__button').classList.add('selected');
+        }
     }
 
     syncSelectedOption() {
