@@ -821,8 +821,6 @@
 		display: contents;
 		@media (min-width: $md2) {
 			display: block;
-		}
-		@media (min-width: $md1) {
 			padding: rem(50) rem(50) rem(50) rem(70);
 		}
 	}

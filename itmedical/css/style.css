@@ -14957,6 +14957,7 @@ div.asl_r p.showmore {
 
   .focus__body {
     display: block;
+    padding: 3.125rem 3.125rem 3.125rem 4.375rem;
   }
 
   .focus__image {
@@ -15161,10 +15162,6 @@ div.asl_r p.showmore {
 
   .focus__container {
     max-width: 90rem;
-  }
-
-  .focus__body {
-    padding: 3.125rem 3.125rem 3.125rem 4.375rem;
   }
 
   .certs__item-logo {
